@@ -1,0 +1,194 @@
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    .size(100%, 100%);
+    font-family: Arial, 'Microsoft YaHei'
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.draw-box {
+    .size(100%, 100%);
+    min-width: 1900px;
+    min-height: 900px;
+    position: relative;
+    .draw-bg-top {
+        height: 50%;
+        background: url("img/bg-top.jpg") no-repeat;
+    }
+    .draw-bg-bottom {
+        height: 50%;
+        background: url("img/bg-bottom.jpg") no-repeat;
+    }
+    .draw-luck {
+        position: absolute;
+        width: 95%;
+        height: 862px;
+        background: url("img/luck.png") no-repeat;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        .draw-luck-name {
+            .clearfix();
+            width: 55%;
+            position: absolute;
+            color: #f1478b;
+            margin-top: 22%;
+            margin-left: 23%;
+            font-weight: bold;
+            li {
+                float: left;
+                text-align: center;
+                font-size: 46px;
+                margin-bottom: 20px;
+            }
+            &.one-once {
+                margin-top: 19%;
+                li {
+                    width: 100%;
+                    line-height: 243px;
+                    font-size: 90px;
+                }
+            }
+            &.three-once {
+                margin-top: 19%;
+                li {
+                    width: 33%;
+                    line-height: 243px;
+                    font-size: 56px;
+                }
+            }
+            &.ten-once {
+                li {
+                    width: 20%;
+                }
+            }
+        }
+    }
+    .draw-luck-items {
+    	display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .size(100%,
+        100%);
+        background: url("img/luck-items.png") no-repeat;
+        .draw-luck-item {
+            text-align: center;
+            .prize-name {
+                margin: 0 auto;
+                .size(380px,
+                160px);
+                margin-top: 10.4%;
+            }
+            ul {
+                .clearfix();
+                width: 80%;
+                margin-left: 10%;
+                margin-top: 1%;
+                li {
+                    color: #f1478b;
+                    font-size: 18px;
+                    font-weight: bold;
+                    float: left;
+                    margin-bottom: 8px;
+                }
+            }
+            &.first-prize {
+                .prize-name {
+                    background: url(img/first-prize.png) no-repeat;
+                }
+                ul {
+                	margin-top: 8%;
+                	li {
+                		font-size: 50px;
+                		width: 50%;
+                		margin-bottom: 0;
+                	}
+                }
+            }
+            &.two-prize {
+                .prize-name {
+                    background: url(img/two-prize.png) no-repeat;
+                }
+                ul {
+                	li {
+                		font-size: 46px;
+                		width: 33.3%;
+                	}
+                }
+            }
+            &.three-prize {
+                .prize-name {
+                    background: url(img/three-prize.png) no-repeat;
+                }
+                ul {
+                	li {
+                		font-size: 22px;
+                    width: 20%;
+
+                	}
+                }
+            }
+            &.four-prize {
+                .prize-name {
+                    background: url(img/four-prize.png) no-repeat;
+                }
+                ul {
+                	li {
+                		font-size: 22px;
+                    width: 16.666%;
+
+                	}
+                }
+            }
+        }
+    }
+    .draw-control {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        a {
+            display: inline-block;
+            .size(100px,
+            30px);
+            line-height: 30px;
+            border: 1px solid #4d0075;
+            border-radius: 3px;
+            opacity: .2;
+            background: #4d0075;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            &:hover,
+            &:focus,
+            &:visited {
+                text-decoration: none;
+            }
+        }
+    }
+}

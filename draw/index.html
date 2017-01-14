@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>draw</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="http://www.coolfe.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="draw-box">
+        <div class="draw-bg-top"></div>
+        <div class="draw-bg-bottom"></div>
+        <div class="draw-luck">
+            <ul class="draw-luck-name three-once">
+                <!--one-once: 一个一次 three-once：三个一次 ten-once： 十个一次-->
+                <li>姓名姓</li>
+                <li>姓名姓</li>
+                <li>姓名姓</li>
+            </ul>
+        </div>
+        <div class="draw-luck-items">
+            <div class="draw-luck-item first-prize">
+                <div class="prize-name"></div>
+                <ul>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <!-- <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li>
+                    <li>姓名名-研发部</li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="draw-control">
+            <a href="javascript:;" id="start">开始</a>
+            <a href="javascript:;" id="pause">暂停</a>
+            <a href="javascript:;" id="stop">停止</a>
+            <a href="javascript:;" id="show">显示结果</a>
+            <a href="javascript:;" id="hidden">隐藏结果</a>
+        </div>
+    </div>
+    <script>
+    $("#start,#pause,#stop").on("click", function() {
+        var $this = $(this);
+        alert($this.html());
+    })
+    $("#show").on("click", function() {
+        $(".draw-luck-items").show(200);
+        $(".draw-luck").hide(200);
+
+    })
+    $("#hidden").on("click", function() {
+        $(".draw-luck-items").hide(200);
+        $(".draw-luck").show(200);
+    })
+    </script>
+</body>
+
+</html>

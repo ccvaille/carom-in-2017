@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, 'Microsoft YaHei';
+}
+ul,
+li {
+  list-style: none;
+}
+.draw-box {
+  width: 100%;
+  height: 100%;
+  min-width: 1900px;
+  min-height: 900px;
+  position: relative;
+}
+.draw-box .draw-bg-top {
+  height: 50%;
+  background: url("img/bg-top.jpg") no-repeat;
+}
+.draw-box .draw-bg-bottom {
+  height: 50%;
+  background: url("img/bg-bottom.jpg") no-repeat;
+}
+.draw-box .draw-luck {
+  position: absolute;
+  width: 95%;
+  height: 862px;
+  background: url("img/luck.png") no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.draw-box .draw-luck .draw-luck-name {
+  width: 55%;
+  position: absolute;
+  color: #f1478b;
+  margin-top: 22%;
+  margin-left: 23%;
+  font-weight: bold;
+}
+.draw-box .draw-luck .draw-luck-name:before,
+.draw-box .draw-luck .draw-luck-name:after {
+  content: " ";
+  display: table;
+}
+.draw-box .draw-luck .draw-luck-name:after {
+  clear: both;
+}
+.draw-box .draw-luck .draw-luck-name li {
+  float: left;
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+.draw-box .draw-luck .draw-luck-name.one-once {
+  margin-top: 19%;
+}
+.draw-box .draw-luck .draw-luck-name.one-once li {
+  width: 100%;
+  line-height: 243px;
+  font-size: 90px;
+}
+.draw-box .draw-luck .draw-luck-name.three-once {
+  margin-top: 19%;
+}
+.draw-box .draw-luck .draw-luck-name.three-once li {
+  width: 33%;
+  line-height: 243px;
+  font-size: 56px;
+}
+.draw-box .draw-luck .draw-luck-name.ten-once li {
+  width: 20%;
+}
+.draw-box .draw-luck-items {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/luck-items.png") no-repeat;
+}
+.draw-box .draw-luck-items .draw-luck-item {
+  text-align: center;
+}
+.draw-box .draw-luck-items .draw-luck-item .prize-name {
+  margin: 0 auto;
+  width: 380px;
+  height: 160px;
+  margin-top: 10.4%;
+}
+.draw-box .draw-luck-items .draw-luck-item ul {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 1%;
+}
+.draw-box .draw-luck-items .draw-luck-item ul:before,
+.draw-box .draw-luck-items .draw-luck-item ul:after {
+  content: " ";
+  display: table;
+}
+.draw-box .draw-luck-items .draw-luck-item ul:after {
+  clear: both;
+}
+.draw-box .draw-luck-items .draw-luck-item ul li {
+  color: #f1478b;
+  font-size: 18px;
+  font-weight: bold;
+  float: left;
+  margin-bottom: 8px;
+}
+.draw-box .draw-luck-items .draw-luck-item.first-prize .prize-name {
+  background: url(img/first-prize.png) no-repeat;
+}
+.draw-box .draw-luck-items .draw-luck-item.first-prize ul {
+  margin-top: 8%;
+}
+.draw-box .draw-luck-items .draw-luck-item.first-prize ul li {
+  font-size: 50px;
+  width: 50%;
+  margin-bottom: 0;
+}
+.draw-box .draw-luck-items .draw-luck-item.two-prize .prize-name {
+  background: url(img/two-prize.png) no-repeat;
+}
+.draw-box .draw-luck-items .draw-luck-item.two-prize ul li {
+  font-size: 46px;
+  width: 33.3%;
+}
+.draw-box .draw-luck-items .draw-luck-item.three-prize .prize-name {
+  background: url(img/three-prize.png) no-repeat;
+}
+.draw-box .draw-luck-items .draw-luck-item.three-prize ul li {
+  font-size: 22px;
+  width: 20%;
+}
+.draw-box .draw-luck-items .draw-luck-item.four-prize .prize-name {
+  background: url(img/four-prize.png) no-repeat;
+}
+.draw-box .draw-luck-items .draw-luck-item.four-prize ul li {
+  font-size: 22px;
+  width: 16.666%;
+}
+.draw-box .draw-control {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.draw-box .draw-control a {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #4d0075;
+  border-radius: 3px;
+  opacity: .2;
+  background: #4d0075;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+.draw-box .draw-control a:hover,
+.draw-box .draw-control a:focus,
+.draw-box .draw-control a:visited {
+  text-decoration: none;
+}
