@@ -3,122 +3,322 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>draw</title>
+    <title>EC幸运大抽奖</title>
     <link rel="stylesheet" href="css/index.css">
-    <script src="http://www.coolfe.com/jquery.js"></script>
+    <script src="./js/jquery-1.8.2.min.js"></script>
+    <script>
+        var DEPART = ['CEO', '人力行政部','人力资源部','行政部','财务部',
+            '行业开发部','解决方案部','客户运营','市场部',
+            '渠道部','客服中心','产品部','研发部',
+            '北创','深创','上创','广创'];
+        var USERS = [
+            {"id":1,"did":0,"name":"同事","status":0},
+            {"id":2,"did":1,"name":"同事","status":0},
+            {"id":3,"did":2,"name":"同事","status":0},
+            {"id":4,"did":2,"name":"同事","status":0},
+            {"id":5,"did":2,"name":"同事","status":0},
+            {"id":6,"did":2,"name":"同事","status":0},
+            {"id":7,"did":2,"name":"同事","status":0},
+            {"id":8,"did":2,"name":"同事","status":0},
+            {"id":9,"did":2,"name":"同事","status":0},
+            {"id":10,"did":2,"name":"同事","status":0},
+            {"id":11,"did":3,"name":"同事","status":0},
+            {"id":12,"did":3,"name":"同事","status":0},
+            {"id":13,"did":3,"name":"同事","status":0},
+            {"id":14,"did":3,"name":"同事","status":0},
+            {"id":15,"did":3,"name":"同事","status":0},
+            {"id":16,"did":4,"name":"同事","status":0},
+            {"id":17,"did":4,"name":"同事","status":0},
+            {"id":18,"did":4,"name":"同事","status":0},
+            {"id":19,"did":4,"name":"同事","status":0},
+            {"id":20,"did":4,"name":"同事","status":0},
+            {"id":21,"did":4,"name":"同事","status":0},
+            {"id":22,"did":4,"name":"同事","status":0},
+            {"id":23,"did":4,"name":"同事","status":0},
+            {"id":24,"did":4,"name":"同事","status":0},
+            {"id":25,"did":4,"name":"同事","status":0},
+            {"id":26,"did":4,"name":"同事","status":0},
+            {"id":27,"did":5,"name":"同事","status":0},
+            {"id":28,"did":5,"name":"同事","status":0},
+            {"id":29,"did":5,"name":"同事","status":0},
+            {"id":30,"did":5,"name":"同事","status":0},
+            {"id":31,"did":5,"name":"同事","status":0},
+            {"id":32,"did":5,"name":"同事","status":0},
+            {"id":33,"did":5,"name":"同事","status":0},
+            {"id":34,"did":5,"name":"同事","status":0},
+            {"id":35,"did":5,"name":"同事","status":0},
+            {"id":36,"did":5,"name":"同事","status":0},
+            {"id":37,"did":6,"name":"同事","status":0},
+            {"id":38,"did":7,"name":"同事","status":0},
+            {"id":39,"did":7,"name":"同事","status":0},
+            {"id":40,"did":7,"name":"同事","status":0},
+            {"id":41,"did":7,"name":"同事","status":0},
+            {"id":42,"did":7,"name":"同事","status":0},
+            {"id":43,"did":7,"name":"同事","status":0},
+            {"id":44,"did":8,"name":"同事","status":0},
+            {"id":45,"did":8,"name":"同事","status":0},
+            {"id":46,"did":8,"name":"同事","status":0},
+            {"id":47,"did":8,"name":"同事","status":0},
+            {"id":48,"did":8,"name":"同事","status":0},
+            {"id":49,"did":8,"name":"同事","status":0},
+            {"id":50,"did":8,"name":"同事","status":0},
+            {"id":51,"did":8,"name":"同事","status":0},
+            {"id":52,"did":8,"name":"同事","status":0},
+            {"id":53,"did":8,"name":"同事","status":0},
+            {"id":54,"did":8,"name":"同事","status":0},
+            {"id":55,"did":9,"name":"同事","status":0},
+            {"id":56,"did":9,"name":"同事","status":0},
+            {"id":57,"did":9,"name":"同事","status":0},
+            {"id":58,"did":9,"name":"同事","status":0},
+            {"id":59,"did":9,"name":"同事","status":0},
+            {"id":60,"did":9,"name":"同事","status":0},
+            {"id":61,"did":9,"name":"同事","status":0},
+            {"id":62,"did":9,"name":"同事","status":0},
+            {"id":63,"did":9,"name":"同事","status":0},
+            {"id":64,"did":9,"name":"同事","status":0},
+            {"id":65,"did":9,"name":"同事","status":0},
+            {"id":66,"did":9,"name":"同事","status":0},
+            {"id":67,"did":9,"name":"同事","status":0},
+            {"id":68,"did":9,"name":"同事","status":0},
+            {"id":69,"did":9,"name":"同事","status":0},
+            {"id":70,"did":9,"name":"同事","status":0},
+            {"id":71,"did":9,"name":"同事","status":0},
+            {"id":72,"did":9,"name":"同事","status":0},
+            {"id":73,"did":9,"name":"同事","status":0},
+            {"id":74,"did":9,"name":"同事","status":0},
+            {"id":75,"did":9,"name":"同事","status":0},
+            {"id":76,"did":9,"name":"同事","status":0},
+            {"id":77,"did":9,"name":"同事","status":0},
+            {"id":78,"did":9,"name":"同事","status":0},
+            {"id":79,"did":9,"name":"同事","status":0},
+            {"id":80,"did":9,"name":"同事","status":0},
+            {"id":81,"did":9,"name":"同事","status":0},
+            {"id":82,"did":9,"name":"同事","status":0},
+            {"id":83,"did":9,"name":"同事","status":0},
+            {"id":84,"did":9,"name":"同事","status":0},
+            {"id":85,"did":9,"name":"同事","status":0},
+            {"id":86,"did":9,"name":"同事","status":0},
+            {"id":87,"did":9,"name":"同事","status":0},
+            {"id":88,"did":9,"name":"同事","status":0},
+            {"id":89,"did":9,"name":"同事","status":0},
+    </script>
+
 </head>
 
+<audio  id="mp3" loop="loop"  style="display:none"
+       src="./dz.wav">
+    你的浏览器不支持audio标签
+</audio>
 <body>
     <div class="draw-box">
         <div class="draw-bg-top"></div>
         <div class="draw-bg-bottom"></div>
         <div class="draw-luck">
-            <ul class="draw-luck-name three-once">
+            <div id="show_title">
+                  <img alt="">
+            </div>
+            <ul class="draw-luck-name one-once" id="show_box">
                 <!--one-once: 一个一次 three-once：三个一次 ten-once： 十个一次-->
-                <li>姓名姓</li>
-                <li>姓名姓</li>
-                <li>姓名姓</li>
+                <li>EC幸运大抽奖</li>
             </ul>
         </div>
-        <div class="draw-luck-items">
+        <div class="draw-luck-items" id="show_result">
             <div class="draw-luck-item first-prize">
                 <div class="prize-name"></div>
-                <ul>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <!-- <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li>
-                    <li>姓名名-研发部</li> -->
+                <ul id="re_user">
                 </ul>
             </div>
         </div>
         <div class="draw-control">
-            <a href="javascript:;" id="start">开始</a>
-            <a href="javascript:;" id="pause">暂停</a>
-            <a href="javascript:;" id="stop">停止</a>
-            <a href="javascript:;" id="show">显示结果</a>
-            <a href="javascript:;" id="hidden">隐藏结果</a>
+              <a href="javascript:;">高级设置</a>
+        </div>
+        <div class="ec-modal draw-modal">
+            <div class="ec-popuper">
+                <h4>高级设置 <i class="ec-close">&#10005</i></h4>
+                <div class="ec-modal-container">
+                    <input type="number" placeholder="请输入每次抽几个" class="ec-input">
+                    <input type="number" placeholder="请输入次数" class="ec-input">
+                    <div class="ec-modal-footer">
+                        <div class="ec-btn-group">
+                            <a href="javascript:;" class="ec-btn ec-btn-primary" id="confirm">确定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script>
-    $("#start,#pause,#stop").on("click", function() {
-        var $this = $(this);
-        alert($this.html());
-    })
-    $("#show").on("click", function() {
-        $(".draw-luck-items").show(200);
-        $(".draw-luck").hide(200);
+        $(function(){
 
-    })
-    $("#hidden").on("click", function() {
-        $(".draw-luck-items").hide(200);
-        $(".draw-luck").show(200);
-    })
+            var box = $('#show_box');
+            var title_img = $('#show_title img');
+            var i = 0;
+            var stepone = 1;
+            var nconfig = [0,2,4,5,6];
+            var nnum = [0,0,0,0,0];
+			var nstep = [0,1,3,10,10];
+            var now = 0;
+            var run = false;
+            var RE = {'s1':[],'s2':[],'s3':[],'s4':[]};
+            $(document).keyup(function(e){
+                var keyCode = e.keyCode;
+                console.info(keyCode);
+                if(keyCode == 49 || keyCode==97){//一等奖
+                    if(run){
+                        return false;
+                    }
+                    stepone = nstep[1];
+                    now = 1;
+                    title_img.attr('src','css/img/small-first-prize.png');
+                    box.removeClass('ten-once').removeClass('three-once').addClass('one-once');
+                    box.html("<li>一等奖抽取第"+nnum[1]+'/'+nconfig[1]+'批</li>');
+                }else if(keyCode == 50 || keyCode==98){//二等奖
+                    if(run){
+                        return false;
+                    }
+                    stepone = nstep[2];
+                    now = 2;
+                    title_img.attr('src','css/img/small-two-prize.png');
+                    box.removeClass('ten-once').removeClass('three-once').addClass('one-once');
+                    box.html("<li>二等奖抽取第"+nnum[2]+'/'+nconfig[2]+'批</li>');
+                }else if(keyCode == 51 || keyCode==99){//三等奖
+                    if(run){
+                        return false;
+                    }
+                    stepone = nstep[3];
+                    now = 3;
+                    title_img.attr('src','css/img/small-three-prize.png');
+                    box.removeClass('ten-once').removeClass('three-once').addClass('one-once');
+                    box.html("<li>三等奖抽取第"+nnum[3]+'/'+nconfig[3]+'批</li>');
+                }else if(keyCode == 52 || keyCode==100){//四等奖
+                    if(run){
+                        return false;
+                    }
+                    stepone = nstep[4];
+                    now = 4;
+                    title_img.attr('src','css/img/small-four-prize.png');
+                    box.removeClass('ten-once').removeClass('three-once').addClass('one-once');
+                    box.html("<li>四等奖抽取第"+nnum[4]+'/'+nconfig[4]+'批</li>');
+                }else if(keyCode == 53 || keyCode==101){//5 展开或隐藏部门
+                    box.find('li span').toggle();
+                }else if(keyCode == 54 || keyCode==102){//6 查看结果
+                    var ubox = $('#re_user');
+                    ubox.html('');
+                    for(var i=0;i<RE['s'+now].length;i++){
+                        ubox.append('<li>'+RE['s'+now][i]+'</li>');
+                    }
+                    if(now == 1){
+                        $('.draw-luck-item').removeClass('two-prize').removeClass('three-prize').removeClass('four-prize').addClass('first-prize');
+                    }else if(now ==2 ){
+                        $('.draw-luck-item').removeClass('first-prize').removeClass('three-prize').removeClass('four-prize').addClass('two-prize');
+                    }else if(now == 3){
+                        $('.draw-luck-item').removeClass('two-prize').removeClass('first-prize').removeClass('four-prize').addClass('three-prize');
+                    }else if(now == 4){
+                        $('.draw-luck-item').removeClass('two-prize').removeClass('three-prize').removeClass('first-prize').addClass('four-prize');
+                    }
+                    $('#show_result').toggle();
+					$('.draw-luck').toggle();
+                }else if(keyCode == 13){//回车 开始或暂停
+                    if(now<1 || now>4){
+                        alert("请输入1-4再开始！");
+                    }else{
+                        start();
+                    }
+
+                }
+            });
+            var t = false;
+            var spend = 100;
+            var TMPUSER = [];
+            function start(){
+                if(run){
+                    run = false;
+                    clearInterval(t);
+                    setUsers(now);//设置结果
+                    setResult(now);
+                    mp3('ok');
+                }else{
+                    run = true;
+
+                    if(nnum[now]>=nconfig[now]){
+                        alert(now+"等奖已经抽取完毕！");
+                        run = false;
+                        return false;
+                    }
+                    mp3('start');
+                    nnum[now]++;
+                    TMPUSER = getUsers(0);
+                    TMPUSER.sort(function(){ return 0.5 - Math.random() });
+                    //one-once: 一个一次 three-once：三个一次 ten-once
+                    box.removeClass('one-once');
+                    if(stepone==10){
+                        box.addClass('ten-once');
+                    }else if(stepone == 3){
+                        box.addClass('three-once');
+
+                    }else{
+                        box.addClass('one-once');
+                    }
+					box.html("");
+                    t = setInterval(upbox,spend);
+                }
+            }
+            var i = 1;
+
+            function upbox(){
+                i++;
+                if(i>=TMPUSER.length){
+                    i = 1;
+                }
+                //console.info(i);
+                box.html('<li uid="'+TMPUSER[i].id+'"><b>'+TMPUSER[i].name+'</b><span>'+DEPART[TMPUSER[i].did]+'</span></li>');
+                for(var j =0;j<stepone-1;j++){
+                    i++;
+                    if(i>=TMPUSER.length){
+                        i = 1;
+                    }
+                    box.append('<li uid="'+TMPUSER[i].id+'"><b>'+TMPUSER[i].name+'</b><span>'+DEPART[TMPUSER[i].did]+'</span></li>');
+                }
+
+
+            }
+            function getUsers(s){
+                var user = [];
+                for(var i=0;i<USERS.length;i++){
+                    if(USERS[i].status == s){
+                        user.push(USERS[i]);
+                    }
+                }
+                return user;
+            }
+            function setUsers(s){
+                for(var i = 0;i<USERS.length;i++){
+                    box.find('li').each(function(){
+                        var uid = $(this).attr('uid');
+                        if(uid>0 && uid== USERS[i].id){
+                            USERS[i].status = s;
+                            console.info(USERS[i].name);
+                        }
+                    });
+                }
+            }
+            //设置结果页面按照顺序展示
+            function setResult(s){
+                box.find('li').each(function(){
+					
+                    RE['s'+s].push($(this).find('b').text()+'-'+$(this).find('span').text());
+                });
+                console.info(RE['s'+s]);
+            }
+            function mp3(s){
+                if(s == 'start'){
+                    $('#mp3').attr('src','./dz.wav').attr('autoplay',true).attr('loop',true);
+                }else if(s == 'ok'){
+                    $('#mp3').attr('src','./10.wav').attr('autoplay',true).removeAttr('loop');
+                }
+            }
+        });
+
     </script>
 </body>
 

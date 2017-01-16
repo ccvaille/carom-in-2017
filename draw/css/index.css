@@ -12,6 +12,172 @@ ul,
 li {
   list-style: none;
 }
+/*component*/
+.ec-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 13;
+  _position: absolute;
+  _clear: both;
+  /* filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorstr=#7f000000); */
+}
+.ec-modal .ec-popuper {
+  position: absolute;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+}
+.ec-modal .ec-popuper h4 {
+  position: relative;
+  color: #303642;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #fff;
+  font-size: 16px;
+  line-height: 1.1;
+}
+.ec-modal .ec-popuper h4 i.ec-close {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 12px;
+  color: #303642;
+  font-style: normal;
+}
+.ec-modal .ec-popuper h4 i.ec-close:hover {
+  background: #fff;
+  color: #f2534f;
+}
+.ec-modal-container {
+  padding: 0 20px;
+  padding-bottom: 20px;
+}
+.ec-modal-body {
+  padding: 0;
+  font-size: 14px;
+}
+.ec-modal-footer {
+  padding-top: 20px;
+  text-align: right;
+}
+a.ec-btn {
+  background: #229be5;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 20px;
+  border: 1px solid #229be5;
+  border-radius: 2px;
+  min-width: 80px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  text-align: center;
+  transition: background .5s, border .4s;
+}
+a.ec-btn:hover {
+  background: #23a5f5;
+  border-color: #23a5f5;
+  color: #fff;
+}
+a.ec-btn:active {
+  background: #2b92d5;
+  border-color: #2b92d5;
+  color: #fff;
+}
+a.ec-btn:focus {
+  color: #fff;
+}
+a.ec-btn.disabled {
+  background: #ccc;
+  color: #fff;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+a.ec-btn.ec-btn-lg {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+}
+a.ec-btn.ec-btn-cancel {
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: #4c4c4c;
+}
+a.ec-btn.ec-btn-cancel:hover {
+  color: #4c4c4c;
+  background: #f7f7f7;
+  border-color: #d9d9d9;
+}
+a.ec-btn.ec-btn-cancel:active {
+  background: #f0f0f0;
+  color: #4c4c4c;
+}
+a.ec-btn.ec-btn-cancel.disabled {
+  background: #fafafa;
+  color: #cccccc;
+  border-color: #d9d9d9;
+  cursor: not-allowed;
+}
+a.ec-btn.ec-btn-popup {
+  border-radius: 0;
+  color: #1790db;
+  border: 1px dashed #21a0ee;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 16px;
+  background: #fff;
+}
+a.ec-btn.ec-btn-popup:hover {
+  color: #40b4ff;
+  border-color: #21a0ee;
+}
+a.ec-btn.ec-btn-popup:active {
+  color: #2b93d5;
+  border-color: #21a0ee;
+}
+a.ec-btn.ec-btn-popup.disabled {
+  color: #bfbfbf;
+  border-color: #959595;
+}
+input.ec-input {
+  font-size: 12px;
+  line-height: 30px;
+  height: 30px;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  border-radius: 2px;
+}
+input.ec-input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+input.ec-input.ec-input-lg {
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 22px;
+}
+input.ec-input.ec-input-xs {
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 10px;
+}
+/*component*/
 .draw-box {
   width: 100%;
   height: 100%;
@@ -37,6 +203,12 @@ li {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.draw-box .draw-luck #show_title {
+  width: 55%;
+  position: absolute;
+  margin-top: 11.33%;
+  margin-left: 23%;
+}
 .draw-box .draw-luck .draw-luck-name {
   width: 55%;
   position: absolute;
@@ -58,6 +230,11 @@ li {
   text-align: center;
   font-size: 46px;
   margin-bottom: 20px;
+}
+.draw-box .draw-luck .draw-luck-name li span {
+  font-size: 12px;
+  vertical-align: top;
+  display: none;
 }
 .draw-box .draw-luck .draw-luck-name.one-once {
   margin-top: 19%;
@@ -94,7 +271,7 @@ li {
   margin: 0 auto;
   width: 380px;
   height: 160px;
-  margin-top: 10.4%;
+  margin-top: 7.4%;
 }
 .draw-box .draw-luck-items .draw-luck-item ul {
   width: 80%;
@@ -170,4 +347,10 @@ li {
 .draw-box .draw-control a:focus,
 .draw-box .draw-control a:visited {
   text-decoration: none;
+}
+.draw-modal .ec-popuper {
+  width: 390px;
+  height: 162px;
+  margin-top: -60px;
+  margin-left: -195px;
 }
