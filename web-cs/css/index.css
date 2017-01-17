@@ -99,16 +99,45 @@ a.ec-btn.ec-btn-cancel.disabled {
   border-color: #d9d9d9;
   cursor: not-allowed;
 }
+input.ec-input,
+textarea.ec-input {
+  font-size: 12px;
+  line-height: 20px;
+  height: 30px;
+  padding: 0 12px;
+  color: #303642;
+  border: 1px solid #d4deee;
+}
+input.ec-input:hover,
+textarea.ec-input:hover {
+  border-color: #2580e6;
+  color: #303642;
+}
+input.ec-input:focus,
+textarea.ec-input:focus,
+input.ec-input:active,
+textarea.ec-input:active {
+  border-color: #2580e6;
+  color: #303642;
+  outline: 0;
+}
+textarea.ec-input {
+  resize: none;
+}
 /*component*/
 /*small-cs-online*/
 .small-cs-online {
-  position: relative;
+  position: fixed;
+  right: 1px;
+  bottom: 1px;
   width: 380px;
   height: 520px;
   margin: 0 auto;
   border: 1px solid #d9dfea;
   box-shadow: 0px 1px 0 0 #ebebeb;
+  overflow: hidden;
   /*对话结束*/
+  /*留言*/
 }
 .small-cs-online .btn-control {
   position: absolute;
@@ -173,6 +202,7 @@ a.ec-btn.ec-btn-cancel.disabled {
   height: 306px;
   border-top: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
+  background: #fff;
 }
 .small-cs-online .small-cs-content .auto-end-text {
   display: none;
@@ -202,17 +232,31 @@ a.ec-btn.ec-btn-cancel.disabled {
 .small-cs-online .small-cs-footer .small-cs-icon li {
   float: left;
   margin-right: 15px;
+  cursor: pointer;
 }
 .small-cs-online .small-cs-footer .small-cs-input {
   height: 64px;
 }
-.small-cs-online .small-cs-footer .small-cs-send {
+.small-cs-online .small-cs-footer .small-cs-input textarea {
+  width: 100%;
+  height: 70%;
+  border: none;
+  outline: none;
+  resize: none;
+  margin: 10px 0;
+  -webkit-appearance: none;
+}
+.small-cs-online .small-cs-footer .small-cs-footer-btn {
   text-align: right;
 }
-.small-cs-online .small-cs-footer .small-cs-send a.ec-btn {
+.small-cs-online .small-cs-footer .small-cs-footer-btn a.ec-btn {
   padding: 0 1px;
 }
+.small-cs-online .small-cs-footer .small-cs-footer-btn a.ec-btn:last-child {
+  margin-left: 8px;
+}
 .small-cs-online .small-cs-footer .auto-end-footer-text {
+  display: none;
   text-align: center;
   color: #999;
   line-height: 1.71;
@@ -223,10 +267,102 @@ a.ec-btn.ec-btn-cancel.disabled {
 .small-cs-online.small-cs-online-end .auto-end-text {
   display: block;
 }
-.small-cs-online.small-cs-online-end .small-cs-send,
+.small-cs-online.small-cs-online-end .small-cs-footer-btn,
 .small-cs-online.small-cs-online-end .small-cs-icon {
   display: none;
 }
 .small-cs-online.small-cs-online-end .small-cs-input {
   height: 50px;
+  visibility: hidden;
+}
+.small-cs-online.small-cs-online-end .auto-end-footer-text {
+  display: block;
+}
+.small-cs-online.small-cs-leave-mes .small-cs-content {
+  width: 90%;
+  height: auto;
+  border: none;
+  margin: 0 auto;
+}
+.small-cs-online.small-cs-leave-mes .leave-mes-text {
+  font-size: 12px;
+  line-height: 2;
+  color: #808080;
+  margin: 16px auto;
+  text-align: center;
+}
+.small-cs-online.small-cs-leave-mes ul li {
+  margin-bottom: 10px;
+}
+.small-cs-online.small-cs-leave-mes ul li span {
+  width: 36px;
+  text-align: right;
+  display: inline-block;
+  color: #141414;
+  font-size: 12px;
+}
+.small-cs-online.small-cs-leave-mes ul li .ec-input {
+  margin-left: 14px;
+  width: 236px;
+}
+.small-cs-online.small-cs-leave-mes ul li textarea.ec-input {
+  height: 100px;
+}
+.small-cs-online.small-cs-leave-mes ul li:last-child .ec-input {
+  width: 76px;
+}
+.small-cs-online.small-cs-leave-mes ul li:last-child cite.verification-code {
+  display: inline-block;
+  width: 115px;
+  height: 43px;
+  background: #eee;
+  vertical-align: top;
+  cursor: pointer;
+  margin-left: 10px;
+}
+/*居中弹层*/
+.web-cs-modal .small-cs-online {
+  width: 700px;
+  position: absolute;
+  margin-left: -350px;
+  margin-top: -260px;
+  left: 50%;
+  top: 50%;
+}
+.web-cs-modal .small-cs-left {
+  float: left;
+  width: 490px;
+}
+.web-cs-modal .small-cs-right {
+  float: right;
+  text-align: center;
+  width: 209px;
+  height: 100%;
+  border-left: 1px solid #ebebeb;
+}
+.web-cs-modal .small-cs-right .cs-img {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background: #eee;
+}
+.web-cs-modal .small-cs-right h4 {
+  font-size: 18px;
+  color: #2b2b2b;
+  margin-bottom: 30px;
+}
+.web-cs-modal .small-cs-right ul {
+  width: 85%;
+  margin: 0 auto;
+  text-align: left;
+}
+.web-cs-modal .small-cs-right ul li {
+  color: #333;
+  margin-bottom: 20px;
+}
+.web-cs-modal .small-cs-right ul li span {
+  color: #999;
 }

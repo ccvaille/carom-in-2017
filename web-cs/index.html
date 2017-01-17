@@ -8,36 +8,136 @@
 </head>
 
 <body>
-    <div class="small-cs-online small-cs-online-end">
-        <ul class="btn-control">
-            <li class="min"></li>
-            <li class="close"></li>
-        </ul>
-        <div class="small-cs-head">
-            <img src="css/img/p.png" alt="">
-            <div class="small-cs-head-text">
-                <p>客服054号</p>
-                <span>EC将会为您竭诚服务</span>
-            </div>
-        </div>
-        <div class="small-cs-content">
-            <div class="auto-end-text">您好，由于很久没有收到您的消息，系统自动结束了对话。如有需要欢迎咨询。</div>
-        </div>
-        <div class="small-cs-footer">
-            <ul class="small-cs-icon">
-                <li><img src="css/img/expression.png" alt="选择表情"></li>
-                <li><img src="css/img/file.png" alt="选择文件"></li>
-                <li><img src="css/img/pic.png" alt="发送图片"></li>
+    <div id="web-cs-box">
+        <!--右下小弹窗-->
+        <div class="small-cs-online small-cs-online-end" style="display: none">
+            <ul class="btn-control">
+                <li class="min"></li>
+                <li class="close"></li>
             </ul>
-            <div class="small-cs-input">
+            <div class="small-cs-head">
+                <img src="css/img/p.png" alt="">
+                <div class="small-cs-head-text">
+                    <p>客服054号</p>
+                    <span>EC将会为您竭诚服务</span>
+                </div>
             </div>
-            <div class="small-cs-send">
-                <a href="javascript:;" class="ec-btn">发送</a>
+            <div class="small-cs-content">
+                <div class="auto-end-text">您好，由于很久没有收到您的消息，系统自动结束了对话。如有需要欢迎咨询。</div>
             </div>
-            <div class="auto-end-footer-text">
-                对话已经结束，您可以 <a href="javascript:;">继续会话</a> 或 <a href="javascript:;">留言</a>
+            <div class="small-cs-footer">
+                <ul class="small-cs-icon">
+                    <li><img src="css/img/expression.png" alt="选择表情"></li>
+                    <li><img src="css/img/file.png" alt="选择文件"></li>
+                    <li><img src="css/img/pic.png" alt="发送图片"></li>
+                </ul>
+                <div class="small-cs-input">
+                    <textarea></textarea>
+                </div>
+                <div class="small-cs-footer-btn">
+                    <a href="javascript:;" class="ec-btn">发送</a>
+                </div>
+                <div class="auto-end-footer-text">
+                    对话已经结束，您可以 <a href="javascript:;">继续会话</a> 或 <a href="javascript:;">留言</a>
+                </div>
             </div>
         </div>
+        <div class="small-cs-online small-cs-leave-mes" style="display: none;">
+            <ul class="btn-control">
+                <li class="min"></li>
+                <li class="close"></li>
+            </ul>
+            <div class="small-cs-head">
+                <img src="css/img/p.png" alt="">
+                <div class="small-cs-head-text">
+                    <p>客服054号</p>
+                    <span>EC将会为您竭诚服务</span>
+                </div>
+            </div>
+            <div class="small-cs-content">
+                <div class="leave-mes-text">
+                    您好，我暂时不在线，您可以给我发送短信或者留言。
+                </div>
+                <ul>
+                    <li><span>姓名</span>
+                        <input type="text" class="ec-input">
+                    </li>
+                    <li><span>电话</span>
+                        <input type="text" class="ec-input">
+                    </li>
+                    <li><span>QQ</span>
+                        <input type="text" class="ec-input">
+                    </li>
+                    <li><span>邮箱</span>
+                        <input type="text" class="ec-input">
+                    </li>
+                    <li><span>备注</span>
+                        <textarea class="ec-input"></textarea>
+                    </li>
+                    <li><span>验证码</span>
+                        <input type="text" class="ec-input">
+                        <cite class="verification-code"></cite>
+                    </li>
+                </ul>
+            </div>
+            <div class="small-cs-footer">
+                <div class="small-cs-footer-btn">
+                    <a href="javascript" class="ec-btn ec-btn-cancel">关闭</a>
+                    <a href="javascript:;" class="ec-btn">提交</a>
+                </div>
+            </div>
+        </div>
+        <!--右下小弹窗-->
+        <!--居中弹层-->
+        <div class="web-cs-modal">
+            <div class="small-cs-online">
+                <ul class="btn-control">
+                    <li class="min"></li>
+                    <li class="close"></li>
+                </ul>
+                <div class="small-cs-head">
+                    <img src="css/img/p.png" alt="">
+                    <div class="small-cs-head-text">
+                        <p>客服054号</p>
+                        <span>EC将会为您竭诚服务</span>
+                    </div>
+                </div>
+                <div class="small-cs-left">
+                    <div class="small-cs-content">
+                        <div class="auto-end-text">您好，由于很久没有收到您的消息，系统自动结束了对话。如有需要欢迎咨询。</div>
+                    </div>
+                    <div class="small-cs-footer">
+                        <ul class="small-cs-icon">
+                            <li><img src="css/img/expression.png" alt="选择表情"></li>
+                            <li><img src="css/img/file.png" alt="选择文件"></li>
+                            <li><img src="css/img/pic.png" alt="发送图片"></li>
+                        </ul>
+                        <div class="small-cs-input">
+                            <textarea></textarea>
+                        </div>
+                        <div class="small-cs-footer-btn">
+                            <a href="javascript:;" class="ec-btn ec-btn-cancel">取消</a>
+                            <a href="javascript:;" class="ec-btn">发送</a>
+                        </div>
+                        <div class="auto-end-footer-text">
+                            对话已经结束，您可以 <a href="javascript:;">继续会话</a> 或 <a href="javascript:;">留言</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-cs-right">
+                    <div class="cs-img"></div>
+                    <h4>谭小平</h4>
+                    <ul>
+                        <li><span>职位：</span>客服专员</li>
+                        <li><span>电话：</span>0755-26523362</li>
+                        <li><span>手机：</span>13526253212</li>
+                        <li><span>邮箱：</span><a href="mailto:kefu@workec.com">kefu@workec.com</a></li>
+                        <li><span>签名：</span>异常问题请电话联系</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--居中弹层-->
     </div>
 </body>
 
