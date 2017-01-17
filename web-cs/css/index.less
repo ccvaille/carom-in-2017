@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font: 14px Arial, "Microsoft yahei";
+    background: #fff;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #2580e6;
+    &:hover {
+        color: #5199eb;
+    }
+}
+
+img {
+    display: inline-block;
+    border: 0;
+}
+
+input {
+    font-family: Arial, "Microsoft YaHei";
+}
+
+::selection {
+    background: #f74e4e;
+    color: #fff;
+}
+
+
+/*mixins*/
+
+.clearfix() {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.size(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+
+/*mixins*/
+
+
+/*component*/
+
+a.ec-btn {
+    background: #2580e6;
+    color: #fff;
+    font-size: 12px;
+    padding: 0 20px;
+    border: 1px solid #2580e6;
+    border-radius: 2px;
+    min-width: 66px;
+    height: 30px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    transition: background .5s, border .4s;
+    &:hover {
+        background: #3591f8;
+        border-color: #3591f8;
+        color: #fff;
+    }
+    &:active {
+        background: #1872d6;
+        border-color: #1872d6;
+        color: #fff;
+    }
+    &:focus {
+        color: #fff;
+    }
+    &.disabled {
+        background: #ccc;
+        color: #fff;
+        border-color: #ccc;
+        cursor: not-allowed;
+    }
+    &.ec-btn-lg {
+        font-size: 14px;
+        height: 40px;
+        line-height: 40px;
+    }
+    &.ec-btn-cancel {
+        border: 1px solid #d9d9d9;
+        background: #fff;
+        color: #4c4c4c;
+        &:hover {
+            color: #4c4c4c;
+            background: #f7f7f7;
+            border-color: #d9d9d9;
+        }
+        &:active {
+            background: #f0f0f0;
+            color: #4c4c4c;
+        }
+        &.disabled {
+            background: #fafafa;
+            color: #cccccc;
+            border-color: #d9d9d9;
+            cursor: not-allowed;
+        }
+    }
+}
+
+
+/*component*/
+
+
+/*small-cs-online*/
+
+.small-cs-online {
+    position: relative;
+    .size(380px, 520px);
+    margin: 0 auto;
+    border: 1px solid #d9dfea;
+    box-shadow: 0px 1px 0 0 #ebebeb;
+    .btn-control {
+        .clearfix();
+        position: absolute;
+        right: 0;
+        top: 0;
+        li {
+            float: left;
+            .size(38px, 38px);
+            cursor: pointer;
+            &.min {
+                background: url(img/sys_min_normal.png);
+                &:hover {
+                    background: url(img/sys_min_hot.png);
+                }
+            }
+            &.close {
+                background: url(img/sys_close_normal.png);
+                &:hover {
+                    background: url(img/sys_close_hot.png);
+                }
+            }
+        }
+    }
+    .small-cs-head {
+        .clearfix();
+        background: #f7f7f7;
+        padding: 20px;
+        img {
+            float: left;
+            margin-right: 8px;
+        }
+        &-text {
+            float: left;
+            p {
+                color: #3a3a3a;
+                font-size: 16px;
+            }
+            span {
+                color: #a2a2a2;
+                font-size: 12px;
+            }
+        }
+    }
+    .small-cs-content {
+        .size( 100%, 306px);
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+        .auto-end-text {
+            display: none;
+            font-size: 12px;
+            text-align: left;
+            color: #999;
+            .size(316px, auto);
+            margin: 0 auto;
+            margin-top: 22px;
+            line-height: 1.67;
+            padding: 8px 10px;
+            border-radius: 3px;
+            background-color: #f5f5f5;
+        }
+    }
+    .small-cs-footer {
+        padding: 10px;
+        .small-cs-icon {
+            .clearfix();
+            li {
+                float: left;
+                margin-right: 15px;
+            }
+        }
+        .small-cs-input {
+            height: 64px;
+        }
+        .small-cs-send {
+            text-align: right;
+            a.ec-btn {
+                padding: 0 1px;
+            }
+        }
+        .auto-end-footer-text {
+            text-align: center;
+            color: #999;
+            line-height: 1.71;
+            a {
+                font-weight: 300;
+            }
+        }
+    }
+    /*对话结束*/
+    &.small-cs-online-end {
+        .auto-end-text {
+            display: block;
+        }
+        .small-cs-send,
+        .small-cs-icon {
+            display: none;
+        }
+        .small-cs-input {
+            height: 50px;
+        }
+    }
+}
