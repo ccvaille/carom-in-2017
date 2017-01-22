@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css-attribute-select</title>
+	<style>
+	h1[class] {
+		color: blue;
+	}
+	ul li[name] {
+		color: red;
+	}
+	ul li[name="2"] {
+		color: green;
+	}
+	p[type~="a"] {
+		color: red;
+	}
+	p[type^="a"] {
+		font-weight: bold;
+	}
+	p[type$="a"] {
+		font-style: italic;
+	}
+	span[class*="c"] {
+		font-size: 40px;
+		color: pink;
+	}
+	cite {
+		color: orange;
+	}
+	cite[class|="en"] {
+		font-weight: 600;
+	}
+	</style>
+</head>
+<body>
+	<h1 class="title">blue</h1>
+	<ul>
+		<li>none</li>
+		<li name="1">red</li>
+		<li name="1">red</li>
+		<li name="1">red</li>
+		<li name="2">green</li>
+	</ul>
+	<p type="a">red</p>
+	<p type="a b ab">red</p>
+	<p type="b ba">yellow</p>
+	<span class="aac">c</span>
+	<span class="aca">c</span>
+	<span class="acb">c</span>
+	<cite class="en">cite</cite>
+	<cite class="en-enen">cite</cite>
+	<cite class="enenen">cite</cite>
+	<cite class="anen">cite</cite>
+</body>
+</html> 
