@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jquery-DOM</title>
+    <script src="http://www.coolfe.com/jquery.js"></script>
+    <style>
+    	#box {
+    		height: 200px;
+    	}
+    	#box li{
+			display: block;
+    	}
+    	#box.null li{
+    		display: none;
+    	}
+    	#box.null li:first-child{
+    		display: block;
+    	}
+    	.remove {
+    		display: none;
+    	}
+    </style>
+</head>
+
+<body>
+    <ul id="box" class="null">
+        <li>create</li>
+        <li>delect</li>
+        <li>clone</li>
+    </ul>
+    <div class="remove">
+    	<li>1</li>
+    	<li>2</li>
+    	<li>3</li>
+    	<li>4</li>
+    	<li>4</li>
+    	<li>5</li>
+    	<li>6</li>
+    	<li>7</li>
+    </div>
+    <div id="spanbox" style="background: #eee"></div>
+    <div id="result" style="background: pink"></div>
+    <script>
+    // append(),remove(),clone()
+    // removeClass(),show()
+    $(document).ready(function() {
+    	var index,
+    		spanBox = $('#spanbox'),
+    		Ul = $('#box'),
+    		text = '<p>this is a p.</p>',
+    		result = $('#result');
+        $('#box li').on('click', function(){
+        	index =  $(this).index();
+            if(index == 0) {
+            	spanBox.append(text);
+            	result.text('create ' + spanBox.text());
+            	Ul.removeClass('null');
+            	$('.remove').show();
+            }
+             if(index == 1) {
+            	$('.remove li:eq(0)').remove();
+            	result.text('delect ' + spanBox.text());
+            }
+            if (index == 2) {
+            	Ul.find('li').clone().appendTo(spanBox);
+            	result.text('clone ' + spanBox.text());
+            }
+        })
+    })
+    </script>
+</body>
+
+</html>
