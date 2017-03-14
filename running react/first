@@ -24,7 +24,7 @@
 
 			React.DOM.h1(
 				{
-					style: "color: red",
+					style: { color: "red",}
 				},React.DOM.span({id:"span"},"hello")," world!"),
 			document.getElementById("app")
 			)
