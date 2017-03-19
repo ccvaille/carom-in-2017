@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/react.min.js"></script>
+	<script src="js/react-dom.min.js"></script>
+	<script src="js/babel.min.js"></script>
+</head>
+<body>
+	<div id="app"></div>
+	<script>
+		ReactDOM.render(
+				React.DOM.h1(null,"hello"),
+				document.getElementById("app")
+			)
+
+		var Components = React.createClass({
+			render:function(){
+				return React.DOM.h1(null,"coolfe")
+			}
+		})
+
+		ReactDOM.render(
+				React.createElement(Components),
+				document.getElementById("app")
+			)
+
+		// 传递属性
+		var Newcomponent = React.createClass({
+			propTypes:{
+				name: React.PropTypes.string.isRequired,
+			},
+			render:function(){
+				return React.DOM.span(null,"My name is " + this.props.name + ".");
+			}
+		});
+
+		ReactDOM.render(
+				React.createElement(Newcomponent,{}),
+				document.getElementById("app")
+			)
+
+		// 默认属性值(error)
+		var text  =  "text" in this.props ？ this.props.text : "less"；
+		var Defaultatt = React.createClass({
+			proTypes:{
+				firstName: React.PropTypes.string.isRequired,
+				middleName: React.ProTypes.string,
+				familyName: React.PropTypes.string.isRequired,
+				address: React.ProTypes.string,
+			},
+			getDefaultProps: function(){
+				return {
+					middleName: "",
+					address: "n/a"
+				}
+			},
+			render: function(){
+				return React.DOM.span(firstName + middleName + familyName + address)
+			}
+		})
+		ReactDOM.render(
+			React.createElement(Defaultatt),
+			document.getElementById("app")
+		)
+	</script>
+</body>
+</html>
