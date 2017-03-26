@@ -1,0 +1,46 @@
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// tab-body
+#tab-body {
+    width: 520px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    ul#img-box {
+        width: 500%;
+        .clearfix();
+        li {
+            width: 500px;
+            height: 300px;
+            overflow: hidden;
+            float: left;
+        }
+    }
+    ul#num-box {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        width: 100%;
+        li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #000;
+            cursor: pointer;
+            &:hover {
+                background: red;
+            }
+        }
+    }
+}

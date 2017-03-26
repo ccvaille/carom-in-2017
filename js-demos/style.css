@@ -1,0 +1,40 @@
+#tab-body {
+  width: 520px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+#tab-body ul#img-box {
+  width: 500%;
+}
+#tab-body ul#img-box:before,
+#tab-body ul#img-box:after {
+  content: " ";
+  display: table;
+}
+#tab-body ul#img-box:after {
+  clear: both;
+}
+#tab-body ul#img-box li {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  float: left;
+}
+#tab-body ul#num-box {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+#tab-body ul#num-box li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  cursor: pointer;
+}
+#tab-body ul#num-box li:hover {
+  background: red;
+}
