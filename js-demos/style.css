@@ -16,15 +16,19 @@
 #tab-body ul#img-box:after {
   clear: both;
 }
-#tab-body ul#img-box li {
+#tab-body ul#img-box li,
+#tab-body ul#img-box li img {
   width: 500px;
   height: 300px;
   overflow: hidden;
   float: left;
 }
+#tab-body ul#img-box li {
+  display: none;
+}
 #tab-body ul#num-box {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   text-align: center;
   width: 100%;
 }
