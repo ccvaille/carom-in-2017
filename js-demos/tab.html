@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>tab</title>
-	<link rel="stylesheet" href="../normalize.css">
-	<link rel="stylesheet" href="style.css">
+    <title>tab</title>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="tab-body">
-	<ul id="img-box">
-		<li><img src="../images/1.jpeg" alt=""></li>
-		<li><img src="../images/3.jpeg" alt=""></li>		
-	</ul>
-	<ul id="num-box">
-		<li></li>
-		<li></li>
-	</ul>
-	<script>
 
-		var img_box = document.getElementById("img-box"),
-			num_box = document.getElementById("num-box"),
-			img_box_li = img_box.getElementsByTagName("li"),
-			num_box_li = num_box.getElementsByTagName("li");
+<body>
+    <div id="tab-body">
+        <ul id="img-box">
+            <li><img src="../images/1.jpeg" alt=""></li>
+            <li><img src="../images/3.jpeg" alt=""></li>
+        </ul>
+        <ul id="num-box">
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script>
+    var img_box = document.getElementById("img-box"),
+        num_box = document.getElementById("num-box"),
+        img_box_li = img_box.getElementsByTagName("li"),
+        num_box_li = num_box.getElementsByTagName("li");
 
-		for(var i = 0; i < num_box_li.length; i++) {
-			num_box_li[i].onclick = (function(index) {
-				return function(){
-					img_box_li[index].style.display = "block";
-					num_box_li[index].style.background = "red";
-				}
-			})(i);
-		}
+    /*for(var i = 0; i < num_box_li.length; i++) {
+    	num_box_li[i].onclick = (function(index) {
+    		return function(){
+    			img_box_li[index].style.display = "block";
+    			num_box_li[index].style.background = "red";
+    		}
+    	})(i);
+    }*/
 
-	</script>
+    for (var i = 0; i < num_box_li.length; i++) {
+        num_box_li[i].index = i;
+        console.log(i)
+        num_box_li[i].onclick = function() {
+            img_box_li[this.index].style.display = "block";
+            num_box_li[this.index].style.background = "red";
+        }
+    }
+    </script>
 </body>
+
 </html>
