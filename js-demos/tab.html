@@ -22,15 +22,14 @@
 			num_box_li = num_box.getElementsByTagName("li");
 
 		for(var i = 0; i < num_box_li.length; i++) {
-			var index = i;
-			console.log(index)
-			// debugger;
-			num_box_li[index].onclick = function(){
-				console.log(index)
-				img_box_li[index].style.display = "block";
-				num_box_li[index].style.background = "red";
-			}
+			num_box_li[i].onclick = (function(index) {
+				return function(){
+					img_box_li[index].style.display = "block";
+					num_box_li[index].style.background = "red";
+				}
+			})(i);
 		}
+
 	</script>
 </body>
 </html>
