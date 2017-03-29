@@ -7,6 +7,8 @@
 }
 #tab-body ul#img-box {
   width: 500%;
+  position: absolute;
+  left: 0;
 }
 #tab-body ul#img-box:before,
 #tab-body ul#img-box:after {
@@ -23,9 +25,6 @@
   overflow: hidden;
   float: left;
 }
-#tab-body ul#img-box li {
-  display: none;
-}
 #tab-body ul#num-box {
   position: absolute;
   bottom: 0;
@@ -40,5 +39,8 @@
   cursor: pointer;
 }
 #tab-body ul#num-box li:hover {
+  background: red;
+}
+#tab-body ul#num-box li.active {
   background: red;
 }

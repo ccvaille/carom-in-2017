@@ -19,15 +19,14 @@
     position: relative;
     ul#img-box {
         width: 500%;
+        position: absolute;
+        left: 0;
         .clearfix();
         li,li img{
             width: 500px;
             height: 300px;
             overflow: hidden;
             float: left;
-        }
-        li {
-            display: none;
         }
     }
     ul#num-box {
@@ -42,6 +41,9 @@
             background: #000;
             cursor: pointer;
             &:hover {
+                background: red;
+            }
+            &.active {
                 background: red;
             }
         }

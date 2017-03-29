@@ -10,10 +10,12 @@
 <body>
     <div id="tab-body">
         <ul id="img-box">
-            <li><img src="../images/1.jpeg" alt=""></li>
+            <li class="active"><img src="../images/1.jpeg" alt=""></li>
             <li><img src="../images/3.jpeg" alt=""></li>
+            <li><img src="../images/2.jpeg" alt=""></li>
         </ul>
         <ul id="num-box">
+            <li class="active"></li>
             <li></li>
             <li></li>
         </ul>
@@ -33,13 +35,25 @@
     	})(i);
     }*/
 
-    for (var i = 0; i < num_box_li.length; i++) {
-        num_box_li[i].index = i;
-        console.log(i)
-        num_box_li[i].onclick = function() {
-            img_box_li[this.index].style.display = "block";
-            num_box_li[this.index].style.background = "red";
-        }
+    // for (var i = 0; i < num_box_li.length; i++) {
+    //     num_box_li[i].index = i;
+    //     console.log(i)
+    //     num_box_li[i].onclick = function() {
+    //         img_box_li[this.index].style.display = "block";
+    //         num_box_li[this.index].style.background = "red";
+    //     }
+    // }
+    // 
+    for(var i = 0; i < num_box_li.length; i++) {
+    	num_box_li[i].index = i;
+    	num_box_li[i].onmouseover = function() {
+    		for (var i = 0; i< num_box_li.length; i++) {
+    			num_box_li[i].className = "";
+    		}
+    		this.className = "active";
+    		// console.log(this.index)
+    		img_box.style.left = -500 * this.index + 'px';
+    	}
     }
     </script>
 </body>
