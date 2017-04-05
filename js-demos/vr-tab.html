@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vr-tab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="vr-tab-box">
+        <ul id="nav">
+            <li class="active">1</li>
+            <li>2</li>
+        </ul>
+        <div id="content-box">
+            <div class="content">
+                <ul class="content-nav">
+                    <li class="active">a1</li>
+                    <li>a2</li>
+                    <li>a3</li>
+                </ul>
+                <div class="content-items">
+                    <li class="active">a111</li>
+                    <li>a222</li>
+                    <li>a333</li>
+                </div>
+            </div>
+            <div class="content hide">
+                <ul class="content-nav">
+                    <li class="active">b1</li>
+                    <li>b2</li>
+                    <li>b3</li>
+                </ul>
+                <div class="content-items">
+                    <li class="active">b111</li>
+                    <li>b222</li>
+                    <li>b333</li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var oNav = document.getElementById('nav');
+    var aLi = oNav.getElementsByTagName('li');
+
+    var oContentBox = document.getElementById('content-box');
+    var aItem = oContentBox.getElementsByClassName('content');
+
+
+    // 外層控制
+    for (var i = 0; i < aLi.length; i++) {
+        aLi[i].index = i;
+        aLi[i].onmouseover = function() {
+            for (var i = 0; i < aLi.length; i++) {
+                aLi[i].className = '';
+                aItem[i].className = 'content hide';
+            }
+            aLi[this.index].className = 'active';
+            aItem[this.index].className = 'content';
+        }
+    }
+
+    function tab(parent) {
+        var oParent = parent;
+        var aLi = oParent.getElementsByClassName('content-nav')[0].getElementsByTagName('li');
+        var aItem = oParent.getElementsByClassName('content-items')[0].getElementsByTagName('li');
+        // console.log(aLi)
+        // console.log(aItem)
+
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i;
+            aLi[i].onmouseover = function() {
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].className = '';
+                    aItem[i].className = '';
+                }
+                aLi[this.index].className = 'active';
+                aItem[this.index].className = 'active';
+            }
+        }
+    }
+    tab(aItem[0]);
+    tab(aItem[1]);
+    </script>
+</body>
+
+</html>
