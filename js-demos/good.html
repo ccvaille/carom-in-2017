@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>good</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="good-box">
+		<button class="good-btn"><span class="good-btn-text">good</span></button>
+	</div>
+	<script>
+		const btn = document.querySelector('.good-btn');
+		const btn_text = btn.querySelector('.good-btn-text');
+		let isLiked = false;
+
+		btn.addEventListener('click',() => {
+			isLiked = !isLiked;
+			if(isLiked) {
+				btn_text.innerHTML = 'cancel';
+			}
+			else {
+				btn_text.innerHTML = 'good';
+			}
+		})
+	</script>
+</body>
+</html>
