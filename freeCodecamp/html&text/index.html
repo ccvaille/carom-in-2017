@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html&text</title>
+	<script src="http://www.coolfe.com/jquery.js"></script>
+</head>
+<body>
+	<div class="box">
+		<p class="span">some text</p>
+	</div>
+	<script>
+		$(document).ready(function(){
+			console.log("html: " + $(".box").html());
+			console.log("text: " + $(".box").text());
+		});
+	</script>
+</body>
+</html>
