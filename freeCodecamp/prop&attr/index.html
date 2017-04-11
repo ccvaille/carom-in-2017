@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>prop&attr</title>
+    <script src="http://www.coolfe.com/jquery.js"></script>
+</head>
+
+<body>
+    <button id="prop">prop-disable</button>
+    <button id="attr">attr-disable</button>
+    <script>
+    $("#prop").on("click", function() {
+        $(this).prop("disable", false);
+    })
+    $("#attr").on("click", function() {
+        $(this).attr("disable", false);
+    })
+    </script>
+</body>
+
+</html>
