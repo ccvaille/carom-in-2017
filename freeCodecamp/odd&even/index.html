@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>odd&even</title>
+    <script src="http://www.coolfe.com/jquery.js"></script>
+    <style>
+    ul {
+        background: #eee;
+    }
+    /*
+    ul > li:nth-child(2n+1) {
+        color: green;
+    }
+    
+    ul > li:nth-child(2n) {
+        color: red;
+    }*/
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <script>
+    		$("ul li:odd").css("color","red");  // odd 从零开始的基数个
+    		$("ul li:even").css("color","green"); // even 从零开始的偶数个
+    </script>
+</body>
+
+</html>
