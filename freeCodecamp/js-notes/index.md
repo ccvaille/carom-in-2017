@@ -32,3 +32,37 @@ console.log(myStr[0]) //J
 ## string.length
 - string[string.length - 1] -> 字符串最后一个字符
 - string[string.length - n] -> 字符串最后第 n 个字符
+
+## 多维数组:Nest one Array within Another Array
+```
+var myArray = [["aa",23],["bb",24]];
+```
+
+## array: 可变
+```
+var myArray = [1,2,3];
+myArray[0] = 3;
+console.log(myArray[0]); //3
+```
+
+## Access MultiDimensional Arrays With Indexes
+```
+var arr = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [[10,11,12], 13, 14]
+];
+arr[0]; // 等于 [1,2,3]
+arr[1][2]; // 等于 6
+arr[3][0][1]; // 等于 11
+```
+
+## array.push(末尾添加数组)
+array.push([array]);
+
+
+
+
+
+
