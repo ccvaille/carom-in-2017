@@ -72,6 +72,21 @@
 ## form
 - input 
 	- name
+	- placeholder
+	- hidden
+	- type 
+		- email
+		- url
+		- number
+		- tel
+		- search
+		- range
+		- color
+		- date picker
+- select
+	- option
+	- optgroup label=""
+
 ```
 <form action="/login" method="post">
 	<input type="file">
