@@ -139,6 +139,58 @@ WHITE-SPACE:NOWRAP;
     + ==> PADDING-BOTTOM:30PX;
 - MARGIN
 
+## box-sizing
+- content-box
+- border-box: 盒模型的宽高为 width / height
+
+## box-shadow: 不占空间
+- 外阴影：box-shadow: 水平偏移 垂直偏移 模糊半径 阴影大小 阴影颜色
+- 内阴影：box-shadow: inset 水平偏移 垂直偏移 模糊半径 阴影大小 阴影颜色
+
+## outline：不占空间，在 border 外
+- outline：5px solid red;
+
+# background
+- background-color
+    + 默认值：transparent
+- background-image
+- background-repeat
+- background-attachment
+    + scroll
+    + fixed
+    + local: 背景和内容一起滚动
+- background-position
+- background-origin:相对于什么位置来定位
+    + 默认值： padding-box
+- background-clip: 裁剪
+    + 默认值：border-box
+- background-size: 图片大小
+    + cover： 宽度最大
+    + contain： 高度最大
+
+## 线性渐变：linear-gradient()
+- background-image: linear-gradient(red,blue);
+- background: linear-gradient(to top,red,blue);
+- background: linear-gradient(to right bottom,red,blue);
+- background: linear-gradient(0deg,red,blue); // 从下往上的渐变
+- background: linear-gradient(green,red,blue); // 位置：0%,50%,100%
+- background: linear-gradient(green,red 20%,blue); // 位置：0%,20%,100%
+
+## 径向渐变：radial-gradient()
+>radial-gradient([[<shape> || <size>] [at <position>]?,| at <position>,]?<color-stop>[,<color-stop>]+);
+> <size>:
+> closest-side：指定径向渐变的半径长度为从圆心到离圆心最近的边；
+> closest-corner：指定径向渐变的半径长度为从圆心到离圆心最近的角；
+> farthest-side：指定径向渐变的半径长度为从圆心到离圆心最远的边；
+> farthest-corner：指定径向渐变的半径长度为从圆心到离圆心最远的角；
+
+- background: radial-gradient(red,blue);// 椭圆渐变
+- background: radial-gradient(circle,red,blue);//圆形渐变
+- background: radial-gradient(100px 50px,red,blue);// 限定宽高半径
+- background: radial-gradient(100px 50px at 0 0,red,blue);// 限定圆心位置
+
+## repeating-
+- background: repeating-radial-gradient(100px 50px at 0 0,red,blue);
 
 
 
