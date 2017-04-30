@@ -193,6 +193,182 @@ WHITE-SPACE:NOWRAP;
 - background: repeating-radial-gradient(100px 50px at 0 0,red,blue);
 
 
+# position
+- relative
+- absolute
+    + 默认宽度为内容宽度
+    + 脱离文档流
+    + 参照物为第一个定位祖先 或者是 HTML 元素
+- fixed
+    + 默认宽度为内容宽度
+    + 脱离文档流
+    + 参照物为视窗
+
+# float
+- 默认宽度为内容宽度
+- 半脱离文档流
+    + 对元素脱离文档流
+    + 对内容，在文档流内
+- 向指定方向一直移动
+- float 元素在同一文档流
+
+## clear
+- 应用于后续元素
+- 应用于块级元素
+- clearfix
+    ```
+    .clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    .clearfix {zoom: 1;}
+    ```
+
+# flex(弹性布局)
+- 概念
+    + flex container 弹性布局容器
+    + flex item 在文档流中的子元素
+        * float
+        * inline
+        * ~孙元素~
+    + main axis 排列方向 主轴
+    + cross axis 副轴
+- 方向
+    + flex-direction
+        * flex-direction: row(LTR) | row-reverse(RTL) | column(TTB) | column-reverse(BTT)
+- 换行
+    + flex-wrap
+        * flex-wrap: nowrap | wrap | wrap-reverse
+- 缩写
+    + flex-flow
+        * flex-flow: flex-direction | flex-wrap;
+- order(相对于主轴第几)
+    + order: 0 | num
+- 弹性    
+    + flex-basis (flex-item 的宽/高)
+    + flex-grow (空余空间的分配)
+        * flex-basis + flex-grow / sum(flex-grow) * remain(空余部分)
+    + flex-shrink（空余部分 负值）
+- 缩写
+    + flex: flex-grow | flex-shrink | flex-basis  
+- 对齐
+    + justify-content: flex-start | flex-end | center | space-between | space-around
+    + align-items: flex-start | flex-end | center | baseline | stretch(填充整屏)
+    + align-self(某个元素）: auto | flex-start | flex-end | center | baseline | stretch
+    + align-content(多行元素）: flex-start | flex-end | center | space-between | space-around | stretch
+# 布局
+- 三行自适应布局
+```
+    <style>
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: pink;
+        }
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: green;
+        }
+        .body {
+            position: absolute;top: 100px;
+            bottom: 100px;
+            left: 0;
+            right: 0;
+            background: #eee;
+        }
+    </style>
+
+    <body>
+        <header></header>
+        <div class="body"></div>
+        <footer></footer>
+    </body>
+```
+- 两列自适应布局
+    + 左右浮动
+    ```
+    <style>
+        html,body {
+            height: 100%;
+        }
+        .parent {
+            display: flex;
+            height: 100%;
+        }
+        .side {
+            width: 200px;
+            background: red;
+            color: #fff;
+        }
+        .main {
+            flex: 1;
+            background: blue;
+            color: #fff;
+            margin-left: 10px;
+        }
+    </style>
+    <body>
+        <div class="parent"> 
+        <div class="side">侧栏</div>
+        <div class="main">主栏</div>
+</body>
+    ```
+- 三行两列自适应布局
+    ```
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            flex-flow: column;
+        }
+        header,footer {
+            height: 100px;
+            color: #fff;
+            background: #000;
+        }
+        .box {
+            display: flex;
+            flex: 1;
+            width: 600px;
+            align-self: center;
+        }
+        .left{
+            width: 200px;
+            background: pink;
+        }
+        .right{
+            flex: 1;
+            background: green;
+            margin-left: 10px;
+        }
+    </style>
+    <body>
+        <header>header</header>
+        <div class="box">
+            <div class="left">
+                left
+            </div>
+            <div class="right">
+                right
+            </div>
+        </div>
+        <footer>footer</footer>
+    </body>
+    ```
+
 
 
 
