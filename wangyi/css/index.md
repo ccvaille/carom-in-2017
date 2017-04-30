@@ -369,9 +369,45 @@ WHITE-SPACE:NOWRAP;
     </body>
     ```
 
-
-
-
+# 变形
+- transform 
+    + transform: none | <transform-function>
+- rotate(旋转) 
+    + transform: rotate(<angle>)
+- translate(移动) 
+    + transform: translate(50px)
+    + transform：translate(50px,20%)
+    + transform: translateX(-50px)
+    + transform: translateY(30px)
+- scale(缩放)
+    + transform: scale(1.2)
+    + transform: scale(1,1.2)
+    + transform: scaleX(.5)
+    + transform: scaleY(1.5)
+- skew(倾斜)
+    + transform: skew(30deg) //向 X 轴倾斜的角度
+    + transform: skew(30deg,35deg)//向 X 轴倾斜的角度, 向 Y 轴倾斜的角度
+    + transform: skewX(30deg)
+    + transform: skewY(30deg)
+- transform: translate(50%) rotate(45deg)
+- transform-origin(变形的中心点)
+    + 默认值： transform-origin: 50% 50%
+    + transform-origin: right 50px 20px; x 轴， y 轴, z 轴
+- perspective(人眼离物体的距离)
+    + perspective: none | <length>
+    + perspective: 500px
+    + perspective: 2000px
+- **perspective-origin**
+- translate3d
+    + transform: translate3d(10px,20%,50px)
+- scale3d
+    + transform: scale3d(1.2,1.2,1)
+- rotate3d
+    + transform: rotate3d(1,0,0,45deg)
+- transform-style(平面效果还是 3D 效果)
+    + transform-style: flat | preserve-3d
+- backface-visibility (背部是否可见)
+    + backface-visibility: visible | hidden
 
 
 
