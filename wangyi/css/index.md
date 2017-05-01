@@ -409,6 +409,45 @@ WHITE-SPACE:NOWRAP;
 - backface-visibility (背部是否可见)
     + backface-visibility: visible | hidden
 
+# 过渡
+- transition-property
+    + transition-property: none | all | left | right 
+- transition-duration（过渡时间）
+    + transition-duration: 1s
+- transition-timing-function
+    + transition-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier() | steps(3,start)// 一步一步执行，非连续
+- transition-delay(延时执行)
+    + transition-delay: 1s
+- transition
+    + transition: left 2s ease 1s // 执行时间为 2s, 延时 1s 执行
+
+# 动画
+- animation-name 
+    + animation-name: abc
+- animation-duration
+    + animation-duration: 1s
+- animation-timing-function
+    + animation-timing-function: linear
+- animation-iteration-count (循环次数)
+    + animation-iteration-count: infinite(无限次) | num
+- animation-direction
+    + animatino-direction: normal | reverse | alternate(往返) | alternate-reverse
+- animation-play-state（暂停动画 || 继续播放） 
+    + animation-play-state: running | paused 
+- animation-delay
+    + animation-delay：1s
+- animation-fill-mode(动画开始保持在第一帧或者最后一帧的位置)
+    + animatino-fill-mode: none | backwards | forwards | both（动画开始第一帧，动画结束最后一帧）
+- animation 
+    + animation: abc 2s ease 0s 1 normal none running 
+    + // 动画时间为 2s  延时 0s 执行 播放次数为1  播放方向 normal 
+    + animation: abc 2s 0s both,abcd 2s both  
+- **@keyframes**
+    ```@keyframes abc {
+        from {}
+        to {}
+    }
+    ```
 
 
 
