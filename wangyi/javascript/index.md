@@ -149,7 +149,36 @@ catch(error) {console.log(error);}
 finally {console.log('finally');}
 ```
 
-
+## 数值
+- Math.abs(x): 绝对值
+    + Math.abs(-5) // 5
+- Math.round(x): 四舍五入
+    + Math.round(1.9) // 2
+- Math.ceil(x): 向上取整
+    + Math.ceil(1.9) // 2
+    + Math.ceil(1.1) // 2
+- Math.floor(x): 向下取整
+    + Math.floor(1.1) // 1
+    + Math.floor(1.9) // 1
+- Math.max(): 获取最大值
+    + Math.max(1,2) // 2
+- Math.min()
+- Math.random(): [0,1) 随机数
+- parseInt(string,radix): 转换整形，radix 代表几进制数
+    + parseInt('1b2.4') // 1 
+    > 非数字后面都会忽略
+    + parseInt('www') // NaN
+- parseFloat(string)
+    + parseFloat('100.1') // 100.1
+    + parseFloat('12.4b5') // 12.4
+    + parseFloat('www') // NaN
+- Number(vulue)
+    > 有一个不是数字的直接输出 NaN
+    + Number('100.1') // 100.1
+    + Number('12.4d8') // NaN
+- num.toFixed(digits) //保留多少位小数
+    + (100.235665).toFixed(2) //100.24
+如何获取一个大于等于0且小于等于9的随机整数？
 
 
 
