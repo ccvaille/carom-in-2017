@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css</title>
+    <style>
+    .parent:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    
+    .parent {
+        zoom: 1;
+        width: 810px;
+        margin: 0 auto;
+        color: #fff;
+        text-align: center;
+        line-height: 100px;
+    }
+    
+    .side {
+        float: left;
+        width: 200px;
+        margin-right: 10px;
+        background: red;
+        height: 100px;
+    }
+    
+    .main {
+        float: right;
+        width: 600px;
+        background: blue;
+        height: 100px;
+    }
+    
+    p {
+        width: 200px;
+        font-family: '宋体', 'SimSun';
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        line-height: 25px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    
+    .slide {
+        width: 200px;
+        height: 100px;
+        position: relative;
+        background: blue;
+    }
+    
+    .slide .pointer {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .slide .pointer i {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #000;
+        margin-right: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .slide .pointer i.active {
+        background: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="side">侧栏</div>
+        <div class="main">主栏</div>
+        <p>标题文字标题文字标题文字标题文字标题文字标题文字</p>
+    </div>
+    <div class="slide">
+        <!-- 图片省略 -->
+        <!-- 以下是指示器 -->
+        <div class="pointer"><i class="current"></i><i></i><i></i></div>
+    </div>
+    要求如效果图中标注，幻灯（slide）宽200px，高100px，指示器（pointer）在右下角，距离右边10px距离下边10px，指示器中的三个圆直径为10px，背景为黑色，间距为5px，当前选中项（current）为白色背景，请完成CSS，不需要兼容低版本IE。
+</body>
+
+</html>
