@@ -172,16 +172,27 @@ finally {console.log('finally');}
     + parseFloat('100.1') // 100.1
     + parseFloat('12.4b5') // 12.4
     + parseFloat('www') // NaN
-- Number(vulue)
+- Number(value)
     > 有一个不是数字的直接输出 NaN
     + Number('100.1') // 100.1
     + Number('12.4d8') // NaN
 - num.toFixed(digits) //保留多少位小数
     + (100.235665).toFixed(2) //100.24
-如何获取一个大于等于0且小于等于9的随机整数？
+- 如何获取一个大于等于0且小于等于9的随机整数？
+```
+Math.floor(Math.random()*10)
+```
 
-
-
+## 字符串
+- string.charAt(index)： 获取字符串的索引值的值
+    + ('coolfe').charAt(5) // 'e'
+- string.indexOf(value): 获取符合字符串第一次出现的位置
+    + ('coolefe').indexOf('fe') // 5
+    + ('coolefe').indexOf('a') // -1
+- string.search(regexp)
+    + ('coolfe36').search(/[0-9]/) // 6
+    + ('coolfe36').search(/[A-Z]/) // -1
+    + 
 
 
 
