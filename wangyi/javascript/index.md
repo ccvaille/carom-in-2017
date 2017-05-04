@@ -189,11 +189,14 @@ Math.floor(Math.random()*10)
 - string.indexOf(value): 获取符合字符串第一次出现的位置
     + ('coolefe').indexOf('fe') // 5
     + ('coolefe').indexOf('a') // -1
-- string.search(regexp)
+- string.search(regexp)// 返回索引位置
     + ('coolfe36').search(/[0-9]/) // 6
     + ('coolfe36').search(/[A-Z]/) // -1
-    + 
-
+- string.match(regexp)// 返回匹配的值，值为数组
+    + ('coolfe36').match(/[0-9]/) // ["3", index: 6, input: "coolfe36"]
+    + ('coolfe36').match(/[0-9]/g) // ["3", "6"] (全局查找)
+    + ('coolfe36').match(/[A-Z]/g) // null
+- string
 
 
 
