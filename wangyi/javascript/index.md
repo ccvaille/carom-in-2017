@@ -255,7 +255,11 @@ car.color; // undefined;
 - obj.valueOf() // 获取对象的原始值
 - obj.hasOwnproperty() // 是否拥有属性 
 
-
+## 数组
+- 创建
+    + new Array()
+    + []
+-  
 
 
 
