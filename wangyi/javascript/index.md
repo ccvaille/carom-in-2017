@@ -196,8 +196,64 @@ Math.floor(Math.random()*10)
     + ('coolfe36').match(/[0-9]/) // ["3", index: 6, input: "coolfe36"]
     + ('coolfe36').match(/[0-9]/g) // ["3", "6"] (全局查找)
     + ('coolfe36').match(/[A-Z]/g) // null
-- string
+- string.replace() // 替换
+    + ('coolfe').replace('c','dd') // ddoolfe
+- *string.substring(indexA[,indexB])* // 截取起始位置和结束位置， 包含 indexA, 不包含 indexB 
+    + ('coolfe').substring(0,2) // co
+    + ('coolfe').substring(2) // olfe
+- *string.slice(begin[,end])* // 截取起始位置和结束位置
+    + ('coolfe').slice(1,-1) // -1 为倒数第一个 => 00lf
+- string.substr(start[,length]) // 截取长度的字符串
+    + ('coolfe').substr(2,3) // olf
+    + ('coolfe').substr(2) // olfe
+- string.split(分隔符)
+    + ('coolfe coolfe').split(" ") // ["coolfe","coolfe"]
+- string.toLowerCase() // 变小写
+- string.toUpperCase() // 变大写
+- String(163) // '163'
+- 想要去除一个字符串的第一个字符，有哪些方法可以实现?
+```
+('coolfe').slice(1)
+('coolfe').substring(1)
+('coolfe').substr(1)
+```
 
+
+## 对象
+- 创建
+    + new Object()
+    + {}
+- 属性和方法
+```
+var car = {
+    color: "red", // 属性
+    run: function() { // 方法
+        console.log("run");
+    }
+};
+car.color;
+car.run();
+car["color"];
+car["run"]();
+```
+- 修改属性和方法
+```
+car.color = "yellow";
+```
+- 删除属性和方法
+```
+delect car.color;
+car.color; // undefined;
+```
+- 构建
+    + obj.constructor
+    ```
+    var num = new Number(123);
+    num.constructor; // Number
+    ```
+- obj.toString()
+- obj.valueOf() // 获取对象的原始值
+- obj.hasOwnproperty() // 是否拥有属性 
 
 
 
