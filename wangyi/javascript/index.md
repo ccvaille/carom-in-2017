@@ -259,7 +259,35 @@ car.color; // undefined;
 - 创建
     + new Array()
     + []
--  
+```
+var students = [
+    {id:1,score:80},
+    {id:2,score:60},
+    {id:3,score:80},
+]
+```
+- arr.length
+- arr[index] // 获取
+- students[1].id = 4;
+- arr.indexOf()
+- arr.forEach(callback)
+- arr.reverse() // 倒序
+- arr.sort(a,b)
+> 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+> 若 a 等于 b，则返回 0。
+> 若 a 大于 b，则返回一个大于 0 的值。
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
