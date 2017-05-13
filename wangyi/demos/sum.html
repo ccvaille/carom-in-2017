@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sum</title>
+</head>
+<body>
+	<script>
+		var arr = [10,20,30,40,50];
+		var sum = arr.reduce(function(pre,index){
+			return pre + index;
+		})
+		var sum1 = 0;
+		for(var i = 0; i < arr.length; i++) {
+			sum1 = sum1 + arr[i];
+		}
+		console.log(sum,sum1)
+	</script>
+</body>
+</html>

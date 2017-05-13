@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arr2</title>
+</head>
+<body>
+	<script>
+		var scores = [20,30,40,50,60];
+		// forEach()
+		// var newScores = [];
+		// var addScores = function(item) {
+		// 	newScores.push(item + 5)
+		// 	console.log(newScores)
+		// }
+		// scores.forEach(addScores);
+		// console.log(newScores)
+		// 
+		// 
+		// map()
+		// var addScores = function(item) {
+		// 	return item + 5;
+		// }
+		// scores.map(addScores);
+		// console.log(scores);
+		// console.log(scores.map(addScores));
+		// 
+		// reduce()
+		var sum = function(pre,item){
+			return pre + item;
+		}
+		console.log(scores.reduce(sum,20))
+
+	</script>
+</body>
+</html>

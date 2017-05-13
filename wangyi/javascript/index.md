@@ -271,12 +271,46 @@ var students = [
 - students[1].id = 4;
 - arr.indexOf()
 - arr.forEach(callback)
-- arr.reverse() // 倒序
-- arr.sort(a,b)
-> 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
-> 若 a 等于 b，则返回 0。
-> 若 a 大于 b，则返回一个大于 0 的值。
-
+- 原来的数组改变了
+    + arr.reverse() // 倒序
+    + arr.sort(a,b)
+    > 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+    > 若 a 等于 b，则返回 0。
+    > 若 a 大于 b，则返回一个大于 0 的值。
+    + arr.push()
+    + arr.unshift()
+    + arr.shirft()
+    + arr.pop()
+    + *arr.splice(index,howmany[,插入元素])*
+        * 删除
+        * 添加
+        * 替换
+- 原来的数组不改变
+    + arr.slice(begin[,end]) // 返回包含 begin 不包含 end 的数组
+    + arr.concat()
+    + arr.join()
+        * arr.join(";")
+    + *arr.map()*
+    + arr.reduce(pre,index[,init])
+    ```
+    var scores = [20,30,40,50,60];
+    var sum = function(pre,item){
+            return pre + item;
+        }
+        console.log(scores.reduce(sum,20)) // 220
+    ```
+- 对一个数组（每项都是数值）求和，有哪些方法？
+```
+    var arr = [10,20,30,40,50];
+    var sum = arr.reduce(function(pre,index){
+        return pre + index;
+    })
+    var sum1 = 0;
+    for(var i = 0; i < arr.length; i++) {
+        sum1 = sum1 + arr[i];
+    }
+    console.log(sum,sum1)
+```
 
 
 
