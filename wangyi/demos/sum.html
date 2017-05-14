@@ -6,15 +6,67 @@
 </head>
 <body>
 	<script>
-		var arr = [10,20,30,40,50];
-		var sum = arr.reduce(function(pre,index){
-			return pre + index;
-		})
-		var sum1 = 0;
-		for(var i = 0; i < arr.length; i++) {
-			sum1 = sum1 + arr[i];
+		// var arr = [10,20,30,40,50];
+		// var sum = arr.reduce(function(pre,index){
+		// 	return pre + index;
+		// })
+		// var sum1 = 0;
+		// for(var i = 0; i < arr.length; i++) {
+		// 	sum1 = sum1 + arr[i];
+		// }
+		// console.log(sum,sum1)
+		// 
+		// 未知参数求和
+		function add() {
+			var length = arguments.length;
+			var sum = 0;
+			var items;
+			for(var i = 0; i < length; i++)
+			{
+				items = arguments[i];
+				sum += items;
+			}
+			console.log(sum);
+
 		}
-		console.log(sum,sum1)
+		add(1,2,3);
+		add(1,3);
+		add(1);
 	</script>
 </body>
 </html>
+
+绝对值 abs
+四舍五入 round
+向上取整 ceil
+向下取整 floor
+获取最大 max
+随机数 Math.random
+转换整形 ParseInt
+转换字符串 ParseFloat
+
+0-10 
+Math.floor(Math.random() * 10)
+
+索引值 chatAt
+第一次出现的位置 indexOf
+返回匹配值 
+替换 replace
+截取
+substring
+slice
+substr
+分隔符
+变小写
+变大写
+
+
+
+
+
+
+
+
+
+
+

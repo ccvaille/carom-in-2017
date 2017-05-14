@@ -312,13 +312,89 @@ var students = [
     console.log(sum,sum1)
 ```
 
+# 函数 
+```
+function name(形参) {
+    执行代码
+}
+name(实参)
+```
+- 函数定义
+    + 函数声明
+    ```
+    function name() {
 
+    }
+    ```
+    + 函数表达式
+    > 匿名函数赋给一个变量
+    ```
+    var name = function() {
 
+    }
+    ```
+- 形参 & 实参
+    + 实参个数比形参少，最后一个形参默认为 undefined;
+    + 实参个数比形参多，需要取 arguments.length
+    ```
+    function add() {
+        var length = arguments.length;
+        var sum = 0;
+        var items;
+        for(var i = 0; i < length; i++)
+        {
+            items = arguments[i];
+            sum += items;
+        }
+        console.log(sum);
 
+    }
+    add(1,2,3);
+    add(1,3);
+    add(1);
+    ```
+    + 原始类型 - 值传递
+    + 对象类型 - 引用传递 
+- 作用域（变量起作用的范围）
+- 作为对象属性
+```
+var point = {
+    x: 1,
+    y: 2,
+    move: function(stepX,stepY){
+        point.x += stepX; // this.x += stepX;
+        point.y += stepY;
+    }
+};
+point.move(2,1)
+```
 
+## 构造函数
+```
+function Point(x,y) {
+    this.x = x;
+    this.y = y;
+    this.move = function(stepX, stepY) {
+        this.x += stepX;
+        this.y += stepY;
+    }
+}
+var point = new Point(1,1);// {x:1,y:1,move:function(stepX,stepY){}}
+var point1 = new Point(2,2);// {x:2,y:2,move:function(stepX,stepY){}}
+```
 
-
-
+## 原型
+```
+function Point(x,y) {
+    this.x = x;
+    this.y = y;
+}
+Point.prototype.move = function(stepX, stepY) {
+    this.x += stepX;
+    this.y += stepY;
+};
+var point = new Point(1,1); // {x:1,y:1}
+```
 
 
 
