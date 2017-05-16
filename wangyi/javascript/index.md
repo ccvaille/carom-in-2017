@@ -259,7 +259,145 @@ car.color; // undefined;
 - 创建
     + new Array()
     + []
--  
+```
+var students = [
+    {id:1,score:80},
+    {id:2,score:60},
+    {id:3,score:80},
+]
+```
+- arr.length
+- arr[index] // 获取
+- students[1].id = 4;
+- arr.indexOf()
+- arr.forEach(callback)
+- 原来的数组改变了
+    + arr.reverse() // 倒序
+    + arr.sort(a,b)
+    > 若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+    > 若 a 等于 b，则返回 0。
+    > 若 a 大于 b，则返回一个大于 0 的值。
+    + arr.push()
+    + arr.unshift()
+    + arr.shirft()
+    + arr.pop()
+    + *arr.splice(index,howmany[,插入元素])*
+        * 删除
+        * 添加
+        * 替换
+- 原来的数组不改变
+    + arr.slice(begin[,end]) // 返回包含 begin 不包含 end 的数组
+    + arr.concat()
+    + arr.join()
+        * arr.join(";")
+    + *arr.map()*
+    + arr.reduce(pre,index[,init])
+    ```
+    var scores = [20,30,40,50,60];
+    var sum = function(pre,item){
+            return pre + item;
+        }
+        console.log(scores.reduce(sum,20)) // 220
+    ```
+- 对一个数组（每项都是数值）求和，有哪些方法？
+```
+    var arr = [10,20,30,40,50];
+    var sum = arr.reduce(function(pre,index){
+        return pre + index;
+    })
+    var sum1 = 0;
+    for(var i = 0; i < arr.length; i++) {
+        sum1 = sum1 + arr[i];
+    }
+    console.log(sum,sum1)
+```
+
+# 函数 
+```
+function name(形参) {
+    执行代码
+}
+name(实参)
+```
+- 函数定义
+    + 函数声明
+    ```
+    function name() {
+
+    }
+    ```
+    + 函数表达式
+    > 匿名函数赋给一个变量
+    ```
+    var name = function() {
+
+    }
+    ```
+- 形参 & 实参
+    + 实参个数比形参少，最后一个形参默认为 undefined;
+    + 实参个数比形参多，需要取 arguments.length
+    ```
+    function add() {
+        var length = arguments.length;
+        var sum = 0;
+        var items;
+        for(var i = 0; i < length; i++)
+        {
+            items = arguments[i];
+            sum += items;
+        }
+        console.log(sum);
+
+    }
+    add(1,2,3);
+    add(1,3);
+    add(1);
+    ```
+    + 原始类型 - 值传递
+    + 对象类型 - 引用传递 
+- 作用域（变量起作用的范围）
+- 作为对象属性
+```
+var point = {
+    x: 1,
+    y: 2,
+    move: function(stepX,stepY){
+        point.x += stepX; // this.x += stepX;
+        point.y += stepY;
+    }
+};
+point.move(2,1)
+```
+
+## 构造函数
+```
+function Point(x,y) {
+    this.x = x;
+    this.y = y;
+    this.move = function(stepX, stepY) {
+        this.x += stepX;
+        this.y += stepY;
+    }
+}
+var point = new Point(1,1);// {x:1,y:1,move:function(stepX,stepY){}}
+var point1 = new Point(2,2);// {x:2,y:2,move:function(stepX,stepY){}}
+```
+
+## 原型
+```
+function Point(x,y) {
+    this.x = x;
+    this.y = y;
+}
+Point.prototype.move = function(stepX, stepY) {
+    this.x += stepX;
+    this.y += stepY;
+};
+var point = new Point(1,1); // {x:1,y:1}
+```
+
+
+
 
 
 

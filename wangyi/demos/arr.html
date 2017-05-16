@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>arr</title>
+</head>
+<body>
+	<script>
+		var students = [
+			{id: 1, score: 80},
+			{id: 2, score: 50},
+			{id: 3, score: 100},
+		]
+		// var addScore = function(item) {
+		// 	item.score += 5;
+		// 	console.log(item,item.score)
+		// }
+		// students.forEach(addScore);
+
+		var byScore = function(a,b) {
+			return b.score - a.score;
+		}
+		students.sort(byScore)
+		console.log(students) 
+	</script>
+</body>
+</html>
