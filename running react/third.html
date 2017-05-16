@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="app"></div>
-	<script>
+	<script type="text/babel">
 		ReactDOM.render(
 				React.DOM.h1(null,"hello"),
 				document.getElementById("app")
@@ -42,7 +42,7 @@
 			)
 
 		// 默认属性值(error)
-		var text  =  "text" in this.props ？ this.props.text : "less"；
+		var text  =  "text" in this.props ? this.props.text : "less";
 		var Defaultatt = React.createClass({
 			proTypes:{
 				firstName: React.PropTypes.string.isRequired,
