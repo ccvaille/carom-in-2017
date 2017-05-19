@@ -396,9 +396,87 @@ Point.prototype.move = function(stepX, stepY) {
 var point = new Point(1,1); // {x:1,y:1}
 ```
 
+## Date
+- new Date(year,month[,day,minutes,seconds]) // 当前时间,月份从 0 开始
+- new Date(2017,5,6); // Tue Jun 06 2017 00:00:00 GMT+0800 (CST)
+- new Date(1927,2) // Tue Mar 01 1927 00:00:00 GMT+0800 (CST)
+- new Date(1993,1,0) // Sun Jan 31 1993 00:00:00 GMT+0800 (CST)
+```
+var date = new Date(1993,0,30);
+date.getFullYear()
+date.getMonth()
+date.getDate()
+date.getHours()
+date.getMinutes()
+date.getSeconds()
+```
+- 格式化
+```
+var date = new Date(2015,0,1,14,34,5)
+function padding(num) {
+    return num < 10 ? '0' + num : ' ' + num;
+}
+function format(date) {
+    return date.getFullYear() + '-' 
+    + padding(date.getMonth() + 1) + '-'
+    + padding(date.getDate()) + ' ' 
+    + padding(date.getHours()) + ':'
+    + padding(date.getMinutes()) + ':'
+    + padding(date.getSeconds());
+}
+format(date) // "2015-01-01  14: 34:05"
+```
+- 修改日期
+```
+date.setFullYear(2036)
+date.setMonth(2)
+date.setDate(6)
+date.setHours(12)
+date.setMinutes(2)
+date.setSeconds(36)
+```
+- 求天数
+```
+function getDays(year,month) {
+    var date = new Date(year,month,0);
+    return date.getDate();
+}
+```
 
 
-
-
-
-
+## RegExp(描述字符串规则的表达式)
+- /pattern/attrs
+- new RegExp(pattern,attrs)
+- regexObj.test(str) // 指定字符串与正则表达式是否匹配
+- 锚点
+    + 匹配一个位置
+        * ^ 起始位置 (/^https/).test('http://') // false
+        * $ 结尾位置
+        * \b 单词边界 
+            - /\bis\b/.test('this') // false
+            - /\bis\b/.test('that is tom') // ture
+- 字符类
+    + 匹配一类字符的一个
+        * [0-9]: 一个数字
+        * [a-z]：一个字母
+        * [^0-9]： 非数字
+        * . : 任一字符（除换行外）
+- 元字符
+    + 具有特殊意义的字符
+    + ^ , $ , \b,
+    + \d: [0-9]
+    + \D: [^\d]
+    + \s: 空白符
+    + \S：[^\s]
+    + \w: [A-Za-z0-9]
+- 量词
+    + 出现的次数
+    + {m,n}: m 到 n 次
+    + * : {0, 无穷}
+    + ？: {0,1}
+    + + : {1, 无穷}
+匹配手机号码的正则是什么？
+/^1\d{10}$/
+- 转义符
+    + \.
+    + \/
