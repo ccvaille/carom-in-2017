@@ -480,3 +480,56 @@ function getDays(year,month) {
 - 转义符
     + \.
     + \/
+- 多选分支
+    + /thi(c|n)k/ === /thi[cn]/k/
+- str.match(regexp)
+```
+var url = 'http://blog.163.com/album?id=1#commet';
+var reg = /(https?:)\/\/([^\/]+)(\/[^\?]*)?(\?[^#]*)?(#.*)?/;
+var arr = url.match(reg);
+console.log(arr)
+//"http://blog.163.com/album?id=1#commet"
+//"http:"
+//"blog.163.com"
+//"/album"
+//"?id=1"
+//"#commet"
+```
+- str.replace(regexp)
+    + 替换一个子串
+```
+var str = 'My luck num is 36';
+str.replace(/(\d+)/,'$123456')
+```
+- 全局
+    + /reg/g
+- ~~regexpObj.exec(str)~~
+
+
+## json
+- 与 对象 的区别
+```
+// 对象
+{
+    name: "coolfe",
+    age: 1
+}
+
+// json 
+{
+    “name": "coolfe",
+    "age": 1
+}
+```
+- JSON.parse(text) //json 转换成 js 对象
+- JSON.stringify(value) //js 转换成 json 对象
+
+==========Basics end================
+
+
+
+
+
+
+
+
