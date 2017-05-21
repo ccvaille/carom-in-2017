@@ -279,7 +279,7 @@ var students = [
     > 若 a 大于 b，则返回一个大于 0 的值。
     + arr.push()
     + arr.unshift()
-    + arr.shirft()
+    + arr.shift()
     + arr.pop()
     + *arr.splice(index,howmany[,插入元素])*
         * 删除
