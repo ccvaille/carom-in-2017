@@ -257,11 +257,95 @@
     ```
     var arr = ['c','f','h','o'];
     var str = ['ab3djk4kjkk5kfdl8'];
+    console.log(str);
     var func = (function(){
         var count = 0;
         return function() {
             return arr[acount++];
         }
     })();
-    str = str.replace(/\d/g,func)
+    str = str.replace(/\d/g,func);
+    console.log(str);
     ```
+    + 封装
+```
+    var Car = function(type) {
+        var status = 'stop', //  封装不能访问
+            light = 'off'; // 封装不能访问
+        return {
+            type: type,
+            start: function(){
+                status = "driving";
+                light = "on";
+            },
+            stop: function() {
+                status = "stop";
+                light = "off";
+            },
+            getStatus: function(){
+                console.log(type + ' is ' + status +' with light ' + light);
+            }
+        }
+    }
+    var audi = new Car('audi');
+    audi.start();
+    audi.getStatus();
+    audi.stop();
+    audi.getStatus();
+```
+    + 性能提升
+    > 把不需要保存状态的函数放在闭包，可以提升执行性能
+    ```
+    // 不使用闭包
+    function sum(a,b) {
+        var add = function(a,b) {
+            return a + b;
+        }
+        return add(a,b)
+    }
+    var startTime = new Date();
+    for(var i = 0; i < 1000000; i++){
+        sum(1,1)
+    }
+    var endTime = new Date();
+    console.log(endTime - startTime)
+    ```
+    ```
+    // 使用闭包
+    var sum = (function() {
+        var add = function(a,b){
+            return a + b;
+        }
+        return function(a,b) {
+            add(a,b);
+        }
+    })()
+    var startTime = new Date()
+    for(var i = 0; i < 1000000; i++){
+        sum(1,1)
+    }
+    var endTime = new Date();
+    console.log(endTime - startTime)
+    ```
+
+# First-class function 
+- 函数作为参数
+    + 异步回调函数
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

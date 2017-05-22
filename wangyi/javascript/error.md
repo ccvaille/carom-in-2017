@@ -1,0 +1,2 @@
+- null == false // false
+- new String('123') == new String('123') // false
