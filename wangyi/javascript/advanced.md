@@ -256,12 +256,12 @@
     + 保存函数执行状态
     ```
     var arr = ['c','f','h','o'];
-    var str = ['ab3djk4kjkk5kfdl8'];
+    var str = 'ab3djk4kjkk5kfdl8';
     console.log(str);
     var func = (function(){
         var count = 0;
         return function() {
-            return arr[acount++];
+            return arr[count++];
         }
     })();
     str = str.replace(/\d/g,func);
