@@ -505,10 +505,95 @@ var myNumber = {
         console.log(myNumber.value);
 ```
 
+# 原型
+- 类
+    + 抽象 - 具体（对象）
+- 原型
+    + 具体(原型对象) - 具体（新对象）
+    + 设置对象的原型
+        * Object.create
+        ```
+        var landRover = {
+            name: 'landRover',
+            start: function() {
+                console.log(' start', this.logo);
+            },
+            run: function() {
+                console.log(' running',this.logo);
+            },
+            stop: function() {
+                console.log(' stop',this.logo);
+            }
+        }
+        var landWind = Object.create(landRover);
+        landWind.logo = 'landWind';
+        
+        var landCruiser = Object.create(landRover);
+        landCruiser.logo = 'landCruiser';
 
+        landWind.start();
+        ```
+        * 构造函数
+            - 使用 prototype 设置原型
+            - 使用 new 创建对象
+```
+function Car(logo) {
+    this.logo = logo || 'unknown name';
+}
+Car.prototype = {
+    start: function() {
+        console.log(' start',this.logo);
+    },
+    run: function() {
+        console.log(' running',this.logo);
+    },
+    stop: function() {
+        console.log(' stop',this.logo);
+    }
+}
+var landRover = new Car('landRover');
+var landWind = new Car('landWind');
 
+landRover.start();
+```
+- 原型链-实例
+```
+function Car(logo) {
+    this.logo = logo || 'unknown name';
+}
+Car.prototype = {
+    start: function() {
+        console.log(' start',this.logo);
+    },
+    run: function() {
+        console.log(' running',this.logo);
+    },
+    stop: function() {
+        console.log(' stop',this.logo);
+    }
+}
+function LandRover(serialno) {
+    this.serialNumber = serialno;
+}
 
+LandRover.prototype = new Car('landRover');
 
+var landRover1 = new LandRover(100000);
+var landRover2 = new LandRover(100001);
+
+console.log(landRover1.serialNumber); // 100000
+landRover1.serialNumber = 36;
+console.log(landRover1.serialNumber); // 36
+console.log(landRover2.serialNumber); // 100001
+delete landRover1.serialnumber;
+console.log(landRover1.serialNumber); // undefined
+```
+- hasOwnProperty 
+    + 判断对象传入属性是否是自身的属性，是返回 true, 反正为 false
+```
+landRover1.hasOwnProperty('serialNumber'); // true
+landRover1.hasOwnProperty('logo'); // false
+```
 
 
 
