@@ -331,15 +331,179 @@
 # First-class function 
 - 函数作为参数
     + 异步回调函数
+        * ajax
+- 函数作为返回值
+    + Function.prototype.bind
+    ```
+    function Point(x,y) {
+        this.x = x;
+        this.y = y;
+    }
+    Point.prototype.move = function(x,y) {
+        this.x += x;
+        this.y += y;
+    }
+    var p = new Point(0,0);
+    var circle = {
+        x: 1,
+        y: 1,
+        r: 1
+    };
+    p.move.apply(circle,[2,1]);
+    ```
+   
+    ```
+    function Point(x,y) {
+        this.x = x;
+        this.y = y;
+    }
+    Point.prototype.move = function(x,y) {
+        this.x += x;
+        this.y += y;
+    }
+    var p = new Point(0,0);
+    var circle = {
+        x: 1,
+        y: 1,
+        r: 1
+    };
+    var circlemove = p.move.bind(circle,2,1);
+    circlemove();
+    ```
 
+```
+var move = function(x,y) {
+    this.x += x;
+    this.y += y;
+}
+var p ={
+    x: 1,
+    y: 1
+};
+<!-- var pmove2 = move.bind(p,1,2)
+console.log(p); // 1,1 
+pmove2()
+console.log(p); // 2, 3 -->
+var pmove2 = move.bind(p)
+console.log(p); // 1,1
+pmove2(1,2);
+console.log(p) // 2,3
+```
+  
++ 柯里化
+> 柯里化（Currying），又称部分求值（Partial Evaluation），是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术
+```
+var sum = function(a,b,c) {
+    return a+b+c;
+}
+var sum_curry = function(a) {
+    return function(b,c) {
+        return a+b+c;
+    }
+}
+```
 
+**函数声明和函数表达式定义同一个函数时，执行的是哪个？**
+```
+// 以下代码执行时，三次打印分别输出什么？为什么？
+ 
+function add1(i){
+  console.log("函数声明："+(i+1));
+}
+add1(1);
+ 
+var add1 = function(i){
+  console.log("函数表达式："+(i+10));
+}
+add1(1);
+ 
+function add1(i) {
+    console.log("函数声明："+(i+100));
+}
+add1(1);
+```
 
-
-
-
-
-
-
+**对象方法中定义的子函数，子函数执行时this指向哪里？**
+- 以下代码中打印的this是个什么对象？
+- 这段代码能否实现使myNumber.value加1的功能？
+- 在不放弃helper函数的前提下，有哪些修改方法可以实现正确的功能？
+```
+var myNumber = {
+  value: 1,
+  add: function(i){
+    var helper = function(i){
+        console.log(this);
+          this.value += i;
+    }
+    helper(i);
+  }
+}
+myNumber.add(1);
+```
+=====
+helper中的this指向Window全局变量。
+不能。因为this.value是NaN，不是myNumber.value
+四种方法：
+```
+//方法一：把helper调整为方法函数，这样helper就可以正确引用myNumber为this了。
+var myNumber = {
+                value:1,
+                helper:function(i) {
+                        console.log(this);
+                        this.value +=i;
+                },
+                add: function(i) {
+                    this.helper(i);
+                }            
+            }
+ 
+//方法二：使用闭包
+var myNumber = {
+            value: 1,
+            add: function(i){
+                var thisnew = this;
+                // 构建闭包
+                var helper = function(i){
+                    console.log(thisnew);
+                    thisnew.value += i;
+                }
+               helper(i);
+             }
+        }
+ 
+//方法三：使用方法调用模式，因为方法调用模式可以使this指向调用者
+var myNumber = {
+        value: 1,
+        add: function(i){
+            var helper = function(i){
+                console.log(this);
+                this.value += i;
+            }
+            // 新建一个o对象等于myNumber,将helper方法赋值给该对象，
+            // 然后使用方法调用模式，这样可以让helper中的this指向调用者o,即myNumber
+            var o = myNumber;
+            o.fn = helper;
+            o.fn(i);
+        }
+    }
+ 
+//方法四：使用apply（call）调用模式，将当前helper方法借用给myNumber对象使用
+var myNumber = {
+        value: 1,
+        add: function(i){
+            var helper = function(i){
+                console.log(this);
+                this.value += i;
+            }
+            // myNumber对象借用helper方法，helper中的this将指向myNumber对象
+            //helper.apply(myNumber,[i]); //apply方法
+            helper.call(myNumber,i);  //call方法
+        }
+    }
+ 
+        myNumber.add(1);
+        console.log(myNumber.value);
+```
 
 
 
