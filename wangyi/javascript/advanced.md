@@ -595,6 +595,79 @@ landRover1.hasOwnProperty('serialNumber'); // true
 landRover1.hasOwnProperty('logo'); // false
 ```
 
+# **变量作用域**
+```
+var x = 10;
+function foo() {
+    alert(x);
+}
+function bar() {
+    var x = 20;
+    foo();
+}
+bar();
+```
+- 静态作用域（词法作用域）
+    + 程序的位置决定
+- 动态作用域
+    + 程序运行时刻决定
+    + 栈顶最近变量
+- Js 变量作用域
+    +  Js 使用静态作用域
+    +  Js 没有块级作用域（全局作用域、函数作用域）
+- 词法环境
+    + 全局环境
+    +  foo 环境
+    +  bar 环境
+- 环境记录初始化（声明提前）
+    + 形参
+    + 函数体
+    + 变量
+- 词法环境 - with
+```
+var foo = 'abc';
+with ({
+    foo: 'bar'
+}) {
+        function f() {
+            alert (foo);
+        };
+        (function() {
+            alert(foo);
+            })();
+            f();
+    }
+```
+- 词法环境 - try-catch
+```
+try {
+    var e = 10;
+    throw new Error();
+} catch (e) {
+    function f() {
+        alert(e);
+    }
+    (function() {
+        alert(e);
+        })();
+        f();
+}
+```
+- 在变量作用域中，函数声明和函数表达式有什么区别？
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
