@@ -595,6 +595,108 @@ landRover1.hasOwnProperty('serialNumber'); // true
 landRover1.hasOwnProperty('logo'); // false
 ```
 
+# **变量作用域**
+```
+var x = 10;
+function foo() {
+    alert(x);
+}
+function bar() {
+    var x = 20;
+    foo();
+}
+bar();
+```
+- 静态作用域（词法作用域）
+    + 程序的位置决定
+- 动态作用域
+    + 程序运行时刻决定
+    + 栈顶最近变量
+- Js 变量作用域
+    +  Js 使用静态作用域
+    +  Js 没有块级作用域（全局作用域、函数作用域）
+- 词法环境
+    + 全局环境
+    +  foo 环境
+    +  bar 环境
+- 环境记录初始化（声明提前）
+    + 形参
+    + 函数体
+    + 变量
+- 词法环境 - with
+```
+var foo = 'abc';
+with ({
+    foo: 'bar'
+}) {
+        function f() {
+            alert (foo);
+        };
+        (function() {
+            alert(foo);
+            })();
+            f();
+    }
+```
+- 词法环境 - try-catch
+```
+try {
+    var e = 10;
+    throw new Error();
+} catch (e) {
+    function f() {
+        alert(e);
+    }
+    (function() {
+        alert(e);
+        })();
+        f();
+}
+```
+- 在变量作用域中，函数声明和函数表达式有什么区别？
+
+
+# 闭包
+- 允许函数访问其引用环境中的变量（自由变量）
+- 保存函数执行状态
+```
+function add(node) {
+    function help(i) {
+        return function() {
+            alert(i);
+        }
+    }
+    for (var i = 0;i < nodes.length; i++) {
+        nodes[i].onclick = help(i);
+    }
+}
+```
+- 封装
+
+？原型继承和类继承有什么区别？
+
+## 全局变量
+- var a = 'a; 写在最外面的函数
+- window.a = 'a'
+- (function(){var a; test = 'a'}); 没有写 var
+
+## 继承
+
+实现一个Circle类
+编程实现：
+a.创建一个圆（Circle）的类，并定义该类的一个属性（半径）和两个方法（周长和面积），其中圆的半径可以通过构造函数初始化
+b.创建圆的一个对象，并调用该对象的方法计算圆的周长和面积
+
+
+
+
+
+
+
+
+
+
+
 
 
 

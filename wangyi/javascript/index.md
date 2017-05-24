@@ -384,6 +384,7 @@ var point1 = new Point(2,2);// {x:2,y:2,move:function(stepX,stepY){}}
 ```
 
 ## 原型
+> 把不变的属性和方法，直接绑定在 prototype 对象，提高运行效率
 ```
 function Point(x,y) {
     this.x = x;
