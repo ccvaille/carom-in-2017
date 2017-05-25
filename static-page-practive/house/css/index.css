@@ -71,6 +71,69 @@ h3.part-title span {
   color: #f7b400;
   margin-bottom: 26px;
 }
+footer {
+  width: 100%;
+  background: #353944;
+  padding-top: 46px;
+}
+footer .footer-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+footer .footer-content .footer-text {
+  padding-left: 20px;
+  color: #fbfbfb;
+  padding-bottom: 25px;
+  zoom: 1;
+}
+footer .footer-content .footer-text:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+footer .footer-content .footer-text .qr-items {
+  float: left;
+}
+footer .footer-content .footer-text .qr-items li {
+  float: left;
+  width: 132px;
+}
+footer .footer-content .footer-text .qr-items li:first-child {
+  margin-right: 98px;
+}
+footer .footer-content .footer-text .qr-items li span {
+  display: inline-block;
+  margin-top: 28px;
+}
+footer .footer-content .footer-text .position {
+  float: left;
+  margin-left: 205px;
+  margin-top: 83px;
+}
+footer .footer-content .footer-text .position p:nth-child(2) {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+footer .footer-content .footer-text .position p img {
+  margin-right: 13px;
+}
+footer .footer-content .footer-text .position p span {
+  font-size: 24px;
+  letter-spacing: 4.3px;
+  text-align: left;
+  color: #fbfbfb;
+}
+footer .footer-copy {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-top: 1px solid #505667;
+  color: #fff;
+}
+footer .footer-copy p {
+  line-height: 26px;
+}
 /*index 首页*/
 .index header .top {
   width: 1200px;
@@ -339,66 +402,25 @@ h3.part-title span {
   width: 1200px;
   margin: 0 auto;
 }
-.index footer {
-  width: 100%;
-  background: #353944;
-  padding-top: 46px;
-}
-.index footer .footer-content {
-  width: 1200px;
-  margin: 0 auto;
-}
-.index footer .footer-content .footer-text {
-  color: #fbfbfb;
-  padding-bottom: 25px;
-  zoom: 1;
-}
-.index footer .footer-content .footer-text:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
-.index footer .footer-content .footer-text .qr-items {
-  float: left;
-}
-.index footer .footer-content .footer-text .qr-items li {
-  float: left;
-  width: 132px;
-}
-.index footer .footer-content .footer-text .qr-items li:first-child {
-  margin-right: 98px;
-}
-.index footer .footer-content .footer-text .qr-items li span {
-  display: inline-block;
-  margin-top: 28px;
-}
-.index footer .footer-content .footer-text .position {
+.index footer.footer-index .footer-content .footer-text .position {
   float: right;
+  margin-right: 30px;
+  margin-left: 0;
 }
-.index footer .footer-content .footer-text .position img.footer-logo {
+.index footer.footer-index .footer-content .footer-text .position img.footer-logo {
   margin-left: -24px;
 }
-.index footer .footer-content .footer-text .position p:nth-child(2) {
+.index footer.footer-index .footer-content .footer-text .position p:nth-child(2) {
   margin-bottom: 20px;
   margin-top: 40px;
 }
-.index footer .footer-content .footer-text .position p img {
+.index footer.footer-index .footer-content .footer-text .position p img {
   margin-right: 13px;
 }
-.index footer .footer-content .footer-text .fixbox {
-  width: 132px;
-  height: 132px;
-}
-.index footer .footer-copy {
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  border-top: 1px solid #505667;
-  color: #fff;
-}
-.index footer .footer-copy p {
-  line-height: 26px;
+.index footer.footer-index .footer-content .footer-text .position p span {
+  font-size: 20px;
+  letter-spacing: 3.6px;
+  color: #fbfbfb;
 }
 /*trust 房屋托管*/
 .trust header {
@@ -505,11 +527,17 @@ h3.part-title span {
   height: 0;
   clear: both;
 }
+.trust .content .why ul.why-box:first-child {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
 .trust .content .why ul.why-box li {
   float: left;
 }
 .trust .content .why ul.why-box li:last-child {
   float: right;
+  width: 500px;
 }
 .trust .content .why ul.why-box li img {
   margin-right: 77px;
@@ -536,4 +564,95 @@ h3.part-title span {
   font-size: 20px;
   letter-spacing: 3.6px;
   color: #f7b400;
+}
+.trust .content .reason {
+  width: 100%;
+}
+.trust .content .reason .reason-box {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.trust .content .reason .reason-box .reason-img {
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.trust .content .reason .reason-box ul.w25p,
+.trust .content .reason .reason-box ul.w30p {
+  text-align: center;
+  zoom: 1;
+}
+.trust .content .reason .reason-box ul.w25p:after,
+.trust .content .reason .reason-box ul.w30p:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.trust .content .reason .reason-box ul.w25p li,
+.trust .content .reason .reason-box ul.w30p li {
+  width: 25%;
+  border-right: 1px solid #d2d0d0;
+  height: 270px;
+  float: left;
+}
+.trust .content .reason .reason-box ul.w25p li:last-child,
+.trust .content .reason .reason-box ul.w30p li:last-child {
+  border-right: none;
+}
+.trust .content .reason .reason-box ul.w25p li:hover img,
+.trust .content .reason .reason-box ul.w30p li:hover img {
+  transform: rotate(360deg);
+}
+.trust .content .reason .reason-box ul.w25p li img,
+.trust .content .reason .reason-box ul.w30p li img {
+  transition: transform .5s;
+}
+.trust .content .reason .reason-box ul.w25p li h3,
+.trust .content .reason .reason-box ul.w30p li h3 {
+  font-size: 20px;
+  letter-spacing: 3.6px;
+  color: #f7b400;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+.trust .content .reason .reason-box ul.w25p li p,
+.trust .content .reason .reason-box ul.w30p li p {
+  font-size: 13px;
+  letter-spacing: 2.3px;
+  color: #666666;
+}
+.trust .content .reason .reason-box ul.w25p li p i,
+.trust .content .reason .reason-box ul.w30p li p i {
+  display: block;
+}
+.trust .content .reason .reason-box ul.w30p {
+  margin-top: 115px;
+}
+.trust .content .reason .reason-box ul.w30p li {
+  width: 33.3%;
+}
+.trust .content .step {
+  width: 100%;
+  background: #f6f6f6;
+  padding-top: 100px;
+  padding-bottom: 140px;
+}
+.trust .content .step .step-box {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.trust .content .step .step-box h3 {
+  font-size: 30px;
+  letter-spacing: 5.4px;
+  color: #333333;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+.trust .content .step .step-box p {
+  font-size: 20px;
+  letter-spacing: 3.6px;
+  color: #666666;
 }
