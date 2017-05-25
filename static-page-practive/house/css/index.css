@@ -71,131 +71,218 @@ h3.part-title span {
   color: #f7b400;
   margin-bottom: 26px;
 }
-footer {
-  width: 100%;
-  background: #353944;
-  padding-top: 46px;
+h3.part-line-title {
+  text-align: center;
+  font-weight: normal;
 }
-footer .footer-content {
-  width: 1200px;
+h3.part-line-title p {
+  font-size: 30px;
+  letter-spacing: 9px;
+  color: #666666;
+}
+h3.part-line-title span {
+  font-size: 24px;
+  letter-spacing: 7.2px;
+  color: #666666;
+}
+h3.part-line-title i {
+  display: block;
+  width: 62px;
+  height: 3px;
+  background: #f7b400;
   margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
-footer .footer-content .footer-text {
-  padding-left: 20px;
-  color: #fbfbfb;
-  padding-bottom: 25px;
+header.header-common {
+  width: 1400px;
+  height: 110px;
+  overflow: hidden;
+  margin: 0 auto;
   zoom: 1;
 }
-footer .footer-content .footer-text:after {
+header.header-common:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
 }
-footer .footer-content .footer-text .qr-items {
+header.header-common h1 {
+  float: left;
+  margin-right: 86px;
+}
+header.header-common #nav {
+  float: left;
+  margin-top: 58px;
+}
+header.header-common #nav li {
+  float: left;
+  margin-right: 45px;
+}
+header.header-common #nav li.active a {
+  border-bottom: 5px solid #f7b400;
+}
+header.header-common #nav li a {
+  font-size: 21px;
+  letter-spacing: 3.8px;
+  color: #f7b400;
+  padding-bottom: 20px;
+  border-bottom: 5px solid #fff;
+  transition: border-color 0.3s;
+}
+header.header-common #nav li a:hover {
+  border-color: #f7b400;
+}
+header.header-common .other {
+  float: right;
+  width: 410px;
+  margin-top: 55px;
+  zoom: 1;
+}
+header.header-common .other:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+header.header-common .other li {
+  float: left;
+  margin-right: 15px;
+}
+header.header-common .other li img {
+  margin-right: 10px;
+}
+header.header-common .other li span {
+  line-height: 40px;
+  font-size: 21px;
+  color: #666;
+  vertical-align: top;
+}
+footer.footer-common {
+  width: 100%;
+  background: #353944;
+  padding-top: 46px;
+}
+footer.footer-common .footer-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+footer.footer-common .footer-content .footer-text {
+  padding-left: 20px;
+  color: #fbfbfb;
+  padding-bottom: 25px;
+  zoom: 1;
+}
+footer.footer-common .footer-content .footer-text:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+footer.footer-common .footer-content .footer-text .qr-items {
   float: left;
 }
-footer .footer-content .footer-text .qr-items li {
+footer.footer-common .footer-content .footer-text .qr-items li {
   float: left;
   width: 132px;
 }
-footer .footer-content .footer-text .qr-items li:first-child {
+footer.footer-common .footer-content .footer-text .qr-items li:first-child {
   margin-right: 98px;
 }
-footer .footer-content .footer-text .qr-items li span {
+footer.footer-common .footer-content .footer-text .qr-items li span {
   display: inline-block;
   margin-top: 28px;
 }
-footer .footer-content .footer-text .position {
+footer.footer-common .footer-content .footer-text .position {
   float: left;
   margin-left: 205px;
   margin-top: 83px;
 }
-footer .footer-content .footer-text .position p:nth-child(2) {
+footer.footer-common .footer-content .footer-text .position p:nth-child(2) {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-footer .footer-content .footer-text .position p img {
+footer.footer-common .footer-content .footer-text .position p img {
   margin-right: 13px;
 }
-footer .footer-content .footer-text .position p span {
+footer.footer-common .footer-content .footer-text .position p span {
   font-size: 24px;
   letter-spacing: 4.3px;
   text-align: left;
   color: #fbfbfb;
 }
-footer .footer-copy {
+footer.footer-common .footer-copy {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 20px;
   border-top: 1px solid #505667;
   color: #fff;
 }
-footer .footer-copy p {
+footer.footer-common .footer-copy p {
   line-height: 26px;
 }
 /*index 首页*/
-.index header .top {
+.index header.header-index .top {
   width: 1200px;
   margin: 0 auto;
   zoom: 1;
 }
-.index header .top:after {
+.index header.header-index .top:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
 }
-.index header .top h1 {
+.index header.header-index .top h1 {
   float: left;
   margin: 14px 0 7px 7px;
 }
-.index header .top ul {
+.index header.header-index .top ul {
   float: right;
   margin-top: 33px;
   margin-right: 15px;
   margin-bottom: 8px;
 }
-.index header .top ul li {
+.index header.header-index .top ul li {
   font-size: 20px;
   letter-spacing: 3.6px;
   color: #666666;
   display: inline-block;
 }
-.index header .top ul li:nth-child(1) {
+.index header.header-index .top ul li:nth-child(1) {
   margin-right: 47px;
 }
-.index header .top ul li img {
+.index header.header-index .top ul li img {
   margin-right: 10px;
   vertical-align: middle;
 }
-.index header .top ul li span {
+.index header.header-index .top ul li span {
   vertical-align: sub;
 }
-.index header #nav {
+.index header.header-index #nav {
   width: 100%;
   background: #f7b400;
 }
-.index header #nav .nav {
+.index header.header-index #nav .nav {
   zoom: 1;
   width: 880px;
   margin: 0 auto;
   height: 55px;
 }
-.index header #nav .nav:after {
+.index header.header-index #nav .nav:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
 }
-.index header #nav .nav li {
+.index header.header-index #nav .nav li {
   float: left;
   margin-right: 30px;
 }
-.index header #nav .nav li.active a {
+.index header.header-index #nav .nav li.active a {
   border-bottom: 5px solid #fff;
 }
-.index header #nav .nav li a {
+.index header.header-index #nav .nav li a {
   display: inline-block;
   color: #fff;
   font-size: 21px;
@@ -205,7 +292,7 @@ footer .footer-copy p {
   line-height: 50px;
   transition: all .3s;
 }
-.index header #nav .nav li a:hover {
+.index header.header-index #nav .nav li a:hover {
   border-color: #fff;
 }
 .index .banner {
@@ -402,91 +489,70 @@ footer .footer-copy p {
   width: 1200px;
   margin: 0 auto;
 }
-.index footer.footer-index .footer-content .footer-text .position {
-  float: right;
-  margin-right: 30px;
-  margin-left: 0;
+.index footer.footer-index {
+  width: 100%;
+  background: #353944;
+  padding-top: 46px;
 }
-.index footer.footer-index .footer-content .footer-text .position img.footer-logo {
-  margin-left: -24px;
+.index footer.footer-index .footer-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.index footer.footer-index .footer-content .footer-text {
+  padding-left: 20px;
+  color: #fbfbfb;
+  padding-bottom: 25px;
+  zoom: 1;
+}
+.index footer.footer-index .footer-content .footer-text:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.index footer.footer-index .footer-content .footer-text .qr-items {
+  float: left;
+}
+.index footer.footer-index .footer-content .footer-text .qr-items li {
+  float: left;
+  width: 132px;
+}
+.index footer.footer-index .footer-content .footer-text .qr-items li:first-child {
+  margin-right: 98px;
+}
+.index footer.footer-index .footer-content .footer-text .qr-items li span {
+  display: inline-block;
+  margin-top: 28px;
+}
+.index footer.footer-index .footer-content .footer-text .position {
+  float: left;
+  margin-left: 205px;
+  margin-top: 83px;
 }
 .index footer.footer-index .footer-content .footer-text .position p:nth-child(2) {
   margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .index footer.footer-index .footer-content .footer-text .position p img {
   margin-right: 13px;
 }
 .index footer.footer-index .footer-content .footer-text .position p span {
-  font-size: 20px;
-  letter-spacing: 3.6px;
+  font-size: 24px;
+  letter-spacing: 4.3px;
+  text-align: left;
   color: #fbfbfb;
 }
-/*trust 房屋托管*/
-.trust header {
-  width: 1400px;
-  height: 110px;
-  overflow: hidden;
-  margin: 0 auto;
-  zoom: 1;
-}
-.trust header:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
-.trust header h1 {
-  float: left;
-  margin-right: 86px;
-}
-.trust header #nav {
-  float: left;
-  margin-top: 58px;
-}
-.trust header #nav li {
-  float: left;
-  margin-right: 45px;
-}
-.trust header #nav li.active a {
-  border-bottom: 5px solid #f7b400;
-}
-.trust header #nav li a {
-  font-size: 21px;
-  letter-spacing: 3.8px;
-  color: #f7b400;
+.index footer.footer-index .footer-copy {
+  text-align: center;
+  padding-top: 15px;
   padding-bottom: 20px;
-  border-bottom: 5px solid #fff;
-  transition: border-color 0.3s;
+  border-top: 1px solid #505667;
+  color: #fff;
 }
-.trust header #nav li a:hover {
-  border-color: #f7b400;
+.index footer.footer-index .footer-copy p {
+  line-height: 26px;
 }
-.trust header .other {
-  float: right;
-  width: 410px;
-  margin-top: 55px;
-  zoom: 1;
-}
-.trust header .other:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
-.trust header .other li {
-  float: left;
-  margin-right: 15px;
-}
-.trust header .other li img {
-  margin-right: 10px;
-}
-.trust header .other li span {
-  line-height: 40px;
-  font-size: 21px;
-  color: #666;
-  vertical-align: top;
-}
+/*trust 房屋托管*/
 .trust .content .trust-text {
   width: 100%;
   background: #fff;
@@ -655,4 +721,100 @@ footer .footer-copy p {
   font-size: 20px;
   letter-spacing: 3.6px;
   color: #666666;
+}
+/*apartment 公寓*/
+.content .product {
+  width: 100%;
+  background: #fff;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+.content .product .product-box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.content .product .product-box ul {
+  zoom: 1;
+}
+.content .product .product-box ul:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.content .product .product-box ul li {
+  width: 50%;
+  float: left;
+  margin-bottom: 40px;
+}
+.content .service {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 50px;
+}
+.content .service .service-box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.content .service .service-box ul {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ccc;
+  padding-top: 54px;
+  zoom: 1;
+}
+.content .service .service-box ul:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.content .service .service-box ul li {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.content .service .service-box ul li img {
+  margin-bottom: 25px;
+}
+.content .service .service-box ul li p {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  color: #333333;
+}
+.content .service .service-box ul li span {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 5.4px;
+  color: #666666;
+}
+.content .dream {
+  width: 100%;
+  background: #fff;
+  padding-top: 60px;
+  background: url(img/dream.png) no-repeat;
+  height: 377px;
+}
+.content .dream .dream-box {
+  width: 1200px;
+  margin: 0 auto;
+}
+.content .dream .dream-box .part-line-title p {
+  font-size: 42px;
+  letter-spacing: 12.6px;
+  color: #666666;
+}
+.content .dream .dream-box .part-line-title i {
+  background: #fff;
+  margin-top: 27px;
+  margin-bottom: 38px;
+}
+.content .dream .dream-box .part-line-title span {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.58;
+  letter-spacing: 7.2px;
+  text-align: center;
+  color: #ffffff;
 }

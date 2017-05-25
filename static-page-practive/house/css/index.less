@@ -87,7 +87,86 @@ h3.part-title {
     }
 }
 
-footer {
+h3.part-line-title {
+    text-align: center;
+    font-weight: normal;
+    p {
+        font-size: 30px;
+        letter-spacing: 9px;
+        color: #666666;
+    }
+    span {
+        font-size: 24px;
+        letter-spacing: 7.2px;
+        color: #666666;
+    }
+    i {
+        display: block;
+        width: 62px;
+        height: 3px;
+        background: #f7b400;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+header.header-common {
+    width: 1400px;
+    height: 110px;
+    overflow: hidden;
+    margin: 0 auto;
+    .clearfix();
+    h1 {
+        float: left;
+        margin-right: 86px;
+    }
+    #nav {
+        float: left;
+        margin-top: 58px;
+        li {
+            float: left;
+            margin-right: 45px;
+            &.active {
+                a {
+                    border-bottom: 5px solid #f7b400;
+                }
+            }
+            a {
+                font-size: 21px;
+                letter-spacing: 3.8px;
+                color: #f7b400;
+                padding-bottom: 20px;
+                border-bottom: 5px solid #fff;
+                transition: border-color .3s;
+                &:hover {
+                    border-color: #f7b400;
+                }
+            }
+        }
+    }
+    .other {
+        float: right;
+        width: 410px;
+        margin-top: 55px;
+        .clearfix();
+        li {
+            float: left;
+            margin-right: 15px;
+            img {
+                margin-right: 10px;
+            }
+            span {
+                line-height: 40px;
+                font-size: 21px;
+                color: #666;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+footer.footer-common {
     .wMax();
     background: #353944;
     padding-top: 46px;
@@ -154,7 +233,7 @@ footer {
 /*index 首页*/
 
 .index {
-    header {
+    header.header-index {
         .top {
             .w1200();
             .clearfix();
@@ -396,30 +475,64 @@ footer {
         }
     }
     footer.footer-index {
+        .wMax();
+        background: #353944;
+        padding-top: 46px;
         .footer-content {
+            .w1200();
             .footer-text {
-                .position {
-                    float: right;
-                    margin-right: 30px;
-                    margin-left: 0;
-                    img.footer-logo {
-                        margin-left: -24px;
+                padding-left: 20px;
+                color: #fbfbfb;
+                padding-bottom: 25px;
+                .clearfix();
+                .qr-items {
+                    float: left;
+                    li {
+                        float: left;
+                        width: 132px;
+                        &:first-child {
+                            margin-right: 98px;
+                        }
+                        span {
+                            display: inline-block;
+                            margin-top: 28px;
+                        }
                     }
+                }
+                .position {
+                    float: left;
+                    margin-left: 205px;
+                    margin-top: 83px;
                     p {
                         &:nth-child(2) {
                             margin-bottom: 20px;
-                            margin-top: 40px;
+                            margin-top: 20px;
                         }
                         img {
                             margin-right: 13px;
                         }
                         span {
-                            font-size: 20px;
-                            letter-spacing: 3.6px;
+                            font-size: 24px;
+                            letter-spacing: 4.3px;
+                            text-align: left;
                             color: #fbfbfb;
                         }
                     }
                 }
+                // .fixbox {
+                //     width: 132px;
+                //     height: 132px;
+                // }
+            }
+        }
+        .footer-copy {
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 20px;
+            border-top: 1px solid #505667;
+            color: #fff;
+            p {
+                line-height: 26px;
             }
         }
     }
@@ -429,60 +542,6 @@ footer {
 /*trust 房屋托管*/
 
 .trust {
-    header {
-        width: 1400px;
-        height: 110px;
-        overflow: hidden;
-        margin: 0 auto;
-        .clearfix();
-        h1 {
-            float: left;
-            margin-right: 86px;
-        }
-        #nav {
-            float: left;
-            margin-top: 58px;
-            li {
-                float: left;
-                margin-right: 45px;
-                &.active {
-                    a {
-                        border-bottom: 5px solid #f7b400;
-                    }
-                }
-                a {
-                    font-size: 21px;
-                    letter-spacing: 3.8px;
-                    color: #f7b400;
-                    padding-bottom: 20px;
-                    border-bottom: 5px solid #fff;
-                    transition: border-color .3s;
-                    &:hover {
-                        border-color: #f7b400;
-                    }
-                }
-            }
-        }
-        .other {
-            float: right;
-            width: 410px;
-            margin-top: 55px;
-            .clearfix();
-            li {
-                float: left;
-                margin-right: 15px;
-                img {
-                    margin-right: 10px;
-                }
-                span {
-                    line-height: 40px;
-                    font-size: 21px;
-                    color: #666;
-                    vertical-align: top;
-                }
-            }
-        }
-    }
     .content {
         .trust-text {
             .wMax();
@@ -581,8 +640,7 @@ footer {
                             }
                         }
                         img {
-                                transition: transform .5s;
-
+                            transition: transform .5s;
                         }
                         h3 {
                             font-size: 20px;
@@ -629,6 +687,94 @@ footer {
                     font-size: 20px;
                     letter-spacing: 3.6px;
                     color: #666666;
+                }
+            }
+        }
+    }
+}
+
+
+/*apartment 公寓*/
+
+.content {
+    .product {
+        .wMax();
+        background: #fff;
+        padding-top: 40px;
+        padding-bottom: 70px;
+        .product-box {
+            .w1200();
+            ul {
+                .clearfix();
+                li {
+                    width: 50%;
+                    float: left;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+    .service {
+        .wMax();
+        background: #fff;
+        padding-bottom: 50px;
+        .service-box {
+            .w1200();
+            ul {
+                padding-bottom: 25px;
+                border-bottom: 1px solid #ccc;
+                padding-top: 54px;
+                .clearfix();
+                li {
+                    width: 25%;
+                    float: left;
+                    text-align: center;
+                    img {
+                        margin-bottom: 25px;
+                    }
+                    p {
+                        margin-bottom: 18px;
+                        font-size: 20px;
+                        font-weight: 300;
+                        letter-spacing: 6px;
+                        color: #333333;
+                    }
+                    span {
+                        font-size: 18px;
+                        font-weight: 300;
+                        letter-spacing: 5.4px;
+                        color: #666666;
+                    }
+                }
+            }
+        }
+    }
+    .dream {
+        .wMax();
+        background: #fff;
+        padding-top: 60px;
+        background: url(img/dream.png) no-repeat;
+        height: 377px;
+        .dream-box {
+            .w1200();
+            .part-line-title {
+                p {
+                    font-size: 42px;
+                    letter-spacing: 12.6px;
+                    color: #666666;
+                }
+                i {
+                    background: #fff;
+                    margin-top: 27px;
+                    margin-bottom: 38px;
+                }
+                span {
+                    font-size: 24px;
+                    font-weight: 300;
+                    line-height: 1.58;
+                    letter-spacing: 7.2px;
+                    text-align: center;
+                    color: #ffffff;
                 }
             }
         }
