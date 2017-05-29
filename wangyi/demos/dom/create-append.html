@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="app"></div>
+	<script>
+		var app = document.getElementById('app');
+		var h2 = document.createElement('h2');
+		var h1 = document.createElement('h1');
+		h2.innerText = '这是一个生成文本';
+		h1.innerText = 'title 1';
+		app.appendChild(h2);
+		// app.appendChild(h1);
+		app.insertBefore(h1,h2);
+		app.removeChild(h2);
+	</script>
+</body>
+</html>
