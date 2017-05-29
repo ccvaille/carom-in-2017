@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    	#box {
+    		background: #000;
+    	}
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="userName">
+            <input type="text" id="userName" class="u-txt">
+        </label>
+    </div>
+    <div id="box" data-name='box' data-length='4' data-xx='aaa'>box</div>
+    <script>
+    var input = document.querySelector('#userName');
+    console.log(input.id)
+    console.log(input['id'])
+    input.setAttribute('disabled', true)
+
+
+    var box = document.getElementById('box');
+    console.log(box.dataset)
+    box.style.cssText = 'border:1px solid red;color:#fff;font-weight:200';
+    var style = window.getComputedStyle(box).background;
+    console.log(style)
+    </script>
+</body>
+
+</html>

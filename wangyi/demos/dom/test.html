@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getStyle</title>
+    <style type="text/css">
+   p {
+        color: #f00;
+        line-height: 20px
+    }
+    </style>
+</head>
+<body>
+    <p id="ceshi">getStyle</p>
+</body>
+<script type="text/javascript">
+    function getStyle(element, cssPropertyName) {
+        if (window.getComputedStyle) {   //特性侦测       
+            return window.getComputedStyle(element)[cssPropertyName];   //优先使用W3C规范  
+        }else{         
+            return element.currentStyle[cssPropertyName];   //针对IE9以下兼容
+        }
+    }
+    var a = document.getElementById("ceshi");
+    console.log(getStyle(a, "line-height"));
+    console.log(getStyle(a, "color"));
+</script>
+</html>
