@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form action="https://pizza.example.com/order" method="post" enctype=“application/x-www-form-urlencoded”>
+		<p><label>姓名：</label><input type="text" name="custname" required></p>
+		<p><label>电话：</label><input type="tel" name="custtel" required></p>
+		<p><label>邮箱：</label><input type="email" name="custemail" ></p>
+		<fieldset>
+			<legend>披萨大小</legend>
+			<label><input type="radio" name="size" value="small" required>小</label>
+			<label><input type="radio" name="size" value="medium" required>中</label>
+			<label><input type="radio" name="size" value="large" required>大</label>
+		</fieldset>
+		<fieldset>
+			<legend>披萨配料</legend>
+			<label><input type="checkbox" name="topping" value="bacon">熏肉</label>
+			<label><input type="checkbox" name="topping" value="cheese">奶酪</label>
+			<label><input type="checkbox" name="topping" value="onion">洋葱</label>
+			<label><input type="checkbox" name="topping" value="mushroom">蘑菇</label>
+		</fieldset>
+		<p><label>配送时间：<input type="time" name="delivery" min="11:00" max='21:00' step="900"></label></p>
+		<p><button>提交订单</button></p>
+	</form> -->
+
+
+<!--     <form action="" name="test" id="test">
+        <img src="http://freecodecamp.cn/images/logo-navbar.png" alt="" id="a">
+        <input type="text" name="a">
+    </form> -->
+
+    <input type="file" accept="image/*" multiple id="file">
+    <script>
+    // var form = document.getElementById('test');
+    // console.log(form['a']);
+    // 
+    // 
+    var file = document.getElementById('file');
+    file.addEventListener('change',function(event){
+    	var files = Array.prototype.slice.call(event.target.files,0);
+    	files.forEach(function(item){
+    		file2dataurl(item,function(url){
+    			var image = new Image();
+    			parent.appendChild(image);
+    			image.src = url;
+    		})
+    	})
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

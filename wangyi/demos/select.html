@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- <select name="course" id="">
+		<option value="">课程名称</option>
+		<optgroup label="1.Dom">
+			<option value="1.1">1.1</option>
+		</optgroup>
+		<optgroup label="2.Dom">
+			<option value="2.1">2.1</option>
+		</optgroup>
+	</select> -->
+
+	<form action="" name="course">
+		<select name="chapter" id="">
+			<option value="">请选择</option>
+
+		</select>
+		<select name="section" id="">
+			<option value="">请选择章节</option>
+		</select>
+	</form>
+	<script>
+		var chapters = [
+			{text: '1',value: '1'},
+			{text: '2',value: '2'}
+		]
+		var sections = {
+			1:[
+				{text: 'a',value:'a1'},
+				{text: 'a',value:'a1'},
+				{text: 'a',value:'a1'},
+				{text: 'a',value:'a1'},
+				{text: 'a',value:'a1'},
+			],
+			2:[
+				{text:'b',value:'b1'},
+				{text:'b',value:'b1'},
+				{text:'b',value:'b1'},
+				{text:'b',value:'b1'},
+				{text:'b',value:'b1'},
+			]
+		}
+		function fillSelect(select,list) {
+			for(var i = select.length -1; i>0;i--){
+				select.remove(i);
+			}
+			list.forEach(function(data){
+				var option = new Option(data.text,data.value);
+				select.add(option);
+			}
+		}
+		fillSelect(chapterSelect,chapters);
+		chapterSelect.addEventListener('change',function(event){
+			var value = event.target.value,
+				list = sections[value] || [];
+				fillSelect(sectionSelect,list)
+		})
+	</script>
+</body>
+</html>
