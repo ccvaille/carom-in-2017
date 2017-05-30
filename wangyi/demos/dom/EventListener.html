@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="box">box</div>
+    <script>
+    var box = document.getElementById('box');
+    var  clickfun  = function () {
+    	console.log('this is a click event')
+    }
+    var mouseoverfun = function() {
+    	console.log('this is hover event')
+    }
+    // box.addEventListener('click',clickfun,false);
+    box.addEventListener('mouseover',mouseoverfun,true);
+
+    box.onclick = clickfun;
+
+    // box.removeEventListener('click',clickfun,true);
+    box.onclick = null;
+
+    </script>
+</body>
+
+</html>
