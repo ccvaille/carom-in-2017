@@ -110,11 +110,54 @@ label.setAttribute('form','idname') // error
     + remove
     + add
 
+## textarea
+- select() //全选输入内容
+- selectionStart // 选中内容的起始位置，没有选中文本， return 光标位置
+- selectionEnd
+- selectionDirection // 选择的方向 （shift+ up/left/... = forward = selectionEnd)(shift+ up/left/... = backward = selectionStart)
+- setSelectionRange(start,end) //选择
+- setRangeText(replacement) // 设置范围
+- @输入提醒
+```
+textarea.addEventListener('input',function(event){
+    var target = event.target,
+        cursor = target.selectionStart;
+        if(target.value.charAt(cursor-1)==='@')
+        doShowAtList(function(name){
+            var end = cursor+name.length;
+            target.setRangeText(name,cursor,end,'end');
+            });
+    })
+```
 
 
+# 验证
+- 不验证
+    + input && type  = hidden、reset、button
+    + button && type = rest、button
+    + input/textarea && readonly
+    + disabled
+- 自定义异常
+```
+input.addEventListener('invalid',function(event){
+    var target = event.target;
+    if(target.validity.valueMissing) {
+        target.setCustomValidity('请输入姓名！')
+    }
+    })
+```
+- 禁止验证(novalidate)
+```
+    <form novalidate>
+    <label for=""><input type="number"></label>
+    </form>
+```
 
-
-
+## 提交
+- 隐式提交
+    + enter 提交
+    + form 有非禁用的提交按钮
+    + 没有提交按钮，不超过一个类型为 text,search，email,password,date,time,number 的input 元素
 
 
 
