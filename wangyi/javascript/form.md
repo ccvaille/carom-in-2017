@@ -158,6 +158,64 @@ input.addEventListener('invalid',function(event){
     + enter 提交
     + form 有非禁用的提交按钮
     + 没有提交按钮，不超过一个类型为 text,search，email,password,date,time,number 的input 元素
+- 特殊案例
+    + name='isindex' && type = 'text'
+        * 编码方式为 application/x-www.form-urlencoded
+        * 作为表单的第一个提交元素
+        * 提交时只发送 value 值，不包含 name
+    +  name = '_charset_' && type='hidden'
+        *  没有设置 value 值
+        *  提交时 value 自动用当前提交的字符集填充（UTF-8)
+- submit()
+    + form.submit()
+- onsubmit
+    + 表单提交事件
+    + 提交之前的数据验证
+    + 阻止事件的默认行为可取消表单提交
+- 无刷新表单提交
+    + form
+    + target
+    + iframe
+    + iframe.name = 'targetFrame';form.target = 'targetFrame'
+
+## 登录框
+```
+<form action="/api/login" name="loginForm" target='result' autocomplete='off'>
+    <legend>手机号码登录</legend>
+    <fieldset>
+    <div id="message"></div>
+    <div>
+        <label for="telephone">手机号：</label>
+        <input type="tel" id="telephone" name="telephone" maxlength="11" required pattern="^0?(13[0-9]|15[0123456789]|18[0236789]|14[57])[0-9]{8}$"><br/>
+        <span>11位数字手机号码</span>
+    </div>
+    <div>
+        <label for="password">密码</label>
+        <input type="password" for="password" name="password"><br/>
+        <span>至少6位，同时包含数字和字母</span>
+    </div>
+    <div>
+        <button name="loginBtn">登录</button>
+    </div>
+    </fieldset>
+</form>
+```
+
+```
+function disableSubmit(disabled) {
+    form.loginBtn.disabled = !!disabled;
+    var method = !disabled?'remove':'add';
+    form.loginBtn.classList[method]('j-disabled');
+}
+```
+
+```
+form.telephone.addEventListener('invalid',function(event){
+    event.preventDefault();
+    invalidInput(form.telephone,'请输入正确的手机号码')
+})
+```
+
 
 
 

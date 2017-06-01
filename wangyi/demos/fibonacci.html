@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fibonacci</title>
+</head>
+<body>
+	<script>
+		function fibon(index) {
+			var sum;
+			if (index < 2) {
+				return index;
+			}
+			else {
+				sum = fibon(index-1) + fibon(index-2);
+				return sum;
+			}
+		}
+		console.log(fibon(5))
+	</script>
+</body>
+</html>
