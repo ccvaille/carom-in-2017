@@ -14,3 +14,5 @@
     + React 数据： props / state
         * 对外使用 props
         * 对内使用 state
+    + React 组件属性的值都是字符串类型，当 props 类型不是 String, 要用 {} 包住 
+        * {{ color: "red" }} // 外面是 JSX 语法 ，里面是代表一个对象常量
