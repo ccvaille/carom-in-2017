@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>ES6方式创建的组件</title>
+</head>
+<body>
+	<div id="app"></div>
+	<script src='build/react.js'></script>
+	<script src="build/react-dom.js"></script>
+	<script src="build/browser.min.js"></script>
+	<script type='text/babel'>
+		class MyComponent extends React.Component {
+			alertMe() {
+				alert('click');
+			}
+		  render() {
+		    return (
+		      <p onClick = {this.alertMe.bind(this)}>ES6方式创建的组件</p>
+		    );
+		  }
+		}
+		ReactDOM.render(
+		  <MyComponent/>,
+		  document.getElementById('app')
+		);
+	</script>
+</body>
+</html>
