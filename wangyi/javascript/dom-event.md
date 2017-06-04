@@ -32,7 +32,6 @@ var name = function(event){
         *  event.cancelBubble = true (ie)
     +  stopImmediatePropagation
         *  注册两个事件，会阻止后续事件执行
-
     +  preventDefault（默认行为)（w3c)
         *  event.returnValue = false(ie)
 

@@ -120,6 +120,8 @@ function removeCookie(name,path,domain) {
     document.cookie = name + '=' + ';path=' + path + ';domain=' + domain + ';max-age=0'
 }
 ```
+- 操作
+    + setcookie()函数第二个参数设置为空值，第三个参数将Cookie的过期时间设置为小于系统的当前时间即可.
 - 缺陷
     + 增加流量，每次请求带上 cookie  
     + 安全

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    	#music {
+    		border-color: green;
+    		border: 1px solid red;
+    	}
+    </style>
+</head>
+
+<body>
+    <div id="user"><span id="name" class="name">jordan</span></div>
+    <div id="music">网易云音乐</div>
+    <div class="user"></div>
+    <ul id="nums"><li>1</li><li>2</li><li>3</li></ul>
+    <script>
+    var user = document.getElementById('user');
+    var music = document.getElementById('music');
+    var element = document.getElementById('music');
+    console.log(
+        user.childNodes[0],
+        user.firstChild, user.lastChild,
+
+window.getComputedStyle(music).borderColor,
+music.style.borderColor)
+    var lis = nums.getElementsByTagName("li");
+nums.removeChild(nums.firstChild);
+console.log(lis.length)
+    </script>
+</body>
+
+</html>
