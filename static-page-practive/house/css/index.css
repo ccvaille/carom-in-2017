@@ -16,7 +16,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: system, -apple-system, BlinkMacSystemFont, SF UI, PingFang SC, Roboto, '思源黑体', Helvetica Neue, Helvetica, Microsoft YaHei, Arial, sans-serif;
+  font-family: system, -apple-system, Helvetica, Microsoft YaHei, Arial, sans-serif;
   background: #fff;
   min-width: 1400px;
 }
@@ -65,7 +65,7 @@ h3.part-title {
 h3.part-title p {
   font-size: 30px;
   letter-spacing: 5.4px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 h3.part-title span {
   display: block;
@@ -82,10 +82,10 @@ h3.part-line-title {
 h3.part-line-title p {
   font-size: 30px;
   letter-spacing: 9px;
-  color: #666666;
+  color: #333;
 }
 h3.part-line-title span {
-  font-size: 24px;
+  font-size: 22px;
   letter-spacing: 7.2px;
   color: #666666;
 }
@@ -100,7 +100,7 @@ h3.part-line-title i {
 }
 header.header-common {
   width: 1400px;
-  height: 110px;
+  height: 80px;
   overflow: hidden;
   margin: 0 auto;
   zoom: 1;
@@ -115,23 +115,35 @@ header.header-common h1 {
   float: left;
   margin-right: 86px;
 }
+header.header-common h1 img {
+  width: 143px;
+}
+header.header-common h1 span {
+  font-size: 16px;
+}
+header.header-common h1 span i {
+  display: block;
+}
 header.header-common #nav {
   float: left;
-  margin-top: 58px;
+  margin-top: 34px;
 }
 header.header-common #nav li {
   float: left;
-  margin-right: 45px;
+  margin-right: 42px;
+}
+header.header-common #nav li:last-child {
+  margin: 0;
 }
 header.header-common #nav li.active a {
-  border-bottom: 5px solid #f7b400;
+  border-bottom: 3px solid #f7b400;
 }
 header.header-common #nav li a {
-  font-size: 21px;
+  font-size: 16px;
   letter-spacing: 3.8px;
   color: #f7b400;
   padding-bottom: 20px;
-  border-bottom: 5px solid #fff;
+  border-bottom: 3px solid #fff;
   transition: border-color 0.3s;
 }
 header.header-common #nav li a:hover {
@@ -140,7 +152,7 @@ header.header-common #nav li a:hover {
 header.header-common .other {
   float: right;
   width: 410px;
-  margin-top: 55px;
+  margin-top: 24px;
   zoom: 1;
 }
 header.header-common .other:after {
@@ -158,7 +170,7 @@ header.header-common .other li img {
 }
 header.header-common .other li span {
   line-height: 40px;
-  font-size: 21px;
+  font-size: 18px;
   color: #666;
   vertical-align: top;
 }
@@ -969,7 +981,7 @@ footer.footer-common .footer-copy p {
 /*about*/
 .content .aboutme {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 78px;
   border-top: 1px solid #ebebeb;
 }
@@ -979,7 +991,7 @@ footer.footer-common .footer-copy p {
   margin: 0 auto;
 }
 .content .aboutme .aboutme-box .left {
-  width: 300px;
+  width: 243px;
   float: left;
   height: 100%;
   border: 1px solid #cccccc;
@@ -1024,8 +1036,8 @@ footer.footer-common .footer-copy p {
   color: #f7b400;
 }
 .content .aboutme .aboutme-box .right {
-  margin-left: 32px;
-  width: 866px;
+  margin-left: 20px;
+  width: 930px;
   float: left;
   height: 100%;
   border: 1px solid #ccc;
@@ -1035,16 +1047,16 @@ footer.footer-common .footer-copy p {
 }
 .content .aboutme .aboutme-box .right .right-intro ul li h4 {
   font-weight: normal;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 1.13;
   letter-spacing: 9px;
   color: #f7b400;
   margin-bottom: 20px;
 }
 .content .aboutme .aboutme-box .right .right-intro ul li p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.7;
-  letter-spacing: 6px;
+  letter-spacing: 3px;
   text-align: left;
   color: #666666;
   margin-bottom: 30px;
