@@ -19,6 +19,7 @@ class ControlPanel extends Component {
       </div>
     );
   }
+
 }
 
 export default ControlPanel;

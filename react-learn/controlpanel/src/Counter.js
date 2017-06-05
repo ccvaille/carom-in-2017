@@ -12,9 +12,11 @@ class Counter extends Component {
 
     this.onClickIncrementButton = this.onClickIncrementButton.bind(this);
     this.onClickDecrementButton = this.onClickDecrementButton.bind(this);
+    this.clickfun = this.clickfun.bind(this);
 
     this.state = {
-      count: props.initValue
+      count: props.initValue,
+      iclick: 'no'
     }
   }
 
@@ -48,14 +50,24 @@ class Counter extends Component {
     this.setState({count: this.state.count - 1});
   }
 
+  // 值变化才重新 render
   shouldComponentUpdate(nextProps, nextState) {
+    // nextProps 这次渲染传入的 props
+    // this.props 上一次渲染的 props
     return (nextProps.caption !== this.props.caption) ||
-           (nextState.count !== this.state.count);
+           (nextState.count !== this.state.count) || 
+           (nextState.iclick !== this.state.iclick) // yes
+  }
+  clickfun() {
+    alert('this is click');
+    this.setState({iclick: 'yes'});
+    console.log(this.state.iclick) // no
   }
 
   render() {
     console.log('enter render ' + this.props.caption);
     const {caption} = this.props;
+    <Counter caption={'add'} initValue={10}></Counter>
     return (
       <div>
         <button style={buttonStyle} onClick={this.onClickIncrementButton}>+</button>
@@ -63,6 +75,12 @@ class Counter extends Component {
         <span>{caption} count: {this.state.count}</span>
       </div>
     );
+    
+    return (
+      <div>
+        <button onClick={this.clickfun}>click: {this.state.iclick}</button>
+      </div>
+    )
   }
 }
 
