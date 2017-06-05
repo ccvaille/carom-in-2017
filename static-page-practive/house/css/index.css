@@ -98,47 +98,65 @@ h3.part-line-title i {
   margin-top: 15px;
   margin-bottom: 20px;
 }
-header.header-common {
-  width: 1400px;
+header {
+  width: 1200px;
   height: 80px;
   overflow: hidden;
   margin: 0 auto;
+}
+header .top {
   zoom: 1;
 }
-header.header-common:after {
+header .top:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
 }
-header.header-common h1 {
+header h1 {
   float: left;
   margin-right: 86px;
+  height: 80px;
+  font-weight: normal;
 }
-header.header-common h1 img {
+header h1 img {
   width: 143px;
+  padding-top: 10px;
+  display: inline-block;
 }
-header.header-common h1 span {
+header h1 span {
   font-size: 16px;
+  color: #f7b400;
+  display: inline-block;
+  padding-left: 22px;
+  vertical-align: super;
 }
-header.header-common h1 span i {
+header h1 span i {
   display: block;
 }
-header.header-common #nav {
+header #nav {
   float: left;
-  margin-top: 34px;
+  margin-top: 35px;
+  zoom: 1;
 }
-header.header-common #nav li {
+header #nav:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+header #nav li {
   float: left;
   margin-right: 42px;
+  cursor: pointer;
 }
-header.header-common #nav li:last-child {
-  margin: 0;
+header #nav li:last-child {
+  margin-right: 0;
 }
-header.header-common #nav li.active a {
+header #nav li.active a {
   border-bottom: 3px solid #f7b400;
 }
-header.header-common #nav li a {
+header #nav li a {
   font-size: 16px;
   letter-spacing: 3.8px;
   color: #f7b400;
@@ -146,171 +164,102 @@ header.header-common #nav li a {
   border-bottom: 3px solid #fff;
   transition: border-color 0.3s;
 }
-header.header-common #nav li a:hover {
+header #nav li a:hover {
   border-color: #f7b400;
 }
-header.header-common .other {
-  float: right;
-  width: 410px;
+header .other {
+  float: left;
   margin-top: 24px;
+  margin-left: 53px;
   zoom: 1;
 }
-header.header-common .other:after {
+header .other:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
 }
-header.header-common .other li {
+header .other li {
   float: left;
   margin-right: 15px;
 }
-header.header-common .other li img {
+header .other li img {
   margin-right: 10px;
 }
-header.header-common .other li span {
+header .other li span {
   line-height: 40px;
   font-size: 18px;
   color: #666;
   vertical-align: top;
 }
-footer.footer-common {
+footer {
   width: 100%;
   background: #353944;
-  padding-top: 46px;
+  padding-top: 30px;
 }
-footer.footer-common .footer-content {
+footer .footer-content {
   width: 1200px;
   margin: 0 auto;
 }
-footer.footer-common .footer-content .footer-text {
+footer .footer-content .footer-text {
   padding-left: 20px;
   color: #fbfbfb;
-  padding-bottom: 25px;
+  padding-bottom: 20px;
   zoom: 1;
 }
-footer.footer-common .footer-content .footer-text:after {
+footer .footer-content .footer-text:after {
   content: "";
   display: block;
   height: 0;
   clear: both;
 }
-footer.footer-common .footer-content .footer-text .qr-items {
+footer .footer-content .footer-text .qr-items {
   float: left;
 }
-footer.footer-common .footer-content .footer-text .qr-items li {
+footer .footer-content .footer-text .qr-items li {
   float: left;
   width: 132px;
+  text-align: center;
 }
-footer.footer-common .footer-content .footer-text .qr-items li:first-child {
+footer .footer-content .footer-text .qr-items li:first-child {
   margin-right: 98px;
 }
-footer.footer-common .footer-content .footer-text .qr-items li span {
+footer .footer-content .footer-text .qr-items li span {
   display: inline-block;
-  margin-top: 28px;
+  margin-top: 10px;
+  font-size: 12px;
 }
-footer.footer-common .footer-content .footer-text .position {
+footer .footer-content .footer-text .position {
   float: left;
   margin-left: 205px;
-  margin-top: 103px;
+  margin-top: 83px;
 }
-footer.footer-common .footer-content .footer-text .position p:nth-child(2) {
-  margin-bottom: 20px;
+footer .footer-content .footer-text .position p:nth-child(2) {
+  margin-bottom: 0;
   margin-top: 20px;
 }
-footer.footer-common .footer-content .footer-text .position p img {
+footer .footer-content .footer-text .position p img {
   margin-right: 13px;
 }
-footer.footer-common .footer-content .footer-text .position p span {
-  font-size: 24px;
+footer .footer-content .footer-text .position p span {
+  font-size: 18px;
   letter-spacing: 4.3px;
   text-align: left;
   color: #fbfbfb;
+  vertical-align: super;
 }
-footer.footer-common .footer-copy {
+.footer-copy {
   text-align: center;
   padding-top: 15px;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
   border-top: 1px solid #505667;
   color: #fff;
+  font-size: 12px;
 }
-footer.footer-common .footer-copy p {
-  line-height: 26px;
+.footer-copy p {
+  line-height: 20px;
 }
 /*index 首页*/
-.index header.header-index .top {
-  width: 1200px;
-  margin: 0 auto;
-  zoom: 1;
-}
-.index header.header-index .top:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
-.index header.header-index .top h1 {
-  float: left;
-  margin: 14px 0 7px 7px;
-}
-.index header.header-index .top ul {
-  float: right;
-  margin-top: 33px;
-  margin-right: 15px;
-  margin-bottom: 8px;
-}
-.index header.header-index .top ul li {
-  font-size: 20px;
-  letter-spacing: 3.6px;
-  color: #666666;
-  display: inline-block;
-}
-.index header.header-index .top ul li:nth-child(1) {
-  margin-right: 47px;
-}
-.index header.header-index .top ul li img {
-  margin-right: 10px;
-  vertical-align: middle;
-}
-.index header.header-index .top ul li span {
-  vertical-align: sub;
-}
-.index header.header-index #nav {
-  width: 100%;
-  background: #f7b400;
-}
-.index header.header-index #nav .nav {
-  zoom: 1;
-  width: 880px;
-  margin: 0 auto;
-  height: 55px;
-}
-.index header.header-index #nav .nav:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
-.index header.header-index #nav .nav li {
-  float: left;
-  margin-right: 30px;
-}
-.index header.header-index #nav .nav li.active a {
-  border-bottom: 5px solid #fff;
-}
-.index header.header-index #nav .nav li a {
-  display: inline-block;
-  color: #fff;
-  font-size: 21px;
-  letter-spacing: 3.8px;
-  padding: 0 10px;
-  border-bottom: 5px solid #f7b400;
-  line-height: 50px;
-  transition: all .3s;
-}
-.index header.header-index #nav .nav li a:hover {
-  border-color: #fff;
-}
 .index .banner {
   margin-bottom: 20px;
 }
@@ -326,7 +275,7 @@ footer.footer-common .footer-copy p {
 .index .content .part-a .part-a-box .intro {
   width: 950px;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.65;
   letter-spacing: 0.8px;
   color: #666;
@@ -390,7 +339,7 @@ footer.footer-common .footer-copy p {
 .index .content .part-b ul li {
   float: left;
   width: 600px;
-  height: 290px;
+  height: 289px;
   text-align: center;
   overflow: hidden;
 }
@@ -398,7 +347,7 @@ footer.footer-common .footer-copy p {
   background: #f7b400;
   position: relative;
 }
-.index .content .part-b ul li.img-text div {
+.index .content .part-b ul li.img-text div.img {
   width: 420px;
   height: 150px;
   position: absolute;
@@ -407,27 +356,35 @@ footer.footer-common .footer-copy p {
   margin-left: -210px;
   margin-top: -75px;
 }
-.index .content .part-b ul li.img-text div img {
+.index .content .part-b ul li.img-text div.img img {
   margin-bottom: 20px;
 }
-.index .content .part-b ul li.img-text div p {
-  font-size: 30px;
+.index .content .part-b ul li.img-text div.img p {
+  font-size: 22px;
   letter-spacing: 5.4px;
-  color: #666;
   margin-bottom: 20px;
   transition: color .3s;
 }
-.index .content .part-b ul li.img-text div span {
-  font-size: 20px;
+.index .content .part-b ul li.img-text div.img p a {
+  color: #666;
+}
+.index .content .part-b ul li.img-text div.img span {
+  font-size: 12px;
   letter-spacing: 3.6px;
   color: rgba(254, 254, 254, 0.9);
   transition: color .3s;
 }
-.index .content .part-b ul li.img-text:hover p {
-  color: #333;
+.index .content .part-b ul li.img-text div.bg {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 600px;
+  height: 289px;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
 }
-.index .content .part-b ul li.img-text:hover span {
-  color: #fefefe;
+.index .content .part-b ul li.img-text:hover div.bg {
+  display: block;
 }
 .index .content .part-b ul li > img {
   transition: .8s;
@@ -460,10 +417,11 @@ footer.footer-common .footer-copy p {
 }
 .index .content .part-c .part-c-box .new-items img {
   float: left;
+  margin-left: 10px;
 }
 .index .content .part-c .part-c-box .new-items ul {
   float: right;
-  margin-left: 40px;
+  margin-left: 30px;
   width: 669px;
 }
 .index .content .part-c .part-c-box .new-items ul li {
@@ -504,69 +462,6 @@ footer.footer-common .footer-copy p {
 .index .content .part-d .part-d-box {
   width: 1200px;
   margin: 0 auto;
-}
-.index footer.footer-index {
-  width: 100%;
-  background: #353944;
-  padding-top: 46px;
-}
-.index footer.footer-index .footer-content {
-  width: 1200px;
-  margin: 0 auto;
-}
-.index footer.footer-index .footer-content .footer-text {
-  padding-left: 20px;
-  color: #fbfbfb;
-  padding-bottom: 25px;
-  zoom: 1;
-}
-.index footer.footer-index .footer-content .footer-text:after {
-  content: "";
-  display: block;
-  height: 0;
-  clear: both;
-}
-.index footer.footer-index .footer-content .footer-text .qr-items {
-  float: left;
-}
-.index footer.footer-index .footer-content .footer-text .qr-items li {
-  float: left;
-  width: 132px;
-}
-.index footer.footer-index .footer-content .footer-text .qr-items li:first-child {
-  margin-right: 98px;
-}
-.index footer.footer-index .footer-content .footer-text .qr-items li span {
-  display: inline-block;
-  margin-top: 28px;
-}
-.index footer.footer-index .footer-content .footer-text .position {
-  float: left;
-  margin-left: 205px;
-  margin-top: 5px;
-}
-.index footer.footer-index .footer-content .footer-text .position p:nth-child(2) {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-.index footer.footer-index .footer-content .footer-text .position p img {
-  margin-right: 13px;
-}
-.index footer.footer-index .footer-content .footer-text .position p span {
-  font-size: 24px;
-  letter-spacing: 4.3px;
-  text-align: left;
-  color: #fbfbfb;
-}
-.index footer.footer-index .footer-copy {
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 20px;
-  border-top: 1px solid #505667;
-  color: #fff;
-}
-.index footer.footer-index .footer-copy p {
-  line-height: 26px;
 }
 /*trust 房屋托管*/
 .trust .content .trust-text {
