@@ -1003,3 +1003,41 @@ footer .footer-content .footer-text .position p span {
 .content .aboutme .aboutme-box .right .right-map ul li p a:hover {
   color: #dcb039;
 }
+/*轮播*/
+.new-head-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.head-items {
+  width: 60000px;
+  overflow: hidden;
+}
+.head-items li {
+  float: left;
+}
+.head-items li img {
+  width: 100%;
+  vertical-align: top;
+}
+.head-span {
+  height: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 31px;
+  text-align: center;
+  z-index: 10;
+  opacity: 0.8;
+}
+.head-dian {
+  width: 30px;
+  height: 3px;
+  /*border-radius: 8px;*/
+  background: #a0a0a0;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+.head-click {
+  background: #eee;
+}
