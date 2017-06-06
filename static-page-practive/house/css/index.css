@@ -58,6 +58,44 @@ img {
 .banner img {
   max-width: 100%;
 }
+/*轮播*/
+.banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.banner .head-items {
+  width: 60000px;
+  overflow: hidden;
+}
+.banner .head-items li {
+  float: left;
+}
+.banner .head-items li img {
+  width: 100%;
+  vertical-align: top;
+}
+.banner .head-span {
+  height: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 31px;
+  text-align: center;
+  z-index: 10;
+  opacity: 0.8;
+}
+.banner .head-dian {
+  width: 30px;
+  height: 3px;
+  /*border-radius: 8px;*/
+  background: #a0a0a0;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+}
+.banner .head-click {
+  background: #eee;
+}
 h3.part-title {
   text-align: center;
   font-weight: normal;
@@ -259,6 +297,7 @@ footer .footer-content .footer-text .position p span {
 .footer-copy p {
   line-height: 20px;
 }
+/*common*/
 /*index 首页*/
 .index .banner {
   margin-bottom: 20px;
@@ -1002,42 +1041,4 @@ footer .footer-content .footer-text .position p span {
 }
 .content .aboutme .aboutme-box .right .right-map ul li p a:hover {
   color: #dcb039;
-}
-/*轮播*/
-.new-head-wrap {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-.head-items {
-  width: 60000px;
-  overflow: hidden;
-}
-.head-items li {
-  float: left;
-}
-.head-items li img {
-  width: 100%;
-  vertical-align: top;
-}
-.head-span {
-  height: 0;
-  position: absolute;
-  width: 100%;
-  bottom: 31px;
-  text-align: center;
-  z-index: 10;
-  opacity: 0.8;
-}
-.head-dian {
-  width: 30px;
-  height: 3px;
-  /*border-radius: 8px;*/
-  background: #a0a0a0;
-  display: inline-block;
-  margin: 0 6px;
-  cursor: pointer;
-}
-.head-click {
-  background: #eee;
 }
