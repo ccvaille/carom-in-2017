@@ -87,10 +87,9 @@ img {
 .banner .head-dian {
   width: 30px;
   height: 3px;
-  /*border-radius: 8px;*/
   background: #a0a0a0;
   display: inline-block;
-  margin: 0 6px;
+  margin-right: 20px;
   cursor: pointer;
 }
 .banner .head-click {
@@ -112,6 +111,7 @@ h3.part-title span {
   letter-spacing: 3px;
   color: #f7b400;
   margin-bottom: 26px;
+  text-transform: uppercase;
 }
 h3.part-line-title {
   text-align: center;
@@ -383,8 +383,12 @@ footer .footer-content .footer-text .position p span {
   overflow: hidden;
 }
 .index .content .part-b ul li.img-text {
-  background: #f7b400;
+  background: #f9c333;
   position: relative;
+}
+.index .content .part-b ul li.img-text > a {
+  width: 100%;
+  height: 100%;
 }
 .index .content .part-b ul li.img-text div.img {
   width: 420px;
@@ -403,8 +407,6 @@ footer .footer-content .footer-text .position p span {
   letter-spacing: 5.4px;
   margin-bottom: 20px;
   transition: color .3s;
-}
-.index .content .part-b ul li.img-text div.img p a {
   color: #666;
 }
 .index .content .part-b ul li.img-text div.img span {
@@ -456,7 +458,7 @@ footer .footer-content .footer-text .position p span {
 }
 .index .content .part-c .part-c-box .new-items img {
   float: left;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .index .content .part-c .part-c-box .new-items ul {
   float: right;
@@ -472,7 +474,7 @@ footer .footer-content .footer-text .position p span {
 }
 .index .content .part-c .part-c-box .new-items ul li > a {
   color: #666666;
-  font-size: 18px;
+  font-size: 16px;
   width: 75%;
   max-height: 50px;
   display: -webkit-box;
@@ -491,11 +493,12 @@ footer .footer-content .footer-text .position p span {
   bottom: 5px;
   right: 0;
   color: #666;
+  font-size: 16px;
 }
 .index .content .part-d {
   width: 100%;
   background: #fff;
-  padding-top: 70px;
+  padding-top: 40px;
   padding-bottom: 60px;
 }
 .index .content .part-d .part-d-box {
@@ -931,9 +934,9 @@ footer .footer-content .footer-text .position p span {
   border: 1px solid #cccccc;
 }
 .content .aboutme .aboutme-box .left h4 {
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1.13;
-  letter-spacing: 9px;
+  letter-spacing: 6px;
   color: #666666;
   position: relative;
   font-weight: normal;
@@ -962,7 +965,7 @@ footer .footer-content .footer-text .position p span {
 .content .aboutme .aboutme-box .left ul li a {
   font-size: 24px;
   line-height: 1.42;
-  letter-spacing: 7.2px;
+  letter-spacing: 4px;
   text-align: left;
   color: #666666;
 }
@@ -983,7 +986,7 @@ footer .footer-content .footer-text .position p span {
   font-weight: normal;
   font-size: 24px;
   line-height: 1.13;
-  letter-spacing: 9px;
+  letter-spacing: 5px;
   color: #f7b400;
   margin-bottom: 20px;
 }
@@ -1016,20 +1019,24 @@ footer .footer-content .footer-text .position p span {
   width: 33.3%;
   float: left;
   text-align: center;
+  border-right: 1px solid #ccc;
+}
+.content .aboutme .aboutme-box .right .right-map ul li:last-child {
+  border: none;
 }
 .content .aboutme .aboutme-box .right .right-map ul li img {
   margin-bottom: 20px;
 }
 .content .aboutme .aboutme-box .right .right-map ul li span {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.21;
-  letter-spacing: 8.4px;
+  letter-spacing: 4px;
   color: #666666;
   display: block;
   margin-bottom: 33px;
 }
 .content .aboutme .aboutme-box .right .right-map ul li p {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.55;
   color: #666666;
 }

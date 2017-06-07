@@ -101,10 +101,9 @@ img {
     .head-dian {
         width: 30px;
         height: 3px;
-        /*border-radius: 8px;*/
         background: #a0a0a0;
         display: inline-block;
-        margin: 0 6px;
+        margin-right: 20px;
         cursor: pointer;
     }
     .head-click {
@@ -127,6 +126,7 @@ h3.part-title {
         letter-spacing: 3px;
         color: #f7b400;
         margin-bottom: 26px;
+        text-transform: uppercase;
     }
 }
 
@@ -296,6 +296,8 @@ footer {
         line-height: 20px;
     }
 }
+
+
 /*common*/
 
 
@@ -370,8 +372,12 @@ footer {
                     text-align: center;
                     overflow: hidden;
                     &.img-text {
-                        background: #f7b400;
+                        background: #f9c333;
                         position: relative;
+                        & > a {
+                            width: 100%;
+                            height: 100%;
+                        }
                         div.img {
                             width: 420px;
                             height: 150px;
@@ -388,9 +394,7 @@ footer {
                                 letter-spacing: 5.4px;
                                 margin-bottom: 20px;
                                 transition: color .3s;
-                                a {
-                                    color: #666;
-                                }
+                                color: #666;
                             }
                             span {
                                 font-size: 12px;
@@ -414,7 +418,7 @@ footer {
                             }
                         }
                     }
-                    > img {
+                    & > img {
                         transition: .8s;
                         &:hover {
                             transform: scale(1.03);
@@ -438,7 +442,7 @@ footer {
                     .clearfix();
                     img {
                         float: left;
-                        margin-left: 10px;
+                        margin-left: 20px;
                     }
                     ul {
                         float: right;
@@ -452,7 +456,7 @@ footer {
                             position: relative;
                             & > a {
                                 color: #666666;
-                                font-size: 18px;
+                                font-size: 16px;
                                 width: 75%;
                                 max-height: 50px;
                                 display: -webkit-box;
@@ -471,6 +475,7 @@ footer {
                                 bottom: 5px;
                                 right: 0;
                                 color: #666;
+                                font-size: 16px;
                             }
                         }
                     }
@@ -480,7 +485,7 @@ footer {
         .part-d {
             .wMax();
             background: #fff;
-            padding-top: 70px;
+            padding-top: 40px;
             padding-bottom: 60px;
             .part-d-box {
                 .w1200();
@@ -878,9 +883,9 @@ footer {
                 height: 100%;
                 border: 1px solid #cccccc;
                 h4 {
-                    font-size: 30px;
+                    font-size: 28px;
                     line-height: 1.13;
-                    letter-spacing: 9px;
+                    letter-spacing: 6px;
                     color: #666666;
                     position: relative;
                     font-weight: normal;
@@ -909,7 +914,7 @@ footer {
                         a {
                             font-size: 24px;
                             line-height: 1.42;
-                            letter-spacing: 7.2px;
+                            letter-spacing: 4px;
                             text-align: left;
                             color: #666666;
                             &:hover {
@@ -933,7 +938,7 @@ footer {
                                 font-weight: normal;
                                 font-size: 24px;
                                 line-height: 1.13;
-                                letter-spacing: 9px;
+                                letter-spacing: 5px;
                                 color: #f7b400;
                                 margin-bottom: 20px;
                             }
@@ -961,19 +966,23 @@ footer {
                             width: 33.3%;
                             float: left;
                             text-align: center;
+                            border-right: 1px solid #ccc;
+                            &:last-child{
+                                border: none;
+                            }
                             img {
                                 margin-bottom: 20px;
                             }
                             span {
-                                font-size: 28px;
+                                font-size: 24px;
                                 line-height: 1.21;
-                                letter-spacing: 8.4px;
+                                letter-spacing: 4px;
                                 color: #666666;
                                 display: block;
                                 margin-bottom: 33px;
                             }
                             p {
-                                font-size: 20px;
+                                font-size: 16px;
                                 line-height: 1.55;
                                 color: #666666;
                                 i {

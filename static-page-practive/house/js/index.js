@@ -36,7 +36,7 @@ $(function(){
             $(".head-span .head-dian").removeClass("head-click");
             $(".head-span .head-dian").eq(gg).addClass("head-click");
 
-        }, 3000);
+        }, 6000);
 
     }
     $(window).load(function() {
