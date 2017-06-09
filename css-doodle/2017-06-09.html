@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/css-doodle.min.js"></script>
+</head>
+
+<body>
+    <css-doodle grid='8'>
+        :doodle { size: 200px; background: #000;overflow: hidden;}
+        border-radius: @pick(100% 0; 0 100%);
+        transition: .2s ease @rand(.6s);
+        border:  1px solid hsla(calc(36 * @index()),80%,80%,.7);
+        background: hsla(calc(36 * @index()),50%,50%,.7);
+        transform: rotate(@pick(60deg,-60deg)) scale(@rand(.25, 1.25));
+    </css-doodle>
+</body>
+
+</html>

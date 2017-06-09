@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2017-06-07</title>
+    <script src="js/css-doodle.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- :host { size: 200px; } background: hsla( calc(180 + @row() * @col() * 5), 80%, 80%, 1 );; border: 1px solid #fff; 
+    :after {content:'@pick(+, *, ., -,^,$)'; color: #000; } -->
+    <css-doodle grid="5,7">
+        background: rgba(102, 51, 153, @rand(.9)); 
+        transition: .2s ease @rand(200ms); 
+        transform: rotate(@rand(360deg)); 
+        clip-path: polygon( @rand(100%) 0, 100% @rand(100%), 0 @rand(100%) );
+    </css-doodle>
+    <css-doodle >
+    background: blue;
+    clip-path: @shape(bud, @rand(3, 10));
+  </css-doodle>
+  <css-doodle grid="8">
+  :doodle {
+    size: 100px;
+    background: #000;
+    overflow: hidden;
+  }
+  clip-path: @shape(clover, @pick(3, 4));
+  background: hsla(
+    calc(5 * @index()), 70%, 60%, @rand(.5)
+  );
+  transform:
+    rotate(@rand(360deg))
+    scale(@rand(.5, 2.4))
+    translate(@rand(-50%, 50%), @rand(-50%, 50%));
+</css-doodle>
+</body>
+
+</html>
