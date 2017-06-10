@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    &,
+    &:before,
+    &:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+html,
+body {
+    background: #343137;
+    padding: 20px 0;
+}
+
+.notifi-box {
+    position: relative;
+    .size(380px, 125px);
+    background: #fff;
+    margin: 0 auto;
+    text-align: left;
+    padding: 30px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    .clearfix();
+    .notifi-img {
+        .size(50px, 50px);
+        background: #a7d155;
+        border-radius: 50%;
+        border: 5px solid #8fb14f;
+        text-align: center;
+        float: left;
+        .fa {
+            color: #fff;
+            font-size: 24px;
+            padding-top: 8px;
+        }
+    }
+    .notifi-text {
+        padding-left: 20px;
+        width: 260px;
+        float: left;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    .window-control {
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: 1px solid #dcdcdc;
+        .size(60px, 25px);
+        border-radius: 3px;
+        .clearfix();
+        .fa {
+            display: block;
+            width: 33.3%;
+            text-align: center;
+            font-size: 10px;
+            cursor: pointer;
+            height: 25px;
+            line-height: 25px;
+            float: left;
+            background: #f0f0f0;
+            color: #5e5c5c;
+            transition: all .3s;
+            &:hover {
+                background: #b6b8c5;
+            }
+        }
+    }
+    &:nth-child(2) {
+        .notifi-img {
+            background: #e34f4f;
+            border-color: #c14343;
+        }
+    }
+    &:nth-child(3) {
+        .notifi-img {
+            background: #f1e472;
+            border-color: #cec260;
+        }
+    }
+}

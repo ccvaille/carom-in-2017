@@ -1,0 +1,74 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+.btn {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 1px 8px 3px rgba(0, 0, 0, .15);
+    a {
+        display: inline-block;
+        height: 36px;
+        padding: 0 18px;
+        line-height: 32px;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background .3s;
+        border-radius: 2px;
+        &:first-child {
+            background: -webkit-linear-gradient(top, #aab7c5, #78808f);
+            background: linear-gradient(top, #aab7c5, #78808f);
+            border-style: solid;
+            border-color: #c1cad4 #a6afba #989fa9 #afbac6;
+            box-shadow: 0 0 0 1px #8d98a4;
+            &:hover,
+            &:focus {
+                background: -webkit-linear-gradient(top, tint(#aab7c5, 20%), tint(#78808f, 20%));
+                background: linear-gradient(top, tint(#aab7c5, 20%), tint(#78808f, 20%));
+            }
+            &:active {
+                background: -webkit-linear-gradient(top, shade(#aab7c5, 20%), shade(#78808f, 20%));
+                background: linear-gradient(top, shade(#aab7c5, 20%), shade(#78808f, 20%));
+            }
+        }
+        &:last-child {
+            background: -webkit-linear-gradient(top, #91b9e4, #4f79cf);
+            border-radius: 0 2px 2px 0;
+            border-style: solid;
+            border-color: #accaeb #98bae5 #7698db #9cbde6;
+            box-shadow: 0 0 0 1px #8d98a4;
+            margin-left: -1px;
+            &:hover,
+            &:focus {
+                background: -webkit-linear-gradient(top, tint(#91b9e4, 20%), tint(#4f79cf, 20%));
+                background: linear-gradient(top, tint(#91b9e4, 20%), tint(#4f79cf, 20%));
+            }
+            &:active {
+                background: -webkit-linear-gradient(top, shade(#91b9e4, 20%), shade(#4f79cf, 20%));
+                background: linear-gradient(top, shade(#91b9e4, 20%), shade(#4f79cf, 20%));
+            }
+        }
+    }
+}
