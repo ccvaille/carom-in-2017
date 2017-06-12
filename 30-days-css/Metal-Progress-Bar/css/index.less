@@ -1,0 +1,79 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+html,
+body {
+    .size(100%, 100%);
+}
+
+.box {
+    .size(100%, 100%);
+    background: radial-gradient(#e4e8ea, #a4aaae);
+    padding-top: 50px;
+    .bar {
+        .size(260px, 40px);
+        margin: 0 auto;
+        background: linear-gradient(#eaecee, #c0c4c8);
+        border: 1px solid #b4b6b9;
+        box-shadow: 0 0 0 7px #ced1d3;
+        border-radius: 25px;
+        padding: 15px;
+        .clearfix();
+        .progress {
+            .size(90%, 8px);
+            float: left;
+            margin-right: 2%;
+            .progress-item {
+                .size(100%, 100%);
+                background: linear-gradient(#838383, #bababa);
+                border-radius: 5px;
+                position: relative;
+            }
+            &.active .progress-item:after {
+                top: 0;
+                left: 0;
+                content: '';
+                position: absolute;
+                .size(95%, 100%);
+                animation: ani 3s;
+                background: repeating-linear-gradient(135deg,#0196e9 1px,#01a2f1 3px);
+                border-radius: 5px;
+                transition: all 1s;
+            }
+        }
+        span {
+            float: left;
+            width: 8%;
+            font-size: 12px;
+            line-height: 8px;
+        }
+    }
+}
+
+@keyframes ani {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 95%
+    }
+}
