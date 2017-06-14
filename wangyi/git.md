@@ -53,7 +53,15 @@
     +   git stash list 
     +   git stash apply // 恢复
     +    git stash drop stash@{0} //删除
-    +     git stash pop = stash apply + stash drop
+    +    git stash pop = stash apply + stash drop
+
+- git rebase 
+
+## 远程分支
+- git push
+- git remote origin name 
+- git remote -v // 查看远程仓库信息
+- git fetch // 获取远程仓库的提交历史
 
 
 
