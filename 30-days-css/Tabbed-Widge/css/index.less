@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    .size(100%, 100%);
+    font-family: Arial;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+a {
+    &,
+    &:hover,
+    &:active,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+.box {
+    .size(100%, 100%);
+    background: #ebebeb;
+    position: relative;
+}
+
+.contact {
+    .size(340px, 480px);
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    header {
+        height: 53px;
+        background: #f7f7f7;
+        border-bottom: 1px solid #e3e3e3;
+        ul {
+            padding: 12px 3% 0;
+            li {
+                .size(32%, 40px);
+                float: left;
+                text-align: center;
+                &:nth-child(even) {
+                    border-left: none;
+                    border-right: none;
+                }
+                &.active {
+                    border: 3px solid #44c7f3;
+                    border-left: 1px solid #e3e3e3;
+                    border-right: none;
+                    border-bottom: none;
+                    margin-top: -2px;
+                    border-radius: 2px;
+                    a {
+                        border-top: none;
+                        border-style: none;
+                        &:hover {
+                            background: #fff;
+                            color: #44c7f3;
+                        }
+                    }
+                }
+                a {
+                    display: block;
+                    .size(100%, 100%);
+                    color: #bababa;
+                    font-size: 12px;
+                    line-height: 40px;
+                    border: 1px solid #e3e3e3;
+                    border-radius: 2px 2px 0 0;
+                    background: #fff;
+                    transition: all .3s;
+                    &:hover {
+                        background: #44c7f3;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .person {
+        li {
+            display: block;
+            position: relative;
+            .clearfix();
+            padding: 18px 3%;
+            border-bottom: 1px solid #e5e5e5;
+            background: #fff;
+            cursor: pointer;
+            &:hover {
+                background: #f7f7f7;
+            }
+            .img {
+                float: left;
+                background: #000;
+                .size(34px, 34px);
+                border-radius: 2px;
+                margin-right: 10px;
+            }
+            .text {
+                float: left;
+                font-size: 12px;
+                .name {
+                    font-weight: bold;
+                    color: #6c6c6c;
+                    display: block;
+                }
+                .follow {
+                    color: #bdbdbd;
+                }
+            }
+            .mail.icon {
+                position: absolute;
+                top: 26px;
+                right: 20px;
+                width: 16px;
+                height: 12px;
+                border-radius: 1px;
+                border: 2px solid #d8d8d8;
+                transition: all .3s;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 8px;
+                    top: -4px;
+                    width: 1px;
+                    height: 10px;
+                    background: #d8d8d8;
+                    transform-origin: bottom;
+                    transform: rotate(-54deg);
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 8px;
+                    top: -4px;
+                    width: 1px;
+                    height: 10px;
+                    background: #d8d8d8;
+                    transform-origin: bottom;
+                    transform: rotate(54deg);
+                }
+                &:hover{
+                    border-color: #ef7272;
+                    &:before,&:after {
+                        background: #ef7272;
+                    }
+                }
+            }
+        }
+    }
+}

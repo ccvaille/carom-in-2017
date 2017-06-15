@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+ul,
+li {
+  list-style-type: none;
+}
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background: #ebebeb;
+  position: relative;
+}
+.contact {
+  width: 340px;
+  height: 480px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+.contact header {
+  height: 53px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e3e3e3;
+}
+.contact header ul {
+  padding: 12px 3% 0;
+}
+.contact header ul li {
+  width: 32%;
+  height: 40px;
+  float: left;
+  text-align: center;
+}
+.contact header ul li:nth-child(even) {
+  border-left: none;
+  border-right: none;
+}
+.contact header ul li.active {
+  border: 3px solid #44c7f3;
+  border-left: 1px solid #e3e3e3;
+  border-right: none;
+  border-bottom: none;
+  margin-top: -2px;
+  border-radius: 2px;
+}
+.contact header ul li.active a {
+  border-top: none;
+  border-style: none;
+}
+.contact header ul li.active a:hover {
+  background: #fff;
+  color: #44c7f3;
+}
+.contact header ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #bababa;
+  font-size: 12px;
+  line-height: 40px;
+  border: 1px solid #e3e3e3;
+  border-radius: 2px 2px 0 0;
+  background: #fff;
+  transition: all .3s;
+}
+.contact header ul li a:hover {
+  background: #44c7f3;
+  color: #fff;
+}
+.contact .person li {
+  display: block;
+  position: relative;
+  zoom: 1;
+  padding: 18px 3%;
+  border-bottom: 1px solid #e5e5e5;
+  background: #fff;
+  cursor: pointer;
+}
+.contact .person li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.contact .person li:hover {
+  background: #f7f7f7;
+}
+.contact .person li .img {
+  float: left;
+  background: #000;
+  width: 34px;
+  height: 34px;
+  border-radius: 2px;
+  margin-right: 10px;
+}
+.contact .person li .text {
+  float: left;
+  font-size: 12px;
+}
+.contact .person li .text .name {
+  font-weight: bold;
+  color: #6c6c6c;
+  display: block;
+}
+.contact .person li .text .follow {
+  color: #bdbdbd;
+}
+.contact .person li .mail.icon {
+  position: absolute;
+  top: 26px;
+  right: 20px;
+  width: 16px;
+  height: 12px;
+  border-radius: 1px;
+  border: 2px solid #d8d8d8;
+  transition: all .3s;
+}
+.contact .person li .mail.icon:before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: -4px;
+  width: 1px;
+  height: 10px;
+  background: #d8d8d8;
+  transform-origin: bottom;
+  transform: rotate(-54deg);
+}
+.contact .person li .mail.icon:after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: -4px;
+  width: 1px;
+  height: 10px;
+  background: #d8d8d8;
+  transform-origin: bottom;
+  transform: rotate(54deg);
+}
+.contact .person li .mail.icon:hover {
+  border-color: #ef7272;
+}
+.contact .person li .mail.icon:hover:before,
+.contact .person li .mail.icon:hover:after {
+  background: #ef7272;
+}
