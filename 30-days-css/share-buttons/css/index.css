@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+ul,
+li {
+  list-style-type: none;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+ul {
+  text-align: center;
+  padding-top: 20px;
+}
+ul li {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 75px;
+  border: 1px solid #bababa;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
+ul li span {
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  line-height: 38.5px;
+}
+ul li .num {
+  font-size: 22px;
+  color: #444444;
+  border-bottom: 1px solid #7eafc0;
+}
+ul li .text {
+  color: #fff;
+  background: #7fcae3;
+  box-shadow: 0px 3px 0px #468aa0;
+  border-radius: 0 0 4px 4px;
+}
+ul li:after {
+  position: absolute;
+  content: '';
+  left: 28px;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid #fff;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+ul li.like .text {
+  background: #5b78b4;
+  box-shadow: 0 3px 0 #284178;
+}
+ul li.add .text {
+  background: #5d5d5d;
+  box-shadow: 0 3px 0 #3d3d3d;
+}
