@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+ul,
+li {
+  list-style-type: none;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding-top: 20px;
+}
+.search-box {
+  width: 240px;
+  margin: 0 auto;
+}
+.search-box:hover .select-box {
+  display: block;
+}
+.select {
+  width: 100%;
+  height: 24px;
+  position: relative;
+}
+.select input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #a8acbc;
+  padding: 0 10px;
+  line-height: 24px;
+}
+.select input:focus {
+  outline: none;
+}
+.select .search.icon {
+  color: #000;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+.select .search.icon:after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  height: 6px;
+  width: 1px;
+  background-color: #000;
+}
+.select-box {
+  display: none;
+  position: relative;
+  width: 240px;
+  margin-top: 8px;
+  border: 1px solid #c0c3d2;
+  border-radius: 4px;
+}
+.select-box:after {
+  position: absolute;
+  top: -10px;
+  left: calc(50% - 5px);
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid #c0c3d2;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.select-box li {
+  position: relative;
+  padding: 10px 15px;
+  border: 1px solid #fff;
+  transition: all .3s;
+}
+.select-box li .btn {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 22px;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #c0c3d2;
+  border-radius: 50%;
+}
+.select-box li .btn:before {
+  position: absolute;
+  content: '';
+  width: 4px;
+  height: 4px;
+  background: #c0c3d2;
+  top: 40%;
+  left: 2px;
+  transform: translateY(-40%);
+}
+.select-box li .btn:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 5px solid #c0c3d2;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  top: 40%;
+  left: 6px;
+  transform: translateY(-40%);
+}
+.select-box li:hover,
+.select-box li.active {
+  cursor: pointer;
+  background: #499deb;
+  border-color: #1f6db6;
+}
+.select-box li:hover span,
+.select-box li.active span {
+  color: #fff;
+}
+.select-box li:hover .btn,
+.select-box li.active .btn {
+  border-color: #fff;
+}
+.select-box li:hover .btn:before,
+.select-box li.active .btn:before {
+  background: #fff;
+}
+.select-box li:hover .btn:after,
+.select-box li.active .btn:after {
+  border-color: #fff;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+.select-box p span {
+  display: block;
+  color: #808394;
+  margin-bottom: 7px;
+}
+.select-box p span.name {
+  font-weight: bold;
+}
