@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background: #252525;
+  padding-top: 20px;
+}
+.progress-bar {
+  position: relative;
+  width: 310px;
+  height: 25px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  border: 5px solid #1a1a1a;
+  border-radius: 5px;
+}
+.progress-bar:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  animation: ani 3s infinite;
+}
+@keyframes ani {
+  0% {
+    width: 0%;
+  }
+  20% {
+    width: 20%;
+    background: repeating-linear-gradient(135deg, #f85d33 1px, #fa6b40 3px);
+  }
+  50% {
+    width: 50%;
+    background: repeating-linear-gradient(135deg, #f27010 1px, #fab340 3px);
+  }
+  80% {
+    width: 80%;
+    background: repeating-linear-gradient(135deg, #f6c126 1px, #f9d23c 3px);
+  }
+  100% {
+    width: 100%;
+    background: repeating-linear-gradient(135deg, #648d21 1px, #759033 3px);
+  }
+}
