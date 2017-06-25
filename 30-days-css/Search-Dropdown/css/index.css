@@ -96,7 +96,6 @@ li {
   transition: all .3s;
 }
 .select-box li .btn {
-  display: inline-block;
   position: absolute;
   right: 15px;
   top: 22px;
@@ -153,11 +152,11 @@ li {
   border-top-color: transparent;
   border-bottom-color: transparent;
 }
-.select-box p span {
+.select-box span {
   display: block;
   color: #808394;
   margin-bottom: 7px;
 }
-.select-box p span.name {
+.select-box span.name {
   font-weight: bold;
 }

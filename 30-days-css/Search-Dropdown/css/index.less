@@ -40,6 +40,7 @@ li {
     background: #fff;
     padding-top: 20px;
 }
+
 .search-box {
     width: 240px;
     margin: 0 auto;
@@ -111,7 +112,6 @@ li {
         border: 1px solid #fff;
         transition: all .3s;
         .btn {
-            display: inline-block;
             position: absolute;
             right: 15px;
             top: 22px;
@@ -140,7 +140,8 @@ li {
                 transform: translateY(-40%);
             }
         }
-        &:hover,&.active {
+        &:hover,
+        &.active {
             cursor: pointer;
             background: #499deb;
             border-color: #1f6db6;
@@ -155,20 +156,18 @@ li {
                 &:after {
                     border-color: #fff;
                     border-right-color: transparent;
-                border-top-color: transparent;
-                border-bottom-color: transparent;
+                    border-top-color: transparent;
+                    border-bottom-color: transparent;
                 }
             }
         }
     }
-    p {
-        span {
-            display: block;
-            color: #808394;
-            margin-bottom: 7px;
-            &.name {
-                font-weight: bold;
-            }
+    span {
+        display: block;
+        color: #808394;
+        margin-bottom: 7px;
+        &.name {
+            font-weight: bold;
         }
     }
 }
