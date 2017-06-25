@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    .size(100%, 100%);
+    font-family: Arial;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+.box {
+    .size(100%, 100%);
+    background: #3f3f3f;
+    padding-top: 80px;
+}
+
+.tab {
+    background: webkit-linear-gradient(#f2f2f2, #f0f0f0);
+    background: linear-gradient(#f2f2f2, #f0f0f0);
+    .size(100%, 100%);
+}
+
+.nav {
+    background: #3f3f3f;
+    text-align: center;
+    height: 34px;
+    & > li {
+        display: inline-block;
+        position: relative;
+        &.active,&:hover {
+            ul {
+                display: block;
+            }
+        }
+        ul {
+            position: absolute;
+            top: 43px;
+            left: 0;
+            border: 1px solid #ededed;
+            border-top: none;
+            display: none;
+            li {
+                width: 200px;
+                background: #fff;
+                a {
+                    height: 34px;
+                    margin: 0 20px;
+                    color: #666666;
+                    background: #fff;
+                    border-radius: 0;
+                    font-weight: normal;
+                    border-bottom: 1px solid #ededed;
+                }
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+                &:hover a {
+                    color: red;
+                }
+            }
+        }
+        &.active a,&:hover a {
+            color: #666;
+            background: #fff;
+        }
+    }
+    a {
+        display: inline-block;
+        background: -webkit-linear-gradient(#b1d0dd, #8ab9cc);
+        background: linear-gradient(#b1d0dd, #8ab9cc);
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        text-decoration: none;
+        height: 100%;
+        padding: 0 20px;
+        line-height: 34px;
+        border-radius: 3px;
+        transition: all .3s;
+        &:hover,
+        &.active a {
+            text-decoration: none;
+        }
+    }
+}
+
+.content {
+    height: -webkit-calc(~"100% - 31px");
+    height: calc(~"100% - 31px");
+    margin-top: 8px;
+    border-top: 1px solid #d8d8d8;
+}
