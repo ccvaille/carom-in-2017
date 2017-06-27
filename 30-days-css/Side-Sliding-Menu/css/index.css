@@ -28,6 +28,7 @@ ul {
   padding: 20px 0;
   width: 55px;
   height: 100%;
+  overflow: hidden;
   transition: width .3s;
 }
 ul:hover {
@@ -38,6 +39,7 @@ ul li {
   margin: 10px 0;
   width: 255px;
   height: 40px;
+  line-height: 40px;
   cursor: pointer;
 }
 ul li:hover {
@@ -46,6 +48,9 @@ ul li:hover {
 ul li:hover a {
   display: inline-block;
   color: #fff;
+}
+ul li:hover i {
+  border-color: #fff;
 }
 ul i {
   display: inline-block;
@@ -56,8 +61,8 @@ ul i {
   margin: 0 20px;
 }
 ul a {
-  display: none;
-  color: #8a8a8a;
+  margin-left: 10px;
+  color: #aaa;
   line-height: 40px;
   text-transform: uppercase;
 }

@@ -46,7 +46,8 @@ a {
 ul {
     background: #F7F7F7;
     padding: 20px 0;
-    .size(55px,100%);
+    .size(55px, 100%);
+    overflow: hidden;
     transition: width .3s;
     &:hover {
         width: 255px;
@@ -54,26 +55,30 @@ ul {
     li {
         display: block;
         margin: 10px 0;
-        .size(255px,40px);
+        .size(255px, 40px);
+        line-height: 40px;
         cursor: pointer;
         &:hover {
-        	background: #00bbbb;
-        	a {
-        		display: inline-block;
-        		color: #fff;
-        	}
+            background: #00bbbb;
+            a {
+                display: inline-block;
+                color: #fff;
+            }
+            i {
+                border-color: #fff;
+            }
         }
     }
     i {
-    		display: inline-block;
+        display: inline-block;
         .size(8px, 8px);
         border-radius: 4px;
         border: 1px solid #aaa;
         margin: 0 20px;
     }
     a {
-    	display: none;
-    	color: #8a8a8a;
+        margin-left: 10px;
+        color: #aaa;
         line-height: 40px;
         text-transform: uppercase;
     }
