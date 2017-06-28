@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    .size(100%, 100%);
+    font-family: Arial;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+a {
+    &,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.box {
+    .size(100%, 100%);
+    background: #d0d0d0;
+}
+
+.progress-box {
+    position: relative;
+    perspective: 1000px;
+}
+
+.progress-item {
+    .size(360px, 100px);
+    transform-style: perserve-3d;
+    transform-origin: 50% 50% ;
+}
+
+.face {
+    .size(100px, 100px);
+    position: absolute;
+}
+
+.top {
+    left: 200px;
+    top: 100px;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    background: rgba(145, 145, 145, 0.2);
+}
+
+.bottom {
+    left: 200px;
+    bottom: -200px;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    background: pink;
+}
+
+.left {
+    left: 100px;
+    top: 200px;
+    transform: rotateY(90deg);
+    transform-origin: right;
+    background: green;
+    z-index: 2;
+}
+
+.right {
+    left: 300px;
+    top: 200px;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    background: #eee;
+    z-index: 3;
+}
+
+.front {
+    left: 200px;
+    top: 200px;
+    transform: translateZ(100px);
+    background: black;
+    z-index: 4;
+}
+
+.back {
+    left: 200px;
+    top: 200px;
+    transform: translateZ(0);
+    background: blue;
+}
