@@ -50,8 +50,9 @@ a {
 
 .progress-item {
     .size(360px, 100px);
-    transform-style: perserve-3d;
-    transform-origin: 50% 50% ;
+    transform-origin: 50% 50%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .face {
@@ -60,19 +61,21 @@ a {
 }
 
 .top {
+    .size(200px, 100px);
     left: 200px;
     top: 100px;
     transform: rotateX(-90deg);
     transform-origin: bottom;
-    background: rgba(145, 145, 145, 0.2);
+    background: rgba(208, 203, 203, 0.3);
 }
 
 .bottom {
+    .size(200px, 100px);
     left: 200px;
-    bottom: -200px;
+    top: 300px;
     transform: rotateX(90deg);
     transform-origin: top;
-    background: pink;
+    box-shadow: 0 0.1em 0.6em rgba(0, 0, 0, 0.3), 0.6em -0.5em 3em rgba(0, 0, 0, 0.3), 1em -1em 8em #fefefe;
 }
 
 .left {
@@ -80,30 +83,32 @@ a {
     top: 200px;
     transform: rotateY(90deg);
     transform-origin: right;
-    background: green;
+    background: rgba(254, 254, 254, 0.6);
     z-index: 2;
 }
 
 .right {
-    left: 300px;
+    left: 401px;
     top: 200px;
     transform: rotateY(-90deg);
     transform-origin: left;
-    background: #eee;
+    background: rgba(254, 254, 254, 0.3);
     z-index: 3;
 }
 
 .front {
+    .size(200px, 100px);
     left: 200px;
     top: 200px;
     transform: translateZ(100px);
-    background: black;
+    background: rgba(254, 254, 254, 0.3);
     z-index: 4;
 }
 
 .back {
+    .size(200px, 100px);
     left: 200px;
     top: 200px;
     transform: translateZ(0);
-    background: blue;
+    background: rgba(254, 254, 254, 0.3)
 }
