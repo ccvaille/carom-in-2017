@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  zoom: 1;
+  background: #000;
+}
+.box:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+ul li {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #ECF0F1;
+  box-shadow: inset 0 2px 20px #e6ebed;
+}
+ul li div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: green;
+}
+ul li:first-child div {
+  top: 0;
+  right: 0;
+  transform-origin: 100% 50%;
+  transition: all 3s;
+  transform: rotate3d(0, 1, 0, 90deg);
+}
+ul li:first-child:hover div {
+  transform-origin: 100% 0%;
+  transform: rotate3d(0, 0, 0, 0deg);
+}
