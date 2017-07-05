@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>coolfe-170701-Pure-CSS-Tree</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <div class="box">
-        <label><input type="checkbox">checkbox</label>
+        <div class="tree-box">
+            <input type="checkbox" id="view">
+            <label for="view">view</label>
+            <ul>
+                <li>index.html</li>
+                <li>
+                    <input type="checkbox" id="layout">
+                    <label for="layout">layout</label>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="base">
+                            <label for="base">
+                                base</label>
+                            <ul class="child">
+                                <li>index.html</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
+
 </html>

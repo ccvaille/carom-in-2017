@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+ul li {
+  list-style: none;
+}
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background: #e6e6e6;
+}
+.tree-box {
+  padding: 50px;
+}
+.tree-box input[type='checkbox'] {
+  display: none;
+}
+.tree-box label {
+  display: inline-block;
+  position: relative;
+  line-height: 30px;
+  color: #434a58;
+  padding-left: 20px;
+  cursor: pointer;
+  border-bottom: 1px dashed #434a58;
+  width: 80%;
+}
+.tree-box label:hover {
+  color: #434a58;
+  border-bottom-color: #B0B9C5;
+}
+.tree-box label:after {
+  position: absolute;
+  content: '';
+  top: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+}
+.tree-box input[type='checkbox'] ~ ul > li {
+  height: 0;
+  overflow: hidden;
+}
+.tree-box input[type='checkbox']:checked ~ ul > li {
+  line-height: 30px;
+  height: auto;
+}
+.tree-box input[type='checkbox']:checked + label {
+  border-bottom-color: #434a58;
+}
+.tree-box input[type='checkbox']:checked + label:hover {
+  border-bottom-color: #434a58;
+}
+.tree-box ul {
+  padding-left: 10px;
+}
