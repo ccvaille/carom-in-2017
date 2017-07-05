@@ -1,0 +1,19 @@
+## Webpack
+- npm init 
+    - 生成 package.json 文件
+- 安装
+    - npm install --save webpack react react-dom// 写进 dependencies
+    - npm install --save-dev babel-core babel-eslint babel-loader babel-preset-es2015 babel-preset-react html-webpack-plugin webpack webpack-dev-server // 写进 devDependencies
+- new file
+    - webpack.config.js
+    - .babelrc
+- 写组件
+    - new folder(app)
+- 注意点
+    - absolute path：`{$__dirname}/dist`
+    - 组件名称后面需要有 / 分割
+        - ReactDOM.render(<MyName/>,document.getElementById('app'));
+- 总结
+    - 组件的两种写法
+    - props 父元素传递过来，不能更改
+    - state 可以通过 setState() 更改
