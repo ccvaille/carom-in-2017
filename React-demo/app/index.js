@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const divStyle = {
+    color: 'red',
+    borderWidth: '1px',
+    borderStyle: 'solid',
+    borderColor: '#000',
+    borderRadius: '3px'
+};
+
+// create Component
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -11,25 +20,24 @@ class App extends React.Component {
         return (<div><h1>Hello,World!</h1></div>);
     }
 }
-ReactDOM.render(<App/>,document.getElementById('app'));
-
+ReactDOM.render(<App />, document.getElementById('app'));
 
 const MyComponent = () => (
     <div>My name is coolfe.</div>
 );
 
-ReactDOM.render(<MyComponent/>,document.getElementById('name'));
+ReactDOM.render(<div style={divStyle}>MyComponent  /></div>, document.getElementById('name'));
 
 
-
+// PropTypes
 MyComponent.propTypes = {
     todo: React.PropTypes.object,
     name: React.PropTypes.string,
 }
 
+//defaultProps
 MyComponent.defaultProps = {
     todo: {},
     name: '',
 }
-
 
