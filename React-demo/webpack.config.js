@@ -21,11 +21,19 @@ const HTMLWebpackPluginConfig3 = new HTMLWebpackPlugin({
     inject: 'body',
 });
 
+const HTMLWebpackPluginConfig4 = new HTMLWebpackPlugin({
+    chunks: ['event'],
+    template:  `${__dirname}/eventHandle/index.html`,
+    filename:  'event.html',
+    inject: 'body',
+});
+
 module.exports = {
     entry: {
         app: './app/index.js',
         props: './props/index.js',
         state: './state/index.js',
+        event: './eventHandle/index.js',        
     },
     output: {
         path: `${__dirname}/dist`,
@@ -49,5 +57,5 @@ module.exports = {
         inline: true,
         port: 8008,
     },
-    plugins: [HTMLWebpackPluginConfig,HTMLWebpackPluginConfig2,HTMLWebpackPluginConfig3],
+    plugins: [HTMLWebpackPluginConfig,HTMLWebpackPluginConfig2,HTMLWebpackPluginConfig3,HTMLWebpackPluginConfig4],
 };
