@@ -13,7 +13,13 @@
     - absolute path：`{$__dirname}/dist`
     - 组件名称后面需要有 / 分割
         - ReactDOM.render(<MyName/>,document.getElementById('app'));
+    - JSX 注释写法：/**/ OR {/**/}
+- Why
+    - ...
 - 总结
     - 组件的两种写法
     - props 父元素传递过来，不能更改
     - state 可以通过 setState() 更改
+    - className  = class
+    - htmlFor = for
+    - http://localhost:8008/webpack-dev-server 能看到当前的所有文件

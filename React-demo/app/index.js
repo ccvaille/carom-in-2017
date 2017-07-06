@@ -26,7 +26,7 @@ const MyComponent = () => (
     <div>My name is coolfe.</div>
 );
 
-ReactDOM.render(<div style={divStyle}>MyComponent  /></div>, document.getElementById('name'));
+ReactDOM.render(<div style={divStyle}>< MyComponent /></div>, document.getElementById('name'));
 
 
 // PropTypes
@@ -41,3 +41,27 @@ MyComponent.defaultProps = {
     name: '',
 }
 
+//Jsx
+const lists = ['JavaScript', 'Java', 'Node', 'Python'];
+var text = 'Hello React';
+
+
+class HelloMessage extends React.Component {
+    render() {
+        return (
+            <div>
+                <ul>
+                    {lists.map((result, index) => {
+                        return (<li> key= {index}>{result}</li>);
+                    })}
+                </ul>
+               {/*echo  Hello React*/}
+                <h1>{text}</h1>
+                {/* echo string*/}
+                <h1>{'text'}</h1>
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(<HelloMessage />, document.getElementById('list'));
