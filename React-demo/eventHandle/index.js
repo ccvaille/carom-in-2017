@@ -1,11 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import shortid from 'shortid';
+
+
+// const lists = ['JavaScript', 'Java', 'Node', 'Python'];
+// const TodoList = () => (
+//     <ul>
+//         {
+//             lists.map((item,index) => (
+//                 <li key={index}>{item}</li>
+//             ))
+//         }
+//     </ul>
+// )
 
 const TodoList = (props) => (
     <ul>
         {
             props.items.map((item) => (
-                <li key={item.id} > {item.text}</li>
+                // <li key={item.id} > {item.text}</li>
+                <li key={shortid.generate()} > {item.text}</li>
+                
             ))
         }
     </ul>
@@ -47,3 +62,5 @@ class TodoApp extends React.Component {
 }
 
 ReactDOM.render(<TodoApp/>,document.getElementById('app'));
+// ReactDOM.render(<TodoList/>,document.getElementById('app'));
+
