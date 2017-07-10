@@ -1,4 +1,4 @@
-## Webpack
+## React
 - npm init 
     - 生成 package.json 文件
 - 安装
@@ -14,6 +14,17 @@
     - 组件名称后面需要有 / 分割
         - ReactDOM.render(<MyName/>,document.getElementById('app'));
     - JSX 注释写法：/**/ OR {/**/}
+- 生命周期
+    - Mounting：已插入真实的 DOM
+        - componentWillMount()
+        - componentDidMount()
+    - Updating：正在被重新渲染
+        - componentWillReceiveProps(object nextProps)：已載入元件收到新的參數時呼叫
+        - shouldComponentUpdate(object nextProps, object nextState)：元件判斷是否重新渲染時呼叫，起始不會呼叫除非呼叫 forceUpdate()
+        - componentWillUpdate(object nextProps, object nextState)
+        - componentDidUpdate(object prevProps, object prevState)
+    - Unmounting：已移出真实的 DOM
+        - componentWillUnmount()
 - Why
     - ...
 - 总结
@@ -23,3 +34,4 @@
     - className  = class
     - htmlFor = for
     - http://localhost:8008/webpack-dev-server 能看到当前的所有文件
+

@@ -23,6 +23,7 @@ HelloMessage.defaultProps = {
 ReactDOM.render(<HelloMessage name='sandy'/>,document.getElementById('app'));
 
 
+
 //functional component
 // const HelloMessage = (props) => (
 //     <div>Hello {props.name}</div>

@@ -28,12 +28,37 @@ const HTMLWebpackPluginConfig4 = new HTMLWebpackPlugin({
     inject: 'body',
 });
 
+const HTMLWebpackPluginConfig5 = new HTMLWebpackPlugin({
+    chunks: ['refs'],
+    template:  `${__dirname}/refs/index.html`,
+    filename:  'refs.html',
+    inject: 'body',
+});
+
+const HTMLWebpackPluginConfig6 = new HTMLWebpackPlugin({
+    chunks: ['life'],
+    template:  `${__dirname}/life/index.html`,
+    filename:  'life.html',
+    inject: 'body',
+});
+
+const HTMLWebpackPluginConfig7 = new HTMLWebpackPlugin({
+    chunks: ['ajax'],
+    template:  `${__dirname}/ajax/index.html`,
+    filename:  'ajax.html',
+    inject: 'body',
+});
+
 module.exports = {
     entry: {
         app: './app/index.js',
         props: './props/index.js',
         state: './state/index.js',
-        event: './eventHandle/index.js',        
+        event: './eventHandle/index.js',   
+        refs: './refs/index.js',
+        life: './life/index.js',
+        ajax: './ajax/index.js'       
+              
     },
     output: {
         path: `${__dirname}/dist`,
@@ -57,5 +82,5 @@ module.exports = {
         inline: true,
         port: 8008,
     },
-    plugins: [HTMLWebpackPluginConfig,HTMLWebpackPluginConfig2,HTMLWebpackPluginConfig3,HTMLWebpackPluginConfig4],
+    plugins: [HTMLWebpackPluginConfig,HTMLWebpackPluginConfig2,HTMLWebpackPluginConfig3,HTMLWebpackPluginConfig4,HTMLWebpackPluginConfig5,HTMLWebpackPluginConfig6,HTMLWebpackPluginConfig7],
 };

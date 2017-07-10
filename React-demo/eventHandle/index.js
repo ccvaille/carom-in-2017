@@ -37,7 +37,7 @@ class TodoApp extends React.Component {
         }
     }
     onChange(e) {
-        this.setState({ text: e.target.value });
+            this.setState({ text: e.target.value });
     }
     handlesubmit(e) {
         e.preventDefault();
