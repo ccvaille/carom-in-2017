@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>coolfe-170703-Login-Logout-Animation-Concept</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="http://www.coolfe.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <!-- <div class="bg"> -->
+        <div class="login">
+            <div class="login-check">
+            </div>
+            <div class="login-form">
+                <div>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="checkbox" id="login">
+                <label for="login">
+                    <a class="login-button"><span>
+					Sign in
+				</span></a>
+                </label>
+            </div>
+        </div>
+        <div class="logining">
+            <span>Good Morning!</span>
+            <label for="login">
+                <a class="login-button"><span>
+					Out
+				</span></a>
+            </label>
+        </div>
+    </div>
+    <script>
+    $('.login label').click(function() {
+        $('.login').fadeOut(2000);
+        $('.logining').fadeIn(4000);
+    })
+    $('.logining label').click(function() {
+        $('.logining').fadeOut(1000);
+        $('.login').fadeIn(2000);
+    })
+    </script>
+</body>
+
+</html>

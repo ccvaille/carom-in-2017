@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    .size(100%, 100%);
+    font-family: Arial;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    &,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.box {
+    .size(100%, 100%);
+    background: rgb(230, 230, 230);
+    padding: 20px;
+}
+
+.line {
+    margin-bottom: 30px;
+    &:first-child {
+        border-top: 1px solid #8c8b8b;
+    }
+    &:nth-child(2) {
+        border-top: 3px double #8c8b8b;
+    }
+    &:nth-child(3) {
+        border-top: 1px dashed #8c8b8b;
+    }
+    &:nth-child(4) {
+        border-top: 1px dotted #8c8b8b;
+    }
+    &:nth-child(5) {
+        background-color: #fff;
+        border-top: 2px dashed #8c8b8b;
+    }
+    &:nth-child(6) {
+        background-color: #fff;
+        border-top: 2px dotted #8c8b8b;
+    }
+    &:nth-child(7) {
+        border-top: 1px solid #8c8b8b;
+        border-bottom: 1px solid #fff;
+    }
+    &:nth-child(8) {
+        border-top: 1px solid #8c8b8b;
+        border-bottom: 1px solid #fff;
+        &:after {
+            content: '';
+            display: block;
+            border-top: 1px solid #8c8b8b;
+            margin-top: 2px;
+        }
+    }
+    &:nth-child(9) {
+        border-top: 1px dashed #8c8b8b;
+        background: #fff;
+    }
+    &:nth-child(10) {
+        border-top: 1px dotted #8c8b8b;
+        background: #fff;
+    }
+    &:nth-child(11) {
+        height: 10px;
+        box-shadow: 0 10px 10px -10px red inset;
+    }
+    &:nth-child(12) {
+        height: 1px;
+        background-image: -webkit-linear-gradient(left, #f0f0f0, red, #f0f0f0);
+        background-image: linear-gradient(left, #f0f0f0, red, #f0f0f0);
+    }
+    &:nth-child(13) {
+        height: 30px;
+        border-style: solid;
+        border-color: red;
+        border-width: 1px 0 0 0;
+        border-radius: 20px;
+        &:after {
+            display: block;
+            content: "";
+            height: 30px;
+            margin-top: -31px;
+            border-style: solid;
+            border-color: red;
+            border-width: 0 0 1px 0;
+            border-radius: 20px;
+        }
+    }
+}
