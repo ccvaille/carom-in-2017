@@ -7,3 +7,37 @@ import Repos from './components/Repos';
 import About from './components/About';
 import User from './components/User';
 import Contacts from './components/Contacts';
+
+
+ReactDOM.render(
+  <aa history={hashHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home} />
+      <Route path="/repos/:name" component={Repos} />
+      <Route path="/about" component={About} />
+      <Route path="/user" component={User} />
+      <Route path="/contacts" component={Contacts} />
+    </Route>
+  </aa>,
+  document.getElementById('app'));
+
+
+  ReactDOM.render(
+    
+  )
+
+  /* 另外一種寫法：
+	const routes = (
+	    <Route path="/" component={App}>
+	      <IndexRoute component={Home} />
+	      <Route path="/repos/:name" component={Repos} />
+	      <Route path="/about" component={About} />
+	      <Route path="/user" component={User} />
+	      <Route path="/contacts" component={Contacts} />
+	    </Route>
+	);
+
+	ReactDOM.render(
+	  <Router routes={routes} history={hashHistory} />,
+	  document.getElementById('app'));
+  */
