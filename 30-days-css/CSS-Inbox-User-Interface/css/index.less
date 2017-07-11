@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    .size(100%, 100%);
+    font-family: Arial;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    &,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.box {
+    .size(100%, 100%);
+}
+
+ul {
+    .clearfix();
+    li {
+        height: 70px;
+        .img {
+            float: left;
+            .size(100px, 100%);
+            position: relative;
+            background: #000;
+            &:after {
+                display: block;
+                height: 100%;
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                border-right: 10px solid transparent;
+            }
+        }
+        .text {
+            line-height: 70px;
+            float: left;
+            width: 80%;
+            margin-left: 20px;
+        }
+        &:first-child {
+            .img {
+                &:after {
+                    border-color: pink;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .img {
+                &:after {
+                    border-color: green;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .img {
+                &:after {
+                    border-color: blue;
+                }
+            }
+        }
+        &:nth-child(4) {
+            .img {
+                &:after {
+                    border-color: yellow;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .img {
+                &:after {
+                    border-color: red;
+                }
+            }
+        }
+        &:hover {
+            .img:after {
+                border-width: 300px;
+                transition: border-width 1s;
+                
+            }
+        }
+    }
+}
