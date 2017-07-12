@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    &,
+    &:before,
+    &:after {
+        box-sizing: border-box;
+    }
+}
+
+html,
+body {
+    .size(100%, 100%);
+    font-family: Arial;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    &,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.box {
+    .size(100%, 100%);
+    background: #2E3F50;
+    ul {
+        text-align: center;
+        padding-top: 50px;
+    }
+    li {
+        display: inline-block;
+        position: relative;
+        .size(60px, 90px);
+        background: #fff;
+        .clearfix();
+        z-index: 1;
+    }
+    .top,
+    .bottom {
+        position: absolute;
+        left: 0;
+        .size(100%, 50%);
+        overflow: hidden;
+        font-size: 75px;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 700;
+    }
+    .bottom {
+        bottom: 0;
+        line-height: 0;
+    }
+    .top {
+        top: 0;
+    }
+    .hinge {
+        .size(100%, 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        .top,
+        .bottom {
+            height: 0;
+            z-index: 5;
+            line-height: 0;
+            background: #fff;
+            transform-origin: 0px 45px;
+            transform: rotateX(0deg);
+            visibility: hidden;
+        }
+        .top {
+            padding-top: 45px;
+        }
+        .bottom {
+            height: 45px;
+        }
+    }
+    #select:checked {
+        & + label .before {
+            animation: beforeani 1s infinite  alternate;
+        }
+        & + label .back {
+            animation: backani 1s .5s infinite  alternate;
+        }
+        .unbefore {
+            animation: unbeforeani .5s  infinite  alternate;
+        }
+        .unback {
+            animation: unbackani .5s infinite  alternate;
+        }
+    }
+}
+
+@keyframes beforeani {
+    from {
+        visibility: visible;
+        transform: rotateX(0);
+    }
+    to {
+        transform: rotateX(100deg);
+    }
+}
+
+
+@keyframes backani {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+        
+    }
+}
+
+@keyframes unbackani {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+        
+    }
+}
+
+@keyframes unbeforeani {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+        
+    }
+}
