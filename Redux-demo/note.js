@@ -14,7 +14,7 @@ var reducer = function(state, action) {
 var store = redux.createStore(reducer,[]);
 
 // get current store
-console.log('state is' : store.getState());
+console.log('state is :' + store.getState());
 
 //in redux , change state === store.dispatch(action)
 store.dispatch({type: 'add_todo', text: 'read'});

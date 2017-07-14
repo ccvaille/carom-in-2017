@@ -1,0 +1,17 @@
+{
+  "name": "redux-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "note.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react-redux": "^5.0.5"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.4.0"
+  }
+}
