@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+}
+ul li {
+  list-style: none;
+}
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+.progressbar li {
+  float: left;
+  position: relative;
+  text-align: center;
+  height: 40px;
+}
+.progressbar li.active:before {
+  background: #27AE60;
+}
+.progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+  color: #333;
+  background: #fff;
+}
