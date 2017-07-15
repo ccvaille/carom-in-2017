@@ -25,33 +25,45 @@ a:active {
   width: 100%;
   height: 100%;
   background: #2E3F50;
-}
-.square-box {
-  width: 100%;
-  height: 100%;
   position: relative;
 }
+.square-box {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  transform-origin: 50% 50%;
+  animation: ani 10s linear infinite;
+  animation-play-state: paused;
+}
 .square-box:hover {
-  transform: rotate(360deg);
+  animation-play-state: running;
 }
 .square {
   width: 100px;
   height: 100px;
-  background: #fff;
+  background: #120c3d;
   position: absolute;
-  top: 100px;
-  left: 100px;
+  top: 0;
+  left: 0;
   transform-origin: 50% 50%;
   transition: transform 2s;
 }
 .square:first-child {
-  transform: rotate(20deg);
+  transform: rotate(18deg);
 }
 .square:nth-child(2) {
-  transform: rotate(40deg);
+  transform: rotate(36deg);
 }
 .square:nth-child(3) {
-  transform: rotate(60deg);
+  transform: rotate(54deg);
+}
+.square:nth-child(4) {
+  transform: rotate(72deg);
+}
+.square:nth-child(5) {
+  transform: rotate(90deg);
 }
 @keyframes ani {
   to {

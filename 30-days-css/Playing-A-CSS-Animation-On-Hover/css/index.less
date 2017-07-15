@@ -45,44 +45,67 @@ a {
 .box {
     .size(100%, 100%);
     background: #2E3F50;
+    position: relative
 }
 
 .square-box {
-    .size(100%, 100%);
-    position: relative;
-    &:hover {
-        transform: rotate(360deg);
-        // &:first-child {
-        // transform: rotate(380deg);
-        // }
-        // &:nth-child(2) {
-        //     transform: rotate(400deg);
-        // }
-        // &:nth-child(3) {
-        //     transform: rotate(420deg);
-        // }
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    .size(100px, 100px);
+    transform-origin: 50% 50%;
+    animation: ani 10s linear infinite;
+    animation-play-state: paused;
+    &:hover{
+        animation-play-state: running;
     }
+    // &:hover {
+    //     .square {
+    //         &:nth-child(1) {
+    //             transform: rotate(378deg);
+    //         }
+    //         &:nth-child(2) {
+    //             transform: rotate(396deg);
+    //         }
+    //         &:nth-child(3) {
+    //             transform: rotate(414deg);
+    //         }
+    //         &:nth-child(4) {
+    //             transform: rotate(432deg);
+    //         }
+    //         &:nth-child(5) {
+    //             transform: rotate(450deg);
+    //         }
+    //     }
+    // }
 }
 
 .square {
     .size(100px, 100px);
-    background: #fff;
+    background: #120c3d;
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 0;
+    left: 0;
     transform-origin: 50% 50%;
     transition: transform 2s;
     &:first-child {
-        transform: rotate(20deg);
+        transform: rotate(18deg);
     }
     &:nth-child(2) {
-        transform: rotate(40deg);
+        transform: rotate(36deg);
     }
     &:nth-child(3) {
-        transform: rotate(60deg);
+        transform: rotate(54deg);
     }
-    
+    &:nth-child(4) {
+        transform: rotate(72deg);
+    }
+    &:nth-child(5) {
+        transform: rotate(90deg);
+    }
 }
+
+
 @keyframes ani {
     to {
         transform: rotate(1turn);
