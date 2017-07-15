@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 class Text extends React.Component {
     constructor(props) {
         super(props);
+        console.log(this.props);
         this.onChange = this.onChange.bind(this);
         this.state = {
             text: 'this is a  input',
@@ -12,17 +13,13 @@ class Text extends React.Component {
     onChange(e) {
         this.setState({
             text: e.target.value,
-            length: e.target.value.length,
         });
-        // if (this.state.text.length = 0) {
-        //     this.state.text.length = ''
-        // }
     }
     render() {
         return (
             <div>
-                <input type="text" value={this.state.text} onChange={this.onChange} />
-                <span>{this.state.text.length}</span>
+                <input type="text" value={this.state.text} onChange={this.onChange} /><br/>
+                <span>文本框的长度为： {this.state.text.length ? this.state.text.length : ''}</span>
             </div>
         )
     }
@@ -36,8 +33,8 @@ class TextP extends React.Component {
         );
     }
 }
-// Text.defaultProps = {
-//         text: 'this is a  input',
-// };
+Text.defaultProps = {
+        text: 'this is a  aaa',
+};
 
 ReactDOM.render(<TextP />, document.getElementById('app'));
