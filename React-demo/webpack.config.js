@@ -48,6 +48,12 @@ const HTMLWebpackPluginConfig7 = new HTMLWebpackPlugin({
     filename:  'ajax.html',
     inject: 'body',
 });
+const HTMLWebpackPluginConfig8 = new HTMLWebpackPlugin({
+    chunks: ['tab'],
+    template:  `${__dirname}/tab/index.html`,
+    filename:  'tab.html',
+    inject: 'body',
+});
 
 module.exports = {
     entry: {
@@ -57,7 +63,8 @@ module.exports = {
         event: './eventHandle/index.js',   
         refs: './refs/index.js',
         life: './life/index.js',
-        ajax: './ajax/index.js'       
+        ajax: './ajax/index.js' ,
+        tab: './tab/index.js'      
               
     },
     output: {
@@ -82,5 +89,5 @@ module.exports = {
         inline: true,
         port: 8008,
     },
-    plugins: [HTMLWebpackPluginConfig,HTMLWebpackPluginConfig2,HTMLWebpackPluginConfig3,HTMLWebpackPluginConfig4,HTMLWebpackPluginConfig5,HTMLWebpackPluginConfig6,HTMLWebpackPluginConfig7],
+    plugins: [HTMLWebpackPluginConfig,HTMLWebpackPluginConfig2,HTMLWebpackPluginConfig3,HTMLWebpackPluginConfig4,HTMLWebpackPluginConfig5,HTMLWebpackPluginConfig6,HTMLWebpackPluginConfig7,HTMLWebpackPluginConfig8],
 };
