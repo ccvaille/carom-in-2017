@@ -2,16 +2,23 @@
   "name": "redux-demo",
   "version": "1.0.0",
   "description": "",
-  "main": "note.js",
+  "main": "bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --inline --hot"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "react-redux": "^5.0.5"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "redux-devtools": "^3.4.0"
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.0",
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
