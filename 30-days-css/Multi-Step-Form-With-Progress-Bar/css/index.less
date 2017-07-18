@@ -48,14 +48,19 @@ a {
 }
 
 .progressbar {
+    padding-top: 50px;
+    // http://www.w3school.com.cn/cssref/pr_gen_counter-reset.asp
+    counter-reset: step;
+    .clearfix();
     li {
         float: left;
         position: relative;
         text-align: center;
-        height: 40px;
+        .size(100px, 40px);
+        padding-top: 20px;
         &.active {
             &:before {
-                 background: #27AE60;
+                background: #27AE60;
             }
         }
         &:before {
@@ -63,12 +68,56 @@ a {
             counter-increment: step;
             display: block;
             position: absolute;
-            .size(20px,20px);
-            border-radius:3px;
+            top: -15px;
+            left: 43px;
+            .size(20px, 20px);
+            border-radius: 3px;
             margin: 0 auto 5px auto;
             color: #333;
             background: #fff;
         }
+        &:nth-child(2),
+        &:nth-child(3) {
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background: #000;
+                position: absolute;
+                left: -50%;
+                top: -7px;
+                z-index: -1;
+            }
+        }
     }
 }
 
+.step {
+    .size(200px, 200px);
+    background: pink;
+    padding: 20px;
+    margin-left: 50px;
+    display: none;
+    input {
+        display: block;
+        margin-bottom: 10px;
+    }
+    a {
+        cursor: pointer;
+    }
+}
+
+.hidden {
+    transform: scale(0.8);
+    position: absolute;
+    opacity: 0;
+    display: none;
+    transition: all .3s;
+}
+.active {
+    display: block; 
+    left: 0%; 
+    opacity: 1;
+    transition: all .3s;
+
+}
