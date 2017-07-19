@@ -48,6 +48,9 @@ a:active {
 .progressbar li.active:before {
   background: #27AE60;
 }
+.progressbar li.active:after {
+  background: #27AE60 !important;
+}
 .progressbar li:before {
   content: counter(step);
   counter-increment: step;
@@ -79,6 +82,8 @@ a:active {
   background: pink;
   padding: 20px;
   margin-left: 50px;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
   display: none;
 }
 .step input {
