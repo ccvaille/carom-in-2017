@@ -1,0 +1,472 @@
+@import "../../styles/variables";
+
+.list-entry-preview {
+    width: 150px;
+    height: 280px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+    font-size: 14px;
+    overflow: hidden;
+
+    &.theme-one {
+        .entry-head {
+            background-color: @cornflower-blue-color;
+        }
+    }
+
+    &.theme-two {
+        .entry-head {
+            background-color: @theme-two-color;
+        }
+    }
+
+    &.theme-three {
+        .entry-head {
+            background-color: @theme-three-color;
+        }
+    }
+
+    &.theme-four {
+        .entry-head {
+            background-color: @theme-four-color;
+        }
+    }
+
+    &.theme-five {
+        .entry-head {
+            background-color: @theme-five-color;
+        }
+    }
+
+    &.default {
+        .entry-head {
+            background-color: @default;
+        }
+    }
+
+    &.cyan-blue {
+        .entry-head {
+            background-color: @cyan-blue;
+        }
+    }
+
+    &.dark-green {
+        .entry-head {
+            background-color: @dark-green;
+        }
+    }
+
+    &.orange {
+        .entry-head {
+            background-color: @orange;
+        }
+    }
+
+    &.jade-green {
+        .entry-head {
+            background-color: @jade-green;
+        }
+    }
+
+    * {
+        font-size: 14px;
+    }
+
+    .entry-head {
+        color: white;
+        padding: 4px 6px 4px 12px;
+        height: 32px;
+        line-height: 32px;
+
+        span, i {
+            color: white;
+        }
+
+        span {
+            float: left;
+            padding-top: 4px;
+        }
+
+        i {
+            float: right;
+            padding-top: 5px;
+            cursor: pointer;
+        }
+    }
+
+    .group-arrow {
+        display: inline-block;
+        margin-right: 8px;
+        width: 0;
+        height: 0;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease;
+
+        &.expand {
+            transform: rotate(90deg);
+        }
+    }
+
+    .cs-groups {
+        min-height: 248px;
+        max-height: 248px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 12px;
+
+        &.theme-custom {
+            padding: 0 12px 12px;
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+        }
+
+        &.theme-system {
+            background: url('../../img/skin-sel-s.png') no-repeat;
+            background-size: cover;
+        }
+
+        &.theme-one {
+            background-color: #fafafa;
+
+            .cs-group {
+                a {
+                    color: @cornflower-blue-color;
+                }
+            }
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @cornflower-blue-color;
+            }
+
+            .customer-service {
+                .service-icon {
+                    background-position: 0 0;
+                }
+            }
+        }
+
+        &.theme-two {
+            background-position: 0 0;
+
+            .cs-group {
+                a {
+                    color: black;
+                }
+            }
+
+            .services {
+                a {
+                    color: #2d2b31;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @theme-two-color;
+            }
+
+            .customer-service {
+                .service-icon {
+                    background-position: 0 -28px;
+                }
+            }
+        }
+
+        &.theme-three {
+            background-position: -168px 0;
+
+            .cs-group {
+                a {
+                    color: #343434;
+                }
+            }
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @theme-three-color;
+            }
+
+            .customer-service {
+                .service-icon {
+                    background-position: 0 -57px;
+                }
+            }
+        }
+
+        &.theme-four {
+            background-position: -336px 0;
+
+            .cs-group {
+                a {
+                    color: black;
+                }
+            }
+
+            .services {
+                a {
+                    color: #2d2b31;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @theme-four-color;
+            }
+
+            .customer-service {
+                .service-icon {
+                    background-position: 0 -89px;
+                }
+            }
+        }
+
+        &.theme-five {
+            background-position: -504px 0;
+
+            .cs-group {
+                a {
+                    color: white;
+                }
+            }
+
+            .services {
+                a {
+                    color: white;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid white;
+            }
+
+            .customer-service {
+                .service-icon {
+                    background-position: 0 -118px;
+                }
+            }
+        }
+
+        &.default {
+            background-color: #fafafa;
+            background: none;
+
+            .cs-group {
+                a {
+                    color: @default;
+
+                    span {
+                        color: @default;
+                    }
+                }
+            }
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @default;
+            }
+
+            .customer-service {
+                .service-icon {
+                    color: @default;
+                }
+            }
+        }
+
+        &.cyan-blue {
+            background-color: #fafafa;
+            background: none;
+
+            .cs-group {
+                a {
+                    color: @cyan-blue;
+
+                    span {
+                        color: @cyan-blue;
+                    }
+                }
+            }
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @cyan-blue;
+            }
+
+            .customer-service {
+                .service-icon {
+                    color: @cyan-blue;
+                }
+            }
+        }
+
+        &.dark-green {
+            background-color: #fafafa;
+            background: none;
+
+            .cs-group {
+                a {
+                    color: @dark-green;
+
+                    span {
+                        color: @dark-green;
+                    }
+                }
+            }
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @dark-green;
+            }
+
+            .customer-service {
+                .service-icon {
+                    color: @dark-green;
+                }
+            }
+        }
+
+        &.orange {
+            background-color: #fafafa;
+            background: none;
+
+            .cs-group {
+                a {
+                    color: @orange;
+
+                    span {
+                        color: @orange;
+                    }
+                }
+            }
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @orange;
+            }
+
+            .customer-service {
+                .service-icon {
+                    color: @orange;
+                }
+            }
+        }
+
+        &.jade-green {
+            background-color: #fafafa;
+            background: none;
+
+            .cs-group {
+                a {
+                    color: @jade-green;
+
+                    span {
+                        color: @jade-green;
+                    }
+                }
+            }
+
+            .services {
+                a {
+                    color: #4c4c4c;
+                }
+            }
+
+            .group-arrow {
+                border-left: 3px solid @jade-green;
+            }
+
+            .customer-service {
+                .service-icon {
+                    color: @jade-green;
+                }
+            }
+        }
+
+        .cs-group {
+            padding: 4px 0;
+            > a {
+                display: block;
+                max-width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-weight: 600;
+            }
+
+            a {
+                display: block;
+                font-size:12px;
+            }
+            overflow: hidden;
+            max-height: 200px;
+            transition:all .3s;
+            &.cs-hidden {
+                max-height:24px;
+                transition:all .3s ease;
+            }
+        }
+    }
+    .services {
+        margin-left: 18px;
+        transition: all .3s ease;
+        height:auto;
+        // animation: csopen .3s;
+        float: left;
+        width:100%;
+        margin-top: 5px;
+
+        .customer-service {
+            margin: 4px 0;
+
+            .service-icon {
+                float: left;
+                margin-top: 2px;
+                width: 18px;
+                height: 18px;
+                // background: url('../../img/service-head.png') no-repeat;
+            }
+
+            a {
+                display: inline-block;
+                float: left;
+                padding: 1px 4px;
+                max-width: 72px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}

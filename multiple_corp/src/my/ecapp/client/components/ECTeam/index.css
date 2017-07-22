@@ -1,0 +1,264 @@
+body,
+html {
+  height: auto;
+}
+.ecTeam-box {
+  max-width: 480px;
+  margin: 40px auto 50px auto;
+  box-shadow: 0px 0px 2px rgba(204, 204, 204, 0.5);
+  border: 1px solid #d7dae0;
+  position: relative;
+  color: #808080;
+}
+.ecTeam-box.top-fixed {
+  border: 0;
+}
+.ecTeam-box .msg-box .inner-box {
+  padding: 15px 20px 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.ecTeam-box .msg-box .inner-box.no-link {
+  cursor: auto;
+}
+.ecTeam-box .msg-box .inner-box .content-box {
+  margin: 12px 0 15px 0;
+  color: #0f0f0f;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.ecTeam-box .msg-box .inner-box .from {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.ecTeam-box .msg-box .inner-box .article-box {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+  font-size: 12px;
+  margin-top: 12px;
+  color: #808080;
+}
+.ecTeam-box .msg-box .inner-box .time {
+  text-align: left;
+  margin: 3px 0;
+  color: #999;
+}
+.ecTeam-box .msg-box .inner-box .time a {
+  margin: 0 5px 0 0;
+}
+.ecTeam-box .msg-box .inner-box .time a.noTalk {
+  cursor: text;
+}
+.ecTeam-box .msg-box .inner-box .time span {
+  color: #3aa8f0;
+  margin-right: 10px;
+}
+.ecTeam-box .msg-box .inner-box .name,
+.ecTeam-box .msg-box .inner-box .plain-text {
+  margin: 0 3px;
+}
+.ecTeam-box .msg-box .inner-box .name:first-child,
+.ecTeam-box .msg-box .inner-box .plain-text:first-child {
+  margin-left: 0;
+}
+.ecTeam-box .msg-box .inner-box .plain-text.no-space {
+  margin: 0;
+}
+.ecTeam-box .msg-box .inner-box .font-num {
+  margin: 0 3px;
+}
+.ecTeam-box .msg-box .inner-box .list {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: 7px;
+  height: 20px;
+  color: #2580e6;
+}
+.ecTeam-box .msg-box .inner-box .list span {
+  color: #3aa8f0;
+  margin-right: 5px;
+}
+.ecTeam-box .msg-box .inner-box .list .name {
+  margin: 0;
+}
+.ecTeam-box .msg-box .inner-box .list .name:not(:last-child):after {
+  content: '、';
+}
+.ecTeam-box .msg-box .sm-tips {
+  color: #0f0f0f;
+  margin-top: 7px;
+}
+.ecTeam-box .msg-box .time {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -25px;
+  text-align: center;
+}
+.ecTeam-box .msg-box .header {
+  font-size: 12px;
+  color: #808080;
+}
+.ecTeam-box .msg-box .title {
+  font-size: 18px;
+  color: #0f0f0f;
+}
+.ecTeam-box .msg-box .header + .title {
+  margin-top: 12px;
+}
+.ecTeam-box .msg-box .img-show {
+  height: 180px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.ecTeam-box .msg-box .img-show img {
+  max-width: 100%;
+  width: 100%;
+}
+.ecTeam-box .msg-box .request-box {
+  padding-bottom: 10px;
+}
+.ecTeam-box .msg-box .btn-bot {
+  font-size: 12px;
+  line-height: 40px;
+  height: 30px;
+  border-top: 1px #eee solid;
+}
+.ecTeam-box .msg-box .btn-bot .bot-more {
+  color: #0f0f0f;
+  display: inline-block;
+  cursor: pointer;
+}
+.ecTeam-box .msg-box .btn-bot .bot-more:before {
+  content: '';
+  position: absolute;
+  background: url("icon-right.png") 0 0 no-repeat;
+  right: 20px;
+  width: 8px;
+  height: 13px;
+  bottom: 13px;
+}
+.ecTeam-box .msg-box .btn-bot .bot-state {
+  color: #9b9b9b;
+}
+.ecTeam-box a.normalBox {
+  color: inherit;
+}
+.ecTeam-box .more-btn {
+  text-align: center;
+  color: #3aa8f0;
+  padding: 7px 0;
+}
+.msg-type-select {
+  position: fixed;
+  top: 0;
+  width: 110%;
+  left: 0;
+  height: 40px;
+  background: #fafafa;
+  z-index: 11;
+}
+.msg-type-select .select-wrap {
+  position: absolute;
+  left: 50%;
+  margin-left: 60px;
+  top: 5px;
+}
+.select-fixed {
+  position: fixed;
+  right: 10px;
+  top: 40px;
+}
+.select-fixed .ant-select-dropdown-menu {
+  max-height: initial;
+}
+.ant-select-selection {
+  border-radius: 6px;
+}
+.ant-select-selection:hover {
+  border-color: #2580e6;
+}
+.loading {
+  text-align: center;
+  padding: 30px 0;
+}
+.no-more {
+  text-align: center;
+  padding: 30px 0;
+}
+.no-content {
+  text-align: center;
+  padding: 30px 0;
+}
+.error-img {
+  margin: 0 auto;
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin-top: 120px;
+}
+.error-tips-box {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+  color: #919499;
+}
+.refresh-btn {
+  text-align: center;
+  margin-top: 10px;
+}
+.no-hand {
+  color: #808080;
+}
+.no-hand:hover {
+  color: #808080;
+}
+.ecTeam-box-sno {
+  box-shadow: none;
+  padding: 0;
+  margin: 0 auto 34px auto;
+  border: 0;
+}
+.feedback {
+  padding-top: 5px;
+}
+.feedback li {
+  display: flex;
+}
+.feedback li p {
+  color: #999999;
+  line-height: 20px;
+  font-size: 12px;
+}
+.feedback li p.fl {
+  width: 60px;
+}
+.feedback li p.fr {
+  flex: 1;
+}
+.feedback li p.fr.one {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.feedback li p.fr.two {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+/* 滚动条 scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+  padding-top: 40px;
+}

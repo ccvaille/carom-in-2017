@@ -1,0 +1,81 @@
+.cs-group-sidebar {
+    width: 220px;
+    float: left;
+
+    .ant-btn span {
+        color:#666;
+    }
+
+    .groups {
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin-top: 9px;
+
+        li {
+            font-size: 14px;
+
+            &:hover {
+                .operates {
+                    display: block;
+                }
+            }
+
+            a, .edit {
+                display: block;
+                padding: 7px 12px;
+                color: #444;
+
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+
+                &.active {
+                    > span {
+                        color: #3c9fe0;
+                    }
+
+                    .name-wrapper {
+                        color: #3c9fe0;
+                        span {
+                            color: #3c9fe0;
+                        }
+                    }
+
+                    &:hover {
+                        > span {
+                            color: #2272c1;
+                        }
+                    }
+                }
+            }
+
+            .name-wrapper {
+                width: 58%;
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+
+                .name {
+                    display: inline-block;
+                    max-width: 64%;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+
+            .operates {
+                float: right;
+                display: none;
+                position: relative;
+                top: 3px;
+
+                span {
+                    margin: 0 1px;
+                }
+            }
+        }
+    }
+}

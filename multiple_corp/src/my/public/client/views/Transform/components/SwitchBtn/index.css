@@ -1,0 +1,26 @@
+.switch-box {
+  float: right;
+  border: 1px solid #B4BBCB;
+  height: 28px;
+  line-height: 28px;
+  margin-top: 6px;
+  margin-right: 7px;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+.switch-box span {
+  float: left;
+  padding: 0 10px;
+  height: 27px;
+  line-height: 27px;
+  color: #303642;
+}
+.switch-box span.active {
+  background: #96A0B4;
+  color: #fff;
+}
+.switch-box span:not(:last-child) {
+  border-right: 1px solid #B4BBCB;
+}

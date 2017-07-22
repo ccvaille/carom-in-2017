@@ -1,0 +1,327 @@
+.sale-goal-all{
+    background-color: #F0F2F4;
+    .wrapper{
+        padding-top: 120px;
+        // height: 100vh;
+        // overflow: auto;
+        // -webkit-overflow-scrolling: touch;
+        .chart-panel{
+            background: #ffffff;
+            padding: 30px;
+            .no-data-content{
+                background-color: #ffffff;
+                padding-bottom: 30px;
+                padding-top: 10px;
+                text-align: center;
+                img{
+                    width: 180px;
+                }
+                p{
+                    font-size: 26px;
+                    color: #81878E;
+                    margin: 20px 0 0 0;
+                }
+            }
+            .tips{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-bottom: 50px;
+                 span{
+                    font-size: 26px;
+                    color: #727C8F;
+                 }
+                 .iconfont{
+                     font-size: 30px;
+                     color: #6FA5FF;
+                     margin-left: 10px;
+                 }
+            }
+            .content{
+                text-align: center;
+            }
+            .chart{
+                display: inline-block;
+            }
+            .stat{
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 45px;
+                .t1{
+                    color: #303642;
+                    font-size:26px;
+                    margin-left:20px;
+                    display: inline-block;
+                    width:120px;
+                }
+                .t2{
+                    color: #303642;
+                    font-size:26px;
+                }
+                .goal{
+                    display: flex;
+                    align-items: center;
+                    padding-bottom:30px;
+                    padding-top: 25px;
+                    border-bottom:1px solid #DCDFE5;
+                    .icon{
+                        color: #FF930D;
+                        float: left;
+                        width:25px;
+                        height:25px;
+                        font-size:25px;
+                    }
+                    .t2{
+                        color: #303642;
+                    }
+                }
+                .finished{
+                    display: flex;
+                    align-items: center;
+                    padding-top:30px;
+                    .icon{
+                        display: inline-block;
+                        background-color: #60ABF8;
+                        width:25px;
+                        height:25px;
+                        float: left;
+                    }
+                    .t2{
+                        color: #3180E6;
+                    }
+
+                }
+                .unfinished{
+                    display: flex;
+                    align-items: center;
+                    padding-top:30px;
+                    .icon{
+                        display: inline-block;
+                        background-color: #F76F57;
+                        width:25px;
+                        height:25px;
+                        float: left;
+                    }
+                    .t2{
+                        color: #f2534f;
+                    }
+                }
+            }
+            .warn-less{
+                margin-top: 60px;
+                background-color: #F0F2F4;
+                border-radius: 6px;
+                padding: 20px 20px 20px 60px;
+                font-size: 26px;
+                color: #303642;
+                line-height: 40px;
+                position: relative;
+                .iconfont{
+                    font-size: 28px;
+                    color: #727C8F;
+                    position: absolute;
+                    left: 25px;
+                    top: 20px;
+                }
+                .money{
+                    font-size: 26px;
+                    color: #DF3631;
+                }
+            }
+            .warn-good{
+                margin-top: 60px;
+                background-color: #FFF2C9;
+                border-radius: 6px;
+                padding: 20px;
+                line-height: 40px;
+                text-align: center;
+                .iconfont{
+                    font-size: 28px;
+                    color:  #FFC800;
+                    margin-right: 20px;
+                }
+                span{
+                    font-size: 26px;
+                    color: #303642;
+                }
+            }
+            .warn-awesome{
+                margin-top: 60px;
+                background-color: #FFF2C9;
+                border-radius: 6px;
+                padding: 20px;
+                line-height: 40px;
+                text-align: center;
+                .iconfont{
+                    font-size: 28px;
+                    color:  #FFC800;
+                    margin-right: 20px;
+                }
+                span{
+                    font-size: 26px;
+                    color: #DF3631;
+                }
+            }
+        }
+        .list-panel{
+            .panel-header{
+                font-size: 26px;
+                color: #727C8F;
+                padding: 30px;
+            }
+            .list-content{
+                background-color: #ffffff;
+                table{
+                    width: 100%;
+                    padding: 30px 0 0 0;
+                    border-spacing: 0;
+                    thead{
+                        tr{
+                            th{
+                                font-size: 24px;
+                                color: #81878E;
+                                font-weight: normal;
+                                text-align: left;
+                                &.name-title-cell{
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            &:active{
+                                background-color: #E5E6E7;
+                            }
+                            height: 130px;
+                            &:last-child{
+                                td{
+                                    border-bottom: none;
+                                }
+                            }
+                            td{
+                                font-size: 26px;
+                                border-bottom: 1px solid #D5DBE1;
+                                color: #303642;
+                                text-align: left;
+                                
+                                .avatar{
+                                    vertical-align: middle;
+                                    width: 72px;
+                                    height: 72px;
+                                    border-radius: 50%;
+                                    margin-right: 30px;
+                                }
+                                .name{
+                                    vertical-align: middle;
+                                }
+                                &.name-cell{
+                                    // width: 380px;
+                                    padding-left: 30px;
+                                }
+                                &.goal-cell{
+                                    font-size: 28px;
+                                    height:130px;
+                                    .num{
+                                        line-height: 1;
+                                        font-size: 26px;
+                                        color: #300000;
+                                        .finished{
+                                            font-size: 26px;
+                                            color: #300000;
+                                        }
+                                        .goal{
+                                            font-size: 26px;
+                                            color: #3D434E;
+                                        }
+                                        .split-line{
+                                            margin: 0 10px;
+                                        }
+                                    }
+                                    .progress{
+                                        margin-top: 10px;
+                                        background-color: #ffffff;
+                                        border: 1px solid #D5DBE1;
+                                        border-radius: 100px;
+                                        width: 230px;
+                                        height: 30px;
+                                        position: relative;
+                                        font-size: 24px;
+                                        color: #3D434E;
+                                        text-align: center;
+                                        .fin-rate{
+                                            background-color: #C7D5E1;
+                                            border-radius: 100px;
+                                            height: 28px;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                        }
+                                        .rate-num{
+                                            text-align: center;
+                                            position: absolute;
+                                            left: 0;
+                                            top: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            z-index: 999;
+                                        }
+                                    }
+                                }
+                                &.link-cell{
+                                    width: 50px;
+                                    text-align: right;
+                                    padding-right: 30px;
+                                    .iconfont{
+                                        color: #D5DBE1;
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .no-data-content{
+                background-color: #ffffff;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                text-align: center;
+                img{
+                    width: 140px;
+                }
+                p{
+
+                    font-size: 26px;
+                    color: #81878E;
+                    margin: 20px 0 0 0;
+                }
+            }
+        }
+    }
+}
+.goal-tips-modal{
+    .am-modal-header{
+        .am-modal-title{
+            font-size: 32px;
+            color: #303642;
+        }
+    }
+    
+    .am-modal-body{
+        ul{
+            li{
+                font-size: 26px;
+                color: #81878E;
+                line-height: 40px;
+                text-align: left;
+            }
+        }
+    }
+    .am-modal-footer{
+        .am-modal-button{
+            font-size: 32px;
+            color: #0DC88C;
+        }
+    }
+}

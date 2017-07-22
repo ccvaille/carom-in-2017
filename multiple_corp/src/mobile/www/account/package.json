@@ -1,0 +1,14 @@
+{
+  "name": "account_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./client/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alayii",
+  "theme": {
+    "brand-primary": "#11BF57",
+    "brand-primary-tap": "#0fa84c"
+  }
+}

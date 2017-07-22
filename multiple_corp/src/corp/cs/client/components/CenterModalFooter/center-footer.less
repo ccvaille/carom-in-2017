@@ -1,0 +1,73 @@
+.center-footer {
+    button {
+        color: white;
+        margin: 0 7px;
+        border-radius: 0;
+        min-width: 72px;
+        height: 32px;
+        line-height: 15px;
+        border-radius: 3px;
+    }
+
+    .cancel {
+        background: white;
+        color: #333;
+        border: 1px solid #d5deef;
+        transition: all 0.3s ease;
+
+        &:hover, &:focus {
+            border-color: #96a0b4;
+        }
+
+        &:active {
+            background-color: #edf2fa;
+            border-color: #96a0b4;
+        }
+
+        span {
+            color: #333;
+        }
+    }
+
+    .ok {
+        background: #229be4;
+        border-color: #229be4;
+        color: white;
+        transition: all 0.3s ease;
+
+        .loading {
+            display: none;
+        }
+
+        &.ant-btn-loading {
+            cursor: not-allowed;
+            opacity: 0.5;
+
+            .loading {
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                background: url('../../img/loading.gif') center no-repeat;
+                vertical-align: bottom;
+                margin-right: 7px;
+            }
+        }
+
+        &:hover, &:focus {
+            background-color: #34a8f1;
+        }
+
+        &:active {
+            background-color: #1e8acb;
+        }
+
+        span {
+            color: white;
+        }
+    }
+}
+
+input[type="text"] {
+    height: 32px;
+    line-height: 1.5;
+}

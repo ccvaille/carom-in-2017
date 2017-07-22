@@ -1,0 +1,28 @@
+.cs-access-setting .pc-chat-preview {
+    height: 510px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+
+    .chat-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: calc(~'100% - 30px');
+    }
+
+    &.without-border {
+        border-color: transparent;
+    }
+
+    .preview-result {
+        margin-top: 13px;
+        // border: 1px solid #d8deea;
+        height: 450px;
+        background: white;
+
+        &.standard-mode {
+            width: 600px;
+            padding: 0 10px;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+
+span{
+	font-size: 28px;
+}
+svg{
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.tab-container{
+	.am-tabs-content-animated .am-tabs-tabpane{
+		position: relative;
+		max-height: 800px;
+		overflow: auto;
+	}
+	.footer{
+		position: absolute;
+		display: flex;
+		bottom: -2px;
+		right: 0;
+		left: 0;
+		.btn{
+			border: 1PX solid #C6CDD4;
+			color: #303642;
+			flex:1;
+			border-radius: 0;
+            letter-spacing: -4px;
+            span{
+                font-size: 32px;
+                font-weight: normal;
+            }
+			&.rest{
+                height: 88px;
+                font-size: 32px;
+			}
+			&.ok{
+				border-left: none;
+				background: #0DC88C;
+				color: #fff;
+                height: 88px;
+                font-size: 32px;
+			}
+		}
+	}
+}
+.am-tabs{
+	position: relative;
+	z-index: 12;
+	background: #fff;
+}
+.mask{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 8;
+	background: rgba(0, 0, 0, .5 );
+}

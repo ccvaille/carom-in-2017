@@ -1,0 +1,110 @@
+.sidebar{
+    width:130px;
+    height:100%;
+    float: left;
+    border-right:1px solid lightslategray;
+
+    .create-btn{
+        color: #ffffff;
+        background-color: #2580e6;
+        padding:6px 25px;
+        border-radius: 3px;
+        margin:20px 25px;
+        display: inline-block;
+    }
+
+    .my-form{
+        margin-top:5px;
+        width:100%;
+        .title{
+            height: 40px;
+            line-height:40px;
+            .icon{
+                color: #96a0b4;
+                margin-left:20px;
+            }
+            span{
+                color: #888;
+                margin-left:10px;
+            }
+        }
+        .link-url{
+
+        }
+    }
+    .icon-panel{
+        width:100%;
+        li{
+            a{
+                display: block;
+                height:40px;
+                line-height:40px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #ebf0f6;
+                }
+                &.active{
+                    background-color: #d4deee;
+                }
+
+                .icon{
+                    color: #96a0b4;
+                    margin-left:20px;
+                    font-size:14px;
+                    display: inline-block;
+                    height:40px;
+                    line-height: 40px;
+                }
+                span{
+                    color: #303642;
+                    font-size:14px;
+                    margin-left:10px;
+                }
+            }
+
+
+        }
+    }
+    .no-icon-panel{
+        width:100%;
+        li{
+            a{
+                display: block;
+                height:40px;
+                line-height:40px;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #ebf0f6;
+                }
+                &.active{
+                    background-color: #d4deee;
+                }
+                span{
+                    color: #303642;
+                    font-size: 14px;
+                    margin-left:45px;
+                }
+            }
+        }
+    }
+}
+.my-public{
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    text-align: center;
+    button{
+        width: 100px;
+        height: 25px;
+        text-align: center;
+        padding: 0;
+        background: #FFFFFF;
+        border: 1px solid #B4BCCB;
+        border-radius: 3px;
+    }
+    p{
+        margin-bottom: 10px;
+        color: #303642;
+        font-size: 12px;
+    }
+}

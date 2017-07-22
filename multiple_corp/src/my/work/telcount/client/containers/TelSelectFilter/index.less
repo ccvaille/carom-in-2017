@@ -1,0 +1,88 @@
+.ec_select_manage{
+    position: relative;
+    // height: 35px;
+    width: auto;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    overflow: hidden;
+
+    p{
+        float: left;
+        margin-top: 6px;
+        margin-bottom: auto;
+    }
+    span{
+        float: left;
+        margin-left: 10px;
+        height: 30px;
+        width: 45px;
+        border-radius: 2px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid #d4deee;
+        cursor: pointer;
+    }
+    .on{
+        background-color: #2580e6;
+        color: white;
+        border: 0;
+    }
+
+    .ec_select_list {
+        margin-top: 2px;
+        padding-left: 10px;
+    }
+}
+.fl2{
+    // float: left;
+    display: inline;
+    margin-left: 10px;
+    margin-top: 2px;
+    > div {
+        // float:left;
+        display: inline-block;
+        background:#229be6;
+        padding:3px 10px;
+        margin:1px 10px 3px 0;
+        position:relative;
+        border-radius:2px;
+        -webkit-transition: padding 0.1s ease-out; 
+        transition: padding 0.1s ease-out;
+        &:first-child {
+            margin-left: 10px;
+        }
+        a{
+            color:#fff;
+            padding:0px 8px;
+        }
+        .a2{
+            display:none;
+            position:absolute;
+            width:8px;
+            height:8px;
+            background:url(//www.staticec.com/my/images/close_btn1.gif) no-repeat;
+            top: 8px;
+            right: 0px;
+        }
+        &:hover { 
+            padding: 3px 15px 3px 5px; 
+            .a2{
+                display:block !important;
+            }
+        }
+    }
+}
+.sureBtn{
+    display: inline-block;
+    // margin-top: 2px;
+    font-size: 12px;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #428bca;
+    border-radius: 3px;
+    line-height: 1.428571429;
+    padding: 3px 8px;
+    &:hover{
+        background-color: #3276b1;
+    };
+}

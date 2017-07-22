@@ -1,0 +1,100 @@
+.switch-cs {
+    .left-box {
+        float: left;
+        width: 48%;
+        // margin-bottom: -59px;
+    }
+
+    .right-box {
+        float: right;
+        width: 48%;
+        // margin-left: 15px;
+        textarea.ant-input{
+            resize: none;
+            height: 262px;
+        }
+        .choice {
+            margin-bottom: 13px;
+            min-height: 30px;
+
+            > div {
+                display: inline-block;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                visibility: hidden;
+                vertical-align: middle;
+                // display: none;
+                &.show {
+                    // display: inline-block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .search {
+        position: relative;
+
+        .search-icon {
+            display: inline-block;
+            width: 10%;
+            position: absolute;
+            top: 6px;
+            left: 7px;
+            z-index: 99;
+
+            i {
+                color: #989898;
+            }
+        }
+
+        input {
+           text-indent: 17px;
+        }
+    }
+
+        .service-list-box {
+            margin-top: 13px;
+            border: 1px solid rgb(230, 230, 230);
+            height: 263px;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            li {
+                cursor: pointer;
+                padding: 7px 10px;
+
+                &.active {
+                    background-color: #e9eff2;
+                }
+
+            .avatar {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+
+                .active-icon {
+                    float: right;
+                    margin-top: 5px;
+                }
+            }
+        }
+}
+
+.switch-cs-modal {
+    .ant-modal-body {
+        padding: 30px 20px 20px;
+    }
+
+    .ant-modal-footer button:nth-child(2) {
+        margin-right: 0;
+    }
+}

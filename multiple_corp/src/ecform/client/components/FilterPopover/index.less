@@ -1,0 +1,99 @@
+﻿.filter-popover{
+    width:400px;
+    height:370px;
+    .ctrl-wrapper{
+        height: 25px;
+        line-height:25px;
+        .title{
+            font-size:14px;
+            color: #000;
+            font-weight:bold;
+            float: left;
+        }
+        .ctrl{
+            color: #2580e6;
+            font-size:12px;
+            float: right;
+            font-weight:normal;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+    .groups{
+        height:315px;
+        overflow-y: auto;
+        margin-right: -20px;
+        padding-right: 20px;
+        .group {
+            .ctrl-wrapper {
+                margin-bottom: 10px;
+                height: 25px;
+                line-height: 25px;
+                .title {
+                    font-size: 14px;
+                    color: #000;
+                    font-weight: normal;
+                    float: left;
+                }
+                .ctrl {
+                    color: #2580e6;
+                    font-size: 12px;
+                    float: right;
+                    font-weight: normal;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .tags {
+                .tag {
+                    display: inline-block;
+                    float: left;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    &:nth-child(4n){
+                        margin-right: 0px;
+                    }
+                    a {
+                        display: inline-block;
+                        border-radius: 3px;
+                        text-align: center;
+                        width: 90px;
+                        padding: 0 5px;
+                        border: 1px solid #d4deee;
+                        color: #303642;
+                        height: 30px;
+                        line-height: 28px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 12px;
+                        transition: all .5s;
+                        &.active {
+                            color: #fff;
+                            background: #2580e6;
+                        }
+                        &:hover{
+                            border-color: #2580e6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        background-color: #f8f9fc;
+        text-align: right;
+        height:50px;
+        line-height:50px;
+        border-top:1px solid #edf2fa;
+        margin-left:-20px;
+        margin-right:-20px;
+        padding-right:20px;
+        button{
+            margin-left:10px;
+        }
+    }
+}

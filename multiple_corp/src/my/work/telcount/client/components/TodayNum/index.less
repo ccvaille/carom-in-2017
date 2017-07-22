@@ -1,0 +1,40 @@
+@import "../../../../../../comm/antd/lib/style/themes/default.less";
+.statistics-items {
+	width: 86%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	li {
+		display: inline-block;
+		width: 24%;
+		text-align: center;
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 15px;
+			width: 0;
+			height: 30px;
+			border-right: 1px solid #e0e8f6 ;
+			right: 0;
+		}
+		&:last-child{
+			&:after {
+				border-right: transparent;
+			}
+		}
+		.statistics-items-name{
+			color: @input-color;
+			font-size: 14px;
+			margin-bottom: 14px;
+		}
+		.statistics-items-num{
+			color: @input-color;
+			font-size: 24px;
+			font-weight: bold;
+			text-overflow: ellipsis;
+			white-space : nowrap;
+			overflow : hidden;
+		}
+	}
+}

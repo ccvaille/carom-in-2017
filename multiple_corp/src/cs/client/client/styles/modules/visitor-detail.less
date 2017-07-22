@@ -1,0 +1,203 @@
+.visitor-details {
+    position: absolute;
+    top: 2px;
+    right: -240px;
+    bottom: 0;
+    width: 240px;
+    transition: right 0.3s ease-in;
+    background-color: #f5f5f5;
+
+    &.show {
+        right: 0px;
+
+        .toggle-details {
+            display: none;
+            opacity: 1;
+            i {
+                transform: rotate(180deg);
+            }
+        }
+        &:hover .toggle-details {
+            display: block;
+        }
+    }
+
+    .toggle-details {
+        display: block;
+        opacity: .4;
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .ant-tabs {
+        height: 100%;
+    }
+
+    .ant-tabs-content {
+        height: calc(~'100% - 52px');
+    }
+
+    .ant-tabs-tabpane {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-track-piece:vertical:start {
+            background-color: #f5f5f5;
+        }
+
+        &::-webkit-scrollbar-track-piece:vertical:end {
+            background-color: #f5f5f5;
+        }
+    }
+
+    .ant-form-item {
+        margin-bottom: 3px;
+    }
+
+    .ant-form-item-label {
+        padding: 0;
+        line-height: 32px;
+    }
+
+    .toggle-details {
+        cursor: pointer;
+        width: 12px;
+        height: 48px;
+        line-height: 48px;
+        background-color: #f5f5f5;
+        box-shadow: 0px 1px 3px 0 rgba(51, 51, 51, 0.12), inset 1px 0px 0 0 #ccd7e4;
+        padding-left: 2px;
+        // padding: 8px 0;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        position: absolute;
+        top: calc(~'50% - 65px');
+        left: -12px;
+        z-index: 1;
+
+        i {
+            color: #2580e6;
+            transition: all 0.1s ease-in;
+        }
+    }
+
+    .info-detail {
+        padding: 0 15px;
+        margin-bottom: 16px;
+
+        .ant-form-item, .ant-form-item-control {
+            height: 32px;
+        }
+
+        .ant-form-item-label {
+            text-align: left;
+
+            label {
+                &:after {
+                    content: '';
+                }
+            }
+        }
+
+        .info-content {
+            display: inline-block;
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            height: 32px;
+        }
+
+        .necessary-hint {
+            color: red;
+            padding-left: 2px;
+        }
+    }
+
+    .basic-info {
+        .ant-input {
+            border-color: transparent;
+            outline: 0;
+            background-color: #f5f5f5;
+
+            &:hover, &:focus, &:active {
+                background-color: white;
+            }
+
+            &:hover {
+                border-color: #d4deee;
+            }
+
+            &:focus, &:active {
+                border-color: #2580e6;
+            }
+
+            &.has-error {
+                border-color: #f2534f;
+                background-color: white;
+            }
+        }
+
+        .ant-select-selection {
+            border-color: transparent;
+            background-color: #f5f5f5;
+
+            .ant-select-arrow {
+                visibility: hidden;
+                transition: all 0.1s ease-in;
+            }
+
+            &:hover, &:focus, &:active {
+                background-color: white;
+                .ant-select-arrow {
+                    visibility: visible;
+                }
+            }
+
+            &:hover {
+                border-color: #d9d9d9;
+            }
+
+            &:focus, &:active {
+                border-color: #2580e6;
+            }
+        }
+    }
+
+    .name-input {
+        &[disabled] {
+            color: #666;
+        }
+    }
+
+    .gender-select {
+        &.ant-select-disabled.ant-select-focused {
+            .ant-select-selection {
+                border-color: #d9d9d9;
+            }
+        }
+    }
+
+    .operates {
+        text-align: center;
+        margin-top: 16px;
+
+        .view-info {
+            margin-left: 12px;
+        }
+    }
+}
+
+.gender-dropdown {
+    li:first-child {
+        display: none;
+    }
+}
+
+.basic-info-tip {
+    .ant-tooltip-inner {
+        word-break: break-all;
+    }
+}

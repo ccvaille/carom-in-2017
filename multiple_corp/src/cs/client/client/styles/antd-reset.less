@@ -1,0 +1,118 @@
+.ant-table {
+    .ant-table-row {
+        &:nth-child(even) {
+            background-color: #f8f8fb;
+        }
+
+        &:nth-child(odd) {
+            background-color: white;
+        }
+
+        // &:hover {
+        //     background-color: #f0f2f5;
+        // }
+    }
+}
+
+.ant-table-header {
+    background: #f2f4f7;
+}
+
+.ant-table-thead > tr > th {
+    font-weight: normal;
+    background: #f2f4f7;
+    padding: 14px 8px;
+    color: #727c8f;
+}
+
+.ant-table-tbody > tr > td {
+    padding: 14px 8px;
+}
+
+// .ant-table-scroll .ant-table-tbody > tr > td {
+//     padding: 10px 8px;
+// }
+
+// hack: antd 2.6.4 已解决
+.ant-table-scroll {
+    overflow-x: hidden;
+}
+.ant-table-fixed-header .ant-table-scroll .ant-table-header {
+    margin-right: -20px;
+    padding-right: 20px;
+}
+
+// .ant-table-scroll {
+//     .ant-table-tbody {
+//         > tr {
+//             > td {
+//                 padding: 9px 8px;
+//             }
+//         }
+//     }
+// }
+
+.ant-table-header table, .ant-table .ant-table-thead {
+    line-height: 1;
+}
+
+// .ant-table-header {
+//     background: transparent;
+// }
+
+// .ant-table-thead > tr > th {
+//     font-weight: normal;
+//     background: transparent;
+//     border-bottom: 2px solid #edf2fa;
+//     border-collapse: separate;
+//     border-spacing: 0 2px;
+// }
+
+// .ant-table-tbody {
+//     border-top: 2px solid #edf2fa;
+// }
+
+// .ant-table-scroll .ant-table-body {
+//     border-top: 2px solid #edf2fa;
+// }
+
+.ant-select .ant-select-selection {
+    border-radius: 0;
+    border-color: #d4deee;
+}
+
+.ant-select-focused .ant-select-selection,
+.ant-select-selection:focus
+.ant-select-open .ant-select-selection,
+.ant-select-open .ant-select-selection:focus {
+    box-shadow: none;
+}
+
+.ant-select-open .ant-select-selection {
+    border-color: #2580e6;
+
+    &:focus, &:active {
+        border-color: #2580e6;
+    }
+}
+
+.ant-popover-inner {
+    padding: 7px 10px;
+}
+
+.ant-modal-mask {
+    background-color: rgba(55, 55, 55, 0.4);
+}
+
+.ant-modal-content {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+// .ant-message-notice {
+//     left: auto;
+// }
+
+// .ant-message-notice-content {
+//     right: auto;
+//     left: 50%;
+// }

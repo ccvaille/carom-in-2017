@@ -1,0 +1,207 @@
+@import '../../../../../../../../comm/ec-antd/lib/style/themes/default.less';
+.back-rule {
+    overflow: auto;
+    position: relative;
+}
+
+.ant-btn {
+    background: #fff;
+}
+
+.ant-btn-primary {
+    background: @primary-color;
+}
+
+.back-rule-continer {
+    // margin: -1px 10px 0px 10px;
+    // padding: 1px 20px 60px 20px;
+    background: #fff;
+    .ant-radio-wrapper {
+        margin-right: 35px;
+        font-size: 14px;
+    }
+}
+
+.back-rule-body {
+    margin-top: 23px;
+    position: relative;
+    font-size: 14px;
+    .back-rule-point {
+        font-size: @font-size-lg;
+        font-weight: bold;
+        color: @heading-color; // &::before {
+        //     content: '*';
+        //     color: @highlight-color ;
+        //     float: left;
+        //     margin-left: -20px;
+        // }
+        // &.no-point::before {
+        //     content: ''
+        // }
+    }
+    p {
+        padding: 7px 0;
+    }
+    .ant-input {
+        width: 105px;
+        margin: 0 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+    .ant-calendar-picker .ant-input {
+        width: 100%;
+        text-align: left;
+    }
+    .ant-checkbox-wrapper {
+        margin-right: 3px;
+    }
+    .tips {
+        color: @text-color-secondary;
+    }
+    .tips-head {
+        font-size: @font-size-lg;
+        .help {
+            font-size: @font-size-lg;
+            color: @border-color-base;
+            float: left;
+            margin-left: -20px;
+        }
+    }
+    .back-rule-check .ant-checkbox-checked .ant-checkbox-inner,
+    .back-rule-checkgroup .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: @primary-color;
+    }
+    .back-rule-check .ant-checkbox-checked .ant-checkbox-inner::after,
+    .back-rule-checkgroup .ant-checkbox-checked .ant-checkbox-inner::after {
+        border-color: #fff;
+    }
+}
+
+.back_rule_error.back_rule_error {
+    color: @error-color;
+    margin-left: 10px;
+    .iconfont {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+}
+
+.back-rule-check {
+    margin-top: 5px;
+}
+
+.back-rule-check.way-no-check .ant-checkbox-inner {
+    border-color: @highlight-color;
+}
+
+.back-rule-check .ant-checkbox-wrapper {
+    margin-right: 30px;
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.back_rule_protocol {
+    h3 {
+        font-weight: bold;
+        font-size: @font-size-lg;
+        margin-bottom: 15px;
+    }
+    p {
+        padding: 5px 0;
+        padding-left: 20px;
+        position: relative;
+        &.dorp_line {
+            padding-left: 2em;
+        }
+    }
+    .number {
+        position: absolute;
+        left: 0;
+        top: 9px;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        color: #fff;
+        background-color: @primary-color;
+        font-size: 12px;
+        font-style: normal;
+        text-align: center;
+        line-height: 15px;
+    }
+    .drop {
+        display: inline-block;
+        position: absolute;
+        top: 13px;
+        left: 4px;
+        width: 6px;
+        height: 6px;
+        background-color: @primary-color;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+}
+
+.masker {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(55, 55, 55);
+    opacity: .6;
+    z-index: 1200;
+    +.anticon-loading {
+        z-index: 1210;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        font-size: 30px;
+        color: #fff;
+    }
+}
+
+.gray-foot-modal .ant-modal-footer {
+    background: #f8f9fc;
+    padding: 15px 20px;
+}
+
+.gray-foot-modal .back_rule_action {
+    background: #f8f9fc;
+    margin: 0 -20px;
+    margin-bottom: -30px;
+    padding: 15px 20px;
+}
+
+.gray-foot-modal .ant-modal-body {
+    padding-bottom: 10px;
+}
+
+.ant-content-modal {
+    .ant-modal-header {
+        padding: 20px 20px 0 20px;
+        .ant-modal-title {
+            font-size: 16px;
+            font-weight: normal;
+        }
+    }
+    .ant-modal-content {
+        .ant-modal-close {
+            right: 18px;
+            top: 16px;
+        }
+    }
+    .ant-modal-body {
+        padding: 30px 20px 10px 20px;
+    }
+    .ant-btn {
+        font-size: 14px;
+        padding: 4px 17px;
+        height: 30px;
+    }
+}

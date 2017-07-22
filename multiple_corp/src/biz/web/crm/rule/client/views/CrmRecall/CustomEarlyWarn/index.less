@@ -1,0 +1,71 @@
+@import '../../../../../../../../comm/ec-antd/lib/style/themes/default.less';
+.back-rule-warn {
+    p {
+        margin-bottom: 10px;
+    }
+    .warn-title {
+        font-size: @font-size-lg;
+        font-weight: bold;
+    }
+    .warn-user-list {
+        border: solid 1px @border-color-base;
+        height: 135px;
+        overflow: auto;
+        font-size: @font-size-base;
+        li {
+            float: left;
+            padding: 5px 10px;
+            background-color: @primary-color;
+            border-radius: @border-radius-sm;
+            color: #fff;
+            margin-left: 10px;
+            margin-top: 10px;
+            &:hover i {
+                visibility: inherit;
+            }
+        }
+        i {
+            float: right;
+            margin-left: 10px;
+            margin-top: 4px;
+            visibility: hidden;
+        }
+    }
+    .tips-head {
+        margin: 0;
+        padding-bottom: 0;
+    }
+    .warn-error {
+        border-color: @highlight-color;
+    }
+    .tips {
+        font-size: @font-size-base;
+    }
+    .back_rule_action{
+        text-align: right;
+        button{
+            margin-left: 10px;
+        }
+        margin-bottom: -10px;
+    }
+}
+
+.back-rule-mostwarn {
+    color: @primary-color;
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 2;
+    .anticon {
+        margin-right: 5px;
+    }
+    
+}
+
+.ectree_bg {
+    width: 239px;
+}
+

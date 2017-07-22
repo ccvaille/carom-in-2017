@@ -1,0 +1,292 @@
+@import "../../style/themes/default";
+@import "../../style/mixins/index";
+
+// size mixins for input
+.input-lg() {
+  padding: @input-padding-vertical-lg @input-padding-horizontal;
+  height: @input-height-lg;
+}
+
+.input-sm() {
+  padding: @input-padding-vertical-sm @input-padding-horizontal;
+  height: @input-height-sm;
+  border-radius: @border-radius-sm;
+}
+
+// input status
+// == when focus or actived
+.active(@color: @outline-color) {
+  border-color: @primary-color;
+  outline: 0;
+  -webkit-appearance: none;
+   box-shadow: none;
+}
+
+// == when hoverd
+.hover(@color: @input-hover-border-color) {
+  border-color: @input-placeholder-color;
+}
+
+.disabled() {
+  background-color: @input-disabled-bg;
+  opacity: 1;
+  cursor: not-allowed;
+  color: #96a0b4;
+  &:hover {
+    .hover(@input-border-color);
+  }
+}
+
+// Basic style for input
+.input() {
+  position: relative;
+  display: inline-block;
+  padding: @input-padding-vertical-base @input-padding-horizontal;
+  width: 100%;
+  -webkit-appearance: none;
+  height: @input-height-base;
+  cursor: text;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @input-color;
+  background-color: @input-bg;
+  background-image: none;
+  border: 1px solid @input-border-color;
+   border-radius: 0;
+  .placeholder(); // Reset placeholder
+  transition: border .2s @ease-in-out, background .2s @ease-in-out, box-shadow .2s @ease-in-out;
+
+  &:hover {
+    .hover();
+  }
+
+  &:focus {
+    .active();
+  }
+
+   &[disabled] {
+    .disabled();
+  }
+
+  // Reset height for `textarea`s
+  textarea& {
+    max-width: 100%; // prevent textearea resize from coming out of its container
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  // Size
+  &-lg {
+    .input-lg();
+  }
+
+  &-sm {
+    .input-sm();
+  }
+}
+
+// Input with icons, you can define @height if you wish to change the input size
+.input-with-icon(@height: @input-height-base) {
+  position: relative;
+
+  .@{iconfont-css-prefix} {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    .square(@height);
+    font-size: 14px;
+    line-height: @height;
+    text-align: center;
+    pointer-events: none;
+  }
+}
+
+// label input
+.input-group(@inputClass) {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  width: 100%;
+
+  // Undo padding and float of grid classes
+  &[class*="col-"] {
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  > [class*="col-"] {
+    padding-right: 8px;
+  }
+
+  &-addon,
+  &-wrap,
+  > .@{inputClass} {
+    display: table-cell;
+
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+    }
+  }
+
+  &-addon,
+  &-wrap {
+    width: 1px; // To make addon/wrap as small as possible
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+
+  &-wrap > * {
+    display: block !important;
+  }
+
+  .@{inputClass} {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  &-addon {
+    padding: @input-padding-vertical-base @input-padding-horizontal;
+    font-size: @font-size-base;
+    font-weight: normal;
+    line-height: 1;
+    color: @input-color;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid @input-border-color;
+    border-radius: @border-radius-base;
+    position: relative;
+
+    // Reset Select's style in addon
+    .@{ant-prefix}-select {
+      margin: -(@input-padding-vertical-base + 1) (-@input-padding-horizontal);  // lesshint spaceAroundOperator: false
+
+      .@{ant-prefix}-select-selection {
+        background-color: inherit;
+        border: 0;
+        margin: -1px;
+        border: 1px solid transparent;
+        box-shadow: none;
+      }
+
+      &-open,
+      &-focused {
+        .@{ant-prefix}-select-selection {
+          border-color: tint(@primary-color, 20%);
+	  color: @primary-color;
+        }
+      }
+    }
+// Expand addon icon click area
+    // https://github.com/ant-design/ant-design/issues/3714
+    > i:only-child:after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  // Reset rounded corners
+  > span > .@{inputClass}:first-child,
+  > .@{inputClass}:first-child,
+  &-addon:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+
+    // Reset Select's style in addon
+    .@{ant-prefix}-select .@{ant-prefix}-select-selection {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &-addon:first-child {
+    border-right: 0;
+  }
+  &-addon:last-child {
+    border-left: 0;
+  }
+
+  > .@{inputClass}:last-child,
+  &-addon:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    // Reset Select's style in addon
+    .@{ant-prefix}-select .@{ant-prefix}-select-selection {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+
+  // Sizing options
+  &-lg .@{inputClass},
+  &-lg > &-addon {
+    .input-lg();
+  }
+
+  &-sm .@{inputClass},
+  &-sm > &-addon {
+    .input-sm();
+  }
+}
+
+/*add search-input */
+.search-input {
+  position: relative;
+  input {
+    padding-left: 30px;
+  }
+  .search-icon,.delect-icon {
+    position: absolute;
+    z-index: 2;
+    height: 30px;
+    line-height: 28px;
+  }
+  .search-icon {
+    left: 10px;
+  }
+  .delect-icon {
+    right: 10px;
+    opacity: 0;
+    transition: all .5s;
+  }
+  &.focus {
+    .delect-icon {
+      opacity: 1;
+    }
+  }
+}
+
+
+/*清除文本框后关闭按钮*/
+
+input::-ms-clear {
+    display: none;
+}
+
+
+/*清除密码框后有小眼睛图标*/
+
+input::-ms-reveal {
+    display: none;
+}
+
+.input:valid + .clear { display: inline; }
+
+/*清除 type=number 的默认样式*/
+input[type=number] {
+    -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

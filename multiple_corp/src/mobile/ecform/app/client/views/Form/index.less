@@ -1,0 +1,260 @@
+.iconfont{
+	font-size: 28px;
+	display: inline-block;
+	margin-left: 10px;
+	color: #B3B5B9;
+	vertical-align: middle;
+}
+ul{
+    list-style: none;
+}
+.iconfont.icon-zhankai{
+	font-size: 12px;
+    margin-top: -10px;
+}
+.iconfont.icon-zhankaixuanzhong{
+    font-size: 12px;
+    margin-top: -10px;
+}
+.iconfont.icon-xuanzhong{
+    font-size: 24px;
+}
+#root, .form, body{
+	height: 100%;
+	background: #f0f2f4;
+	font-family: 微软雅黑;
+	position: relative;
+    -webkit-backface-visibility:hidden;
+    -webkit-transform-style:preserve-3d;
+}
+.am-refresh-control-loading .am-refresh-control-ptr-loading{
+	background: url('../../styles/images/loading.gif') no-repeat center center;
+    width: 36px;
+	height: 36px;
+    margin: 0 auto;
+    background-size: 100% 100%;
+}
+.form-content{
+	position: absolute;
+	top: 87px;
+	bottom: 0px;
+	width: 100%;
+	overflow: hidden;
+	.form-list{
+        width: 100%;
+		.am-list-body{
+			background: none;
+			margin: 0 20px;
+            border: none;
+            &:after{
+                display: none;
+            }
+		}
+		.form-list-itme{
+			background: #fff;
+			margin-bottom: 20px;
+			font-size: 28px;
+			border: 1PX solid #D5DBE1;
+			border-radius: 8px;
+			padding-bottom: 0px;
+			display: block;
+            &:first-child{
+               margin-top: 20px;
+            }
+			h2{
+				font-size: 36px;
+				color: #303642;
+				letter-spacing: 0.8px;
+				line-height: 50px;
+				font-weight: normal;
+                overflow : hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                word-break: break-all;
+			}
+			.content{
+				display: -webkit-box-flex;
+				display: flex;
+				-webkit-flex-flow: row;
+                margin: 30px;
+                margin-bottom: 0px;
+                padding-bottom: 30px;
+                border-bottom: 1px solid #D5DBE1;
+				.ctl{
+					flex: 1;
+                    display: -webkit-flex;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+					p{
+						margin-top: 10px;
+						span{
+							font-size: 24px;
+							color: #989CA2;
+							margin-right: 16px;
+						}
+					}
+				}
+				.ctr{
+					width: 150px;
+                    height: 150px;
+					text-align: right;
+                    background: #f1f1f1;
+                    margin-left: 20px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+				}
+			}
+			.foot{
+				display: -webkit-box-flex;
+				display: flex;
+				-webkit-flex-flow: row;
+				height: 70px;
+
+				.ft{
+					flex: 1;
+					text-align: center;
+					justify-content: center;
+					line-height: 70px;
+					color: #888;
+					font-size: 26px;
+                    display: block;
+                    &.ftl, &.ftr{
+                        &:active, &:visited{
+                            span, i{
+                                opacity: .5;
+                            }
+                        }
+                    }
+					&.ftr{
+                        position: relative;
+                        &:before{
+                            position: absolute;
+                            display: block;
+                            content: '';
+                            width: 1px;
+                            height: 36px;
+                            top: 17px;
+                            left: 0px;
+                            background: #D5DBE1;
+                        }
+                        &.one{
+                            &:after{
+                                display: none
+                            }
+                        }
+                        .to-data{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            color: #888;
+                            &.disabled{
+
+                            }
+                        }
+						.shuju{
+							display: inline-block;
+							position: relative;
+							.circle{
+								position: absolute;
+								right: -20px;
+								top: 20px;
+								width: 10px;
+								height: 10px;
+								background: #FF1F1F;
+								border-radius: 10px;
+							}
+							a{
+								color: #888;
+							}
+						}
+
+					}
+				}
+				i{
+					margin-right: 20px;
+					margin-top: -5px;
+				}
+
+			}
+		}
+	}
+}
+
+.am-refresh-control-ptr{
+}
+.up{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 20px;
+    bottom: 20px;
+    background: #000;
+    opacity: 0.6;
+    cursor: pointer;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 100px;
+    i{
+        font-size: 40px;
+        margin-left: -1px;
+        color: #C6CDD4;
+    }
+}
+.no-data{
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 150px;
+        margin-bottom: 20px;
+    }
+}
+.am-list-footer{
+    margin-top: -30px;
+    .load-foot{
+        background: url('../../styles/images/loading.gif') no-repeat center center;
+        width: 36px;
+        height: 36px;
+        margin: 0 auto;
+        background-size: 100% 100%;
+        margin-bottom: 20px;
+        &.hide {
+            display: none;
+        }
+        &.show{
+            display: block;
+        }
+
+    }
+}
+/* 加载中... */
+.am-activity-indicator-content{
+    width: 240px;
+    height: 240px;
+    background: rgba(0, 0, 0, .7);
+    padding: 0px;
+    line-height: 60px;
+    .am-activity-indicator-spinner{
+        width: 86px;
+        height: 86px;
+        background: url('../../styles/images/loading-white3x.png') no-repeat center center;
+        background-size: 100% 100%;
+        margin-bottom: 20px;
+    }
+    .am-activity-indicator-toast{
+        font-size: 28px;
+        color: #fff;
+    }
+}
+
+.am-activity-indicator-spinner{
+    display: block;
+}

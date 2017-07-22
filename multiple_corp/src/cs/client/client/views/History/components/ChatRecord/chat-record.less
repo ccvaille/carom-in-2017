@@ -1,0 +1,195 @@
+.chat-record {
+    .ant-modal-body {
+        padding-left: 0;
+        padding-right: 0;
+        height: 410px;
+        overflow: hidden;
+    }
+
+    .ant-input {
+        &:hover {
+           border-color: #d4deee;
+        }
+        &:focus {
+           border-color: #d4deee;
+        }
+    }
+
+    .body-wrapper {
+        position: relative;
+        height: 400px;
+
+        .radio-right {
+            margin-left: 31.83333333%;
+        }
+
+        .msg-list-wrapper {
+            padding-top: 20px;
+            height: 90%;
+
+            .msg-list {
+                padding-right: 16px;
+                padding-left: 16px;
+                height: 100%;
+                overflow: auto;
+                width: 560px;
+            }
+        }
+    }
+
+    .title-wrapper {
+        position: absolute;
+        top: -14px;
+        z-index: 2;
+
+        width: 100%;
+        padding: 5px 16px 7px;
+        color: #666;
+        background-color: #fff;
+
+        .name-color {
+            color: #000;
+        }
+
+        .float-right {
+            float: right;
+        }
+    }
+
+    .leave-msg-wrapper {
+        .ant-form-item {
+            p {
+                padding: 6px 7px;
+                word-break: break-all;
+                height: 32px;
+                border: 1px solid #d4deee;
+                line-height: 1.5;
+            }
+
+            .leave-msg-content {
+                height: 86px;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+.ant-form-item {
+    margin-bottom: 10px;
+}
+
+.higher {
+    .ant-popover-inner .ant-popover-inner-content .popover-track-wrapper {
+        height: 340px;
+    }
+}
+.ant-popover-inner {
+
+    .ant-popover-title {
+        .track-popover-title {
+            text-align: center;
+            padding-bottom: 8px;
+            line-height: 26px;
+            font-weight: normal;
+        }
+
+        .ant-select {
+            position: absolute;
+            left: 10px;
+            top: 14px;
+            width: 90px;
+
+            .ant-select-selection {
+                border-radius: 0;
+            }
+        }
+
+        .ant-modal-close {
+            top: 20px;
+        }
+    }
+
+    .ant-popover-inner-content {
+
+        .popover-track-wrapper {
+            width: 506px;
+            padding: 10px 0px 5px;
+            height: 300px;
+            overflow: auto;
+
+            .loading-wrapper {
+                text-align: center;
+                padding-top: 20%;
+
+                .loading {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 10px;
+                    width: 60px;
+                    height: 79px;
+                    background: url('../../../../images/loading-big.gif') center no-repeat;
+                }
+            }
+
+
+            .ant-table-body {
+                tr {
+                    th {
+                    }
+
+                    td {
+                        padding-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .table-header {
+            margin-top: 30px;
+            margin-bottom: 10px;
+
+            &:first-child {
+                margin-top: 0;
+            }
+
+            .title-item {
+                display: inline-block;
+                padding-right: 30px;
+                width: 38%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &:first-child {
+                    width: 24%;
+                }
+
+                &.title-sign {
+                    font-weight: bold;
+                    color: #000;
+                }
+            }
+
+            .referer {
+                display: inline-block;
+                white-space: nowrap;
+            }
+
+            .referer-text {
+                word-break: break-all;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                line-height: 20px;
+                // width: 92%;
+            }
+        }
+    }
+}
+
+// .ant-select-dropdown-style-custom {
+//     border: 1px solid #2580e6;
+// }

@@ -1,0 +1,33 @@
+.time-filter-tab {
+    width: 342px;
+    margin: 0 auto;
+    border: 1px solid #2580e6;
+    border-radius: 3px;
+
+    &.auto-width {
+        width: auto;
+        margin: auto;
+    }
+
+    li {
+        float: left;
+        text-align: center;
+        width: 68px;
+        height: 26px;
+        line-height: 26px;
+        border-right: 1px solid #2580e6;
+
+        &:last-child {
+            border-right: none;
+        }
+
+        a {
+            display: block;
+
+            &.active {
+                background-color: #2580e6;
+                color: white;
+            }
+        }
+    }
+}

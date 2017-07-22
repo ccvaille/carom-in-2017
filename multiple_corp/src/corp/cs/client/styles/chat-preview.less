@@ -1,0 +1,66 @@
+.chat-preview {
+    height: 100%;
+    position: relative;
+    background-color: white;
+    border: 1px solid #d8deea;
+
+    .chat-head {
+        height: 60px;
+        padding: 12px 15px;
+
+        * {
+            color: white;
+        }
+
+        .cs-name {
+            font-size: 14px;
+        }
+
+        .cs-sign {
+            color: white;
+            opacity: 0.85;
+        }
+    }
+
+    .chat-footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 145px;
+        border-top: 2px solid #f6f6f6;
+
+        .chat-area {
+            height: 90px;
+            margin-bottom: 12px;
+
+            .chat-tools {
+                height: 35px;
+                line-height: 35px;
+                padding: 0 10px;
+                cursor: pointer;
+
+                i {
+                    padding-right: 10px;
+                    font-size: 14px;
+                }
+            }
+
+            textarea {
+                border: none;
+                padding: 0 7px;
+            }
+        }
+
+        .chat-operate {
+            float: right;
+            margin-right: 12px;
+        }
+
+        .send-btn {
+            span {
+                color: white;
+            }
+        }
+    }
+}

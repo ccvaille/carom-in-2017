@@ -1,0 +1,33 @@
+.ec_mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(55, 55, 55, 0.3);
+  height: 100%;
+  z-index: 1000;
+}
+
+.ec_mask_transparent {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.ec_mask_transition{
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0);
+  transition:background .3s;
+}
+.ec_fade_toggle{
+  background: rgba(0,0,0,.6);
+}

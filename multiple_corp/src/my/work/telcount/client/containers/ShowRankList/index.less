@@ -1,0 +1,105 @@
+@import "../../../../../../comm/antd/lib/style/themes/default.less";
+@import "../../../../../../../node_modules/antd/lib/style/mixins/clearfix.less";
+
+.detail {
+    .clearfix();
+    height: 330px;
+    li{
+        width: 100%;
+        height: 55px;
+        border: 0;
+        background: #fff;
+        .content{
+            background: #fff;
+            margin-right: 10px;
+            margin-left: 10px;
+            height: 100%;
+            border-radius: 5px;
+            .ranking{
+                font-size: 18px;
+                color: #96a0b4;
+            }
+            &.on {
+                background: #fafbfd;
+            }
+            span{
+                display: inline-block;
+                height: 100%;
+                width: 33.3%;
+                line-height: 55px;
+                font-size: 14px;
+                font-family: 'Microsoft Yahei', '微软雅黑';
+                color:#303642;
+                text-align: center;
+                .medal{
+                    display: inline-block;
+                    width: 20px;
+                    height: 28px;
+                    vertical-align:middle;
+                    content:'';
+                }
+                .first{
+                    background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -4px -4px;
+                };
+                .second{
+                    background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -30px -4px;
+                }
+                .third{
+                    background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -56px -4px;
+                }
+                .change{
+                    width: auto;
+                    height: 100%;
+                    i{
+                        display: inline-block;
+                        width: 9px;
+                        height: 10px;
+                        content:'';
+                    }
+                    .changeRank{
+                        display: inline-block;
+                        width: 30px;
+                    }
+                    .rank_up{
+                        background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -52px -39px;
+                    }
+                    .rank_down{
+                        background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -38px -38px;
+                    }
+                    .rank_keep{
+                        background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -65px -40px;
+                        width: 9px;
+                        height: 3px;
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+            .user_info{
+                .user_info_wrap {
+                    display: inline-block;
+                    width: 160px;
+                    white-space: nowrap;
+                    text-align: left;
+                }
+                img{
+                    display: inline-block;
+                    height: 40px;
+                    width: 40px;
+                    margin-top: -5px;
+                    border-radius: 40px;
+                };
+                .name{
+                    height: 100%;
+                    width: auto;
+                    max-width: 100px;
+                    margin-left: 12px;
+                    font-weight: bold;
+                    text-overflow: ellipsis;
+                    white-space : nowrap;
+                    overflow : hidden;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+}

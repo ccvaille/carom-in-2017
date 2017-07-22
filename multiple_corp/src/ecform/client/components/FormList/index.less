@@ -1,0 +1,198 @@
+﻿.form-list{
+    height:calc(~"100% - 75px");
+    .list-wrapper{
+        .no-result{
+            width:270px;
+            height:170px;
+            margin:160px auto 0;
+            text-align: center;
+            .title{
+                color: #303642;
+                font-size:14px;
+                margin-top:15px;
+            }
+            .detail{
+                font-size:12px;
+                color: #727c8f;
+            }
+        }
+        .loading-wrapper{
+            width:270px;
+            height:170px;
+            margin:160px auto 0;
+            text-align: center;
+        }
+        .loading-img{
+        }
+        height:480px;
+        overflow-y: scroll;
+        .form-item{
+            padding:20px 5px 20px 25px;
+            height:80px;
+            border-bottom:1px solid #e6ecf7;
+            background-color: #ffffff;
+            &:hover{
+                background-color: #f8f9fc;
+                .ctrl-area{
+                    visibility: visible;
+                }
+            }
+            &:last-child{
+                border-bottom:none;
+            }
+            .share-pic{
+                display: inline-block;
+                width:40px;
+                height:40px;
+                float: left;
+            }
+            .form-info{
+                margin-left:20px;
+                display: inline-block;
+                .title{
+                    color: #2580e6;
+                    font-size: 16px;
+                    line-height:1;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: inline-block;
+                    font-weight:normal;
+                    max-width:600px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .pay-icon{
+                    display: inline-block;
+                    background: url('../../../images/pay-list-icon.png');
+                    width: 18px;
+                    height: 14px;
+                    margin-left: 8px;
+                    padding: 0;
+                    border: none;
+                    border-radius: 0;
+                }
+                .desc{
+                    width:610px;
+                    margin-top:5px;
+                    .tab{
+                        display: inline-block;
+                        color: #96a0b4;
+                        a{
+                            color: #5777bb;
+                        }
+                        &.tab1{
+                            width: 75px;
+                        }
+                        &.tab2{
+                            width: 115px;
+                            .num{
+                                color: #fff;
+                                background-color: #fcac60;
+                                border-radius:8px;
+                                margin-left: 6px;
+                                padding:0 5px;
+                            }
+                        }
+                        &.tab3{
+                            width: 185px;
+                        }
+                        &.tab4{
+                            width: 200px;
+                            .cname{
+                                display: inline-block;
+                                width:80px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space:nowrap;
+                                vertical-align: bottom;
+                            }
+                            .ctime{
+                                display: inline-block;
+                                width:72px;
+                            }
+                        }
+                        &.tab5{
+                            .mname{
+                                display: inline-block;
+                                width:80px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space:nowrap;
+                                vertical-align: bottom;
+                            }
+                            .mtime{
+                                display: inline-block;
+                                width:72px;
+                            }
+                        }
+                    }
+
+                }
+            }
+            .ctrl-area{
+                visibility: hidden;
+                display: inline-block;
+                float: right;
+                margin-top:10px;
+                .ctrl{
+                    display: inline-block;
+                    width:35px;
+                    color: #96a0b4;
+                    &:hover{
+                        cursor: pointer;
+                        color: #2580e6;
+                    }
+                    a{
+                        color: #96a0b4;
+                        &:hover{
+                            cursor: pointer;
+                            color: #2580e6;
+                        }
+                    }
+                }
+                .pop-ctrl-area{
+                    .pop-ctrl{
+                        margin-top:10px;
+                        i{
+                            display: inline-block;
+                            color: #96a0b4;
+                            width:20px;
+                            font-size:14px;
+                        }
+                        span{
+                            color: #263450;
+                            font-size:14px;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                            color: #2580e6;
+                            i{
+                                color: #2580e6;
+                            }
+                            span{
+                                color: #2580e6;
+                            }
+                        }
+                        &:first-child{
+                            margin-top:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer{
+        border-top:1px solid #e6ecf7;
+        height:60px;
+        line-height:60px;
+        padding-top:15px;
+        padding-right:15px;
+        .pagination{
+            float: right;
+        }
+    }
+
+
+}

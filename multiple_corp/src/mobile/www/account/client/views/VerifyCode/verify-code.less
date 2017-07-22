@@ -1,0 +1,36 @@
+@import '../../styles/mixins';
+
+.mobile-verify-code {
+    .verify-title {
+        margin-bottom: 0;
+    }
+
+    .sended-text {
+        .text(32px);
+        margin-bottom: 90px;
+    }
+
+    .code-list {
+
+        > div {
+            margin: 0 7px;
+
+            &:first-child {
+                margin-left: 0
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .resend-code {
+        margin-top: 61px;
+        text-align: center;
+    }
+
+    .countdown {
+        .text(26px);
+    }
+}

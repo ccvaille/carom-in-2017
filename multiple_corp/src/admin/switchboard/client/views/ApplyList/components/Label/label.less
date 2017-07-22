@@ -1,0 +1,53 @@
+.content-phone{
+	.label{
+		color: #758791;
+	    height: 24px;
+	    line-height: 24px;
+	    min-width: 120px;
+	    padding: 0 15px;
+	    text-align: center;
+	    margin: 5px 5px;
+	    border: 1px solid #ccc;
+	    display: inline-block;
+	    position: relative;
+	    vertical-align: top;
+	    &:focus{
+	    	box-shadow: 1px 1px 1px #888888;
+	    	border: none;
+	    	padding: 0;
+	    }
+		input{
+	    	width: 120px;
+	    	height: 24px;
+	    	position: absolute;
+	    	left: -1px;
+	    	top: -1px;
+	    	right: -1px;
+	    	bottom: -1px;
+		}
+		&.error{
+			border: 1px solid red;
+			color: red;
+		}
+		&:hover{
+			cursor: pointer;
+			.del{
+				display: block;
+				&:hover{
+					i{
+						color: #333;
+					}
+				}
+			}	
+		}
+		.del{
+			position: absolute;
+			display: none;
+			right: 0px;
+			top:0px;
+			i{
+				color: #758791;
+			}
+		}
+	}
+}

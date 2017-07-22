@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EC-平台管理</title>
+    <!-- <link href="//staticec.com/admin/css/global.css" rel="stylesheet" type="text/css" /> -->
+    <link href="//staticec.com/admin/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href="//staticec.com/admin/css/layout_admin.css" rel="stylesheet" type="text/css" />
+    <link href="//staticec.com/admin/css/layout_Nadmin.css" rel="stylesheet" type="text/css" />
+    <link href="//staticec.com/admin/css/layout_search.css" rel="stylesheet" type="text/css" />
+    <link href="//staticec.com/admin/images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <script language=JavaScript src="https://www.staticec.com/admin/scripts/prototype1.7.3.js" type=text/javascript></script>
+    <!--<script language=JavaScript src="//staticec.com/admin/scripts/common.js" type=text/javascript></script>-->
+    <script type="text/javascript" src="//staticec.com/admin/scripts/page_cookie.js" ></script>
+    <script type="text/javascript" src="//staticec.com/admin/scripts/global.js"></script>
+
+    <style type="text/css">
+        .menu1 a {
+          font: normal 12px/180% Arial;
+          color: #333;
+        }
+        .down_list {position:absolute; background:#EEE; border:1px solid #CCC; margin-top:30px; margin-left:-45px;*margin-left:-100px}
+        .down_list a{ color:#333;}
+        .down_list a:hover{ color:#FFF;}
+        .index_head{width:960px;margin:0 auto; color:#999;}
+        .spnR_wec{ padding-right:40px; float:right}
+        .index_head a{ color:#999 !important; margin-right:20px}
+    </style>
+
+    <script>
+        function expand(el){
+            childObj = document.getElementById("child" + el);
+            if (childObj.style.display == 'none'){
+                childObj.style.display = 'block';
+            } else{
+                childObj.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="container" class="home">
+            <div style="background-color:#f9f9f9; height:27px; padding-top:5px; text-align:left">
+                <div class="index_head">
+            	      <div class="spnR_wec">
+                        欢迎您，<span style="font-weight:bold;">用户名Test</span>
+                        <a href="/logout" style="width:40px;">[退出]</a>
+			              </div>
+                    <a href="https://corp.workec.com/index/agentin">企业管理</a>
+                    <a href="https://agent.workec.com/index/agentin">代理商系统</a>
+                    <a href="https://jzsms.workec.com">精准广告</a>
+                    <a href="https://www.workec.com/index.html" target="_blank">六度官网</a>
+                    <a href="https://www.workec.com/html/help" target="_blank">帮助</a>
+                </div>
+            </div>
+
+            <div class="dh">
+                <div style="width:1024px;margin:0 auto;">
+                    <div class="logo" style="padding-left:20px">
+                        <a href="/"><img src="//staticec.com/admin/images/logo.jpg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="innerWrapper">
+            <div class="pageBody">
+                <div class="leftnav_analyse">
+                    <link href="//staticec.com/admin/css/analyse.css" rel="stylesheet" type="text/css" />
+                     <table cellSpacing=0 cellPadding=0 border=0 style="margin-top:10px">
+                        <tr>
+                            <td align="top">
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=22>
+                                        <td class="menu1">
+                                            <div class="{if $page=='manage'}side_cor{/if}">
+                                                <a href="/admin/manage"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle" />权限管理</b></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <table cellSpacing=0 cellPadding=0 border=0>
+                                        <tr height=22>
+                                          <td class="menu1">
+                                              <div class="{if $page=='apply' || $page=='applylog'}side_cor{/if}">
+                                                  <a href="/superpwd/apply"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>安全授权</b></a>
+                                              </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <tr height=22>
+                                        <td class="menu1">
+                                            <div class="{if $page=='agtmng'}side_cor{/if}">
+                                                <a onclick=expand(4)><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle" />渠道管理</b></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <table id=child4 style="display:none" cellSpacing=0 cellPadding=0 border=0>
+                                        <tr height=25>
+                                            <td ><div class="{if $page=='agtmng'}dotblue{/if} dot"><a href="/agentmng/{if $smarty.session.ec.agtrole eq 1}role{elseif $smarty.session.ec.agtrole eq 2}assign{elseif $smarty.session.ec.agtrole eq 3}manage{elseif $smarty.session.ec.agtrole eq 4}client{/if}">渠道管理</a></div></td>
+                                        </tr>
+                                        <tr height=25>
+                                            <td><div class="{if $page=='performance'}dotblue{/if} dot"><a href="/agentmng/performance" >业绩管理</a></div></td>
+                                        </tr>
+                                        <tr height=25>
+                                            <td><div class="{if $page=='twoperformance'}dotblue{/if} dot"><a href="/agentmng/twoperformance" >二级代理业绩</a></div></td>
+                                        </tr>
+                                        <tr height=25>
+                                            <td><div class="{if $page=='agentact'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/agentmng/agentact" >代理商活跃管理</a></div></td>
+                                        </tr>
+                                        <tr height=25>
+                                            <td><div class="{if $page=='agentactss'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/agentmng/agentact/?isss=1" >代理商SS活跃</a></div></td>
+                                        </tr>
+                                        <tr height=25>
+                                            <td><div class="{if $page=='customerstd'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/agentmng/customerstd" >代理商客户达标统计</a></div></td>
+                                        </tr>
+                                        <tr height=25>
+                                            <td><div class="{if $page=='clientact'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/agentmng/clientact" >客户活跃管理</a></div></td>
+                                        </tr>
+                                        <tr height=25>
+                                            <td><div class="{if $page=='telact'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/agentmng/telact" >电话活跃统计</a></div></td>
+                                        </tr>
+                                    </table>
+
+                                    <table cellSpacing=0 cellPadding=0 border=0>
+                                        <tr height=22>
+                                            <td class="menu1">
+                                                <div>
+                                                    <a onclick=expand(9) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle" />客户管理</b></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </table>
+
+                                <table id="child9" style="display: none" cellSpacing="0" cellPadding="0" border="0">
+                                    <tr height=25>
+                                      <td><div class="{if $page == 'client'}dotblue{/if} dot"><a href="/client">客户管理</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page == 'qixin'}dotblue{/if} dot"><a href="/client/qixin">企信客户管理</a></div></td>
+                                    </tr>
+                                    <tr height="25">
+                                      <td><div class="{if $page == 'client_protect'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/client/protect">客户保护</a></div></td>
+                                    </tr>
+                                    <tr height="25">
+                                      <td><div class="{if $page == 'client_renewmng'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/client/renewmng/index">续费管理</a></div></td>
+                                    </tr>
+                                    <tr height="25">
+                                      <td><div class="{if $page == 'gold_index'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/client/gold/index">黄金帐户</a></div></td>
+                                    </tr>
+                                    <tr height="25">
+                                      <td><div class="{if $page == 'kfp_del'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/client/del/list">删除管理</a></div></td>
+                                    </tr>
+                                    <tr height="25">
+                                      <td><div class="{if $page == 'kfp_ghkh'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/client/throwdan/ghclient">公海客户</a></div></td>
+                                    </tr>
+                                    <tr height="25">
+                                      <td><div class="{if $page == 'kfp_ddpz'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/client/index/dropconfigpage">保护配置</a></div></td>
+                                    </tr>
+                                </table>
+
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=22>
+                                      <td class="menu1">
+                                      <div class="{if $page=='user'}side_cor{/if}">
+                                      <a href="/client/user"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle" />用户管理</b></a>
+                                      </div>
+                                      </td>
+                                    </tr>
+                                </table>
+
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=22>
+                                      <td class="menu1">
+                                      <div class="{if $page=='fax'}side_cor{/if}">
+                                      <a href="/fax/index"><b style="font-weight:bold"><img src="//staticec.com/admin/
+images/icon06.jpg" align="absmiddle" />传真提单</b></a>
+                                      </div>
+                                      </td>
+                                    </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=22>
+                                      <td class="menu1">
+                                      <a onclick=expand(5) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/
+images/icon06.jpg" align="absmiddle" />400&nbsp;提单</b></a>
+                                      </td>
+                                    </tr>
+                                </table>
+
+                                <table id=child5 style="display: none" cellSpacing=0 cellPadding=0 border=0>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='unopen'}dotblue{/if} dot"><a href="/tel400/index/apply" >待开通</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='applyed'}dotblue{/if} dot"><a href="/tel400/index/applyuncheck" >已申请</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='opened'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/tel400/index" >已开通</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='applydeleted'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/tel400/index/applydeleted" >已删除</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='sound'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/tel400/sound" >录音审核</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='upload'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/tel400/index/number" >上传号码</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='demo'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/tel400/index/demo" >体验号码</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='dynamic'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/tel400/tel400dy/index" >动态400</a></div></td>
+                                      </tr>
+                                      <tr height=25>
+                                        <td><div class="{if $page=='test'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/tel400/index/changetest" >400迁移测试</a></div></td>
+                                      </tr>
+                                 </table>
+
+                                 <table cellSpacing=0 cellPadding=0 border=0>
+                                 <tr height=22>
+                                    <td class="menu1">
+                                    <div class="{if $page=='agent'}side_cor{/if}">
+                                    <a onclick=expand(6) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>短信管理</b></a>
+                                    </div>
+                                    </td>
+                                 </tr>
+                                 </table>
+
+                                 <table id=child6 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='set'}dotblue{/if} dot"><a href="/sms/set" >配置</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='sch'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/sms/search" >查询</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='test'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/sms/test" >通道测试</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='remain'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/sms/remain" >余额查询</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='qqupload'}side_cor{/if}">
+                                  <a href="/qq/index"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>QQ管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='help'}side_cor{/if}">
+                                  <a href="/other/help"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>帮助系统</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='feedback'}side_cor{/if}">
+                                  <a  onclick=expand(66)><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>问题反馈</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <!--子菜单 -->
+                                <table id=child66 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $act=='index'}dotblue{/if} dot"><a href="/other/feedback" >反馈列表</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $act=='add'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/feedback/add" >新增问题</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $act=='showcs'}dotblue{/if} dot"><a href="/other/feedback/showcs" >客服列表</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $act=='dellog'}dotblue{/if} dot"><a href="/other/feedback/dellog" >删除日志</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='recip'}side_cor{/if}">
+                                  <a href="/other/revisit/"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>回访系统</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='charge'}side_cor{/if}">
+                                  <a onclick=expand(7) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>充值管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <!--子菜单 -->
+                                <table id=child7 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='alipay'}dotblue{/if} dot"><a href="/charge/log" >支付宝充值</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='agtpay'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/charge/agtlog/charge" >代理商充值</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='reback'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/charge/reback/index" >企业扣返款</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='online'}side_cor{/if}">
+                                  <a onclick=expand(8) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <!--子菜单 -->
+                                <table id=child8 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='sta'}dotblue{/if} dot"><a href="/other/static/" >同时在线数</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                        <td><div class="{if $page=='ver'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/static/version" >版本号统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='tuser'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/total/user" >新增用户</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='ecdata'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/Ecdata/draw" >用户统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='tflow'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/total/flow" >流量分析</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                        <td><div class="{if $page=='total_active_user'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/statistic/active/user" >用户活跃统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                        <td><div class="{if $page=='total_active_client'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/statistic/active/client" >客户活跃统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='tterminal'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/total/terminal" >终端统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='tbusiness'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/total/business" >业务统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                        <td><div class="{if $page=='tecuser'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/total/ecuser" >营客通活跃</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                        <td><div class="{if $page=='teclogin'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/total/eclogin" >营客通登录</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='tpv5'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/other/total/pv5" >PV延迟5秒</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='spreview_try'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/statistic/preview/try" >体验试用表</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='spreview_agreed'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/statistic/preview/agreed" >体验成交表</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='spreview_agreedrate'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/statistic/preview/agreedrate" >体验成交率</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='renewal'}side_cor{/if}">
+                                  <a href="/charge/renewal"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>续费提醒</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='upfilep'}side_cor{/if}">
+                                  <a href="/notice"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>运营公告</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='costing'}side_cor{/if}">
+                                  <a href="/charge/costing"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>成本计算</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='agent'}side_cor{/if}">
+                                  <a onclick=expand(99) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>精准管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <!--子菜单 -->
+                                <table id=child99 style="display: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='ad'}dotblue{/if} dot"><a href="/jingzhun/index/order" >广告订单</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='app'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/index/order?t=app" >应用订单</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='tui'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/index/tui" >退单</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='fp'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/index/client" >客户分配</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='400'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/index/order400" >400提单</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='dpt'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/index/dpt" >数据部分配</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='static'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/index/static" >数据部统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='corp'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/open/corp" >使用企业账号</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='user'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/jingzhun/open/corp?t=2" >系统卡机使用者</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='combo'}side_cor{/if}">
+                                  <a href="/combo"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>套餐管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='combotd'}side_cor{/if}">
+                                  <a href="/combo/combotd"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>套餐退订</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div>
+                                  <a href="/adworkec"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>网站管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='tryout'}side_cor{/if}">
+                                  <a href="/adworkec/buyapply?t="><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>购买申请</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+
+                                <!--子菜单 -->
+                                <table id=child10 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='webapply'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/adworkec/buyapply/">购买申请</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='tryout'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/adworkec/buyapply?t=">试用客户</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='corpweixin'}side_cor{/if}">
+                                  <a href="/adworkec/corpwx?t=1"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>企业微信</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='blacklistp'}side_cor{/if}">
+                                  <a href="/other/blacklist"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>屏蔽管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='ecyun'}side_cor{/if}">
+                                  <a onclick=expand(11) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>EC云呼</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <!--子菜单 -->
+                                <table id=child11 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='statistic'}dotblue{/if} dot"><a href="/pstn/statistic?regdate=0_day">客户消费统计</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='detail'}dotblue{/if} dot"><a href="/pstn/index/detail?regdate=0_day">客户消费详情</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='static'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/pstn/index/static">费用统计</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='apimanage'}side_cor{/if}">
+                                  <a onclick=expand(12) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>API管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <!--子菜单 -->
+                                <table id=child12 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='apiapply'}dotblue{/if} dot"><a href="/api/index">第三方应用</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='invoicep'}side_cor{/if}">
+                                  <a href="/invoice?logdate=all&regdate=0_month&flagval=2,1,0&expressval=1,0&agentTypeval=3,8,7,6,4,99&thirdFlagval=1,2,0&cf=1,4,5,7,8,10,11"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>财务管理</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+
+                                <table cellSpacing=0 cellPadding=0 border=0>
+                                <tr height=22>
+                                  <td class="menu1">
+                                  <div class="{if $page=='form'}side_cor{/if}">
+                                  <a onclick=expand(13) href="javascript:void(0);"><b style="font-weight:bold"><img src="//staticec.com/admin/images/icon06.jpg" align="absmiddle"/>微表单账户</b></a>
+                                  </div>
+                                  </td>
+                                </tr>
+                                </table>
+                                <!--子菜单 -->
+                                <table id=child13 style="DISPLAY: none" cellSpacing=0 cellPadding=0 border=0>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='withdraw'}dotblue{/if} dot"><a href="/form/index/withdrawlist">企业提现申请</a></div></td>
+                                    </tr>
+                                    <tr height=25>
+                                      <td><div class="{if $page=='trade'}dotblue{/if} dot" style="height:15px;*height:16px"><a href="/form/index/tradelist">企业收款明细</a></div></td>
+                                    </tr>
+                                </table>
+                                <!--子菜单end -->
+
+                                <table cellSpacing=0 cellPadding=0 border=0 class="export">
+                                    <tr height=22>
+                                        <td class="menu1">
+                                            <div class="{if $page=='export'}side_cor{/if}">
+                                                <a href="/export" class="my-export">
+                                                    <img src="//staticec.com/admin/images/admin/export.png" >
+                                                    我的导出
+                                                    <b class="wait-down">
+
+                                                    </b>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                     </table>
+                </div>
+
+                <div class="page_rightall">
+                    <div id="root" style="height: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

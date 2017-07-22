@@ -1,0 +1,23 @@
+@import './default.less';
+
+.ec-tree{
+    margin-left: 5px;
+    font-size: @font-size-base;
+    color:@text-color;
+    cursor: pointer;
+    .ec-tree-expand,.ec-tree-node{
+        margin:0;
+        display: inline-block;
+        padding: 5px;
+        &:hover{
+            background: #efefef;
+        }
+    }
+    .ec-tree-title,.ec-tree-node{
+        font-size: 12px;
+        .anticon{
+            margin-right: 3px;
+            transform: scale(.85);
+        }
+    }
+}

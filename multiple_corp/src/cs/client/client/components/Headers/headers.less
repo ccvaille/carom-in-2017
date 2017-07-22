@@ -1,0 +1,82 @@
+.cs-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    // padding: 6px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #eaeaea;
+    height: 38px;
+    line-height: 36px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.09);
+
+    .name {
+        color: #444;
+        margin: 0 20px;
+    }
+
+    .menu-ink-bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 80px;
+        background-color: #2580e6;
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transform-origin: 0 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+	    -webkit-perspective: 1000;
+    }
+
+    .menu-wrapper {
+        margin-left: 5px;
+        height: 100%;
+    }
+
+    .menus {
+        height: 100%;
+        li {
+            float: left;
+
+            a {
+                display: block;
+                padding: 0 27px;
+                color: #666;
+                position: relative;
+                // transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+                .menu-title {
+                    font-size: 12px;
+                    padding-left: 4px;
+                }
+
+                i {
+                    vertical-align: middle;
+                    color: #cad6e6;
+                    font-size: 15px;
+                }
+
+                &.active {
+                    color: #2580e6;
+                    font-weight: 600;
+
+                    i {
+                        font-weight: normal;
+                        color: #2580e6;
+                    }
+                }
+            }
+        }
+    }
+
+    .unread-dot {
+        position: absolute;
+        top: 10px;
+        left: 39px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: red;
+    }
+}

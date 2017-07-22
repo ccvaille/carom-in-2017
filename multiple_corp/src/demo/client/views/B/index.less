@@ -1,0 +1,778 @@
+﻿// @import "../../../../comm/antd/lib/style/themes/default.less";
+
+// /*mixins*/
+
+
+// /*标签当前颜色*/
+
+// .tag-theme(@color) {
+//     li {
+//         a {
+//             border: 1px solid @color;
+//             border-radius: @border-radius-base;
+//             background: #fff;
+//         }
+//         &:hover {
+//             a {
+//                 background: @color;
+//                 color: #fff;
+//             }
+//         }
+//         &.active {
+//             a {
+//                 background: @color;
+//                 color: #fff;
+//             }
+//             &:hover {
+//                 a {
+//                     background: tint(@color, 20%);
+//                     color: #fff;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// /*颜色预览*/
+
+// .set-tag-theme(@color) {
+//     li {
+//         &.normal a {
+//             background: #fff;
+//             border-color: @color;
+//             color: #000;
+//         }
+//         &.active a {
+//             background: @color;
+//             border-color: @color;
+//             color: #fff;
+//         }
+//         &.active-hover a {
+//             background: tint(@color, 20%);
+//             border-color: tint(@color, 20%);
+//             color: #fff;
+//         }
+//     }
+// }
+
+
+// /*mixins*/
+
+// .make-theme(@background) {
+//     background: @background;
+//     box-shadow: 0 0 0 2px #fff, 0 0 0 4px #fff;
+//     &:hover {
+//         background: @background;
+//         box-shadow: 0 0 0 2px #fff, 0 0 0 4px @border-color-base;
+//     }
+//     &.active {
+//         background: @background;
+//         box-shadow: 0 0 0 2px #fff, 0 0 0 4px @background;
+//     }
+// }
+
+
+// /*component*/
+
+// a.ec-link-text {
+//     color: @primary-color;
+//     padding-bottom: 1px;
+//     border-bottom: 1px solid transparent;
+//     transition: all .3s @ease-in-circ;
+//     &:hover {
+//         color: @primary-color;
+//         border-bottom-color: @primary-color;
+//     }
+// }
+
+// .ec-steps {
+//     height: 40px;
+//     width: 860px;
+//     margin: 0 auto;
+//     /* 步骤条常规 */
+//     .ec-steps-tail {
+//         width: 100%;
+//         height: 5px;
+//         background: #edf2fa;
+//         position: relative;
+//     }
+//     /* 步骤条高亮 */
+//     .ec-steps-active {
+//         position: absolute;
+//         left: 0;
+//         top: 0;
+//         width: 31.2%;
+//         // width: 57%; 第二个选中
+//         height: 5px;
+//         border-radius: @border-radius-base;
+//         background: @primary-color;
+//         transition: width 1s linear;
+//     }
+//     ul {
+//         .clearfix();
+//         li {
+//             width: 220px;
+//             height: 40px;
+//             float: left;
+//             position: relative;
+//             &:nth-child(1) {
+//                 width: 270px;
+//                 .ec-steps-text {
+//                     right: 20px;
+//                 }
+//             }
+//             &:nth-last-child(1) {
+//                 width: 370px;
+//                 .ec-steps-text {
+//                     right: 180px;
+//                 }
+//             }
+//             .ec-steps-text {
+//                 position: absolute;
+//                 top: -12px;
+//                 right: 10px;
+//                 .ec-steps-num {
+//                     width: 20px;
+//                     height: 20px;
+//                     background-color: #d4deee;
+//                     border-radius: 50%;
+//                     cursor: pointer;
+//                     color: #fff;
+//                     display: inline-block;
+//                     transition: all .3s;
+//                 }
+//                 span {
+//                     display: block;
+//                     margin-top: 6px;
+//                 }
+//             }
+//             &.active {
+//                 .ec-steps-num {
+//                     background: @primary-color;
+//                     color: #fff;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+// /*component*/
+
+
+
+// .grouping-sorting-box {
+//     padding-top: 26px;
+//     margin: 0 auto;
+//     font-size: 14px;
+//     text-align: left;
+//     width: 100%;
+//     /*升级中*/
+//     &.grouping-sorting {
+//         width: 73%;
+//     }
+//     /*空*/
+//     &.empty-grouping {
+//         .grouping-sorting-left,
+//         .grouping-sorting-right {
+//             // height: 550px;
+//         }
+//         .prompt-notes,
+//         .no-grouping,
+//         .prompt-btn {
+//             display: block;
+//         }
+//     }
+//     .grouping-sorting-container {
+//         height: 500px;
+//         margin-top: 4px;
+//         border: 1px solid @border-color-base;
+//         position: relative;
+//         .clearfix();
+//         p {
+//             color: #727c8f;
+//         }
+//     }
+//     .grouping-sorting-left {
+//         width: 270px;
+//         height: 100%;
+//         border-right: 1px solid @border-color-base;
+//         position: relative;
+//         float: left;
+//         .grouping-sorting-left-head {
+//             background: #edf2fa;
+//             height: 50px;
+//             padding: 10px;
+//             h4 {
+//                 float: left;
+//                 font-weight: normal;
+//                 padding-top: 6px;
+//             }
+//             button {
+//                 float: right;
+//             }
+//         }
+//         .no-grouping {
+//             display: none;
+//             width: 100px;
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%, -50%);
+//             text-align: center;
+//             span {
+//                 display: block;
+//                 margin-top: 14px;
+//             }
+//         }
+//         .grouping-sorting-name {
+//             li {
+//                 padding: 10px;
+//                 height: 40px;
+//                 transition: all .3s;
+//                 cursor: pointer;
+//                 .clearfix();
+//                 &.active {
+//                     background: @primary-color;
+//                     span {
+//                         color: #fff;
+//                     }
+//                     .drop-img {
+//                         display: block;
+//                     }
+//                     &:hover {
+//                         background: @primary-color;
+//                         span {
+//                             color: #fff;
+//                         }
+//                         .drop-hover-img {
+//                             display: none;
+//                         }
+//                     }
+//                 }
+//                 &:hover {
+//                     background: #edf2fa;
+//                     .drop-hover-img {
+//                         display: block;
+//                     }
+//                 }
+//             }
+//             i {
+//                 display: inline-block;
+//                 width: 15px;
+//                 height: 12px;
+//                 background: url(/comm/public/images/doc.png) no-repeat;
+//                 margin-right: 10px;
+//             }
+//             span {
+//                 font-size: 14px;
+//                 color: #303642;
+//             }
+//             img {
+//                 display: none;
+//                 float: right;
+//                 margin-top: 2px;
+//             }
+//         }
+//     }
+//     .grouping-sorting-right {
+//         height: 100%;
+//         position: relative;
+//         margin-left: 270px;
+//         .no-grouping {
+//             display: none;
+//             width: 184px;
+//             position: absolute;
+//             top: 50%;
+//             left: 50%;
+//             transform: translate(-50%, -50%);
+//             text-align: center;
+//             span {
+//                 display: block;
+//                 margin-top: 14px;
+//             }
+//         }
+//         .grouping-sorting-right-head {
+//             height: 50px;
+//             padding: 16px;
+//             h4 {
+//                 float: left;
+//                 font-weight: normal;
+//             }
+//             .right-control {
+//                 float: right;
+//                 span {
+//                     display: inline-block;
+//                     padding: 0 10px;
+//                     color: @border-color-base;
+//                 }
+//             }
+//         }
+//         .add-tag {
+//             height: 50px;
+//             background: #edf2fa;
+//             padding: 10px;
+//             margin: 0 10px;
+//         }
+//         .add-tag-footer {
+//             .clearfix();
+//             position: absolute;
+//             bottom: 0;
+//             width: 99%;
+//             padding: 0 10px;
+//             margin-bottom: 10px;
+//             label {
+//                 float: left;
+//                 margin-top: 6px;
+//             }
+//             .current-themes {
+//                 float: right;
+//                 span {
+//                     font-size: 12px;
+//                 }
+//             }
+//         }
+//     }
+//     .prompt-btn {
+//         display: none;
+//         margin-top: 20px;
+//         label {
+//             display: inline-block;
+//             // margin-top: 24px;
+//             margin-left: 20px;
+//             vertical-align: bottom;
+//         }
+//     }
+//     .prompt-notes {
+//         display: none;
+//         margin-top: 20px;
+//         h4 {
+//             color: #303642;
+//             margin-bottom: 6px;
+//             font-weight: normal;
+//         }
+//         li {
+//             color: #727c8f;
+//         }
+//     }
+//     .help-notes {
+//         font-size: 12px;
+//         margin-top: 20px;
+//         h4 {
+//             color: #303642;
+//             margin-bottom: 6px;
+//             font-weight: normal;
+//         }
+//         li {
+//             color: #727c8f;
+//         }
+//     }
+// }
+
+// .new-label-container {
+//     padding: 20px;
+//     text-align: center;
+//     font-size: 14px;
+//     .new-label-tips {
+//         color: #96a0b4;
+//         text-align: left;
+//         margin-bottom: 60px;
+//     }
+// }
+
+
+// /*单个颜色*/
+
+// .tag-color {
+//     display: inline-block;
+//     width: 20px;
+//     height: 20px;
+//     border-radius: @border-radius-base;
+//     margin: 2px;
+//     vertical-align: bottom;
+//     transition: all .3s;
+//     .make-theme(@primary-color);
+// }
+
+
+// /*颜色标签*/
+
+// .tag-items {
+//     padding: 10px;
+//     margin: 10px;
+//     .clearfix();
+//     li {
+//         height: 30px;
+//         width: 110px;
+//         float: left;
+//         margin-right: 15px;
+//         position: relative;
+//         a {
+//             display: inline-block;
+//             height: 30px;
+//             width: 110px;
+//             text-align: left;
+//             padding: 0 10px;
+//             line-height: 30px;
+//             color: #303642;
+//             font-size: 12px;
+//             transition: all .3s;
+//         }
+//         img {
+//             display: none;
+//             position: absolute;
+//             right: 10px;
+//             top: 9px;
+//         }
+//         &:hover {
+//             img {
+//                 display: block;
+//             }
+//         }
+//         &.active {
+//             img {
+//                 display: block;
+//             }
+//         }
+//     }
+//     &.c1 {
+//         .tag-theme(@primary-color);
+//     }
+//     &.c2 {
+//         .tag-theme(#3b9bf5);
+//     }
+//     &.c3 {
+//         .tag-theme(#f3a41c);
+//     }
+//     &.c4 {
+//         .tag-theme(#00b16a);
+//     }
+//     &.c5 {
+//         .tag-theme(#9264cd);
+//     }
+//     &.c6 {
+//         .tag-theme(#588ad4);
+//     }
+//     &.c7 {
+//         .tag-theme(#f26c63);
+//     }
+//     &.c8 {
+//         .tag-theme(#7889b9);
+//     }
+//     &.c9 {
+//         .tag-theme(#fc7736);
+//     }
+//     &.c10 {
+//         .tag-theme(#686d6e);
+//     }
+//     &.c11 {
+//         .tag-theme(#52323a);
+//     }
+//     &.c12 {
+//         .tag-theme(#ba6200);
+//     }
+//     &.c13 {
+//         .tag-theme(#9e9a27);
+//     }
+//     &.c14 {
+//         .tag-theme(#a87878);
+//     }
+//     &.c15 {
+//         .tag-theme(#067a6b);
+//     }
+//     &.c16 {
+//         .tag-theme(#52be7f);
+//     }
+//     &.c17 {
+//         .tag-theme(#8e44ad);
+//     }
+//     &.c18 {
+//         .tag-theme(#00a2d3);
+//     }
+//     &.c19 {
+//         .tag-theme(#e74c3c);
+//     }
+//     &.c20 {
+//         .tag-theme(#024883);
+//     }
+//     &.c21 {
+//         .tag-theme(#807399);
+//     }
+//     &.c22 {
+//         .tag-theme(#ec960e);
+//     }
+//     &.c23 {
+//         .tag-theme(#989898);
+//     }
+//     &.c24 {
+//         .tag-theme(#fa6374);
+//     }
+//     &.c25 {
+//         .tag-theme(#d35400);
+//     }
+//     &.c26 {
+//         .tag-theme(#049372);
+//     }
+//     &.c27 {
+//         .tag-theme(#6c7a89);
+//     }
+//     &.c28 {
+//         .tag-theme(#d2527f);
+//     }
+//     &.c29 {
+//         .tag-theme(#d91e18);
+//     }
+//     &.c30 {
+//         .tag-theme(#2c3e50);
+//     }
+// }
+
+
+// /*设置标签颜色弹层*/
+
+// .set-tag-theme {
+//     color: @input-placeholder-color;
+//     .ec-popuper {
+//         width: 460px;
+//     }
+//     /*预览颜色*/
+//     .tag-items {
+//         padding: 0;
+//         margin: 0;
+//         margin-top: 20px;
+//         span {
+//             font-size: 12px;
+//         }
+//         ul {
+//             .clearfix();
+//             margin-top: 10px;
+//         }
+//         li {
+//             width: 130px;
+//             a {
+//                 width: 130px;
+//             }
+//             &:nth-last-child(1) {
+//                 margin-right: 0;
+//             }
+//         }
+//     }
+//     /*颜色列表*/
+//     .tag-theme-items {
+//         margin-top: 20px;
+//         span {
+//             display: inline-block;
+//             margin-bottom: 10px;
+//             font-size: 12px;
+//         }
+//         .color-items {
+//             padding: 15px;
+//             padding-bottom: 0;
+//             border: 1px solid @border-color-base;
+//             .tag-color {
+//                 margin-right: 18px;
+//                 margin-bottom: 18px;
+//                 &:nth-child(10n) {
+//                     margin-right: 0;
+//                 }
+//                 &.active {
+//                     border-color: (@primary-color);
+//                 }
+//             }
+//         }
+//     }
+// }
+
+//  /*颜色色值*/
+// .tag-color {
+//     &.c1 {
+//         background: @primary-color;
+//     }
+//     &.c2 {
+//         background: #3b9bf5;
+//     }
+//     &.c3 {
+//         background: #f3a41c;
+//     }
+//     &.c4 {
+//         background: #00b16a;
+//     }
+//     &.c5 {
+//         background: #9264cd;
+//     }
+//     &.c6 {
+//         background: #588ad4;
+//     }
+//     &.c7 {
+//         background: #f26c63;
+//     }
+//     &.c8 {
+//         background: #7889b9;
+//     }
+//     &.c9 {
+//         background: #fc7736;
+//     }
+//     &.c10 {
+//         background: #686d6e;
+//     }
+//     &.c11 {
+//         background: #52323a;
+//     }
+//     &.c12 {
+//         background: #ba6200;
+//     }
+//     &.c13 {
+//         background: #9e9a27;
+//     }
+//     &.c14 {
+//         background: #a87878;
+//     }
+//     &.c15 {
+//         background: #067a6b;
+//     }
+//     &.c16 {
+//         background: #52be7f;
+//     }
+//     &.c17 {
+//         background: #8e44ad;
+//     }
+//     &.c18 {
+//         background: #00a2d3;
+//     }
+//     &.c19 {
+//         background: #e74c3c;
+//     }
+//     &.c20 {
+//         background: #024883;
+//     }
+//     &.c21 {
+//         background: #807399;
+//     }
+//     &.c22 {
+//         background: #ec960e;
+//     }
+//     &.c23 {
+//         background: #989898;
+//     }
+//     &.c24 {
+//         background: #fa6374;
+//     }
+//     &.c25 {
+//         background: #d35400;
+//     }
+//     &.c26 {
+//         background: #049372;
+//     }
+//     &.c27 {
+//         background: #6c7a89;
+//     }
+//     &.c28 {
+//         background: #d2527f;
+//     }
+//     &.c29 {
+//         background: #d91e18;
+//     }
+//     &.c30 {
+//         background: #2c3e50;
+//     }
+// }
+
+
+// /*弹层颜色预览*/
+
+// .tag-theme-perview {
+//     li a {
+//         text-align: center;
+//     }
+//     &.c1 {
+//         .set-tag-theme(@primary-color)
+//     }
+//     &.c2 {
+//         .set-tag-theme(#3b9bf5);
+//     }
+//     &.c3 {
+//         .set-tag-theme(#f3a41c);
+//     }
+//     &.c4 {
+//         .set-tag-theme(#00b16a);
+//     }
+//     &.c5 {
+//         .set-tag-theme(#9264cd);
+//     }
+//     &.c6 {
+//         .set-tag-theme(#588ad4);
+//     }
+//     &.c7 {
+//         .set-tag-theme(#f26c63);
+//     }
+//     &.c8 {
+//         .set-tag-theme(#7889b9);
+//     }
+//     &.c9 {
+//         .set-tag-theme(#fc7736);
+//     }
+//     &.c10 {
+//         .set-tag-theme(#686d6e);
+//     }
+//     &.c11 {
+//         .set-tag-theme(#52323a);
+//     }
+//     &.c12 {
+//         .set-tag-theme(#ba6200);
+//     }
+//     &.c13 {
+//         .set-tag-theme(#9e9a27);
+//     }
+//     &.c14 {
+//         .set-tag-theme(#a87878);
+//     }
+//     &.c15 {
+//         .set-tag-theme(#067a6b);
+//     }
+//     &.c16 {
+//         .set-tag-theme(#52be7f);
+//     }
+//     &.c17 {
+//         .set-tag-theme(#8e44ad);
+//     }
+//     &.c18 {
+//         .set-tag-theme(#00a2d3);
+//     }
+//     &.c19 {
+//         .set-tag-theme(#e74c3c);
+//     }
+//     &.c20 {
+//         .set-tag-theme(#024883);
+//     }
+//     &.c21 {
+//         .set-tag-theme(#807399);
+//     }
+//     &.c22 {
+//         .set-tag-theme(#ec960e);
+//     }
+//     &.c23 {
+//         .set-tag-theme(#989898);
+//     }
+//     &.c24 {
+//         .set-tag-theme(#fa6374);
+//     }
+//     &.c25 {
+//         .set-tag-theme(#d35400);
+//     }
+//     &.c26 {
+//         .set-tag-theme(#049372);
+//     }
+//     &.c27 {
+//         .set-tag-theme(#6c7a89);
+//     }
+//     &.c28 {
+//         .set-tag-theme(#d2527f);
+//     }
+//     &.c29 {
+//         .set-tag-theme(#d91e18);
+//     }
+//     &.c30 {
+//         .set-tag-theme(#2c3e50);
+//     }
+// }

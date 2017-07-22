@@ -1,0 +1,129 @@
+.broadcast-list {
+    position: relative;
+    .top-actions {
+        height: 60px;
+        line-height: 60px;
+        background: #fff;
+        margin: 0 14px;
+        .ant-select {
+            margin-top: 16px;
+            float: right;
+        }
+        .new-item-btn {
+            padding: 7px 20px;
+            color: #fff;
+            background: #2580e6;
+            border-radius: 4px;
+            &:hover {
+                background: #5199eb;
+            }
+        }
+    }
+    .ant-table-fixed-header .ant-table-scroll .ant-table-header {
+        overflow: hidden;
+        margin-left: 14px;
+        margin-right: 14px;
+        margin-bottom: 0 !important;
+    }
+    .ant-table-fixed-header .ant-table-body {
+        padding: 0 14px;
+    }
+    .ant-table-thead>tr>th {
+        padding: 11px 8px;
+        background: #f6f8fc;
+        font-weight: normal;
+        color: #727c8f;
+        font-size: 12px;
+    }
+    .ant-table-tbody {
+        padding-bottom: 25px;
+        >tr {
+            white-space: nowrap;
+            &:hover {
+                background: inherit;
+            }
+            >td {
+                position: relative;
+                padding: 16px 8px;
+                font-size: 14px;
+                color: #333;
+                border-bottom: 1px solid #ebebeb;
+                .title-wrap {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            >td:nth-child(3),
+            >td:nth-child(4),
+            >td:nth-child(5) {
+                font-size: 12px;
+            }
+        }
+    }
+    .ant-table-footer {
+        padding: 11px 8px;
+        background: #fff;
+    }
+    .draft {
+        color: #ff7327;
+    }
+    .published {
+        color: #0db780;
+    }
+    .recalled {
+        color: #ccc;
+    }
+    .actions {
+        display: inline-block;
+        width: 120px;
+        white-space: nowrap;
+        text-align: left;
+        [class^="act-"] {
+            font-size: 12px;
+            color: #2580e6;
+            cursor: pointer;
+            &:first-child {
+                margin-right: 25px;
+            }
+            &:before {
+                content: '';
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                vertical-align: bottom;
+                margin: 3px;
+            }
+        }
+        .act-recall {
+            &:before {
+                background: url('../../icon-recall.png') center center no-repeat;
+            }
+        }
+        .act-edit {
+            &:before {
+                background: url('../../icon-edit.png') center center no-repeat;
+            }
+        }
+        .act-remove {
+            &:before {
+                background: url('../../icon-remove.png') center center no-repeat;
+            }
+        }
+    }
+
+    .load-more,
+    .load-msg {
+        text-align: center;
+        span {
+            color: #2580e6;
+            cursor: pointer;
+        }
+    }
+}

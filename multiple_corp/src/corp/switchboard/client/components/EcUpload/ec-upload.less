@@ -1,0 +1,74 @@
+.ec-upload {
+    margin:0 auto;
+    background:#fff;
+    width:158px;
+    height:218px;
+    border:1px #ececec solid;
+    box-shadow:0 2px 3px #d6d6d6;
+    position:relative;
+    line-height:218px;
+    cursor: pointer;
+    input[type="file"] {
+        display: none;
+    }
+    img {
+        max-width:142px;
+        max-height:198px;
+    }
+    span {
+        position:absolute;
+        top:45%;
+        left:28%;
+        font-size:14px;
+        color:#3aa8f0;
+
+        &.uploading {
+            color: #ccc;
+        }
+
+        img {
+            margin-right: 5px;
+        }
+
+        i {
+            color:#ccc;
+            font-size:14px;
+            margin-right:5px;
+        }
+    }
+
+    .img-box{
+        display:inline-block;
+        position:relative;
+        width: 142px;
+        .edit-btn{
+            display:none;
+            position:absolute;
+            left:0;
+            bottom:0;
+            width:100%;
+            height:33px;
+            background:rgba(0,0,0,.5);
+
+            a {
+                color: white;
+            }
+
+            &.no-img {
+                a {
+                    width: 100%;
+                }
+            }
+            a{
+                display:inline-block;
+                line-height:33px;
+                width:50%;
+            }
+        }
+        &:hover{
+            .edit-btn{
+                display:block;
+            }
+        }
+    }
+}

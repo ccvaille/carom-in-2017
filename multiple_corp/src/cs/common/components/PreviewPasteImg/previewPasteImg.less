@@ -1,0 +1,56 @@
+.button(@bgColor, @borderColor, @fontColor) {
+    display: inline-block;
+    border-radius: 2px;
+    background: @bgColor;
+    border: 1px solid @borderColor;
+    color: @fontColor;
+    text-align: center;
+    &:hover {
+        border: 1px solid tint(@borderColor, 20%) ;
+        background: tint(@bgColor, 20%) ;
+    }
+    &:active {
+        border: 1px solid shade(@borderColor, 20%) ;
+        background: shade(@bgColor, 20%) ;
+    }
+}
+
+.preview-paste-img-wrapper {
+    .img-container {
+        display: block;
+        border: 1px solid #d9d9d9;
+        padding: 10px;
+        overflow: auto;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+    }
+    .ctrls {
+        overflow: hidden;
+        margin-top: 20px;
+        .btn {
+            float: right;
+            font-size: 12px;
+        }
+        .btn-send-pic {
+            box-sizing: content-box;
+            width: 78px;
+            height: 28px;
+            line-height: 28px;
+            .button(#2580e6, #2580e6, #fff);
+        }
+        .btn-cancel {
+            box-sizing: content-box;
+            width: 78px;
+            height: 28px;
+            line-height: 28px;
+            margin-left: 10px;
+            margin-right: 0;
+            .button(#fff, #d9d9d9, #4c4c4c);
+        }
+    }
+}
+

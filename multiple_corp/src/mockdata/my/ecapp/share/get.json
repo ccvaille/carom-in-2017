@@ -1,0 +1,64 @@
+{
+    "code": 0,
+    "msg": "ok",
+    "page": {
+        "curpage": 1,
+        "end": 0
+    },
+    "data": [
+        {
+            "f_req_id": "81554059",
+            "f_req_uid": "5023484",
+            "f_msg": "",
+            "f_memo": "",
+            "f_status": "1",
+            "f_crm_id": "313715848",
+            "f_create_time": "2016-12-19 16:11:52",
+            "f_type": "1",
+            "uname": "\u4e2d\u5c71\u5e02-\u5510\u4e00\u6c1113985214169",
+            "f_rev_uid": "5001002",
+            "sharelist": [
+                {
+                    "crm_name": "\u72c4\u4ec1\u6770\u5ba2\u6237AB",
+                    "crm_id": "313715848"
+                }
+            ]
+        },
+        {
+            "f_req_id": "81554058",
+            "f_req_uid": "5023484",
+            "f_msg": "\u8bf7\u7ed9\u6211\u5427\uff01",
+            "f_memo": "",
+            "f_status": "1",
+            "f_crm_id": "313715848",
+            "f_create_time": "2016-12-19 11:27:33",
+            "f_type": "1",
+            "uname": "\u4e2d\u5c71\u5e02-\u5510\u4e00\u6c1113985214169",
+            "f_rev_uid": "5001002",
+            "sharelist": [
+                {
+                    "crm_name": "\u72c4\u4ec1\u6770\u5ba2\u6237AB",
+                    "crm_id": "313715848"
+                }
+            ]
+        },
+        {
+            "f_req_id": "81553892",
+            "f_req_uid": "5023484",
+            "f_msg": "\u5171\u4eab\u7ed9\u6211\u5427\uff01\u8c22\u8c22...",
+            "f_memo": "",
+            "f_status": "0",
+            "f_crm_id": "313714154",
+            "f_create_time": "2016-12-05 16:51:06",
+            "f_type": "1",
+            "uname": "\u4e2d\u5c71\u5e02-\u5510\u4e00\u6c1113985214169",
+            "f_rev_uid": "5001002",
+            "sharelist": [
+                {
+                    "crm_name": "\u5171\u4eab\u5ba2\u670dC",
+                    "crm_id": "313714154"
+                }
+            ]
+        }
+    ]
+}

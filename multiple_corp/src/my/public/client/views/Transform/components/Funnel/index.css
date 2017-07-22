@@ -1,0 +1,47 @@
+.funnel-box {
+  height: 250px;
+  background: url('funnel.png') 70px 24px no-repeat;
+  position: relative;
+}
+.funnel-box .funnel-data {
+  position: absolute;
+  left: 217px;
+  top: 6px;
+  font-size: 12px;
+  color: #303642;
+}
+.funnel-box .funnel-data li {
+  margin-top: 33px;
+  white-space: nowrap;
+}
+.funnel-box .num,
+.funnel-box .percent {
+  margin-left: 15px;
+}
+.funnel-box .num {
+  font-weight: bold;
+}
+.funnel-box .percent {
+  font-weight: bold;
+}
+.funnel-box .read-tran {
+  position: absolute;
+  left: 480px;
+  top: 70px;
+}
+.funnel-box .register-tran {
+  position: absolute;
+  left: 449px;
+  top: 121px;
+}
+.funnel-box .inbound-tran {
+  position: absolute;
+  left: 420px;
+  top: 171px;
+}
+.funnel-box .customer-tran {
+  position: absolute;
+  left: 605px;
+  top: 119px;
+  font-size: 14px;
+}

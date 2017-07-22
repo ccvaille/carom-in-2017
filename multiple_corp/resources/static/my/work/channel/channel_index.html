@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EC营销即时通|工作台</title>
+    <link href="{$staticfile_domain.my}css/global.css" rel="stylesheet" type="text/css" />
+    <link href="{$staticfile_domain.my}images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <link href="//1.staticec.com/my/work/channel/css/work.a4968.css" rel="stylesheet" />
+</head>
+
+<body>
+<div class="wrapper">
+    <!--左边菜单 开始-->
+    {include file="templates/work/side.html" page="channel_index"}
+    <!--左边菜单 end-->
+    <!--右边内容 开始-->
+    <div class="rightContent" id="root">
+
+    </div>
+</div>
+<div id="confirm-wrapper"></div>
+<script>
+    var userid = '{$userid}';
+    var username = '{$username}';
+    var corpid = '{$corpid}';
+</script>
+<script type='text/javascript' src='//www.staticec.com/my/comm/js/lib_2f85e.js'></script>
+<script type="text/javascript" src="//1.staticec.com/my/work/channel/js/work.a4968.js"></script>
+</body>

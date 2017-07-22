@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EC-云呼总机申请-企业管理</title>
+        <link href="//www.staticec.com/corp/css/global.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout_accounts.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout_Nadmin.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout_dialog.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout_leftnav.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout_specific.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="//www.staticec.com/corp/css/acctree.css?_ev=201612161121" />
+        <link href="//www.staticec.com/corp/images/favicon.ico?_ev=201612161121" type="image/ico" rel="shortcut icon" />
+        <link href="//www.staticec.com/corp/css/layout.css" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout_csSet.css" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/corp/css/layout_dialog.css" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/api/css/zTree/zTreeStyle.css" rel="stylesheet" type="text/css" />
+        <link href="//www.staticec.com/api/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+        <style>
+       
+        a:link{ text-decoration:none}
+        .ecnav_2 {background:url(//www.staticec.com/corp/images/admin/nav2.jpg);}
+        .debg_box { margin-top: 5px; }
+        .act_more { cursor: pointer; font-size: 10px; }
+        .act_box { width: 460px; }
+
+        </style>
+        <script src="//www.staticec.com/api/scripts/jquery-1.8.2.min.js?_ev=201612161121" type="text/javascript"></script>
+        <script src="//www.staticec.com/api/layer/layer.min.js?_ev=20141121045&_ev=201612161121" type="text/javascript"></script>
+        <script type="text/javascript">
+        var jq 	=	jQuery.noConflict(),
+            corpDomain = '//www.staticec.com/corp/',
+            uploadDomain = '//www.staticec.com/',
+            apiDomain = '//www.staticec.com/api/';
+            cid = '{$cid}';
+        </script>
+
+        <script type="text/javascript" src="//www.staticec.com/corp/js/common.js?_ev=201612161121"></script>
+        <script type="text/javascript" src="//www.staticec.com/corp/js/page_dialog.js?_ev=201612161121"></script>
+        <script src="//www.staticec.com/api/layApi/layer.common.js?_ev=20150305045&_ev=201612161121" type="text/javascript"></script>
+        <script type="text/javascript" src="//www.staticec.com/corp/js/role/adduser.js?_ev=201612161121"></script>
+        <script type="text/javascript" src="//www.staticec.com/api/scripts/ztree/jquery.ztree.core-3.5.min.js"></script>
+        <script type="text/javascript" src="//www.staticec.com/api/scripts/ztree/jquery.ztree.exedit-3.5.min.js"></script>
+        <script type="text/javascript" src="//www.staticec.com/api/scripts/ztree/jquery.ec.ztree.cloudboard.js"></script>
+       
+        <script type="text/javascript" src="//www.staticec.com/corp/scripts/jquery.tooltip/jquery.tooltip.min.js?_ev=201612161121"></script>
+        <link href="//www.staticec.com/corp/scripts/jquery.tooltip/jquery.tooltip.css?_ev=201612161121" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div id="wrapper" class="wrapper">
+            <!-- header 开始 -->
+            <!--[if IE 6]>
+            	<script type="text/javascript" src="//www.staticec.com/corp/scripts/DD_belatedPNG.js" ></script>
+            	<script type="text/javascript">
+            	DD_belatedPNG.fix('.logobox img');
+            	</script>
+            <![endif]-->
+            <!--[if lte IE 9]>
+
+            	<link href="//www.staticec.com/corp/css/corp/ie.css" type="text/css" rel="stylesheet" />
+            <![endif]-->
+            <link href="//www.staticec.com/corp/images/favicon.ico" type="image/ico" rel="shortcut icon" />
+            <link href="//www.staticec.com/api/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"  />
+            <link href="//www.staticec.com/api/css/base.css" type="text/css" rel="stylesheet" />
+            <link href="//www.staticec.com/corp/css/corp/new.css" type="text/css" rel="stylesheet" />
+            <link href="//www.staticec.com/corp/css/corp/content.css?v=20140915001" type="text/css" rel="stylesheet" />
+            <script src="//www.staticec.com/api/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+            <script type="text/javascript" src="//www.staticec.com/corp/scripts/feedback.js"></script>
+
+            <div id="container" class="home ec_corp_home">
+            	<div class="top_tit corp_minimenu">
+            		<div class="top_tit_bd ohid">
+            			<h1 class="flr h1">用户名 test&nbsp;(测试帐号)<a href="/logout" style="margin-right:0px; margin-left:5px">[退出]</a></h1>
+            			<ul class="menulist ohid">
+            				<li><a href="https://agent.workec.com">代理商系统</a></li>
+            				<li><a href="https://admin.workec.com">平台管理</a></li>
+            				<li><a href="https://jzsms.workec.com">精准广告</a></li>
+            				<li><a href="https://www.workec.com/index.html">六度官网</a></li>
+            				<li><a href="https://www.workec.com/html/help" target="_blank">帮助</a></li>
+            			</ul>
+            		</div>
+            	</div>
+            	<div class="dh ec_corp_head">
+            		<div class="ec_corp_inner">
+            		<div class="ec_corp_menu">
+            			<ul class="flr">
+            				<li><a href="/corp/accountmanage" class="">员工帐号</a></li>
+            				<li><a href="/corp/role?f=-1" class="ec_corp_menuHover">功能设置</a></li>
+            				<li><a href="/corp/info" class="">企业管理</a></li>
+            			</ul>
+            			</div>
+            			<div class="logo"><a href="/"><img src="//www.staticec.com/corp/images/new/logo.png"></a></div>
+            		</div>
+            	</div>
+            </div>
+            <div class="corp_crumb">
+            		<ul class="ohid">
+            			<li><span>当前位置：</span></li>
+            			<li><a href="javascript:void(0)">云呼总机</a></li>
+            			<li>&gt;</li>
+            			<li><a href="javascript:void(0)">申请开通</a></li>
+            			<li>&gt;</li>
+            			<li>功能设置</li>
+            		</ul>
+            </div>
+            <script type="text/javascript" src="//www.staticec.com/corp/scripts/jquery.tooltip/jquery.tooltip.min.js"></script>
+            <!-- header 结束 -->
+
+            <div id="innerWrapper" class="corp_wrapper">
+                <div class="pagebody corp_pagebody">
+                    <!-- 侧边栏开始 -->
+                    <div class="leftnav_cs leftMenu" id="csnav">
+                    	 <div class="panel-group leftNav" id="accordion">
+
+                     			<div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav19" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>EC企信</span></a>
+                            <div id="parentcsnav19" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                                  <li><a href="/weixincorp/index" class="">基本信息</a></li>
+                                                <li><a href="/weixincorp/user" class="">企业号成员管理</a></li>
+                                                <li><a href="/weixincorp/help" class="">帮助教程</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                           </div>
+
+
+                    	 	  <div class="panel panel-default"> <a data-parent="#accordion" href="#left_kfManage" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>客户管理</span></a>
+                            <div id="left_kfManage" class="panel-collapse collapse" style="height: 0px;">
+                              <div class="panel-body">
+                                <ul class="eList">
+                    			    <li><a href="/corp/role?f=-1" class="cred">权限设置</a></li>
+                                    			    <li><a href="/crm/set/field">自定义字段设置</a></li>
+                                    			    <li><a href="/crm/set">客户标签</a></li>
+                    			    <!--<li><a href="/crm/set/stage" >客户阶段与上限</a></li>-->
+                    			    <li><a class="" href="/crm/set/stage">客户库规则管理</a></li>
+                                    <li><a class="" href="/crm/qq/index">QQ授权管理</a></li>            </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                    	 	 <!-- 开通客服 && 当前员工有权限查看 -->
+                          <div class="panel panel-default"> <a data-parent="#accordion" href="#left_qqkf" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>QQ客服</span></a>
+                            <div id="left_qqkf" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                                  <li><a href="/corp/role?f=7">权限设置</a></li>
+                                  <li><a href="/csnew/faceset/float?scheme=0">界面设置</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                    	  	  <!-- 企业有开通 400 && 代理商有400销售权限 && 当前员工有权限查看 -->
+                    	  	  <div class="panel panel-default"> <a data-parent="#accordion" href="#left_tel400" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>400电话</span></a>
+                            <div id="left_tel400" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                                    <li><a href="http://corp.workec.com/corp/tel400">400资料</a></li>
+                                    <li><a href="http://corp.workec.com/tel400/sound/set">系统设置</a></li>
+                    				<li><a href="/tel400/set/">人员设置</a></li>
+                    				<li><a href="/corp/role?f=8">权限设置</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                    	  <!-- 8520后去掉 -->
+                    	  	  <!-- 企业开通营客通 || 企业开通客服 || 企业开通企呼云 && 当前员工有权限查看 -->
+                    	  	   <div class="panel panel-default"> <a data-parent="#accordion" href="#left_email" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>企业邮箱</span></a>
+                            <div id="left_email" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                                  <li><a href="/corp/bizmail" class="">邮箱信息</a></li>
+                                              </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                    	  	  	<!-- 代理商有销售权限 || 企业开通微站 && 当前员工有权限查看 -->
+                    	  			<div class="panel panel-default"> <a data-parent="#accordion" href="#left_weizhan" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>微&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;站</span></a>
+                            <div id="left_weizhan" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                    			   			   <li><a href="/weizhan" class="">微&nbsp;&nbsp;&nbsp;&nbsp;站</a></li>
+                    			               </ul>
+                              </div>
+                            </div>
+                          </div>
+
+
+                    	   		<div class="panel panel-default"> <a data-parent="#accordion" href="#left_space" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>空间管理</span></a>
+                            <div id="left_space" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                                  <li><a href="/corp/role?f=10" class="">空间管理</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+
+                    	   		<div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav16" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>授权EC客服</span></a>
+                            <div id="parentcsnav16" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                                  <li><a href="/corp/role/externalusers" class="">授权EC客服设置</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                    	  	  	<!-- 代理商有销售权限 || 企业开通付费拨号 && 当前员工有权限 -->
+                    	  			<div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav17" data-toggle="collapse" class="panel-title panel-heading aName"><span>企业付费拨号</span></a>
+                            <div id="parentcsnav17" class="panel-collapse in" style="height: auto;">
+                              <div class="panel-body">
+                                <ul class="eList">
+                    			              <li><a href="/paydial/apply" class="">企业付费拨号资料</a></li>
+                    			              </ul>
+                              </div>
+                            </div>
+                            </div>
+
+                    	  		<div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav18" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>微表单及场景秀</span></a>
+                            <div id="parentcsnav18" class="panel-collapse collapse ">
+                              <div class="panel-body">
+                                <ul class="eList">
+                                  <li><a href="/corp/role?f=13" class="">权限设置</a></li>
+                                  <li><a href="/corp/formclass" class="">分类设置</a></li>
+                                  	                  <li><a href="/weixincorp/market" class="">微信企业号授权</a></li>
+                                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+                    					<div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav20" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>企业号应用</span></a>
+                    	        <div id="parentcsnav20" class="panel-collapse collapse ">
+                    	          <div class="panel-body">
+                    	            <ul class="eList">
+                    	              <li><a href="/weixincorp/qiandao" class="">外勤签到</a></li>
+                    	              <li><a href="/weixincorp/wxcrm" class="">微信版客户管理</a></li>
+                    	            </ul>
+                    	          </div>
+                    	        </div>
+                    	       </div>
+
+                           			<div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav21" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>API管理</span></a>
+                    	        <div id="parentcsnav21" class="panel-collapse collapse ">
+                    	          <div class="panel-body">
+                    	            <ul class="eList">
+                    	              <li>
+                    	              <a href="/api/index" class="">
+                    	              已是开发者	              </a>
+                    	              </li>
+                    	            </ul>
+                    	          </div>
+                    	        </div>
+                    	       </div>
+
+                           <!-- 第三方应用管理入口控制 start -->
+                           					<div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav22" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>第三方应用管理</span></a>
+                    		    <div id="parentcsnav22" class="panel-collapse collapse" style="height: 0px;">
+                    		      <div class="panel-body">
+                    		        <ul class="eList">
+                    		          <li><a href="/corp/app" class="">第三方应用管理</a></li>
+                    		        </ul>
+                    		      </div>
+                    		    </div>
+                    		   </div>
+                    		       <!-- 第三方应用管理入口控制 end -->
+                    		 		 <div class="panel panel-default"> <a data-parent="#accordion" href="#parentcsnav23" data-toggle="collapse" class="panel-title panel-heading aName collapsed"><span>外勤签到</span></a>
+                    			 <div id="parentcsnav23" class="panel-collapse collapse ">
+                    				 <div class="panel-body">
+                    					 <ul class="eList">
+                    						 <li><a href="/corp/visit/index" class="">签到事件设置</a></li>
+                    					 </ul>
+                    				 </div>
+                    			 </div>
+                    		 </div>
+                    		 		 <!-- 外勤签到 end -->
+                    </div>
+                    </div>
+                    <!-- 侧边栏结束 -->
+
+                    <div class="right_cs pre">
+                        <div id="root" style="height: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="corp_footer">
+                <div class="innerfooter">
+                    <span>全国服务电话：400-0060-100 Copyright</span>
+                    <span>
+                        	 © 2008-2016 workec.com, All Rights Reserved.
+                        </span>
+                    <span>
+            			粤ICP备09049701号
+            		</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

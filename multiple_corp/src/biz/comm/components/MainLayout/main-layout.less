@@ -1,0 +1,142 @@
+@import "../../../../comm/ec-antd/lib/style/themes/default.less";
+
+.biz-layout, .layout-main {
+    height: 100%;
+    min-height: 768px;
+}
+
+.layout-sidebar {
+	background: #303642;
+    text-align: center;
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 200px;
+    z-index: 10;
+}
+
+.layout-main {
+	margin-left: 200px;
+	background: #edf2fa;
+    // transition: all 0.5s;
+
+	.container {
+		background: #edf2fa;
+		padding: 10px;
+        padding-bottom: 0;
+        min-width: 650px;
+	}
+
+	.main-content {
+        background: #fff;
+        height: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+	}
+
+	.content {
+		height: 100%;
+	}
+}
+
+@media screen and (max-width: 700px) {
+    .layout-main {
+        width: 100%;
+        .container {
+            overflow-x: hidden;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .layout-sidebar {
+        width: 70px;
+        transition: width .5s;
+
+        &.left-hover,
+        &:hover {
+            width: 200px;
+            .biz-sidebar {
+                h1 {
+                    height: 57px;
+                    span {
+                        /* visibility: visible; */
+                        opacity: 1;
+                    }
+                }
+                ul li {
+                    span {
+                        opacity: 1;
+                    }
+                    a {
+                        padding-left: 42px;
+                    }
+                }
+            }
+        }
+
+        .biz-sidebar {
+            h1 {
+                img {
+                    width: 58%;
+                    max-width: 56px;
+                    transition: width 1s ease-out;
+                }
+                span {
+                    /* visibility: hidden; */
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+            }
+            ul li {
+                span {
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+                a {
+                    padding-left: 26px;
+                    transition: padding .5s;
+                }
+            }
+        }
+    }
+
+    .layout-main {
+        margin-left: 70px;
+    }
+
+    /*顶部提示小黄条*/
+    .top-tip {
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .user-info {
+        img {
+            display: none;
+        }
+        button {
+            margin-left: 10px;
+        }
+        .user-text {
+            p:first-child {
+                i {
+                    display: none;
+                    &:first-child {
+                        font-size: 14px;
+                        margin-top: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+
+}

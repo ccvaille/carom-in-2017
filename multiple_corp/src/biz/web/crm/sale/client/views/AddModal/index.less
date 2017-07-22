@@ -1,0 +1,116 @@
+.add-modal{
+    .ant-modal-content{
+      .ant-modal-body{
+        padding-bottom: 0px;
+        .add-modal-wrapper {
+    .tab-title-items {
+        border: 1px solid #d4deee;
+        display: inline-block;
+        width: 120px;
+        height: 355px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        border-right: 1px solid #d4deee;
+        &>h3{
+            height: 53px;
+            line-height: 53px;
+            font-size: 14px;
+            color: #303642;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .tab-title-content{
+            .tab-title-item {
+                padding: 10px 12px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #ebf0f6;
+                }
+                &.active {
+                    color: #fff;
+                    background-color: #2580e6;
+                    border-color: #2580e6;
+                }
+            }
+        }
+
+    }
+    // tab-title-items
+    .tab-content-items {
+        display: inline-block;
+        width: 680px;
+        vertical-align: top;
+        padding: 17px 0 0 20px;
+        .tab-content-item {
+            display: none;
+            &.active {
+                display: block;
+            }
+        }
+        .from-wrapper {
+            display: inline-block;
+            width: 440px;
+            height: 388px;
+            border-right: 1px solid #d4deee;
+            overflow-y: auto;
+            overflow-x: hidden;
+            vertical-align: top;
+            margin-top: -20px;
+            padding-top: 20px;
+            h3{
+                font-size: 14px;
+            }
+            .field-wrapper{
+                margin-top: 20px;
+            }
+            .ant-form-item-label {
+                text-align: center;
+            }
+        }
+        .example-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 230px;
+            height: 360px;
+            padding-left: 20px;
+            vertical-align: top;
+            h3{
+                font-size: 14px;
+            }
+            img {
+                margin-top: 10px;
+            }
+            .instruction-wrapper {
+                position: absolute;
+                bottom: 20px;
+                h3{
+                    font-weight: normal;
+                    font-size: 14px;
+                    color: #303642;
+                }
+                ul{
+                    margin-top: 5px;
+                    li{
+                        width: 204px;
+                        color: #727c8f;
+                        font-size: 12px;
+                        line-height: 1.67;
+                        word-wrap: break-word;
+                        word-break: normal;
+                        white-space: normal;
+                    }
+
+                }
+            }
+        }
+    }
+}
+      }
+      .ant-modal-footer{
+            border-top: 1px solid #d4deee;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #f8f9fc;
+        }
+    }
+}

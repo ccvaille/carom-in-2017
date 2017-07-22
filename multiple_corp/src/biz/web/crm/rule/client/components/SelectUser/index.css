@@ -1,0 +1,122 @@
+.select-user {
+  border: solid 1px #d4deee;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1210;
+  padding: 10px;
+  padding-bottom: 50px;
+  border-radius: 4px;
+}
+.select-user::before {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-bottom: solid 11px #d4deee;
+  border-left: solid 11px transparent;
+  border-right: solid 11px transparent;
+  position: absolute;
+  left: 19px;
+  top: -12px;
+}
+.select-user::after {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-bottom: solid 10px #fff;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  position: absolute;
+  left: 20px;
+  top: -10px;
+}
+.select-user .left {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding-top: 61px;
+  padding-right: 30px;
+}
+.select-user .left > p {
+  float: left;
+  margin-top: -61px;
+}
+.select-user .left > .input-wrapper {
+  width: 100%;
+  float: left;
+  margin-top: -30px;
+  position: relative;
+}
+.select-user .left .list {
+  border-top: none;
+}
+.select-user .right {
+  margin-left: 50%;
+  height: 100%;
+  padding-top: 31px;
+  padding-left: 10px;
+}
+.select-user .right > p {
+  float: left;
+  margin-top: -31px;
+}
+.select-user .right .list {
+  border-radius: 3px;
+}
+.select-user .list {
+  border: solid 1px #d4deee;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  min-height: 100%;
+  overflow: auto;
+  height: 100%;
+}
+.select-user .list .ant-tree-title {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.select-user .list .ant-tree-node-selected {
+  background: transparent;
+}
+.select-user .footer {
+  padding: 10px 0;
+  text-align: right;
+}
+.select-user .footer > button {
+  margin-left: 10px;
+}
+.select-user .anticon-right {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+}
+.select-user .checked_list .ant-tree-title {
+  width: 100%;
+  background-color: inherit;
+}
+.select-user .checked_list .ant-tree-title:hover::after {
+  content: "X";
+  float: right;
+}
+.select-user .checked_list a {
+  display: block;
+  padding: 5px;
+}
+.select-user .checked_list .ant-tree-switcher {
+  display: none;
+}
+.select-user .checked_list ul {
+  padding: 0;
+}
+.select-user .checked_list ul li {
+  padding: 0;
+}
+.select-user .search-input {
+  border-radius: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.select-user .search-icon {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+}

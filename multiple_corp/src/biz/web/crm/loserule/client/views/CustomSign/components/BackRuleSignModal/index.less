@@ -1,0 +1,171 @@
+@import '../../../../../../../../../comm/ec-antd/lib/style/themes/default.less';
+.back-rule-signlist{
+    height: 279px;
+    overflow: auto;
+    margin: 0 -20px;
+    padding: 0 20px;
+    li.signitem-single-item{
+        float: left;
+        width: 25%;
+        padding: 5px;
+        p{
+            cursor: pointer;
+            text-align: center;
+            overflow: hidden;
+            height: 32px;
+            line-height: 20px;
+            word-break:break-all;
+            word-wrap:break-word;
+            padding: 5px;
+            border-radius: @border-radius-sm ;
+            &::after{
+                content:'+';
+                float: right;
+                margin: -4px;
+                padding: 5px;
+                border-top-right-radius: @border-radius-sm;
+                border-bottom-right-radius: @border-radius-sm;
+                color: #fff;
+            }
+        }
+        p.checked{
+            background: #edf2fa;
+            &::after{
+                background: #6fa5ff;
+            }
+        }
+        p:hover{
+            background: #edf2fa;
+            &::after{
+                background: #d4deee;
+            }
+        }
+    }
+    .back-rule-signitem{
+        padding-bottom: 25px;
+        overflow-x:hidden; 
+        .signitem-title{
+            font-size: @font-size-lg;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
+        .signitem-expand{
+            color: @primary-color;
+            float: right;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .signitem-subitem-list{
+            margin:0 -5px;
+            font-size: @font-size-base;
+            padding: 0;
+            overflow: auto;
+            li{
+                float: left;
+                width: 25%;
+                padding: 5px;
+            }
+            p{
+                cursor: pointer;
+                text-align: center;
+                overflow: hidden;
+                height: 32px;
+                line-height: 20px;
+                word-break:break-all;
+                word-wrap:break-word;
+                padding: 5px;
+                border-radius: @border-radius-sm ;
+                border:solid 1px @border-color-base;
+            }
+        }
+    }
+}
+.back-sign-loading{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.tr-tag-theme(@color){
+    .signitem-name{
+        color: @color;
+    }
+    .signitem-subitem-list p{
+        &:hover{
+            border-color: @color;
+            color: @color;
+        }
+        &.checked{
+            border-color: @color;
+            background-color: @color;
+            color: #fff;
+        }
+        &:active{
+            border-color: @color;
+            background-color: @color;
+            color: #fff;
+        }
+    } 
+}
+
+.ec--tr-tag {
+    .selected.c1 {
+        .tr-tag-theme(#2580e6);
+    }
+    .selected.c2 {
+        .tr-tag-theme(#48b274);
+    }
+    .selected.c3 {
+        .tr-tag-theme(#e69e23);
+    }
+    .selected.c4 {
+        .tr-tag-theme(#00b16a);
+    }
+    .selected.c5 {
+        .tr-tag-theme(#9264cd);
+    }
+    .selected.c6 {
+        .tr-tag-theme(#588ad4);
+    }
+    .selected.c7 {
+        .tr-tag-theme(#f26c63);
+    }
+    .selected.c8 {
+        .tr-tag-theme(#7889b9);
+    }
+    .selected.c9 {
+        .tr-tag-theme(#fc7736);
+    }
+    .selected.c10 {
+        .tr-tag-theme(#788385);
+    }
+    .selected.c11 {
+        .tr-tag-theme(#807399);
+    }
+    .selected.c12 {
+        .tr-tag-theme(#cd8a3e);
+    }
+    .selected.c13 {
+        .tr-tag-theme(#9e9a27);
+    }
+    .selected.c14 {
+        .tr-tag-theme(#b76e6e);
+    }
+    .selected.c15 {
+        .tr-tag-theme(#c8557d);
+    }
+    .selected.c16 {
+        .tr-tag-theme(#33b1b3);
+    }
+    .selected.c17 {
+        .tr-tag-theme(#989898);
+    }
+    .selected.c18 {
+        .tr-tag-theme(#d99428);
+    }
+    .selected.c19 {
+        .tr-tag-theme(#e16356);
+    }
+    .selected.c20 {
+        .tr-tag-theme(#5c7bd2);
+    }
+}

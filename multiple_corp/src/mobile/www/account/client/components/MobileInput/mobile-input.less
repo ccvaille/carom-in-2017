@@ -1,0 +1,70 @@
+.ec-mobile-input-item {
+    position: relative;
+    height: 88px;
+    background-color: transparent;
+    display: flex;
+    vertical-align: middle;
+    overflow: hidden;
+    align-items: center;
+
+    &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        right: auto;
+        top: auto;
+        width: 100%;
+        border-bottom: 1PX solid #D5DBE1;
+    }
+
+    .ec-input-control {
+        font-size: 34px;
+        flex: 1;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        input {
+            color: #000;
+            font-size: 34px;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            padding: 4px 0;
+            border: 0;
+            background-color: transparent;
+            line-height: 1;
+            box-sizing: border-box;
+        }
+    }
+
+    .ec-input-clear {
+        display: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+        font-style: normal;
+        color: #fff;
+        background-color: #ccc;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20fill%3D'%23fff'%20viewBox%3D'0%200%2030%2030'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M19%206.41L17.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012z'%2F%3E%3Cpath%20d%3D'M0%200h24v24H0z'%20fill%3D'none'%2F%3E%3C%2Fsvg%3E");
+        background-size: 42px auto;
+        background-position: 4px 4px;
+    }
+
+    .ec-input-suffix {
+        flex: initial;
+        min-width: 0;
+        max-height: 42px;
+        overflow: hidden;
+        padding-right: 0;
+        line-height: 1;
+        color: #888;
+        font-size: 30px;
+        margin-left: 10px;
+    }
+}

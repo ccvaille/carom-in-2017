@@ -1,0 +1,89 @@
+@import "../../../../../../comm/antd/lib/style/themes/default.less";
+@import "../../../../../../../node_modules/antd/lib/style/mixins/clearfix.less";
+
+.ec_sort_tab{
+    .clearfix();
+    height: 52px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #fff;
+    li{
+        position: relative;
+        display: inline-block;
+        width: 33.3%;
+        height: 100%;
+        line-height: 52px;
+        font-size: 14px;
+        color:#96a0b4;
+        background-color: #fff;
+        border: 0;
+        text-align: center;
+        .up_icon{
+            background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -18px -43px;
+        }
+        .down_icon{
+            background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -30px -43px;
+        }
+        .rank_tips{
+            display: inline-block;
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            right: 10px;
+            top: 18px;
+            background: url(//www.staticec.com/my/images/employee-icon.png) no-repeat -3px -52px;
+        }
+        .content{
+            display: inline-block;
+            width: 12px;
+            height: 20px;
+            margin-left: 5px;
+            vertical-align:middle;
+            .up{
+                position: relative;
+                height: 8px;
+                width: 12px;
+                margin-bottom: 2px;
+                i{
+                    position: absolute;
+                    display: block;
+                    width: 6px;
+                    height: 4px;
+                    background-color: #fff;
+                    bottom: 0px;
+                    left: 3px;
+                }
+            }
+            .down{
+                position: relative;
+                height: 8px;
+                width: 12px;
+                margin-top: 2px;
+                i{
+                    position: absolute;
+                    display: block;
+                    width: 6px;
+                    height: 4px;
+                    background-color: #fff;
+                    top: 0px;
+                    left: 3px;
+                }
+            }
+        }
+        .content2{
+            position: relative;
+            display: inline-block;
+            width: 12px;
+            height: 10px;
+            margin-left: 5px;
+            vertical-align:middle;
+            i{
+                position: absolute;
+                width: 6px;
+                height: 4px;
+                left:3px;
+                top:3px;
+            }
+        }
+    }
+}

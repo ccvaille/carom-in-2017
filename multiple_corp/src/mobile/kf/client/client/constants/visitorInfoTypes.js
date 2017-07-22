@@ -1,0 +1,1 @@
+export const GET_VISITOR_INFO='visitor/getInfo';

@@ -1,0 +1,97 @@
+﻿.order-detail{
+    background-color: #fff;
+    padding: 20px;
+    .search-panel{
+        .export-btn{
+            float: right;
+        }
+    }
+    .filter-panel{
+        margin-top:20px;
+        width:100%;
+        overflow: hidden;
+        background-color: #fafbfd;
+        //background-color: lightblue;
+        padding: 16px;
+        .left-part{
+            width:460px;
+            margin-right: 60px;
+            border-right: 1px dashed cadetblue;
+            display: inline-block;
+            float:left;
+            .row{
+                height:45px;
+                line-height:45px;
+                span.title{
+                    width:50px;
+                    text-align: center;
+                }
+            }
+            .ant-calendar-picker{
+                width:110px;
+            }
+            .date-text{
+                margin-right:10px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .date-text.on{
+                color: #2580e6;
+            }
+        }
+        .right-part{
+            display: inline-block;
+            float: left;
+            .r1{
+                display: inline-block;
+                float: left;
+                height:46px;
+                line-height:46px;
+                span.title{
+                    width:50px;
+                    text-align: center;
+                }
+            }
+            .r2{
+                float: left;
+                margin:10px 20px 0;
+            }
+            .r3{
+                display: inline-block;
+                float: left;
+                .row{
+                    height:49px;
+                    line-height:49px;
+                    span.title{
+                        width:50px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .summary{
+        height:50px;
+        line-height:50px;
+        color: rgba(22, 25, 28, 0.94);
+    }
+    .table-wrapper{
+
+    }
+}
+
+@media screen and (min-width: 1200px)and (max-width: 1280px) {
+    .order-detail .filter-panel .left-part{
+        width:430px;
+        margin-right: 20px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .order-detail .filter-panel .left-part{
+        width:430px;
+        margin-right: 0;
+        border-right: none;
+    }
+}
+

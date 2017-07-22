@@ -1,0 +1,27 @@
+@import '../../styles/mixins.less';
+
+.input-item {
+    margin-bottom: 18px; 
+    &-name {
+        display: inline-block;
+        width: 80px;
+        text-align: right;
+        margin-right: 20px;
+        font-size: 14px;
+        i {
+            display: inline-block;
+            color: #ff351e;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+    }
+    input {
+            border: 1px solid #d2d6d9;
+            border-radius: 2px;
+            .size(320px,36px);
+            line-height: 36px;
+            padding: 0 12px;
+            font-size: 12px;
+        }
+}

@@ -1,0 +1,34 @@
+{
+	"code": 0,
+	"msg": "ok",
+	"page": {
+		"curpage": 1,
+		"end": 0
+	},
+	"data": [
+		{
+			"f_title": "iphon7首发啦！天啦噜了...",
+			"f_desc": "又到了一年一度卖肾的季节了。iPhone7，你值得拥有!",
+			"f_url": "https://www.workec.com/html/news/qyh5qiaaodao.html",
+			"f_recive_time": "2016-08-22 10:04:59"
+		},
+		{
+			"f_title": "企业号H5外勤签到功能发布啦！",
+			"f_desc": "欢迎大家猛戳使用！",
+			"f_url": "https://www.workec.com/html/news/qyh5qiaaodao.html",
+			"f_recive_time": "2016-08-22 10:04:59"
+		},
+		{
+			"f_title": "还没有发布的公告测试",
+			"f_desc": "测试就是这么难",
+			"f_url": "http://www.workec.com/html/news/havapicnews.html",
+			"f_recive_time": "2016-08-22 10:05:00"
+		},
+		{
+			"f_title": "最新PC公告测试唐益明",
+			"f_desc": "各位小伙伴，今天市场销售部的部分小伙伴回来开会，启动9月销售计划、激励士气，声音可能较大。他们难得回来一次，研发/产品的小伙伴们可趁机感受一下不一样的氛围，感受下他们的决心和信心。",
+			"f_url": "http://www.workec.com/html/news/havapicnews.html",
+			"f_recive_time": "2016-08-22 10:05:00"
+		}
+	]
+}

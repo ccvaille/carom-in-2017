@@ -1,0 +1,48 @@
+.element-with-tip {
+    position: relative;
+
+    .ec-tip {
+        position: absolute;
+        left: 0;
+        line-height: 18px;
+        padding: 6px;
+        border: 1px solid #d4deee;
+        border-radius: 1px;
+        background-color: #fff;
+        box-shadow: 0 0 5px #c8c9ca;
+        top: 33px;
+        min-width: 100px;
+        min-height: 24px;
+        display: none;
+        z-index: 999;
+        word-break: break-all;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: -12px;
+            border: 6px solid transparent;
+            border-bottom-color: #d4deee;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 13px;
+            top: -10px;
+            border: 6px solid transparent;
+            border-bottom-color: #fff;
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+
+    input {
+        &.has-error {
+            border-color: #f2534f;
+        }
+    }
+}

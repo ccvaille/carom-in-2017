@@ -1,0 +1,290 @@
+.sale-funnel{
+    background-color: #F0F2F4;
+    .wrapper{
+        .tabs{
+            display: flex;
+            border-bottom: 1px solid #D5DBE1;
+            background-color: #ffffff;
+            .tab{
+                flex: 1;
+                font-size: 32px;
+                color: #303642;
+                height: 90px;
+                line-height: 90px;
+                text-align: center;
+                margin: 0 80px;
+                &.active{
+                        border-bottom: 2px solid #0DC88C;
+                        color: #0DC88C;
+                }
+            }
+            .split-line{
+                display: inline-block;
+                border-right: 1px solid #D5DBE1;
+                height: 45px;
+                align-self: center;
+            }
+        }
+        .chart-panel{
+            background: #ffffff;
+            padding: 30px;
+            .tips{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                margin-bottom: 50px;
+                 span{
+                    font-size: 26px;
+                    color: #727C8F;
+                 }
+                 .iconfont{
+                     font-size: 30px;
+                     color: #6FA5FF;
+                     margin-left: 10px;
+                 }
+            }
+            .content{
+                .cloud{
+                    width: 100%;
+                    height:120px;
+                    text-align: center;
+                    font-size:26px;
+                    color: #303642;
+                    background: url('../../images/cloud.png') no-repeat;
+                    background-size: 100% 120px;
+                    p{
+                        height: 85px;
+                        line-height: 85px;
+                        padding: 0;
+                        margin: 0;
+                        .title{
+                            font-size: 26px;
+                            color: #303642;
+                        }
+                        .num{
+                            font-size: 32px;
+                            color: #303642;
+                            font-weight: bold;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                .chart{
+                    display: inline-block;
+                    width: 100%;
+                }
+                .stat{
+                    width: 100%;
+                    .left{
+                        display: inline-block;
+                        width: 50%;
+                        text-align: center;
+                        border-right: 1px solid #D5DBE1;
+                    }
+                    .right{
+                        display: inline-block;
+                        width: 50%;
+                        text-align: center;
+                    }
+                    .title{
+                        font-size: 26px;
+                        margin-right: 30px;
+                        color: #303642;
+                        letter-spacing: 0;
+                    }
+                    .num{
+                        font-size: 34px;
+                        color: #DF3631;
+                    }
+                    .symbol{
+                        font-size: 24px;
+                        color: #DF3631;
+                    }
+                }
+            }
+            .no-data-content{
+                padding-top: 10px;
+                padding-bottom: 30px;
+                text-align: center;
+                img{
+                    width: 235px;
+                }
+                p{
+                    font-size: 26px;
+                    color: #81878E;
+                    margin: 20px 0 0 0;
+                }
+            }
+        }
+        .list-panel{
+            .tips{
+                font-size: 26px;
+                color: #727C8F;
+                padding: 30px;
+                .iconfont{
+                     font-size: 30px;
+                     color: #6FA5FF;
+                     margin-left: 10px;
+                 }
+            }
+            .content{
+                background-color: #ffffff;
+                table{
+                    width: 100%;
+                    padding-top: 30px;
+                    border-spacing: 0;
+                    thead{
+                        tr{
+                            th{
+                                font-size: 24px;
+                                color: #81878E;
+                                font-weight: normal;
+                                text-align: left;
+                                padding-bottom: 20px;
+                                &.stage-title-cell{
+                                    padding-left: 30px;
+                                }
+                            }
+                        }
+                        
+                    }
+                    tbody{
+                        tr{
+                            &:active{
+                                background-color: #E5E6E7;
+                            }
+                            height: 90px;
+                            line-height: 90px;
+                            &:last-child{
+                                td{
+                                     border-bottom: none;
+                                }
+                            }
+                            td{
+                                font-size: 26px;
+                                color: #303642;
+                                text-align: left;
+                                border-bottom: 1px solid #DADFE4;
+                                &.icon{
+                                    text-align: right;
+                                    padding-right: 30px;
+                                    width: 50px;
+                                    .iconfont{
+                                        color: #D5DBE1;
+                                        font-size: 25px;
+                                    }
+                                }
+                                &.empty-cell{
+                                    width: 30px;
+                                    border-bottom: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .no-data-content{
+                background-color: #ffffff;
+                padding-top: 60px;
+                padding-bottom: 60px;
+                text-align: center;
+                img{
+                    width: 235px;
+                }
+                p{
+                    font-size: 26px;
+                    color: #81878E;
+                    margin: 20px 0 0 0;
+                }
+            }
+        } 
+    }
+}
+.funnel-tips-modal{
+    .am-modal-header{
+        .am-modal-title{
+            font-size: 32px;
+            color: #303642;
+        }
+    }
+    
+    .am-modal-body{
+        .content{
+            margin-top: 20px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .am-modal-footer{
+        .am-modal-button{
+            font-size: 32px;
+            color: #0DC88C;
+        }
+    }
+}
+
+.funnel-stage-modal{
+    .am-modal-header{
+        .am-modal-title{
+            font-size: 32px;
+            color: #303642;
+        }
+    }
+    
+    .am-modal-body{
+        .content{
+            display: inline-block;
+            p{
+                height:50px;
+                line-height:50px;
+                margin-bottom: 12px;
+                text-align: left;
+                .title{
+                    font-size: 26px;
+                    color: #81878E;
+                    width: 300px;
+                    display: inline-block;
+                }
+                .result{
+                    font-size: 26px;
+                    color: #303642;
+                }
+            }
+        }
+    }
+    .am-modal-footer{
+        .am-modal-button{
+            font-size: 32px;
+            color: #0DC88C;
+        }
+    }
+}
+
+.funnel-guide-modal{
+    .am-modal-header{
+        .am-modal-title{
+            font-size: 32px;
+            color: #303642;
+        }
+    }
+    
+    .am-modal-body{
+        .content{
+            margin-top: 10px;
+            p{
+                font-size: 26px;
+                color: #81878E;
+                margin-top: 30px;
+            }
+        }
+    }
+    .am-modal-footer{
+        .am-modal-button{
+            font-size: 32px;
+            color: #0DC88C;
+        }
+    }
+}
+
+

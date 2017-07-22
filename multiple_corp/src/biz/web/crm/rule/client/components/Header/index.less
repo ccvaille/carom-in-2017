@@ -1,0 +1,108 @@
+﻿@import "../../../../../../../comm/ec-antd/lib/style/themes/default.less";
+.clearfix() {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+.new-label-header {
+    .clearfix();
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding-left: 200px;
+    border-bottom: 2px solid @primary-color;
+    height: 72px;
+    min-width: 650px;
+    background: #fff;
+    .new-label-left {
+        float: left;
+        h2 {
+            padding-left: 10px;
+            padding-top: 18px;
+            margin-bottom: 9px;
+            color: #424242;
+            font-size: 16px;
+            display: none;
+        }
+        .new-label-nav {
+            padding-top: 31px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            li {
+                float: left;
+                width: 110px;
+                height: 40px;
+                text-align: center;
+                position: relative;
+                border: 1px solid transparent;
+                border-radius: @border-radius-base;
+                a {
+                    color: @primary-color;
+                    font-size: 16px;
+                    &:hover {
+                        color: #0051b6;
+                    }
+                }
+                &.active {
+                    background: @primary-color;
+                    border-color: @primary-color;
+                    a {
+                        color: #fff;
+                    }
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        background: @primary-color;
+                        transform: rotate(45deg);
+                        z-index: 1;
+                        width: 6px;
+                        height: 6px;
+                        left: 50px;
+                        bottom: -5px;
+                    }
+                }
+            }
+        }
+    }
+    .customer-info {
+        float: right;
+        margin-right: 10px;
+        margin-top: 17px;
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        img,
+        .customer-text,
+        button {
+            float: left;
+        }
+        .customer-text {
+            margin-left: 10px;
+            p {
+                color: #96a0b4;
+                i {
+                    font-style: normal;
+                    color: #303642;
+                }
+            }
+        }
+        button {
+            margin-left: 30px;
+            margin-top: 4px;
+        }
+    }
+}

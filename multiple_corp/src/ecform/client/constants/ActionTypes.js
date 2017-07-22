@@ -1,0 +1,24 @@
+
+export const FETCH_FAILURE='FETCH_FAILURE';//请求失败
+export const FETCH_SUCCESS='FETCH_SUCCESS';//请求成功
+export const FETCHING ='FETCHING';//请求中
+export const SORT_CHANGE = 'SORT_CHANGE';//排序改变
+export const SEARCH_TEXT_CHANGE = 'SEARCH_TEXT_CHANGE';//搜索改变
+export const SEARCH_TYPE_CHANGE = 'SEARCH_TYPE_CHANGE';//搜索类型改变
+export const FILTER_CHANGE = 'FILTER_CHANGE';//搜索改变
+
+export const FETCH_FORM_LIST_SUCCESS = 'FETCH_FORM_LIST_SUCCESS';//获取列表成功
+export const FETCH_ROLE_SUCCESS = 'FETCH_ROLE_SUCCESS';//获取权限成功
+export const FETCH_GET_CLASS_SUCCESS = 'FETCH_GET_CLASS_SUCCESS';//获取分类·成功
+
+export const FETCH_DELETE_FORM_SUCCESS = 'FETCH_DELETE_FORM_SUCCESS';//删除成功
+
+export const MIGRATION_TO_PUBLIC_SUCCESS = 'MIGRATION_TO_PUBLIC_SUCCESS';//移入公共成功
+
+export const ROUTER_CHANGE= 'ROUTER_CHANGE';//路由改变
+export const PAGE_CHANGE= 'PAGE_CHANGE';//分页改变
+
+export const FETCH_SET_CLASS_SUCCESS= 'FETCH_SET_CLASS_SUCCESS';//设置分类成功
+
+
+

@@ -1,0 +1,53 @@
+@import (less) '../../../../less/public/sessionVars.less';
+@import (less) '../../../../less/public/mixins.less';
+
+#@{css-prefix}-cs-root {
+    .cs-session-mobile {
+        .size(100%, 100%);
+        overflow: hidden;
+
+        .header {
+            position: fixed;
+            left: 0;
+            right: 0;
+            width: 100%;
+            text-align: center;
+            height: 33px;
+
+            p {
+                margin: 0;
+            }
+
+            .return {
+                .size(50px, 50px);
+                line-height: 50px;
+                position: absolute;
+                top: 0;
+                .arrow-left.icon {
+                    color: #000;
+                    position: absolute;
+                    margin-left: 3px;
+                    margin-top: 10px;
+                    width: 16px;
+                    height: 2px;
+                    background-color: #fff;
+                    left: 20px;
+                    top: 14px;
+                    display: inline-block;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 1px;
+                        top: -5px;
+                        width: 10px;
+                        height: 10px;
+                        border-top: solid 2px #fff;
+                        border-right: solid 2px #fff;
+                        -webkit-transform: rotate(-135deg);
+                        transform: rotate(-135deg);
+                    }
+                }
+            }
+        }
+    }
+}

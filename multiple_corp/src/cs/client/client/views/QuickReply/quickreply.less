@@ -1,0 +1,38 @@
+.cs-quickreply {
+    .setting-icon {
+        background: url('../../images/setting-icon.png') no-repeat;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        margin: 0 5px;
+
+        &.edit-icon {
+            background-position: 0 0;
+        }
+
+        &.remove-icon {
+            background-position: -16px 0;
+        }
+    }
+
+    .empty-detail {
+        margin-left: 220px;
+        height: 100%;
+        position: relative;
+
+        .empty {
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            p {
+                margin-top: 10px;
+                color: #bdc5cd;
+                font-size: 14px;
+            }
+        }
+    }
+}

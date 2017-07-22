@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 281681 */
+    src: url('//at.alicdn.com/t/font_f37tgt0s9zqfflxr.eot');
+    src: url('//at.alicdn.com/t/font_f37tgt0s9zqfflxr.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_f37tgt0s9zqfflxr.woff') format('woff'),
+    url('//at.alicdn.com/t/font_f37tgt0s9zqfflxr.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_f37tgt0s9zqfflxr.svg#iconfont') format('svg');
+}
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0;
+    -moz-osx-font-smoothing: grayscale;
+}
+body .rightContent{
+    margin-left:130px !important;
+}
+.clear-fix{
+    clear: both;
+}
+
+.funnel{
+    .t-area{
+        margin-top:25px;
+        margin-bottom:25px;
+        .left-side{
+            display: inline-block;
+            .title{
+                font-size:14px;
+                color: #303642;
+                float: left;
+                font-weight: bold;
+            }
+            .icon{
+                color: #6FA5FF;
+                float: left;
+                margin-left:5px;
+                cursor: pointer;
+            }
+            .ant-popover{
+                width: 430px !important;
+                h3{
+                    color: #303642;
+                    font-size:12px;
+                    font-weight:bold;
+                    margin-bottom:7px;
+                    &.tit-2{
+                        margin-top:20px;
+                    }
+                }
+                p{
+                    line-height: 2;
+                   font-size: 12px;
+                    line-height: 2;
+                    color: #303642;
+                }
+                ul{
+                    li{
+                        font-size:12px;
+                        line-height: 2;
+                        color: #303642;
+                    }
+                }
+            }
+        }
+        .right-side{
+            display: inline-block;
+            float: right;
+            .ctrl-btn{
+                color: #303642;
+                cursor: pointer;
+                .icon{
+                    font-size:13px;
+                    margin-right:5px;
+                }
+                &.active{
+                    color:#3180E6;
+                }
+            }
+            .split{
+                color: #DADDE3;
+                margin: 0 7px;
+            }
+        }
+    }
+    .container{
+        width:820px;
+        margin: 0 auto;
+    }
+    .chart-area{
+        margin-left: 60px;
+        display: inline-block;
+        width: 400px;
+        float: left;
+        .cloud{
+            display: inline-block;
+            width: 400px;
+            height:70px;
+            text-align: center;
+            font-size:14px;
+            color: #303642;
+            background: url('../../images/cloud.png') no-repeat;
+            p{
+                height: 50px;
+                line-height: 50px;
+                .icon{
+                    color: #6FA5FF;
+                    margin-left:5px;
+                    margin-right:5px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+        .chart{
+            display: inline-block;
+            float: left;
+            //margin-top:10px;
+        }
+
+    }
+    .bread-crumb{
+        margin-bottom:10px;
+        .active{
+            color:#3180e6;
+            cursor: pointer;
+        }
+        .hide{
+            display: none;
+        }
+    }
+    .warn-area{
+        display: inline-block;
+        float: left;
+        width: 276px;
+        margin-left: 40px;
+        .warn-wrapper{
+            width:276px;
+            height:80px;
+            display: inline-block;
+            //float: left;
+            border: 1px solid #DADDE3;
+            border-radius: 3px;
+            position: relative;
+            //margin-left:40px;
+            padding:15px 20px;
+            .tip{
+                font-size: 12px;
+                color: #303642;
+                //width:70px;
+                padding:0 13px;
+                display: inline-block;
+                text-align: center;
+                font-weight:bold;
+                position: absolute;
+                top:-10px;
+                left:10px;
+                background-color: #ffffff;
+            }
+            p{
+                line-height:18px;
+                margin-bottom: 12px;
+                .title{
+                    float: left;
+                }
+                .result{
+                    float: right;
+                }
+                .icon{
+                    color: #6FA5FF;
+                    margin-left:5px;
+                    margin-right:5px;
+                    float: left;
+                    cursor: pointer;
+                }
+            }
+            &.dashed{
+                width:276px;
+                height:140px;
+                border: 1px dashed #6FA5FF;
+                margin-top:35px;
+            }
+        }
+    }
+    .ant-table{
+        border-radius:0;
+        .ant-table-placeholder{
+            border-left: 1px solid #DADDE4;
+            border-right: 1px solid #DADDE4;
+        }
+        table{
+            border-radius:0;
+            border-collapse: collapse !important;
+            border: 1px solid #DADDE4 !important;
+            .ant-table-thead{
+                th{
+                    background: #F5F6F9;
+                    border: 1px solid #DADDE4;
+                    padding-top:6px;
+                    padding-bottom:6px;
+                    padding-left: 20px;
+                }
+            }
+            .ant-table-tbody{
+                tr{
+                    td{
+                        padding-left: 20px;
+                        border:none;
+                        .ant-table-row-expand-icon{
+
+                        }
+                        &.time-col{
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+                    }
+                    border: 1px solid #F3F3F3;
+                    background: #fff;
+                    &.node-row{
+                        td.status-col{
+                            font-weight: bold;
+                        }
+                    }
+                    
+                    &.leaf-row{
+                    }
+                }
+
+            }
+        }
+    }
+    .table-wrapper-2{
+        .ant-pagination{
+            margin: 16px 0;
+            float: right;
+        }
+    }
+}
+.ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow{
+    left: 14px;
+}
+

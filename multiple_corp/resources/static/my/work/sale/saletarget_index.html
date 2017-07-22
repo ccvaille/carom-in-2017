@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>EC营销即时通|工作台</title>
+    <link href="{$staticfile_domain.my}css/global.css" rel="stylesheet" type="text/css" />
+    <link href="{$staticfile_domain.my}images/favicon.ico" type="image/ico" rel="shortcut icon" />
+    <link href="//1.staticec.com/my/work/sale/css/work.2025e.css" rel="stylesheet" />
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">-->
+</head>
+
+<body>
+<div class="wrapper">
+    <!--左边菜单 开始-->
+    {include file="templates/work/side.html" page="saletarget_index"}
+    <!--左边菜单 end-->
+    <!--右边内容 开始-->
+    <div class="rightContent" id="root">
+
+    </div>
+</div>
+<div id="confirm-wrapper"></div>
+<script>
+    var userid = '{$userid}';
+    var corpid = '{$corpid}';
+    var deptid = '{$deptid}';
+    var username = '{$username}';
+    var person = {$person};
+    var setting = {$setting};
+</script>
+
+</body>
+<script type="text/javascript" src="//1.staticec.com/my/work/sale/js/work.2025e.js"></script>
+
+</html>
+

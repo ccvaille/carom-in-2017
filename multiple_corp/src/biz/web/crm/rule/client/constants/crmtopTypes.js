@@ -1,0 +1,2 @@
+export const CHECK_IF_LIMIT = 'CHECK_IF_LIMIT';
+export const SWITCH_USE_STATE = 'SWITCH_USE_STATE';

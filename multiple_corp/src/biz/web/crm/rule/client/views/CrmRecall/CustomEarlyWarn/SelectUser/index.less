@@ -1,0 +1,124 @@
+@import '../../../../../../../../comm/ec-antd/lib/style/themes/default.less';
+
+.select-user{
+    border: solid 1px @border-color-base;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1210;
+    padding: 10px;
+    padding-bottom: 50px;
+    border-radius:@border-radius-sm;
+    &::before{
+        content: ' ';
+        width:0;
+        height: 0;
+        border-bottom: solid 11px  @border-color-base;
+        border-left: solid 11px transparent;
+        border-right:solid 11px transparent;
+        position:absolute;
+        left: 19px;
+        top:-12px;
+    }
+    &::after{
+        content:' ';
+        width: 0;
+        height: 0;
+        border-bottom: solid 10px #fff;
+        border-left: solid 10px transparent;
+        border-right:solid 10px transparent;
+        position:absolute;
+        left: 20px;
+        top:-10px;
+    }
+    .left{
+        float: left;
+        width: 50%;
+        height: 100%;
+        padding-top: 61px;
+        padding-right: 30px;
+        >p{
+            float: left;
+            margin-top: -61px;
+        }
+        >.input-wrapper{
+            width: 100%;
+            float: left;
+            margin-top:-30px;
+            position: relative;
+        }
+        .list{
+            border-top: none;
+        }
+    }
+    .right{
+        margin-left: 50%;
+        height: 100%;
+        padding-top: 31px;
+        padding-left: 10px;
+        >p{
+            float: left;
+            margin-top: -31px;
+        }
+        .list{
+            border-radius:  @border-radius-base;
+        }
+    }
+    .list{
+        border:solid 1px @border-color-base;
+        border-bottom-left-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+        min-height: 100%;
+        overflow: auto;
+        height: 100%;
+        .ant-tree-title{
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        .ant-tree-node-selected{
+            background: transparent;
+        }
+    }
+    .footer{
+        padding: 10px 0;
+        text-align: right;
+        >button{
+            margin-left: 10px;
+        }
+    }
+    .anticon-right{
+        position: absolute;
+        top:50%;
+        left: 47%;
+    }
+    .checked_list .ant-tree-title{
+        width: 100%;
+        background-color: inherit;
+        &:hover::after{
+            content:"X";
+            float: right;
+        }
+    }
+    .checked_list a{
+        display: block;
+        padding: 5px;
+    }
+    .checked_list .ant-tree-switcher{
+        display: none;
+    }
+    .checked_list ul{
+        padding: 0;
+        li{
+            padding: 0;
+        }
+    }
+    .search-input{
+        border-radius: 0;
+        border-top-right-radius: @border-radius-base;
+        border-top-left-radius: @border-radius-base;
+    }
+    .search-icon{
+        position: absolute;
+        right: 7px;
+        top: 7px;
+    }
+}

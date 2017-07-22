@@ -1,0 +1,47 @@
+.cs-statistics {
+    .ant-menu-submenu-inline > .ant-menu-submenu-title:after {
+        display: none;
+    }
+
+    .anticon-right {
+        transform: rotate(0deg);
+        transition: transform .3s ease;
+    }
+
+    .ant-menu-submenu-open .anticon-right {
+        transform: rotate(90deg);
+    }
+
+    .ant-menu-inline {
+        border-right: none;
+
+        .ant-menu-item {
+            border-right: none;
+        }
+
+        .ant-menu-item-selected {
+            background-color: #ebf3f7;
+            border-right: none;
+
+            a {
+                color: #1a1a1a;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .ant-menu-item:hover, .ant-menu-item-active, .ant-menu-submenu-active, .ant-menu-submenu-title:hover {
+        background-color: #f2f2f2;
+    }
+
+    .menu-title {
+        position: relative;
+
+        i {
+            position: absolute;
+            right: 32px;
+            top: 11px;
+            color: #999999;
+        }
+    }
+}

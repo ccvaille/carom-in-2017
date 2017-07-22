@@ -1,0 +1,70 @@
+{
+	"code": 0,
+	"msg": "ok",
+	"page": {
+		"curpage": 1,
+		"end": 0
+	},
+	"data": [
+		{
+			"f_is_send": "1",
+			"bid": "2185",
+			"f_uid": "5001002",
+			"f_name": "asdfasdf",
+			"f_create_time": "1481009195",
+			"blog": {
+				"f_blog_title": "广播最新测试2016Year",
+				"f_blog_content": "<p>\n\t系诶些你得吉军佛文件</p>",
+				"f_blog_url": "https://mzone.workec.com/blog/view?bid=2185"
+			}
+		},
+		{
+			"f_is_send": "1",
+			"bid": "2097",
+			"f_uid": "5001002",
+			"f_name": "狄仁杰",
+			"f_create_time": "1464145358",
+			"blog": {
+				"f_blog_title": "系统消息测试",
+				"f_blog_content": "<p>\n\t1223456</p>",
+				"f_blog_url": "https://mzone.workec.com/blog/view?bid=2097"
+			}
+		},
+		{
+			"f_is_send": "1",
+			"bid": "1808",
+			"f_uid": "5001002",
+			"f_name": "狄仁杰",
+			"f_create_time": "1420592854",
+			"blog": {
+				"f_blog_title": "不是Mzone域名的广播消息",
+				"f_blog_content": "<p>\n\t不是Mzone域名的广播消息</p>\n<p>\n\t不是Mzone域名的广播消息</p>\n<p>\n\t不是Mzone域名的广播消息</p>\n<p>\n\t&nbsp;</p>",
+				"f_blog_url": "https://mzone.workec.com/blog/view?bid=1808"
+			}
+		},
+		{
+			"f_is_send": "1",
+			"bid": "1806",
+			"f_uid": "5001002",
+			"f_name": "狄仁杰",
+			"f_create_time": "1420540248",
+			"blog": {
+				"f_blog_title": "第三次发广播",
+				"f_blog_content": "<p>\n\t是发威发违法</p>",
+				"f_blog_url": "https://mzone.workec.com/blog/view?bid=1806"
+			}
+		},
+		{
+			"f_is_send": "1",
+			"bid": "1805",
+			"f_uid": "5001002",
+			"f_name": "狄仁杰",
+			"f_create_time": "1420540159",
+			"blog": {
+				"f_blog_title": "再次发广播消息",
+				"f_blog_content": "<p>\n\t再次发广播消息</p>\n<p>\n\t再次发广播消息</p>\n<p>\n\t再次发广播消息</p>\n<p>\n\t再次发广播消息</p>\n<p>\n\t再次发广播消息</p>",
+				"f_blog_url": "https://mzone.workec.com/blog/view?bid=1805"
+			}
+		}
+	]
+}

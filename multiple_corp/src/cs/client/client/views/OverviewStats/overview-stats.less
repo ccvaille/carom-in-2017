@@ -1,0 +1,77 @@
+.statistics-overview {
+    .overview-wrapper {
+        margin-top: 20px;
+
+        h3 {
+            font-weight: normal;
+            margin-bottom: 12px;
+        }
+
+        .percent-row {
+            cursor: pointer;
+        }
+    }
+
+    .old-statistics {
+        // margin-top: 40px;
+        position: absolute;
+        bottom: 20px;
+
+        .hint {
+            padding-left: 10px;
+            color: #cccccc;
+        }
+    }
+
+    .traffic-table, .conversation-table {
+        .ant-table-row {
+            &:nth-child(even), &:nth-child(odd) {
+                background-color: white;
+            }
+
+            &:hover {
+                background-color: white;
+            }
+        }
+    }
+}
+
+.pop-content {
+    // margin: -20px;
+    // padding: 5px 10px;
+
+    .pop-percent {
+        font-size: 16px;
+    }
+
+    .date-wrapper {
+        margin: 3px 0;
+    }
+
+    .date {
+        float: left;
+    }
+
+    .num {
+        float: right;
+        color: #b2b2b2;
+        padding-left: 10px;
+    }
+}
+
+// .stats-percent-wrapper {
+//     max-width: 60%;
+//     margin: 0 auto;
+// }
+
+.stats-percent {
+    padding: 0 4px;
+}
+
+.stats-percent-up {
+    color: #f84430;
+}
+
+.stats-percent-down {
+    color: #00c763;
+}

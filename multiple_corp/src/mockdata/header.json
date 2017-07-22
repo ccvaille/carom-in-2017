@@ -1,0 +1,2 @@
+access-control-allow-origin: http://static.workec.com
+Access-Control-Allow-Credentials: true

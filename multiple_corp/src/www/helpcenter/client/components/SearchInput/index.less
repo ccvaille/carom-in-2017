@@ -1,0 +1,31 @@
+
+.search-wrap {
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 350px;
+    height: 40px;
+    border: 1px solid #d4deee;
+    margin-top: 10px;
+
+    input {
+        width: 317px;
+        height: 100%;
+        border: 0;
+        padding-left: 33px;
+        color: #666;
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    span {
+        width: 33px;
+        height: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(search.png) center center no-repeat;
+        cursor: pointer;
+    }
+}

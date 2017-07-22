@@ -1,0 +1,85 @@
+.public-carousel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    &.hide{
+        display: none;
+    }
+    .slide{
+        .slide-head-img{
+            width: 100%;
+            margin-top: 70px;
+            margin-bottom: 15px;
+            text-align: center;
+            img{
+                display: inline-block;
+            }
+        }
+        h2{
+            font-weight: bold;
+            font-size: 28px;
+            color: #303642;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 14px;
+            color: #303642;
+            text-align: center;
+        }
+
+    }
+    .slick-slider{
+        padding-bottom: 60px;
+        .slick-dots{
+            .slick-active{
+                button{
+                    background: #3180E6;
+                }
+            }
+            button{
+                background: #D8D8D8;
+                width: 10px;
+                height: 10px;
+            }
+            li{
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+    }
+    .foot{
+        position: absolute;
+        bottom: 15%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+        align-items: inherit;
+        justify-content: inherit;
+        button{
+            &.ant-btn{
+                display: inline-block;
+                margin-bottom: 20px;
+                background: #3180E6;
+                border-radius: 3px;
+                color: #fff;
+                text-decoration: none;
+                border: 1px solid transparent;
+                span{
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+                &:hover{
+                    border: 1px solid transparent;
+                }
+            }
+
+        }
+    }
+
+}

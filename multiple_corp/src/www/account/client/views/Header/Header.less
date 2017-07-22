@@ -1,0 +1,78 @@
+@import '../../styles/mixins.less';
+
+#header {
+    position: fixed;
+    .size(100%, 70px);
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    border-bottom: 1px solid #cececc;
+    z-index: 100;
+        border-top: 5px solid #fff;
+    .header-content {
+        .size(1030px, 100%);
+        margin: 0 auto;
+        z-index: 3;
+        .clearfix();
+    }
+    .logo {
+        height: 76px;
+        float: left;
+        font-weight: normal;
+        margin-left: 10px;
+        .icon-logo {
+            display: inline-block;
+            background-image: url("../../images/logo.png");
+            .size(90px,46px);
+            margin-top: 12px;
+            span {
+                display: inline-block;
+                width: 90px;
+                font-size: 22px;
+                color: #52c018;
+                margin-left: 114px;
+                font-weight: bold;
+            }
+        }
+    }
+    #nav {
+        float: left;
+        margin-left: 90px;
+        a {
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+            color: #000000;
+            margin-right: 50px;
+            font-size: 14px;
+            &:hover,&.active {
+                color: #52c018;
+            }
+            &.active {
+                font-weight: bold;
+            }
+        }
+    }
+    .status {
+        float: right;
+        padding-top: 15px;
+        a {
+            display: inline-block;
+            color: #4a5055;
+            background: transparent;
+            height: 36px;
+            line-height: 36px;
+            padding: 0 34px;
+            border-radius: 18px;
+            font-size: 14px;
+            &:hover {
+                color: #52c018;
+            }
+            &.active {
+                background: #00C341;
+                color: #fff;
+            }
+
+        }
+    }
+}

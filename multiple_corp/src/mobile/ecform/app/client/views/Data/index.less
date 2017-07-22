@@ -1,0 +1,152 @@
+body, #root{
+    height: 100%;
+}
+.iconfont{
+	font-size: 28px;
+	display: inline-block;
+	margin-left: 10px;
+	color: #B3B5B9;
+	vertical-align: middle;
+}
+.icon-zhankai{
+	font-size: 16px;
+}
+#root, .form-data{
+	height: 100%;
+	background: #fff;
+	font-family: 微软雅黑;
+	font-size: 32px;
+}
+.am-refresh-control-loading .am-refresh-control-ptr-loading{
+	background: url('../../styles/images/loading.gif') no-repeat center center;
+}
+.form-data{
+	.head{
+		display: -webkit-box-flex;
+		display: flex;
+		line-height: 32px;
+		height: 120px;
+		padding: 0px 20px;
+		position: relative;
+        background: #f9f9f9;
+		h2{
+			flex: 1;
+			justify-content: center;
+			line-height: 120px;
+			font-size: 36px;
+			color: #303642;
+			font-weight: normal;
+			overflow: hidden;
+    		text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    		white-space: nowrap;/*强制不换行*/
+		}
+		p{
+			width: 150px;
+			justify-content: center;
+			line-height: 120px;
+			color: #FFA900;
+			font-size: 32px;
+			text-align: right;
+		}
+	}
+	.content{
+		position: absolute;
+		width: 100%;
+		top: 120px;
+		bottom: 0px;
+		overflow: hidden;
+	}
+	.data-list{
+		overflow-x: hidden;
+		.form-list-item{
+            a{
+                width: 100%;
+                display: -webkit-box-flex;
+                display: flex;
+                height: 100px;
+                width: 100%;
+                font-size: 30px;
+                &:active{
+                    background: #e5e6e7;
+                }
+                span{
+                    font-size: 32px;
+                    color: #303642;
+                }
+                .fl{
+                    width: 20px;
+                    height: 100px;
+                    line-height: 100px;
+                    text-align: center;
+                    color: #81878E;
+                }
+                .fr{
+                    display: -webkit-box-flex;
+                    display: flex;
+                    flex: 1;
+                    justify-content: center;
+                    height: 100px;
+                    border-bottom: 1PX solid #D5DBE1;
+                    overflow: hidden;
+                    .f1{
+                        line-height: 100px;
+                        margin-right: 20px;
+                        flex: 1;
+                        color:  #81878E;
+                        justify-content: center;
+                        overflow: hidden;
+                        text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+                        white-space: nowrap;/*强制不换行*/
+                    }
+
+                    .f2{
+                        height: 100px;
+                        width: 77px;
+                        text-align: right;
+                        vertical-align: middle;
+                        margin-right: 0px;
+                        line-height: 100px;
+                        margin-right: 20px;
+                        color:  #81878E;
+                    }
+                }
+            }
+
+		}
+	}
+}
+.data-list{
+	.am-list-body{
+		&:after{
+			display: none;
+		}
+		border-top: none;
+	}
+	.am-list{
+		width: 100%;
+	}
+}
+.load-foot-data{
+    margin-top: 0px;
+}
+.no-data{
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 150px;
+        margin-bottom: 20px;
+    }
+    &.has-bg{
+        background: #EDEDED;
+        margin: 0px;
+        span{
+            color: #989CA2;
+        }
+    }
+}
+
+

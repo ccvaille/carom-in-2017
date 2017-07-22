@@ -1,0 +1,28 @@
+.multiLineEllipsis(@lineHeight: 1.2em, @lineCount: 1, @bgColor: white){
+    overflow: hidden;
+    // position: relative;
+    line-height: @lineHeight;
+    max-height: @lineHeight * @lineCount;
+    /* text-align: justify; */
+    margin-right: -1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    &:before {
+        content: '...';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.5em;
+        background: @bgColor;
+    }
+}

@@ -1,0 +1,173 @@
+.editabel-wrapper, .group-title-wrapper {
+    &:hover {
+        background-color: #edf2fa;
+        .editabel-btn-wrapper {
+            display: inline-block;
+        }
+    }
+    .items-group-title {
+        width: 719px;
+        display: inline-block;
+        padding: 10px 0;
+        font-size:14px;
+        color: #263450;
+    }
+    .input-wrapper, .editabel-btn-wrapper {
+        display: inline-block;
+        vertical-align: middle;
+        //padding-top: 6px;
+    }
+    .input-wrapper {
+        // width: 585px;
+        &.guide-status{
+          position: relative;
+          border: 3px solid #528ef7;
+          background: #fff;
+          z-index: 556;
+          .ant-radio-group{
+            width: 300px;
+          }
+        }
+        padding: 10px 12px;
+        label {
+            display: inline-block;
+            font-weight:normal;
+        }
+        input {
+            display: inline-block;
+            font-size: 14px;
+            cursor: default;
+        }
+
+        input[type="radio"][disabled],
+        input[type="checkbox"][disabled],
+        input[type="radio"],
+        input[type="checkbox"] {
+          cursor: default;
+        }
+        textarea {
+          outline:none;
+          resize:none;
+        }
+        .ant-input[disabled] ,
+        .ant-checkbox-disabled + span ,
+        .ant-radio-disabled + span ,
+        .ant-select-disabled .ant-select-selection {
+          cursor:  default;
+          color: #727c8f;
+          font-size: 14px;
+          &:hover {
+            border-color: #d4deee;
+          }
+        }
+
+        .ant-input[disabled] ,
+        .ant-select-disabled .ant-select-selection {
+          background-color: #fff;
+        }
+        .ant-checkbox-wrapper,
+        .ant-radio-wrapper {
+          cursor:  default;
+        }
+
+        .label-title {
+            position: relative;
+            line-height: 28px;
+            //float: left;
+            display: inline-block;
+            width: 94px;
+            font-weight: normal;
+            font-size: 14px;
+            vertical-align: middle;
+            margin-right: 10px;
+            //white-space: nowrap;
+            //overflow: hidden;
+            //text-overflow: ellipsis;
+            color: #727c8f;
+        }
+        .ant-form-item-required:after {
+          display: inline-block;
+          position: absolute;
+          margin-left: 4px;
+          content: "*";
+          font-family: SimSun;
+          font-size: 12px;
+          color: #f50;
+        }
+        .ant-form-item-required:before {
+          display: none;
+          content: "";
+        }
+      }
+    .ant-radio-group , .ant-checkbox-group ,.ant-select, .ant-input-wrapper{
+        display: inline-block;
+        width:590px;
+        text-align: left;
+        vertical-align: middle;
+        font-size: 14px;
+        .ant-radio-wrapper, .ant-checkbox-wrapper {
+            width: 116px;
+            white-space: nowrap;
+            overflow: hidden;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+        }
+    }
+    .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+        margin-left: 0px;
+    }
+    .editabel-btn-wrapper {
+        display: none;
+        li {
+            display: inline-block;
+            padding: 10px 10px;
+            cursor: pointer;
+        }
+    }
+    .customer-name {
+      line-height: 28px;
+    }
+}
+
+.items-title {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #263450;
+    font-size: 14px;
+}
+.disabled-editable {
+    color: rgba(48, 54, 66, 0.44)  !important;
+    span {
+      color: rgba(48, 54, 66, 0.44)  !important;
+    }
+    h3 {
+        color: rgba(48, 54, 66, 0.44)  !important;
+    }
+}
+.crm-type-global-title {
+  padding-bottom: 15px;
+  h3 {
+    font-size: 14px;
+    color: #303642;
+  }
+}
+
+.group-title-wrapper {
+  height: 45px;
+}
+
+.ant-radio-wrapper-disabled {
+  .ant-radio {
+    cursor: default;
+  }
+}
+
+.items-group-title-disable {
+  color: #c0c8d8 !important;
+}
+
+.crm-sale-short-input,
+.editabel-wrapper .ant-select {
+  width: 295px !important;
+}

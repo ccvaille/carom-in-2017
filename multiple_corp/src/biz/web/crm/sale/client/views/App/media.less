@@ -1,0 +1,217 @@
+@import "../../../../../../../comm/antd/lib/style/themes/default.less";
+// @import "../Label/index.less";
+@media screen and (min-width: 1440px)and (max-width: 1920px) {
+    /*在哪里能看到气泡层*/
+    .where-to-see {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /*左侧菜单栏*/
+    .ant-layout-left {
+        width: 70px;
+        transition: width .5s;
+        .new-label-sidebar {
+            h1 {
+                img {
+                    width: 58%;
+                    max-width: 56px;
+                    transition: width 1s ease-out;
+                }
+                span {
+                    /* visibility: hidden; */
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+            }
+            ul li {
+                span {
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+                a {
+                    padding-left: 26px;
+                    transition: padding .5s;
+                }
+            }
+        }
+        &.left-hover,
+        &:hover {
+            width: 200px;
+            .new-label-sidebar {
+                h1 {
+                    height: 57px;
+                    span {
+                        /* visibility: visible; */
+                        opacity: 1;
+                    }
+                }
+                ul li {
+                    span {
+                        opacity: 1;
+                    }
+                    a {
+                        padding-left: 42px;
+                    }
+                }
+            }
+        }
+    }
+    /*顶端菜单栏*/
+    .new-label-header {
+        height: 40px;
+        .new-label-left {
+            h2 {
+                display: none;
+            }
+            .new-label-nav {
+                height: 30px;
+                line-height: 30px;
+                margin-top: 10px;
+                padding-top: 0;
+                li {
+                    width: 96px;
+                    height: 30px;
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    /*顶部提示小黄条*/
+    .top-tip {
+        margin-left: 35px;
+    }
+    /*标签盒子*/
+    .grouping-sorting-box {
+        &.grouping-sorting {
+            width: 100% !important;
+        }
+        .grouping-sorting-left {
+            width: 180px !important;
+        }
+        .grouping-sorting-right {
+            margin-left: 180px !important;
+        }
+    }
+    .prompt-footer {
+        width: 100% !important;
+    }
+    /*右上角个人信息*/
+    .new-label-header {
+        .customer-info {
+            margin-top: 5px;
+            img {
+                display: none;
+            }
+            button {
+                color: @primary-color;
+                margin-top: 9px;
+                margin-left: 10px;
+                border-color: transparent;
+                padding: 0;
+                letter-spacing: -1px;
+                font-size: 14px;
+            }
+            .customer-text {
+                p:first-child {
+                    i {
+                        display: none;
+                        &:first-child {
+                            cursor: default;
+                            font-size: 14px;
+                            margin-top: 9px;
+                            display: inline-block;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            -o-text-overflow: ellipsis;
+                            white-space: nowrap;
+                            max-width: 56px;
+                        }
+                    }
+                }
+                p:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+    /*leftgroup*/
+    .prompt-up-box .prompt-up-items ul li {
+        margin-right: 70px;
+    }
+    .ec-steps {
+        width: 585px;
+        ul li {
+            width: 190px;
+            &:nth-child(1) {
+                width: 140px;
+            }
+            &:last-child {
+                width: 254px;
+                .ec-steps-text {
+                    right: 90px;
+                }
+            }
+        }
+    }
+    /*右侧内容快*/
+    .ant-layout-right {
+        margin-left: 70px;
+    }
+    /*footer*/
+    .new-label-footer {
+        /* margin-left: 35px; */
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    /*右上角个人信息*/
+    .customer-info {
+        img {
+            display: none;
+        }
+        button {
+            margin-left: 10px;
+        }
+        .customer-text {
+            p:first-child {
+                i {
+                    display: none;
+                    &:first-child {
+                        font-size: 14px;
+                        margin-top: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    /*在哪里能看到气泡层*/
+    .where-to-see {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /*右侧内容快*/
+    .ant-layout-right {
+        width: 100%;
+        .ant-layout-container {
+            overflow-x: hidden;
+        }
+    }
+    .prompt-up-box {
+        .prompt-up-img {
+            margin-top: 30px;
+        }
+    }
+}

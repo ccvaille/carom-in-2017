@@ -1,0 +1,79 @@
+.cs-client .main-content .cs-statistics {
+    padding: 0;
+}
+
+.cs-statistics {
+    .statistics-content {
+        position: relative;
+        height: 100%;
+        margin-left: 150px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        > div:first-child {
+            margin: 12px 12px 20px;
+        }
+    }
+
+    .menu {
+        // position: fixed;
+        // left: 0;
+        // top: 81px;
+        // bottom: 0;
+        height: 100%;
+        float: left;
+        width: 150px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        border-right: 1px solid #e9e9e9;
+    }
+
+    .ant-menu-sub.ant-menu-inline > .ant-menu-item,
+    .ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+        line-height: 32px;
+        height: 32px;
+        padding-left: 34px !important;
+    }
+
+    .ant-menu-inline> .ant-menu-submenu > .ant-menu-submenu-title {
+        line-height: 32px;
+        height: 32px;
+    }
+
+    .data-operation {
+        position: relative;
+
+        .cs-with-time {
+            width: 500px;
+            margin: 0 auto;
+
+            .time-filter-tab.auto-width {
+                float: left;
+            }
+        }
+
+        button {
+            position: absolute;
+            top: -1px;
+            right: 0;
+        }
+    }
+
+    .graph-title {
+        margin: 20px 0;
+        text-align: center;
+        font-size: 14px;
+
+        p {
+            margin-bottom: 4px;
+        }
+    }
+
+    .stats-table {
+        margin-top: 20px;
+
+        .ant-table-pagination {
+            margin-bottom: 0;
+        }
+    }
+}

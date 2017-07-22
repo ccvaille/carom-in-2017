@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>等等，您没有访问权限</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+        font-family: "Microsoft YaHei", Arial, sans-serif;
+    }
+
+    .error-wrapper {
+        text-align: center;
+        padding-top: 15%;
+    }
+
+    .error-picture {
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+        vertical-align: middle;
+    }
+
+    .error-text {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 48px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .error-title {
+        font-weight: bold;
+        text-align: right;
+        font-size: 24px;
+    }
+
+    .error-tips {
+        font-size: 16px;
+        text-align: right;
+        color: #919499;
+    }
+
+    .back {
+        text-align: right;
+        margin: 16px 0 0 0;
+        font-size: 16px;
+        color: #919499;
+    }
+
+    .back-link {
+        text-decoration: none;
+        padding-left: 2px;
+        color: #2580e6;
+    }
+
+</style>
+
+<body>
+    <script type="text/javascript">
+        function goBack() {
+            window.history.go(-1);
+            return false;
+        }
+    </script>
+    <div class="error-wrapper">
+        <img src="https://www.staticec.com/api/images/error_403.png" alt="" class="error-picture">
+        <div class="error-text">
+            <div class="error-title">等等，您没有访问权限</div>
+            <div class="error-tips">请联系部门负责人或企业管理员</div>
+            <div class="back">您可以<a class="back-link" href="javascript:void(0)" onclick="goBack()">返回上一页</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

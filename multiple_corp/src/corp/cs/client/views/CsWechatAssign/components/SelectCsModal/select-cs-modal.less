@@ -1,0 +1,198 @@
+.select-cs {
+    .left-box {
+        float: left;
+        width: 48%;
+        // margin-bottom: -59px;
+    }
+
+    .right-box {
+        float: right;
+        width: 48%;
+        // margin-left: 15px;
+        textarea.ant-input{
+            resize: none;
+            height: 262px;
+        }
+        .choice {
+            margin-bottom: 13px;
+            min-height: 30px;
+
+            > div {
+                display: inline-block;
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                visibility: hidden;
+                vertical-align: middle;
+                // display: none;
+                &.show {
+                    // display: inline-block;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    .search {
+        position: relative;
+
+        .search-icon {
+            display: inline-block;
+            width: 10%;
+            position: absolute;
+            top: 6px;
+            left: 7px;
+            z-index: 99;
+
+            i {
+                color: #989898;
+                position: relative;
+                top: 2px;
+            }
+        }
+
+        input {
+           text-indent: 17px;
+        }
+    }
+
+    .service-list-box {
+        margin-top: 13px;
+        border: 1px solid rgb(230, 230, 230);
+        height: 263px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        .empty-result {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        li {
+            // cursor: pointer;
+            padding: 7px 10px;
+            height: 36px;
+
+            &:hover {
+                background-color: #e9eff2;
+            }
+
+            &.active {
+                // background-color: #e9eff2;
+
+                .active-icon {
+                    color: #0ec78b;
+                }
+            }
+
+            .avatar {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+                vertical-align: middle;
+
+            }
+
+            .service-name {
+                // line-height: 36px;
+            }
+
+            .active-icon {
+                display: inline-block;
+                float: right;
+                margin-top: 0;
+                font-size: 18px;
+                color: #dedede;
+                cursor: pointer;
+
+                &.icon-close {
+                    color: #333;
+                    font-size: 12px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .cs-group {
+
+        .group-item-list {
+            display: none;
+        }
+
+        .group-name {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 23px;
+            cursor: pointer;
+
+            &.opened {
+                .arrow {
+                    top: 20px;
+                    border-top: 4px solid #808080;
+                    border-left: 4px solid transparent;
+                }
+
+                & + .group-item-list {
+                    display: block;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+                top: 17px;
+                content: '';
+                border: 4px solid transparent;
+                border-left: 4px solid #808080;
+                left: 10px;
+
+            }
+        }
+
+        .group-item-list {
+            li {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .selected-list {
+        .service-list-box {
+            li {
+                .active-icon {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: #e9eff2;
+
+                    .active-icon {
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.switch-cs-modal {
+    .ant-modal-body {
+        padding: 30px 20px 20px;
+    }
+
+    .ant-modal-footer button:nth-child(2) {
+        margin-right: 0;
+    }
+}
+
+.btn-disable {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

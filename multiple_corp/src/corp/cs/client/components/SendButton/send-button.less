@@ -1,0 +1,67 @@
+.send-btn {
+    position: relative;
+    display: inline-block;
+
+    .main-btn {
+        padding: 5px 5px 5px 10px;
+        border-radius: 2px;
+    }
+
+    .send-text {
+        padding-right: 5px;
+        // border-right: 1px solid #fff;
+    }
+
+    .set-icon {
+        color: white;
+        padding-left: 5px;
+        // vertical-align: middle;
+        position: relative;
+        top: 2px;
+        border-left: 1px solid rgba(255, 255, 255, 0.2);
+        height: 14px;
+        display: inline-block;
+
+        img {
+            position: relative;
+            top: -2px;
+        }
+    }
+
+    .send-setting-wrapper {
+        display: none;
+        position: absolute;
+        bottom: 100%;
+        left: 80%;
+        border-right: 5px;
+        width: 183px;
+        box-shadow: 0 0 12px #c8c9ca;
+        background: #fff;
+        z-index: 2;
+
+        .type-item {
+            padding: 6px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #eff3f7;
+            }
+
+            &.checked {
+                .icon-check {
+                    color: #17c951;
+                }
+            }
+
+            .icon-check {
+                color: #fff;
+                padding-left: 5px;
+                padding-right: 10px;
+            }
+
+            .type-text {
+                color: #3a3a3a;
+            }
+        }
+    }
+}

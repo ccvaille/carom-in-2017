@@ -1,0 +1,67 @@
+.sale-guide{
+    position:absolute;
+    .mask{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(55, 55, 55, 0.6);
+        height: 100%;
+        z-index: 555;
+    }
+    .ec-tooltip {
+        z-index: 556;
+        display: block;
+        background: #ffffff;
+        border: 1px #d4deee solid;
+        font-size: 12px;
+        color: #303642;
+        border-radius: 3px;
+        position: absolute;
+        left: 440px;
+        top: -100px;
+    }
+    .ec-tooltip .left{
+        position: absolute;
+        top: 113px;
+        left: -20px;
+    }
+    .ec-tooltip .left .tip-one {
+        border: 10px transparent solid;
+        border-right: 10px #d4deee solid;
+        position: absolute;
+    }
+    .ec-tooltip .left .tip-two {
+        border: 9px transparent solid;
+        border-right: 9px #fff solid;
+        position: absolute;
+        left: 2px;
+        top: 1px;
+    }
+    .ec-tooltip .pop-content {
+    }
+    .ec-tooltip .pop-content img {
+        margin: 0 auto;
+    }
+    .ec-tooltip .pop-footer {
+        height: 50px;
+        line-height: 50px;
+        background: #F5F6F9;
+        text-align: center;
+    }
+    .ec-tooltip .pop-footer .btn-go {
+        background: #3180E6;
+        border-radius: 3px;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        padding: 5px 20px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+            background-color: #5199eb;
+            border-color: #5199eb;
+        }
+    }
+}

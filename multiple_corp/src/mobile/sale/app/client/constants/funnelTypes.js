@@ -1,0 +1,10 @@
+export const FETCHING = 'sale/app/funnel/fetching'; //正在获取中
+export const FETCH_AUTH_SUCCESS = 'sale/app/funnel/fetch_auth_success'; //获取权限成功
+export const FILTER_CHANGE = 'sale/app/funnel/filter_change'; 
+export const FETCH_FUNNEL_SUCCESS = 'sale/app/funnel/fetch_funnel_success'; 
+export const SWITCH_TAB = 'sale/app/funnel/switch_tab'; //切换tab
+export const FETCH_BILL_LIST_SUCCESS = 'sale/app/funnel/fetch_bill_list_success'; 
+export const FETCH_BILL_DETAIL_SUCCESS = 'sale/app/funnel/fetch_bill_detail_success'; 
+export const FETCH_GET_TIP_SUCCESS = 'sale/app/funnel/fetch_get_tip_success';
+export const FETCH_SET_TIP_SUCCESS = 'sale/app/funnel/fetch_set_tip_success';
+export const INIT_STATE = 'sale/app/funnel/init_state'; 

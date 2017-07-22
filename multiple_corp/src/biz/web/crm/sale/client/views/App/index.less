@@ -1,0 +1,104 @@
+﻿.ant-layout-left {
+    background: #303642;
+    text-align: center;
+    /*float: left;*/
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 200px;
+    z-index: 10;
+}
+
+.ant-layout-right {
+    margin-left: 200px;
+    background: #edf2fa;
+    .ant-layout-main {
+        background: #edf2fa;
+        padding: 10px;
+        padding-bottom: 0;
+        /* overflow-y: auto; */
+        min-width: 650px;
+    }
+    .ant-layout-container {
+        background: #fff;
+        /* padding: 2px 0;*/
+        height: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+        .help-wrapper {
+            margin-bottom:40px;
+            padding: 20px;
+            h3{
+                font-weight:normal;
+                color: #303642;
+                margin-bottom:5px;
+            }
+            .desc{
+                padding-left:20px;
+                li{
+                    color: #727c8f;
+                    line-height: 1.67;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .ant-layout-content {
+        height: 100%;
+    }
+}
+
+.help-notes {
+    font-size: 12px;
+    margin-top: 20px;
+    h4 {
+        color: #303642;
+        margin-bottom: 6px;
+        font-weight: normal;
+        .iconfont {
+            font-size: 15px;
+            margin-right: 8px;
+            color: #d4deee;
+        }
+    }
+    ul {
+        padding-left: 22px;
+        li {
+            color: #727c8f;
+        }
+    }
+}
+
+/* use css to set position of modal */
+.vertical-center-modal {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.vertical-center-modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+
+.vertical-center-modal .ant-modal {
+  display: inline-block;
+  vertical-align: middle;
+  top: 0;
+  text-align: left;
+}
+
+/*
+// Use flex which not working in IE
+.vertical-center-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-center-modal .ant-modal {
+  top: 0;
+}
+*/

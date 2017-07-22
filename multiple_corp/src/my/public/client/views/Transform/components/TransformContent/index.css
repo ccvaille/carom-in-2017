@@ -1,0 +1,74 @@
+.transform-content {
+  width: 100%;
+  padding-left: 150px;
+  padding-top: 20px;
+  background: #fff;
+  height: 100%;
+  color: #303642;
+}
+.transform-content .title {
+  font-family: MicrosoftYaHei-Bold;
+  font-size: 14px;
+  color: #303642;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 10px;
+}
+.transform-content .title .tips {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  left: 70px;
+  top: 2px;
+  background: url('tips.png') 0 0 no-repeat;
+  background-size: 100% 100%;
+}
+.transform-content .content-box {
+  margin: 0 25px 10px 5px;
+}
+.transform-content .echarts-box {
+  border: 1px solid #DADDE3;
+}
+.transform-content .echarts-box .header {
+  background: #F5F6F9;
+  line-height: 40px;
+  border-bottom: 1px solid #DADDE3;
+}
+.transform-content .echarts-box .ant-input {
+  height: 28px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 45%;
+  margin-right: 5px;
+}
+.tips-box li {
+  line-height: 30px;
+}
+.tips-box li .name {
+  position: relative;
+  color: #001800;
+  font-weight: bold;
+}
+.tips-box li .name:before {
+  content: '';
+  background: #3180E6;
+  position: absolute;
+  left: -10px;
+  top: 7px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+}
+.ant-popover-inner {
+  padding: 10px 20px;
+}
+.ant-popover-placement-bottomLeft > .ant-popover-content > .ant-popover-arrow:after {
+  top: 2px;
+}
+.ant-popover.ant-popover-placement-bottomLeft {
+  left: 209px !important;
+}

@@ -1,0 +1,45 @@
+@import './antd-reset.less';
+
+html, body {
+    overflow: hidden;
+}
+
+.cs-client {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    margin-top: 38px;
+}
+
+.main-content {
+    // padding: 20px;
+    height: 100%;
+
+    > div:first-child {
+        height: 100%;
+        padding: 12px;
+        overflow: hidden;
+    }
+
+    .cs-avatar {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 7px;
+    }
+}
+.ant-modal-content {
+    min-width: 360px;
+}
+
+div[role="button"],
+span[role="button"],
+i[role="button"] {
+    &:focus {
+        outline: none;
+    }
+}

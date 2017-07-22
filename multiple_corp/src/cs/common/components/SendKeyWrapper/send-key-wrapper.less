@@ -1,0 +1,33 @@
+.send-setting-wrapper {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    // left: 80%;
+    right: 0;
+    border-right: 5px;
+    width: 183px;
+    box-shadow: 0 0 12px #c8c9ca;
+    border: 1px solid #d9dfea;
+    background: #fff;
+    z-index: 2;
+
+    .type-item {
+        padding: 5px 10px;
+
+        &:hover {
+            background-color: #eff3f7;
+        }
+
+        &.checked {
+            .icon-check {
+                color: #17c951;
+            }
+        }
+
+        .icon-check {
+            color: #fff;
+            padding-left: 5px;
+            padding-right: 10px;
+        }
+    }
+}

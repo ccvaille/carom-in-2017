@@ -1,0 +1,45 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "__DEV__": true
+  },
+  "rules": {
+    "indent": [2, 4, {
+        "SwitchCase": 1
+    }],
+    "comma-dangle": ["error", {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "never"
+    }],
+    "linebreak-style": [0],
+    "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
+    "no-console": [0],
+    "spaced-comment": [0],
+    "import/no-extraneous-dependencies": [0],
+    "import/no-unresolved": [2, { "ignore": ["~static", "~comm", "~siteComm", "~cscommon"] }],
+    "import/no-dynamic-require": [0],
+    "import/extensions": [0],
+    "jsx-a11y/no-noninteractive-element-interactions": [0],
+    "react/forbid-prop-types": [0],
+    "react/jsx-filename-extension": [0],
+    "react/jsx-indent": [2, 4],
+    "react/jsx-indent-props": [2, 4]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx"],
+        "moduleDirectory": ["node_modules", "client"]
+      }
+    }
+  }
+}

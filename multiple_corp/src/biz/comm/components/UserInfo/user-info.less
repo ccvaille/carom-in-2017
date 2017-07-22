@@ -1,0 +1,105 @@
+@import "../../../../comm/ec-antd/lib/style/themes/default.less";
+
+.user-info {
+    float: right;
+    margin-right: 10px;
+    margin-top: 17px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    img,
+    .user-text,
+    button {
+        float: left;
+    }
+
+    .user-text {
+        margin-left: 10px;
+
+        p {
+            color: #96a0b4;
+
+            i {
+                font-style: normal;
+                color: #303642;
+            }
+        }
+    }
+
+    button {
+        margin-left: 30px;
+        margin-top: 4px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .user-info {
+        margin-top: 5px;
+
+        img {
+            display: none;
+        }
+
+        button {
+            color: @primary-color;
+            margin-top: 9px;
+            margin-left: 10px;
+            border-color: transparent;
+            padding: 0;
+            letter-spacing: -1px;
+            font-size: 14px;
+        }
+
+        .user-text {
+            p:first-child {
+                i {
+                    display: none;
+                    &:first-child {
+                        cursor: default;
+                        font-size: 14px;
+                        margin-top: 9px;
+                        display: inline-block;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -o-text-overflow: ellipsis;
+                        white-space: nowrap;
+                        max-width: 56px;
+                    }
+                }
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .user-info {
+        img {
+            display: none;
+        }
+        button {
+            // margin-left: 10px;
+        }
+        .customer-text {
+            p:first-child {
+                i {
+                    display: none;
+                    &:first-child {
+                        font-size: 14px;
+                        margin-top: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
+            p:last-child {
+                display: none;
+            }
+        }
+    }
+}

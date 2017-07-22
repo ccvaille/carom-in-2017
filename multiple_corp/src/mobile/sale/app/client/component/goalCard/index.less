@@ -1,0 +1,117 @@
+.goal-card{
+    // &:active{
+    //     .header{
+    //         background-color: #E5E6E7;
+    //     }
+    // }
+    .header{
+        display: flex;
+        height: 88px;
+        background: #F9FAFB;
+        border-bottom: 1px solid #DADFE4;
+        justify-content: space-between;
+        align-items:center;
+        padding: 0 30px;
+        .title{
+            font-size: 28px;
+            color: #303642;
+        }
+        .iconfont{
+            color: #D5DBE1;
+            font-size: 25px;
+        }
+    }
+    .content{
+        background-color: #ffffff;
+        padding:0px 110px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .stat{
+            display: inline-block;
+            margin: 0 auto;
+            .t1{
+                color: #303642;
+                font-size:26px;
+                font-weight:bold;
+                margin-left:20px;
+                display: inline-block;
+                width:160px;
+            }
+            .t2{
+                color: #303642;
+                font-size:32px;
+                font-weight:bold;
+            }
+            .goal{
+                display: flex;
+                align-items: center;
+                padding-bottom:36px;
+                padding-top: 25px;
+                border-bottom:1px solid #DCDFE5;
+                .t1{
+                    
+                }
+                .icon{
+                    color: #FF930D;
+                    float: left;
+                    width:25px;
+                    height:25px;
+                    font-size:25px;
+                }
+                .t2{
+                    color: #303642;
+                    font-weight:bold;
+                }
+            }
+            .finished{
+                display: flex;
+                align-items: center;
+                padding-top:30px;
+                .icon{
+                    display: inline-block;
+                    background-color: #60ABF8;
+                    width:25px;
+                    height:25px;
+                    float: left;
+                }
+                .t2{
+                    color: #3180E6;
+                    font-weight:bold;
+                }
+
+            }
+            .unfinished{
+                display: flex;
+                align-items: center;
+                padding-top:30px;
+                .icon{
+                    display: inline-block;
+                    background-color: #F76F57;
+                    width:25px;
+                    height:25px;
+                    float: left;
+                }
+                .t2{
+                    color: #f2534f;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+    .no-data-content{
+        background-color: #ffffff;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        text-align: center;
+        img{
+            width: 180px;
+        }
+        p{
+
+            font-size: 26px;
+            color: #81878E;
+            margin: 20px 0 0 0;
+        }
+    }
+}
