@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="http://www.coolfe.com/jquery.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div id="banner">
+            <h3>加入我们，连接梦想</h3>
+            <p>每天，有数百万销售人员使用EC经营自己的客户，在平台上产生亿级的销售行为</p>
+        </div>
+        <div class="content">
+            <div class="text">
+                <h3>企业简介</h3>
+                <p>深圳市六度人和科技有限公司 EC（Easy Connection）是由腾讯、用友、赛富亚洲、联创永宣、麦达数字等多家公司投资并战略合作的互联网科技公司，是国家高科技企业、深圳市双软企业 。 公司成立于2008年，2013年公司重新上路，开始二次创业，致力于社交化的客户关系关系管理系统的开发与运营。其主打产品EC是一款领先的SCRM系统（社交化客户关系管理系统），它通过整合QQ、微信、座机、手机、短信、邮件等沟通工具，在企业管理系统与社交网络之间建立实时连接，提供以客户为中心的线上线下市场营销与用户运营解决方案。 截至目前，EC平台已为20万多家用户提供产品与服务，销售网络遍布26个省市。随着产品市场的成熟，公司即将迎来一次更大的发展机遇。</p>
+            </div>
+            <div class="text">
+                <h3>为什么选择EC</h3>
+                <p>事业：朝阳行业，EC是移动互联网+时代引领企业级SaaS服务领域的一匹黑马，拥有独特的链接优势、具有广阔的市场机会，业绩与市值增长迅速； 团队：高管团队成员主要来自腾讯、微软、百度、金蝶、中兴等知名企业，志同道合。公司员工人均年龄28岁，既有创业团队远大的梦想、又有腾讯产品经理严谨的工作作风。这是一支团结向上、充满活力、能打胜仗的队伍； 文化：公司关注员工感受，推行以人为本、互助共赢的小伙伴文化，工作氛围轻松愉快，人际关系简单和谐。
+                </p>
+            </div>
+            <div class="slider">
+                <div class="pre"><img src="img/pre.png" alt=""></div>
+                <div class="items">
+                    <ul>
+                    	<li class="first"></li>
+                        <li><img src="img/1.png"><span>xxxx</span></li>
+                        <li><img src="img/2.png"><span>xxxx</span></li>
+                        <li><img src="img/3.png"><span>xxxx</span></li>
+                        <li><img src="img/1.png"><span>xxxx</span></li>
+                        <li><img src="img/2.png"><span>xxxx</span></li>
+                        <li><img src="img/3.png"><span>xxxx</span></li>
+                        <li class="last"></li>
+                    </ul>
+                </div>
+                <div class="next"><img src="img/next.png" alt=""></div>
+            </div>
+            <div class="job">
+            	<h3>招贤纳士</h3>
+            	<ul>
+            		<li>
+            			<img src="img/a.png" alt="">
+            			<span>技术类职位</span>
+            		</li>
+            		<li>
+            			<img src="img/b.png" alt="">
+            			<span>产品设计类职位</span>
+            		</li>
+            		<li>
+            			<img src="img/c.png" alt="">
+            			<span>职能类职位</span>
+            		</li>
+            		<li>
+            			<img src="img/d.png" alt="">
+            			<span>市场类职位</span>
+            		</li>
+            		<li>
+            			<img src="img/e.png" alt="">
+            			<span>客服服务类职位</span>
+            		</li>
+            		<li>
+            			<img src="img/f.png" alt="">
+            			<span>销售类职位</span>
+            		</li>
+
+            	</ul>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        var index = 0;
+        $('.com-items li').eq(0).show().siblings().hide();
+        var oLiNum = $('#slide-container li').length;
+        $('#prev').click(function() {
+            index--;
+            if (index == -oLiNum) {
+                index = 0;
+            }
+            $('.com-items li').eq(index).fadeIn(500).siblings().hide();
+        })
+        $('#next').click(function() {
+            index++;
+            if (index == oLiNum) {
+                index = 0;
+            }
+            $('.com-items li').eq(index).fadeIn(500).siblings().hide();
+        })
+    });
+    </script>
+</body>
+
+</html>

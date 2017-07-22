@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    &,
+    &:after,
+    &:before {
+        box-sizings: border-box;
+    }
+}
+
+a {
+    &,
+    &:hover,
+    &:active,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-weight: normal;
+}
+
+.clearfix() {
+    zoom: 1;
+    &:after {
+        content: "";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}
+
+.size(@width: auto;
+@height: auto) {
+    width: @width;
+    height: @height;
+}
+
+
+
+
+
+
+
+/*轮播*/
+
+.slider {
+    width: 1066px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 88px;
+    .clearfix();
+    .pre,
+    .next {
+    	position: absolute;
+    	.size(30px,80px);
+    	top: 30px;
+    	line-height: 80px;
+    	text-align: center;
+        border-radius: 3px;
+        background-color: #f7f7f7;
+        border: solid 1px #ebebeb;
+        cursor: pointer;
+    }
+    .pre {
+        left: 0;
+    }
+    .next {
+        right: 0;
+    }
+    .items {
+        width: 936px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        ul {
+            width: 500%;
+            .clearfix();
+            margin-left: -165px;
+            li {
+                float: left;
+                margin-right: 16px;
+                text-align: center;
+                img {
+                	display: block;
+                }
+                &.first,
+                &.last {
+                    .size(88px, 150px);
+                    position: absolute;
+                    left: -12px;
+                    background: url(../img/left.png) no-repeat;
+                }
+                &.last {
+                    left: auto;
+                    right: -26px;
+                    background: url(../img/right.png) no-repeat;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/*banner*/
+
+#banner {
+    .size(100%, 450px);
+    background: url('../img/bg.png') no-repeat top center;
+    text-align: center;
+    padding-top: 149px;
+    background-size: 100% 100%;
+    h3 {
+        font-size: 54px;
+        color: #292f33;
+        margin-bottom: 30px;
+        font-weight: 300;
+    }
+    p {
+        color: #6b7780;
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+
+.text {
+    width: 756px;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 68px;
+    h3 {
+        text-align: center;
+        color: #0f0f0f;
+        font-size: 24px;
+        margin-bottom: 36px;
+    }
+    p {
+        color: #4d4d4d;
+        font-size: 14px;
+        line-height: 2.14;
+    }
+}
+
+
+.job {
+	ul {
+		.clearfix();
+		li {
+			width: 33.3%;
+			float: left;
+		}
+	}
+}

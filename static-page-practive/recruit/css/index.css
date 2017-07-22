@@ -1,0 +1,172 @@
+/* line 1, index.less */
+* {
+  margin: 0;
+  padding: 0;
+}
+/* line 4, index.less */
+*,
+*:after,
+*:before {
+  box-sizings: border-box;
+}
+/* line 12, index.less */
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+/* line 20, index.less */
+ul,
+li {
+  list-style-type: none;
+}
+/* line 25, index.less */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: normal;
+}
+/*轮播*/
+/* line 56, index.less */
+.slider {
+  width: 1066px;
+  margin: 0 auto;
+  position: relative;
+  margin-top: 88px;
+  zoom: 1;
+}
+/* line 34, index.less */
+.slider:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* line 62, index.less */
+.slider .pre,
+.slider .next {
+  position: absolute;
+  width: 30px;
+  height: 80px;
+  top: 30px;
+  line-height: 80px;
+  text-align: center;
+  border-radius: 3px;
+  background-color: #f7f7f7;
+  border: solid 1px #ebebeb;
+  cursor: pointer;
+}
+/* line 74, index.less */
+.slider .pre {
+  left: 0;
+}
+/* line 77, index.less */
+.slider .next {
+  right: 0;
+}
+/* line 80, index.less */
+.slider .items {
+  width: 936px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+/* line 85, index.less */
+.slider .items ul {
+  width: 500%;
+  zoom: 1;
+  margin-left: -165px;
+}
+/* line 34, index.less */
+.slider .items ul:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* line 89, index.less */
+.slider .items ul li {
+  float: left;
+  margin-right: 16px;
+  text-align: center;
+}
+/* line 93, index.less */
+.slider .items ul li img {
+  display: block;
+}
+/* line 96, index.less */
+.slider .items ul li.first,
+.slider .items ul li.last {
+  width: 88px;
+  height: 150px;
+  position: absolute;
+  left: -12px;
+  background: url(../img/left.png) no-repeat;
+}
+/* line 103, index.less */
+.slider .items ul li.last {
+  left: auto;
+  right: -26px;
+  background: url(../img/right.png) no-repeat;
+}
+/*banner*/
+/* line 118, index.less */
+#banner {
+  width: 100%;
+  height: 450px;
+  background: url('../img/bg.png') no-repeat top center;
+  text-align: center;
+  padding-top: 149px;
+  background-size: 100% 100%;
+}
+/* line 124, index.less */
+#banner h3 {
+  font-size: 54px;
+  color: #292f33;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+/* line 130, index.less */
+#banner p {
+  color: #6b7780;
+  font-size: 18px;
+  font-weight: 300;
+}
+/* line 137, index.less */
+.text {
+  width: 756px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 68px;
+}
+/* line 142, index.less */
+.text h3 {
+  text-align: center;
+  color: #0f0f0f;
+  font-size: 24px;
+  margin-bottom: 36px;
+}
+/* line 148, index.less */
+.text p {
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 2.14;
+}
+/* line 157, index.less */
+.job ul {
+  zoom: 1;
+}
+/* line 34, index.less */
+.job ul:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* line 159, index.less */
+.job ul li {
+  width: 33.3%;
+  float: left;
+}
