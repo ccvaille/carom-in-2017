@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial;
+  font-size: 100%;
+}
+ul li {
+  list-style: none;
+}
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.focus-map-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+#img-box {
+  position: absolute;
+  zoom: 1;
+  width: 2000px;
+  height: 200px;
+  transition: all .5s;
+}
+#img-box:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+#img-box li {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+#img-box li:first-child {
+  background: pink;
+}
+#img-box li:nth-child(2) {
+  background: yellow;
+}
+#img-box li:nth-child(3) {
+  background: red;
+}
+#img-box li:nth-child(4) {
+  background: green;
+}
+#img-box li:nth-child(5) {
+  background: blueviolet;
+}
+#dot-box {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  bottom: 10px;
+  zoom: 1;
+}
+#dot-box:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+#dot-box li {
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-right: 2px;
+  background: #000;
+  cursor: pointer;
+}
+#dot-box li:hover,
+#dot-box li.actived {
+  background: red;
+}
