@@ -2,13 +2,13 @@ import React from 'react';
 
 const Repos = (props) => (
     <div>
-        <h3>This is a title.</h3>
-        <p>{props.params.name}</p>
+        <h3>Repos</h3>
+        <h5>{props.name}</h5>
     </div>
 );
 
-Repos.propTypes = {
-    parame: React.propTypes.object,
-}
+Repos.propsTypes = {
+    name: React.PropTypes.Object,
+};
 
 export default Repos;

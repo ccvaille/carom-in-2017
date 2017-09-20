@@ -31,7 +31,7 @@ module.exports = {
   },
   devServer: {
     inline: true,
-    port: 8008,
+    port: 8080,
   },
   plugins: [HTMLWebpackPluginConfig],
 };
