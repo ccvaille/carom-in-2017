@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementChildren</title>
+</head>
+<body>
+    <div id="box">
+        Hello,
+        <span>coolfe</span>
+        <!--<cite>cite</cite>-->
+        <ul>
+            <li>some text.</li>
+        </ul>
+    </div>
+    <script>
+        function getElementChildren(parentNode) {
+            var children = parentNode.children;
+            // var childrenNodes = parentNode.childNodes;
+            
+            if(children) {
+                // console.log(parentNode,children,childrenNodes);
+                console.log(parentNode,children);
+                return children;
+            } else {
+                var array = [],
+                    length = parentNode.childNodes.length;
+                    for(var i = 0; i < length; i++) {
+                        if(parentNode.childNodes[i].nodeType === 1) {
+                            array.push(parentNode.childNodes[i]);
+                        }
+                    }
+                    console.log(array);
+                    return array;
+            }
+
+        }
+        var oBox = document.getElementById('box');
+        getElementChildren(oBox);
+    </script>
+</body>
+</html>
