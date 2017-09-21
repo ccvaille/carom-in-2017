@@ -8,10 +8,10 @@
     + 兄弟关系
         * previousSibling/nextSibling
         * previousElementSibling/nextElementSibling
-    + getElementById
+    + getElementById(no live)
     + getElementsByTagName（live)
     + getElementsByClassName(live)
-    + querySelector/querySelectorAll
+    + querySelector/querySelectorAll(no live)
 ```
 // getElementByClassName（_have bug_)
 function getElementByClasName(root,className) {
@@ -62,8 +62,8 @@ function getElementByClassName(element,names){
 - 创建
     + document.createElement(name)
 - 修改
-    +  element.textContent
-    +  element.innerText(√)
+    +  element.textContent(ie9 不支持)
+    +  element.innerText('√')
 - 插入
     +  element.appendChild('a')
     +  element.insertBefore(achild,element)
