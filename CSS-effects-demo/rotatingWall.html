@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>rotatingwall</title>
+    <style>
+        body {
+            background: #000;
+        }
+        
+        .logo-rotate:nth-child(1) {
+            width: 200px;
+            height: 90px;
+        }
+        
+        .logo-rotate:nth-child(2) {
+            width: 180px;
+        }
+        
+        .logo-rotate:nth-child(3) {
+            width: 160px;
+        }
+        
+        .logo-rotate:nth-child(4) {
+            width: 140px;
+        }
+        
+        .logo-rotate:nth-child(5) {
+            width: 130px;
+        }
+        
+        .logo-rotate:nth-child(6) {
+            width: 110px;
+        }
+        
+        .logo-rotate:nth-child(7) {
+            width: 90px;
+        }
+        
+        .logo-rotate:nth-child(8) {
+            width: 80px;
+        }
+        
+        .logo-rotate {
+            /*animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-duration: 4s;            
+            animation-name: rotate_first; */
+            display: block;
+            margin-bottom: 50px;
+            animation: rotate_first 4s infinite linear;           
+        }
+        
+        @keyframes rotate_first {
+            0% {
+                transform: translate3d(0, 0, 0) rotateY(90deg)
+            }
+            25% {
+                transform: translate3d(400px, 20px, -60px) rotateY(180deg)
+            }
+            50% {
+                transform: translate3d(800px, 0, 0) rotateY(270deg)
+            }
+            75% {
+                transform: translate3d(400px, -20px, 60px) rotateY(360deg)
+            }
+            100% {
+                transform: translate3d(0, 0, 0) rotateY(450deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="logos">
+        <img class="logo-rotate" src="https://pub.idqqimg.com/pc/misc/files/20170912/5f6eb24882a54102a47927020e713c4e.png" alt="logo">
+        <img class="logo-rotate" src="https://www.qiniu.com/assets/logo-white-18da5fcb02f4aa87dacbf4451a7356b6179baebc96ae77cf24f607c98d12d100.png"
+            alt="logo">
+        <img class="logo-rotate" src="https://new.stuq.org/files/system/2017/06-26/17274512068b847889.png" alt="logo">
+        <img class="logo-rotate" src="http://beijing2017.livevideostack.com/source/plugin/swifthumb_con/template/static/images/conlogo.png"
+            alt="logo">
+        <img class="logo-rotate" src="https://pub.idqqimg.com/pc/misc/files/20170912/99c5b4d3328748d8bc25479e338335d9.svg" alt="logo">
+        <img class="logo-rotate" src="https://pub.idqqimg.com/pc/misc/files/20170908/f99f1e7de1204173a5a53e58271003cf.png" alt="logo">
+        <img class="logo-rotate" src="https://pub.idqqimg.com/pc/misc/files/20170913/13d1c3e16c9348b1bfd501baebaea3a8.jpg" alt="logo">
+        <img class="logo-rotate" src="https://pub.idqqimg.com/pc/misc/files/20170918/6aa8feea95df41d4ab46387f8a391601.jpg" alt="logo">
+    </section>
+</body>
+
+</html>
