@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>repalace-img-path</title>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="imgUl">
+        <li><a href="../images/num1.png">1</a></li>
+        <li><a href="../images/num2.png">2</a></li>
+        <li><a href="../images/num3.png">3</a></li>
+        <li><a href="../images/num4.png">4</a></li>
+    </ul>
+    <img src="" alt="" id="imgBox">
+    <script>
+        var imgBox = document.getElementById('imgBox');
+        var oUl = document.getElementById('imgUl');
+        var oLi = oUl.getElementsByTagName('li');
+       
+        // for(var i = 0; i < oLi.length; i++) {
+        //     oLi[i].onclick = (function(j) {
+        //         return function() {
+        //             var a = oLi[j].getElementsByTagName('a')[0];
+        //             imgBox.setAttribute('src', a.getAttribute('href'));
+        //             return false;
+        //         }
+        //     })(i);
+        // }
+
+        for(var i = 0; i < oLi.length; i++) {
+            oLi[i].onclick = (function() {
+                var index = i;
+                return function () {
+                    var a = oLi[index].getElementsByTagName('a')[0];
+                    imgBox.setAttribute('src', a.getAttribute('href'));
+                    return false;
+                }
+            })();
+        }
+    </script>
+</body>
+</html>
