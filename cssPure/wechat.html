@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>wechat</title>
+	<style>
+		.wechat {
+			position: relative;
+			width: 667px;
+			height: 667px;
+			background: #22C300;
+			border-radius: 50px;
+		}
+		p {
+			position: absolute;
+			width: 400px;
+			height: 360px;
+			top: 85px;
+			left: 40px;
+			border-radius: 200px / 180px;
+			background: #fff;
+			border: 10px solid #22c300;
+		}
+		p:before {
+			display: block;
+		    position: absolute;
+		    content: '';
+		    bottom: -18px;
+		    left: 80px;
+		    width: 80px;
+		    height: 80px;
+		    background: #fff;
+		    transform: skewX(-45deg) rotate(65deg);
+		}
+		p i {
+			position: absolute;
+			top: 100px;
+			left: 80px;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background: #22C300;
+		}
+		p i:nth-child(2){
+			left: auto;
+			right: 80px;
+		}
+		p.s {
+			transform: scale(.8);
+			left: auto;
+			right: 0;
+			top: 218px;
+		}
+		p.s:before {
+			/*transform: skewX(-45deg) rotate(0deg);*/
+		}
+	</style>
+</head>
+<body>
+	<div class="wechat">
+		<p>
+			<i></i>
+			<i></i>
+		</p>
+		<p class="s">
+			<i></i>
+			<i></i>
+		</p>
+	</div>
+</body>
+</html>
