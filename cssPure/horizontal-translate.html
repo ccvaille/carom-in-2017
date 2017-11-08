@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>horizontal-translate</title>
+    <style>
+        .horizontal-translate-box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            /* -webkit-perspective: 1200; */
+        }
+
+        .content {
+            width: 200px;
+            height: 200px;
+            float: left;
+            transform-style: preserve-3d;
+            transition: transform 1s;
+            
+        }
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 8px solid #84a421;
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+            backface-visibility: hidden;
+        }
+
+        .front {
+            background: #9fbe39;
+        }
+
+        .back {
+            background: #808573;
+            transform: rotateY(-180deg);
+        }
+
+        .horizontal-translate-box:hover .content {
+            transform: rotateY(180deg);
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="horizontal-translate-box">
+        <div class="content">
+            <div class="front">FRONT</div>
+            <div class="back">BACK</div>
+        </div>
+    </div>
+</body>
+
+</html>
