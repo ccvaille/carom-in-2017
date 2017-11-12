@@ -14,16 +14,18 @@
 </head>
 <body>
     <ul id="imgUl">
-        <li><a href="../images/num1.png">1</a></li>
-        <li><a href="../images/num2.png">2</a></li>
-        <li><a href="../images/num3.png">3</a></li>
-        <li><a href="../images/num4.png">4</a></li>
+        <li><a href="../images/num1.png" title="num1">1</a></li>
+        <li><a href="../images/num2.png" title="num2">2</a></li>
+        <li><a href="../images/num3.png" title="num3">3</a></li>
+        <li><a href="../images/num4.png" title="num4">4</a></li>
     </ul>
     <img src="" alt="" id="imgBox">
+    <p id="title"> </p>
     <script>
         var imgBox = document.getElementById('imgBox');
         var oUl = document.getElementById('imgUl');
         var oLi = oUl.getElementsByTagName('li');
+        var p = document.getElementById('title');
        
         // for(var i = 0; i < oLi.length; i++) {
         //     oLi[i].onclick = (function(j) {
@@ -41,6 +43,8 @@
                 return function () {
                     var a = oLi[index].getElementsByTagName('a')[0];
                     imgBox.setAttribute('src', a.getAttribute('href'));
+                    // p.nodeValue => return null
+                    p.firstChild.nodeValue = a.getAttribute('title');
                     return false;
                 }
             })();
