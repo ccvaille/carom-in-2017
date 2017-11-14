@@ -37,18 +37,26 @@
         //     })(i);
         // }
 
-        for(var i = 0; i < oLi.length; i++) {
-            oLi[i].onclick = (function() {
-                var index = i;
-                return function () {
-                    var a = oLi[index].getElementsByTagName('a')[0];
+        // for(var i = 0; i < oLi.length; i++) {
+        //     oLi[i].onclick = (function() {
+        //         var index = i;
+        //         return function () {
+        //             var a = oLi[index].getElementsByTagName('a')[0];
+        //             imgBox.setAttribute('src', a.getAttribute('href'));
+        //             // p.nodeValue => return null
+        //             p.firstChild.nodeValue = a.getAttribute('title');
+        //             return false;
+        //         }
+        //     })();
+        // }
+
+        for (var i = 0; i < oLi.length; i++) {
+                oLi[i].onclick = function () {
+                    var a = this.firstChild;
                     imgBox.setAttribute('src', a.getAttribute('href'));
-                    // p.nodeValue => return null
-                    p.firstChild.nodeValue = a.getAttribute('title');
                     return false;
                 }
-            })();
-        }
+            }
     </script>
 </body>
 </html>
