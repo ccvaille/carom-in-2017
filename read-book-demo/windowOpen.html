@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>windowOpen</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a class="coolfe" href="https://www.baidu.com/">baidu</a>
+        </li>
+        <li>
+            <a class="coolfe" href="http://www.coolfe.com/">coolfe</a>
+        </li>
+        <li>
+            <a class="coolfe" href="https://ant.design/components/message-cn/">antd</a>
+        </li>
+    </ul>
+    <script>
+        function pop(url) {
+            window.open(url, 'coolfe', "width=320,height=480")
+        }
+
+        var links = document.getElementsByTagName('a');
+        for (var i = 0; i < links.length; i++) {
+            if(links[i].getAttribute('class') == 'coolfe') {
+                links[i].onclick = function(){
+                    // console.log(this) 
+                    pop(this.getAttribute('href'));
+                    return false;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
