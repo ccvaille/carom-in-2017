@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>insertBefore</title>
+</head>
+<body>
+    <div id="box">
+        <p id="title">insertBefore</p>
+    </div>
+    <script>
+        
+
+        window.onload = function() {
+
+            function insertAfter(newNode, referenceElement) {
+                var parent = referenceElement.parentNode;
+                if (parent.lastChild == referenceElement) {
+                    parent.appendChild(newNode);
+                } else {
+                    parent.insertBefore(newNode, referenceElement.nextSibling) // 参照节点的下一个兄弟元素
+                }
+            }
+
+            // var insertNode = parentNode.insertBefore(newNode,referenceElement)
+            var newDiv = document.createElement('h1');
+            var newText = document.createTextNode('some text');
+            var box = document.getElementById('box');
+            var title = document.getElementById('title');
+            newDiv.appendChild(newText);
+            box.insertBefore(newDiv,title);
+            insertAfter(newDiv, title);
+        }
+    </script>
+</body>
+</html>

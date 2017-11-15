@@ -37,7 +37,7 @@
     - var pText = document.createTextNode('Hello World');
     - pDom.appendChild(pText)
 
-- insertBefore() // 新元素插入到一个现有元素的前面
+- insertBefore() // 在当前节点的某个子节点之前再插入一个子节点
     - parentElement.insertBefore(newElement,targetElement)
 - ~~insertAfter()~~ // NOT FOUND
 
