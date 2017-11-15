@@ -9,6 +9,7 @@
 <body>
     <div id="box">
         <p id="title">insertBefore</p>
+        <div id="span">insertAfter</div>
     </div>
     <script>
         
@@ -26,12 +27,17 @@
 
             // var insertNode = parentNode.insertBefore(newNode,referenceElement)
             var newDiv = document.createElement('h1');
+            var newSpan = document.createElement('h2');
             var newText = document.createTextNode('some text');
+            var newSpanText = document.createTextNode('some text after');            
             var box = document.getElementById('box');
             var title = document.getElementById('title');
+            var span = document.getElementById('span');
             newDiv.appendChild(newText);
+            newSpan.appendChild(newSpanText);
             box.insertBefore(newDiv,title);
-            insertAfter(newDiv, title);
+            insertAfter(newSpan, span);
+            
         }
     </script>
 </body>
