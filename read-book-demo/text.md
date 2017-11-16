@@ -1,3 +1,5 @@
+## JavaScript_DOM 第七章
+
 - window
     - open(url,name,featrues) // url地址,  新窗口的 name , 新窗口的属性
         ```
@@ -25,7 +27,6 @@
 
 - innerHTML
     - node.innerHTML = 'xxxx'
-
 - createElement()
     - document.createElement(nodeName)
     - var pDom = document.createElement('p');
@@ -41,4 +42,29 @@
     - parentElement.insertBefore(newElement,targetElement)
 - ~~insertAfter()~~ // NOT FOUND
 
+
+- XMLHttpRequest 对象
+    - new
+        - var request = new ActiveXObject('Msxml2.XMLHTTP.3.0); //[IE7 -]
+        - var request = new XMLHttpRequest();
+    - method
+        - open() //初始化请求
+            - request.open(method,url,async)  // method:「GET」、「POST」、「PUT」、「DELETE」
+        - send() //发送请求
+    - props
+        - readyState 发送请求发回的响应 
+            - 0 : 未初始化
+            - 1 ： 正在加载
+            - 2 ： 加载完毕
+            - 3 ： 正在交互
+            - 4 ： 完成
+
 - Q: 83/90 p 
+
+
+## JavaScript_DOM 第八章
+
+-  HTML5 文档类型声明
+    - <!DOCTYPE html>
+- style 对象
+    - element.style.color
