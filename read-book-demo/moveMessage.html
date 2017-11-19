@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>moveMessage</title>
+    <style>
+        #message {
+            position: absolute;
+            /* top: 20px;
+            left: 30px; */
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div id="message" style="left: 30px; top: 20px;">message</div>
+    </div>
+    <script>
+        function moveMessage() {
+            var messge = document.getElementById('message');
+            if (!messge) {
+                return false;
+            }
+            var x = parseInt(messge.style.left);
+            var y = parseInt(messge.style.top);
+            if (x == 200 && y == 100) {
+                return true;
+            }
+            if (x < 200) {
+                x++;
+            }
+            if (x > 200) {
+                x--;
+            }
+            if (y < 100) {
+                y++;
+            }
+            if (y > 100) {
+                y--;
+            }
+            messge.style.left = x + 'px';
+            messge.style.top = y + 'px';
+            setTimeout('moveMessage()', 10);
+        }
+        window.onload = function () {
+            moveMessage();
+        }
+    </script>
+</body>
+
+</html>
