@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stripeTable</title>
+</head>
+
+<body>
+    <div id="box">
+        <table>
+            <tr>
+                <td>nmae:</td>
+                <td>coolfe</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>coolfe</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>coolfe</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>coolfe</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>coolfe</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>coolfe</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>nmae:</td>
+                <td>sandy</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>sandy</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>sandy</td>
+            </tr>
+            <tr>
+                <td>nmae:</td>
+                <td>sandy</td>
+            </tr>
+
+        </table>
+    </div>
+    <script>
+        window.onload = function () {
+            var table = document.getElementsByTagName('table');
+            var odd, rows;
+            for (var i = 0; i < table.length; i++) {
+                odd = false;
+                rows = table[i].getElementsByTagName('tr');
+                for (var j = 0; j < rows.length; j++) {
+                    if (odd == true) {
+                        rows[j].style.backgroundColor = '#ffc';
+                        odd = false;
+                    } else {
+                        odd = true;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
