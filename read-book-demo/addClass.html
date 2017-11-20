@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>addClass</title>
+</head>
+<body>
+    <div id="box">This ele id is box. add other class</div>
+    <script>
+        function addClass(ele,value) {
+            if(!ele.className) {
+                ele.className = value;
+            } else {
+                newclass = ele.className;
+                newclass += '';
+                newclass += value;
+                ele.className = newclass;
+            }
+        }
+
+        window.onload = function() {
+            console.log(document.getElementById('box'))
+            addClass(document.getElementById('box'),'other');
+        }
+    </script>
+</body>
+</html>
