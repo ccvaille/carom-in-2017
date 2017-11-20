@@ -18,7 +18,7 @@
 
 <body>
     <div class="box">
-        <div id="message" style="left: 30px; top: 20px;">message</div>
+        <div id="message" style="left: 20px; top: 20px;">message</div>
     </div>
     <script>
         function moveMessage() {
@@ -28,7 +28,7 @@
             }
             var x = parseInt(messge.style.left);
             var y = parseInt(messge.style.top);
-            if (x == 200 && y == 100) {
+            if (x == 200 && y == 200) {
                 return true;
             }
             if (x < 200) {
@@ -37,10 +37,10 @@
             if (x > 200) {
                 x--;
             }
-            if (y < 100) {
+            if (y < 200) {
                 y++;
             }
-            if (y > 100) {
+            if (y > 200) {
                 y--;
             }
             messge.style.left = x + 'px';
