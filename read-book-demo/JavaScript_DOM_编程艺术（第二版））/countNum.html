@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>countNum</title>
+</head>
+<body>
+    <div>
+         字母 e 在字符串 "To be, or not to be, that is the question." 中出现的次数：  
+        <p id="num"></p>
+    </div>
+    <script>
+        window.onload = function(){
+            var str = 'To be, or not to be, that is the question.';
+            var count = 0;
+            var pos = str.indexOf('e');
+            while(pos !== -1) {
+                count++;
+                pos = str.indexOf('e', pos + 1);
+            }
+            document.getElementById('num').innerHTML = '<strong>' + count + '</strong>';
+        }
+    </script>
+</body>
+</html>
