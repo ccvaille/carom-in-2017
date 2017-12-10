@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>readingProgress</title>
+    <script src="http://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script>
+    <style>
+        .books {
+            height: 2000px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="books">
+    </div>
+    <script>
+        // https://segmentfault.com/q/1010000002620368
+        $(window).scroll(function () {
+            // console.log($(window).scrollTop());
+            var before = $(window).scrollTop();
+            $(window).scroll(function () {
+                var after = $(this).scrollTop();
+                if (after  > before) {
+                    console.log(after,before,"down")
+                    var docHeight = $(document).height(),
+                        winTop = $(window).height(),
+                        winHeight = $(window).height();
+                    var scrolled = (Math.floor(winTop / (docHeight - winHeight) * 100)); // 百分比
+                    // console.log(scrolled, '%')
+                }
+            })
+        })
+
+
+        // scroll(function (direction) { console.log(direction) });
+        //     function scroll(fn) {
+        //         var $window = $(window),
+        //             beforeScrollTop = $window.scrollTop(),
+        //             fn = fn || function () { };
+
+        //         $window.scroll(function () {
+        //             var afterScrollTop = $window.scrollTop(),
+        //                 delta = afterScrollTop - beforeScrollTop;
+        //             if (delta === 0) return false;
+        //             fn(delta > 0 ? "down" : "up");
+        //             beforeScrollTop = afterScrollTop;
+        //         });
+        //     }
+
+    </script>
+</body>
+
+</html>
