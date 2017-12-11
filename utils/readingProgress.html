@@ -21,17 +21,44 @@
     <script>
         function run() {
             var before = 0;
+            var a,b,c,d,e = false;
             $(window).scroll(function () {
                 var after = $(window).scrollTop();
                 if (after > before) {
-                    console.log("down")
+                    // console.log("down")
                     var docHeight = $(document).height(),
                         winTop = $(window).scrollTop(),
                         winHeight = $(window).height();
                     var scrolled = (Math.floor(winTop / (docHeight - winHeight) * 100)); // 百分比
-                    console.log(scrolled, '%')
+                    if (scrolled > 0 && scrolled < 25) {
+                        if(!a) {
+                            console.log('开始阅读过');
+                            a = true;
+                        }
+                    } else if (scrolled > 25 && scrolled <= 50) {
+                        if(!b) {
+                            console.log('25-50');
+                            b=true;
+                        }
+                    } else if (scrolled > 50 && scrolled <= 70) {
+                        if(!c) {
+                            console.log('50-70');
+                            c = true;
+                        }
+                    } else if (scrolled > 70 && scrolled <= 100) {
+                        if(!d) {
+                            console.log('阅读完');
+                            d = true;
+                        }
+                    } else if (scrolled <= 0) {
+                        if(!e) {
+                            console.log('没读过');
+                            e = true;
+                        }
+                    }
+                    // console.log(scrolled, '%')
                 } else {
-                    console.log("up")
+                    // console.log("up")
                 }
                 before = after;
             })
