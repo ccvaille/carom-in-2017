@@ -19,39 +19,26 @@
     <div class="books">
     </div>
     <script>
-        // https://segmentfault.com/q/1010000002620368
-        $(window).scroll(function () {
-            // console.log($(window).scrollTop());
-            var before = $(window).scrollTop();
+        function run() {
+            var before = 0;
             $(window).scroll(function () {
-                var after = $(this).scrollTop();
-                if (after  > before) {
-                    console.log(after,before,"down")
+                var after = $(window).scrollTop();
+                if (after > before) {
+                    console.log("down")
                     var docHeight = $(document).height(),
-                        winTop = $(window).height(),
+                        winTop = $(window).scrollTop(),
                         winHeight = $(window).height();
                     var scrolled = (Math.floor(winTop / (docHeight - winHeight) * 100)); // 百分比
-                    // console.log(scrolled, '%')
+                    console.log(scrolled, '%')
+                } else {
+                    console.log("up")
                 }
+                before = after;
             })
+        }
+        $(document).ready(function () {
+            run();
         })
-
-
-        // scroll(function (direction) { console.log(direction) });
-        //     function scroll(fn) {
-        //         var $window = $(window),
-        //             beforeScrollTop = $window.scrollTop(),
-        //             fn = fn || function () { };
-
-        //         $window.scroll(function () {
-        //             var afterScrollTop = $window.scrollTop(),
-        //                 delta = afterScrollTop - beforeScrollTop;
-        //             if (delta === 0) return false;
-        //             fn(delta > 0 ? "down" : "up");
-        //             beforeScrollTop = afterScrollTop;
-        //         });
-        //     }
-
     </script>
 </body>
 
